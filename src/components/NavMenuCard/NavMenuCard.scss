@@ -1,0 +1,23 @@
+.navcard__wrapper{
+    height: 10rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.navcard__container{
+    height: 60%;
+    width: 70%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, rgba(1, 93, 177, 0.6) 0%, rgba(1, 93, 177, 0.03) 100%);
+    border-radius: 5px;
+    border-width: 2px;
+    border-style: solid;
+    // border-image: radial-gradient(80.79% 50% at 50% 50%, #8C4424 0%, rgba(140, 68, 36, 0) 100%), linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    border-color: rgb(136, 136, 202);
+    &__title{
+        color: black;
+        font-size: 1.2rem;
+    }
+}
