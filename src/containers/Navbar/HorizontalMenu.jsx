@@ -3,13 +3,14 @@ import NavMenuCard from "../../components/NavMenuCard/NavMenuCard";
 
 import "./HorizontalMenu.scss";
 
-const navMenuDetails = [
+let navMenuDetails = [
     { title: "Option1" },
     { title: "Option2" },
     { title: "Option3" },
     { title: "Option4" },
-    { title: "Option5" }
+    { title: "Option5" },
 ]
+navMenuDetails = [...navMenuDetails, ...navMenuDetails, ...navMenuDetails];
 
 const HorizontalMenu = () => {
     const [leftCardIndex, setLeftCardIndex] = useState(5);
@@ -17,15 +18,37 @@ const HorizontalMenu = () => {
     const [isTransitionEnabled, setIsTransitionEnabled] = useState(true)
     const [touchPosition, setTouchPosition] = useState(null);
 
+    const transitionDuration = 500;
+
+    // Setting up the tilt css classes using wrappers around the visible cards
     const cardComponentsWithClones = React.useMemo(() => {
-        let tempArr = navMenuDetails.map((option) => {
+        let tempArr = navMenuDetails.map((option, i) => {
+            let tiltClass = "";
+            if (i === leftCardIndex) {
+                tiltClass = "visible-card--1";
+            }
+            if (i === leftCardIndex + 1) {
+                tiltClass = "visible-card--2";
+            }
+            if (i === leftCardIndex + 2) {
+                tiltClass = "visible-card--3";
+            }
+            if (i === leftCardIndex + 3) {
+                tiltClass = "visible-card--4";
+            }
+            if (i === leftCardIndex + 4) {
+                tiltClass = "visible-card--5";
+            }
+
             return (
-                <NavMenuCard title={option.title} />
+                <NavMenuCard className={tiltClass}
+                    title={option.title}
+                    isTransitionEnabled={isTransitionEnabled} />
             )
         });
-        tempArr = [...tempArr, ...tempArr, ...tempArr]
         return tempArr;
-    }, []);
+    }, [leftCardIndex]);
+
 
     useEffect(() => {
         if (leftCardIndex + 4 === cardComponentsWithClones.length - 1) {
@@ -33,7 +56,7 @@ const HorizontalMenu = () => {
             setTimeout(() => {
                 setIsTransitionEnabled(false)
                 setLeftCardIndex(5)
-            }, 250)
+            }, transitionDuration)
         }
 
         if (leftCardIndex === 0) {
@@ -41,13 +64,13 @@ const HorizontalMenu = () => {
             setTimeout(() => {
                 setIsTransitionEnabled(false)
                 setLeftCardIndex(5)
-            }, 250)
+            }, transitionDuration)
         }
 
         if (leftCardIndex === 5) {
             setTimeout(() => {
                 setIsTransitionEnabled(true)
-            }, 250)
+            }, transitionDuration)
         }
     }, [leftCardIndex])
 
@@ -55,7 +78,7 @@ const HorizontalMenu = () => {
         if (leftAndRightDisabled) {
             setTimeout(() => {
                 setLeftAndRightDisabled(false)
-            }, 250 * 2)
+            }, transitionDuration * 2)
         }
     }, [leftAndRightDisabled])
 

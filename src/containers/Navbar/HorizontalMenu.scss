@@ -1,7 +1,8 @@
 .hori-menu{
     &__carousel{
         &-container {
-            width: 100%;
+            width: 55%;
+            margin: 0 auto;
             display: flex;
             flex-direction: column;
             background: linear-gradient(180deg, rgba(1, 93, 177, 0.6) 0%, rgba(1, 93, 177, 0.03) 100%);
@@ -21,9 +22,10 @@
         
         &-content {
         display: flex;
-        transition: all 250ms linear;
+        transition: all 500ms linear;
         -ms-overflow-style: none;
         scrollbar-width: none;
+        transform-style: preserve-3d;
         }   
     
         &-content::-webkit-scrollbar, .carousel-content::-webkit-scrollbar {
@@ -38,8 +40,7 @@
         &__left-arrow, &__right-arrow {
             position: absolute;
             z-index: 1;
-            top: 50%;
-            transform: translateY(-50%);
+            top: 30%;
             width: 48px;
             height: 48px;
             border-radius: 24px;
@@ -48,11 +49,11 @@
         }
         
         &__left-arrow {
-            left: 24px;
+            left: -34px;
         }
         
         &__right-arrow {
-            right: 24px;
+            right: -34px;
         }
     }
 }
