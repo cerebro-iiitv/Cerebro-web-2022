@@ -44,10 +44,11 @@
         box-shadow: 7px 0px 4px 0px #00000099;
         .navcard{
             &__grad-border{
-                background-image: radial-gradient(80.79% 50% at 50% 50%, #8C4424 0%, rgba(140, 68, 36, 0) 100%), radial-gradient(2.03% 50% at 50% 50%, #0255F5 0%, rgba(2, 85, 245, 0.58) 100%), linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+                background-image: radial-gradient(95.22% 52.58% at 49.11% 47.42%, #8C4424 0%, rgba(140, 68, 36, 0) 100%), radial-gradient(2.39% 52.58% at 49.11% 47.42%, #00349A 0%, rgba(0, 52, 154, 0.58) 100%), linear-gradient(180deg, #0349A7 -5.16%, rgba(3, 73, 167, 0) 100%);
             }
             &__content{
-            background: radial-gradient(117.86% 105.16% at -9.82% -5.16%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+                background: radial-gradient(117.86% 105.16% at -9.82% -5.16%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+                backdrop-filter: opacity(0.8);
             }
         }
     }
@@ -73,8 +74,7 @@
             &__grad-border{
                 // background-image: radial-gradient(80.79% 50% at 50% 50%, #8C4424 0%, rgba(140, 68, 36, 0) 100%), radial-gradient(2.03% 50% at 50% 50%, #0255F5 0%, rgba(2, 85, 245, 0.58) 100%), linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
 
-                background: radial-gradient(80.79% 50% at 50% 50%, #8C4424 0%, rgba(140, 68, 36, 0) 100%), linear-gradient(0deg, #FFFFFF, #FFFFFF);
-                backdrop-filter: blur(42px);
+                background: radial-gradient(80.79% 50% at 50% 50%, #8C4424 0%, rgba(140, 68, 36, 0) 100%), linear-gradient(0deg, #84b1d9, #84b1d9);
             }
             &__content{
                 background: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
