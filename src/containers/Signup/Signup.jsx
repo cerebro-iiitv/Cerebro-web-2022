@@ -1,10 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8a852ba (auth UI)
 import React, { useState } from "react";
 import { Formik, Form } from "formik";
 import AuthForm from "../../components/AuthForm/AuthForm";
 import Page1 from "./FormPages/Page1";
 import Page2 from "./FormPages/Page2";
 import { initialValues, validatePage } from "./util/SignupFormData";
+<<<<<<< HEAD
 import axiosInstance from "../../services/AxiosInstance";
 import "./Signup.scss";
 
@@ -56,15 +60,19 @@ const Signup = () => {
 =======
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
+=======
+import "./Signup.scss";
+>>>>>>> 8a852ba (auth UI)
 
 const Signup = () => {
+  const [page, setPage] = useState(1);
+
   const validate = (values) => {
-    let errors = {};
-    if (values.proof === undefined)
-      errors.proof = "Please upload a valid proof of identity";
+    const errors = validatePage(values, page);
     return errors;
   };
 
+<<<<<<< HEAD
   const initialValues = {
     firstname: "",
     lastname: "",
@@ -81,18 +89,31 @@ const Signup = () => {
   const onSubmit = (values, { setSubmitting }) => {
     console.log(values);
 >>>>>>> c41847c (:construction: auth form structure)
+=======
+  const onSubmit = (values, { setSubmitting, setFieldTouched }) => {
+    Object.keys(values).forEach((key) => setFieldTouched(key, false));
+    if (page === 1) setPage(2);
+    else console.log(values);
+>>>>>>> 8a852ba (auth UI)
     setSubmitting(false);
   };
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <AuthForm to="/login" link="Login" title="Sign Up" text="Already a member?">
       <Formik {...{ validate, initialValues, onSubmit }}>
         {({ setFieldValue, isSubmitting, errors }) => (
+=======
+    <AuthForm to="/login" link="Login" title="Sign Up" text="Already a member?">
+      <Formik {...{ validate, initialValues, onSubmit }}>
+        {({ setFieldValue, setFieldTouched }) => (
+>>>>>>> 8a852ba (auth UI)
           <Form className="signup">
             {page === 1 ? (
               <Page1 {...{ setFieldValue }} />
             ) : (
+<<<<<<< HEAD
               <Page2
                 {...{
                   setFieldValue,
@@ -102,11 +123,15 @@ const Signup = () => {
                   submitStatus,
                 }}
               />
+=======
+              <Page2 {...{ setFieldValue, setPage }} />
+>>>>>>> 8a852ba (auth UI)
             )}
           </Form>
         )}
       </Formik>
     </AuthForm>
+<<<<<<< HEAD
 =======
     <Formik {...{ validate, initialValues, onSubmit }}>
       {({ touched, errors, isSubmitting, setFieldValue }) => (
@@ -176,6 +201,8 @@ const Signup = () => {
       )}
     </Formik>
 >>>>>>> c41847c (:construction: auth form structure)
+=======
+>>>>>>> 8a852ba (auth UI)
   );
 };
 

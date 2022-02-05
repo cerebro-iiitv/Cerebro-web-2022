@@ -1,4 +1,8 @@
 .forminput {
+<<<<<<< HEAD
+=======
+  padding-top: 10px;
+>>>>>>> 8a852ba (auth UI)
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,7 +16,11 @@
     // font-family: Barlow;
     // font-style: normal;
     font-weight: 500;
+<<<<<<< HEAD
     font-size: 20px;
+=======
+    font-size: 23px;
+>>>>>>> 8a852ba (auth UI)
     color: #b9b9b9;
   }
 
@@ -30,6 +38,7 @@
     outline: none;
   }
 
+<<<<<<< HEAD
   &__input {
     background: #44658c;
     padding: 8px;
@@ -37,6 +46,8 @@
     color: white;
   }
 
+=======
+>>>>>>> 8a852ba (auth UI)
   &__error {
     margin-top: 2px;
     font-size: 15px;
@@ -59,9 +70,13 @@
 
     &__address {
       width: 100%;
+<<<<<<< HEAD
       padding: 5px 5px;
       resize: none;
       overflow-y: clip;
+=======
+      height: 100px;
+>>>>>>> 8a852ba (auth UI)
     }
 
     &__email {
@@ -72,10 +87,25 @@
       width: 100%;
     }
 
+<<<<<<< HEAD
     &__degree {
       margin-top: 5px;
     }
 
+=======
+    &__address {
+      padding: 10px 5px;
+      resize: none;
+      overflow-y: clip;
+    }
+
+    // &__proof {
+    //   input[type="file" i] {
+    //     display: none;
+    //   }
+    // }
+
+>>>>>>> 8a852ba (auth UI)
     &__password {
       float: left;
       padding-right: 20px;
@@ -85,7 +115,10 @@
   &__login {
     &__email {
       width: 544.65px;
+<<<<<<< HEAD
       margin-bottom: 10px;
+=======
+>>>>>>> 8a852ba (auth UI)
     }
   }
 }

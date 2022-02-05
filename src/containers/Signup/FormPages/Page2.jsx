@@ -4,6 +4,7 @@ import { signupFormData } from "../util/SignupFormData";
 import leftarrow from "../../../assets/images/left-arrow.svg";
 import "../Signup.scss";
 
+<<<<<<< HEAD
 const Page2 = ({
   setFieldValue,
   setPage,
@@ -11,6 +12,9 @@ const Page2 = ({
   errors,
   submitStatus,
 }) => {
+=======
+const Page2 = ({ setFieldValue, setPage }) => {
+>>>>>>> 8a852ba (auth UI)
   return (
     <>
       {signupFormData.page2.map(({ label, name, type }, index) => (
@@ -21,6 +25,7 @@ const Page2 = ({
           setFieldValue={setFieldValue}
         />
       ))}
+<<<<<<< HEAD
       <div className="signup__bottom">
         <div className="signup__bottom__status">
           {errors.authentication && (
@@ -60,6 +65,21 @@ const Page2 = ({
             </span>
           </button>
         </div>
+=======
+      <div className="signup__buttons">
+        <button className="signup__buttons__page" onClick={() => setPage(1)}>
+          <img
+            src={leftarrow}
+            alt="back"
+            className="signup__buttons__page__arrow"
+          />
+          Prev Page
+        </button>
+        <div className="signup__buttons__vl" />
+        <button type="submit" className="signup__buttons__submit">
+          <span className="signup__buttons__submit__text">Submit</span>
+        </button>
+>>>>>>> 8a852ba (auth UI)
       </div>
     </>
   );

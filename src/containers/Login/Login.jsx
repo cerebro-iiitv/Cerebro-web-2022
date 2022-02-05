@@ -24,21 +24,13 @@ const Login = () => {
     }
 =======
 import React from "react";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik, Form } from "formik";
 import AuthForm from "../../components/AuthForm/AuthForm";
+import FormInput from "../../components/FormInput/FormInput";
+import { loginFormData, initialValues, validate } from "./util/LoginFormData";
+import "./Login.scss";
 
 const Login = () => {
-  const validate = (values) => {
-    let errors = {};
-    // if (values.username.trim() === "") errors.username = "Username is required";
-    // else if (values.username.trim().length < 4)
-    //   errors.username = "Username must be at least 4 characters";
-    if (values.password.trim() === "") errors.password = "Password is required";
-    else if (values.password.trim().length < 4)
-      errors.password = "Password must be at least 4 characters";
-    return errors;
-  };
-
   const onSubmit = (values, { setSubmitting }) => {
     console.log(values);
 >>>>>>> c41847c (:construction: auth form structure)
@@ -47,6 +39,7 @@ const Login = () => {
 
   return (
     <AuthForm title="Login" to="/signup" text="New member?" link="Sign Up">
+<<<<<<< HEAD
 <<<<<<< HEAD
       <Formik {...{ validate, initialValues, onSubmit }}>
         {({ isSubmitting, errors }) => (
@@ -75,21 +68,32 @@ const Login = () => {
         onSubmit={onSubmit}
       >
         {({ touched, errors, isSubmitting }) => (
+=======
+      <Formik {...{ validate, initialValues, onSubmit }}>
+        {({ isSubmitting }) => (
+>>>>>>> 8a852ba (auth UI)
           <Form>
-            <div>
-              <label htmlFor="text">Registered Email</label>
-              <Field type="email" name="email" placeholder="email" />
-              <ErrorMessage component="div" name="email" />
+            {loginFormData.map(({ label, name, type }, index) => (
+              <FormInput {...{ name, label, type }} key={index} page="login" />
+            ))}
+            <div className="login">
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="login__button"
+              >
+                <span className="login__button__text">
+                  {isSubmitting ? "Please wait..." : "Submit"}
+                </span>
+              </button>
             </div>
-            <div>
-              <label htmlFor="password">Password</label>
-              <Field type="password" name="password" placeholder="Password" />
-              <ErrorMessage component="div" name="password" />
-            </div>
+<<<<<<< HEAD
             <button type="submit" disabled={isSubmitting}>
               {isSubmitting ? "Please wait..." : "Submit"}
             </button>
 >>>>>>> c41847c (:construction: auth form structure)
+=======
+>>>>>>> 8a852ba (auth UI)
           </Form>
         )}
       </Formik>
