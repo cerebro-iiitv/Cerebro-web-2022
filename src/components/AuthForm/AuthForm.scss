@@ -8,7 +8,10 @@
     pointer-events: none;
     user-select: none;
     height: 100vh;
+<<<<<<< HEAD
 
+=======
+>>>>>>> c41847c (:construction: auth form structure)
     &__image {
       height: 100%;
     }
@@ -19,6 +22,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+<<<<<<< HEAD
 
     &__title {
       background-image: url("../../assets/images/title-background.svg");
@@ -28,23 +32,40 @@
       width: 400px;
       height: 65px;
       background-size: contain;
+=======
+    &__title {
+      background-image: url("../../assets/images/title-background.svg");
+      width: 675px;
+      height: 92px;
+>>>>>>> c41847c (:construction: auth form structure)
       position: relative;
 
       &__text {
         // font-family: Barlow;
         // font-style: normal;
         font-weight: 600;
+<<<<<<< HEAD
         font-size: 30px;
         color: #ffffff;
         position: absolute;
+=======
+        font-size: 40px;
+        color: #ffffff;
+        position: absolute;
+        top: 18px;
+>>>>>>> c41847c (:construction: auth form structure)
         width: 100%;
         text-align: center;
       }
     }
 
     &__form {
+<<<<<<< HEAD
       margin-top: 20px;
       margin-bottom: 15px;
+=======
+      margin-top: 40px;
+>>>>>>> c41847c (:construction: auth form structure)
       background: linear-gradient(
         165.87deg,
         rgba(51, 169, 255, 0.31) 3.04%,
@@ -54,6 +75,7 @@
       backdrop-filter: blur(80px);
       border-radius: 40px;
       width: 100%;
+<<<<<<< HEAD
       height: 85%;
 
       &__container {
@@ -63,10 +85,20 @@
         border-radius: 40px;
         width: 100%;
         height: 100%;
+=======
+      height: 70vh;
+
+      &__background {
+        background-image: url("../../assets/images/noise.svg");
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+>>>>>>> c41847c (:construction: auth form structure)
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+<<<<<<< HEAD
 
         &__text {
           // font-family: Lato;
@@ -81,6 +113,8 @@
             color: #ddb83a;
           }
         }
+=======
+>>>>>>> c41847c (:construction: auth form structure)
       }
     }
   }
