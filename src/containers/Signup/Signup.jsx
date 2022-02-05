@@ -1,100 +1,40 @@
-import React from "react";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import React, { useState } from "react";
+import { Formik, Form } from "formik";
+import AuthForm from "../../components/AuthForm/AuthForm";
+import Page1 from "./FormPages/Page1";
+import Page2 from "./FormPages/Page2";
+import { initialValues, validatePage } from "./util/SignupFormData";
+import "./Signup.scss";
 
 const Signup = () => {
+  const [page, setPage] = useState(1);
+
   const validate = (values) => {
-    let errors = {};
-    if (values.proof === undefined)
-      errors.proof = "Please upload a valid proof of identity";
+    const errors = validatePage(values, page);
     return errors;
   };
 
-  const initialValues = {
-    firstname: "",
-    lastname: "",
-    phone: "",
-    address: "",
-    institute: "",
-    degree: "",
-    proof: undefined,
-    email: "",
-    password: "",
-    confirmPassword: "",
-  };
-
-  const onSubmit = (values, { setSubmitting }) => {
-    console.log(values);
+  const onSubmit = (values, { setSubmitting, setFieldTouched }) => {
+    Object.keys(values).forEach((key) => setFieldTouched(key, false));
+    if (page === 1) setPage(2);
+    else console.log(values);
     setSubmitting(false);
   };
 
   return (
-    <Formik {...{ validate, initialValues, onSubmit }}>
-      {({ touched, errors, isSubmitting, setFieldValue }) => (
-        <Form>
-          <div>
-            <label htmlFor="text">First name</label>
-            <Field type="text" name="firstname" />
-            <ErrorMessage component="div" name="firstname" />
-          </div>
-          <div>
-            <label htmlFor="text">Last name</label>
-            <Field type="text" name="lastname" />
-            <ErrorMessage component="div" name="lastname" />
-          </div>
-          <div>
-            <label htmlFor="tel">Contact No.</label>
-            <Field type="tel" name="phone" />
-            <ErrorMessage component="div" name="phone" />
-          </div>
-          <div>
-            <label htmlFor="text">Address</label>
-            <Field as="textarea" name="address" />
-            <ErrorMessage component="div" name="address" />
-          </div>
-          <div>
-            <label htmlFor="text">Institute Name</label>
-            <Field type="text" name="institute" />
-            <ErrorMessage component="div" name="institute" />
-          </div>
-          <div>
-            <label htmlFor="text">Degree</label>
-            <Field type="text" name="degree" />
-            <ErrorMessage component="div" name="degree" />
-          </div>
-          <div>
-            <label htmlFor="file">Proof of bachelors</label>
-            <input
-              type="file"
-              name="proof"
-              onChange={(event) => {
-                setFieldValue("proof", event.currentTarget.files[0]);
-              }}
-            />
-            <ErrorMessage component="div" name="proof" />
-          </div>
-          <div>
-            <label htmlFor="email" name="email">
-              Email ID
-            </label>
-            <Field type="email" name="email" />
-            <ErrorMessage component="div" name="email" />
-          </div>
-          <div>
-            <label htmlFor="password">Password</label>
-            <Field type="password" name="password" />
-            <ErrorMessage component="div" name="password" />
-          </div>
-          <div>
-            <label htmlFor="password">Confirm Password</label>
-            <Field type="password" name="confirmPassword" />
-            <ErrorMessage component="div" name="confirmPassword" />
-          </div>
-          <button type="submit" disabled={isSubmitting}>
-            {isSubmitting ? "Please wait..." : "Submit"}
-          </button>
-        </Form>
-      )}
-    </Formik>
+    <AuthForm to="/login" link="Login" title="Sign Up" text="Already a member?">
+      <Formik {...{ validate, initialValues, onSubmit }}>
+        {({ setFieldValue, setFieldTouched }) => (
+          <Form className="signup">
+            {page === 1 ? (
+              <Page1 {...{ setFieldValue }} />
+            ) : (
+              <Page2 {...{ setFieldValue, setPage }} />
+            )}
+          </Form>
+        )}
+      </Formik>
+    </AuthForm>
   );
 };
 

@@ -1,0 +1,24 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__button {
+    margin: 60px 0px 10px 0px;
+    width: 150px;
+    height: 39px;
+    background: #ecb427;
+    border: none;
+    box-shadow: 0px 0px 10px rgba(236, 180, 39, 0.6);
+    border-radius: 5px;
+
+    &__text {
+      // font-family: Be Vietnam Pro;
+      // font-style: normal;
+      // font-weight: normal;
+      font-size: 22px;
+      color: rgba(0, 0, 0, 0.75);
+    }
+  }
+}
