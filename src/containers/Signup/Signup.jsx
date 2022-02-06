@@ -5,6 +5,7 @@ import Page1 from "./FormPages/Page1";
 import Page2 from "./FormPages/Page2";
 import { initialValues, validatePage } from "./util/SignupFormData";
 import "./Signup.scss";
+import axiosInstance from "../../services/AxiosInstance";
 
 const Signup = () => {
   const [page, setPage] = useState(1);
@@ -17,14 +18,17 @@ const Signup = () => {
   const onSubmit = (values, { setSubmitting, setFieldTouched }) => {
     Object.keys(values).forEach((key) => setFieldTouched(key, false));
     if (page === 1) setPage(2);
-    else console.log(values);
+    else {
+      axiosInstance.post("/signup", values);
+      console.log(values.proof);
+    }
     setSubmitting(false);
   };
 
   return (
     <AuthForm to="/login" link="Login" title="Sign Up" text="Already a member?">
       <Formik {...{ validate, initialValues, onSubmit }}>
-        {({ setFieldValue, setFieldTouched }) => (
+        {({ setFieldValue }) => (
           <Form className="signup">
             {page === 1 ? (
               <Page1 {...{ setFieldValue }} />
