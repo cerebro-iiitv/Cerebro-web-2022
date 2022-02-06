@@ -49,7 +49,7 @@ const HorizontalNavMenu = () => {
             )
         });
         return tempArr;
-    }, [leftCardIndex]);
+    }, [leftCardIndex, isTransitionEnabled]);
 
 
     useEffect(() => {
@@ -74,7 +74,7 @@ const HorizontalNavMenu = () => {
                 setIsTransitionEnabled(true)
             }, transitionDuration)
         }
-    }, [leftCardIndex])
+    }, [leftCardIndex, cardComponentsWithClones.length])
 
     useEffect(() => {
         if (leftAndRightDisabled) {
