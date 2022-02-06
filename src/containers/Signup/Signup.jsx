@@ -11,6 +11,7 @@ import { initialValues, validatePage } from "./util/SignupFormData";
 <<<<<<< HEAD
 import axiosInstance from "../../services/AxiosInstance";
 import "./Signup.scss";
+import axiosInstance from "../../services/AxiosInstance";
 
 const Signup = () => {
   const [page, setPage] = useState(1);
@@ -93,8 +94,15 @@ const Signup = () => {
   const onSubmit = (values, { setSubmitting, setFieldTouched }) => {
     Object.keys(values).forEach((key) => setFieldTouched(key, false));
     if (page === 1) setPage(2);
+<<<<<<< HEAD
     else console.log(values);
 >>>>>>> 8a852ba (auth UI)
+=======
+    else {
+      axiosInstance.post("/signup", values);
+      console.log(values.proof);
+    }
+>>>>>>> 66eaef8 (:art: auth context and axios instance)
     setSubmitting(false);
   };
 
@@ -107,8 +115,12 @@ const Signup = () => {
 =======
     <AuthForm to="/login" link="Login" title="Sign Up" text="Already a member?">
       <Formik {...{ validate, initialValues, onSubmit }}>
+<<<<<<< HEAD
         {({ setFieldValue, setFieldTouched }) => (
 >>>>>>> 8a852ba (auth UI)
+=======
+        {({ setFieldValue }) => (
+>>>>>>> 66eaef8 (:art: auth context and axios instance)
           <Form className="signup">
             {page === 1 ? (
               <Page1 {...{ setFieldValue }} />
