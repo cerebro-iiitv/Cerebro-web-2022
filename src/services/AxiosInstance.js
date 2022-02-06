@@ -2,10 +2,14 @@ import axios from "axios";
 
 const axiosInstance = axios.create({
 <<<<<<< HEAD
+<<<<<<< HEAD
   baseURL: "https://cerebro2022.herokuapp.com/",
 =======
   baseURL: process.env.REACT_APP_SERVER_URL,
 >>>>>>> 66eaef8 (:art: auth context and axios instance)
+=======
+  baseURL: "https://cerebro2022.herokuapp.com/",
+>>>>>>> 35a46db (connect authorization to server)
 });
 
 axiosInstance.interceptors.request.use((config) => {

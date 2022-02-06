@@ -5,6 +5,9 @@ import leftarrow from "../../../assets/images/left-arrow.svg";
 import "../Signup.scss";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 35a46db (connect authorization to server)
 const Page2 = ({
   setFieldValue,
   setPage,
@@ -12,9 +15,12 @@ const Page2 = ({
   errors,
   submitStatus,
 }) => {
+<<<<<<< HEAD
 =======
 const Page2 = ({ setFieldValue, setPage }) => {
 >>>>>>> 8a852ba (auth UI)
+=======
+>>>>>>> 35a46db (connect authorization to server)
   return (
     <>
       {signupFormData.page2.map(({ label, name, type }, index) => (
@@ -26,6 +32,9 @@ const Page2 = ({ setFieldValue, setPage }) => {
         />
       ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 35a46db (connect authorization to server)
       <div className="signup__bottom">
         <div className="signup__bottom__status">
           {errors.authentication && (
@@ -65,6 +74,7 @@ const Page2 = ({ setFieldValue, setPage }) => {
             </span>
           </button>
         </div>
+<<<<<<< HEAD
 =======
       <div className="signup__buttons">
         <button className="signup__buttons__page" onClick={() => setPage(1)}>
@@ -80,6 +90,8 @@ const Page2 = ({ setFieldValue, setPage }) => {
           <span className="signup__buttons__submit__text">Submit</span>
         </button>
 >>>>>>> 8a852ba (auth UI)
+=======
+>>>>>>> 35a46db (connect authorization to server)
       </div>
     </>
   );

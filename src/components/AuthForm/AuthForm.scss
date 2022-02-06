@@ -32,6 +32,7 @@
     &__title {
       background-image: url("../../assets/images/title-background.svg");
       background-repeat: no-repeat;
+<<<<<<< HEAD
       pointer-events: none;
       user-select: none;
       width: 400px;
@@ -48,12 +49,20 @@
       width: 675px;
       height: 92px;
 >>>>>>> c41847c (:construction: auth form structure)
+=======
+      pointer-events: none;
+      user-select: none;
+      width: 400px;
+      height: 65px;
+      background-size: contain;
+>>>>>>> 35a46db (connect authorization to server)
       position: relative;
 
       &__text {
         // font-family: Barlow;
         // font-style: normal;
         font-weight: 600;
+<<<<<<< HEAD
 <<<<<<< HEAD
         font-size: 30px;
         color: #ffffff;
@@ -64,6 +73,11 @@
         position: absolute;
         top: 18px;
 >>>>>>> c41847c (:construction: auth form structure)
+=======
+        font-size: 30px;
+        color: #ffffff;
+        position: absolute;
+>>>>>>> 35a46db (connect authorization to server)
         width: 100%;
         text-align: center;
       }
@@ -79,7 +93,11 @@
 >>>>>>> c41847c (:construction: auth form structure)
 =======
       margin-top: 20px;
+<<<<<<< HEAD
 >>>>>>> 8a852ba (auth UI)
+=======
+      margin-bottom: 15px;
+>>>>>>> 35a46db (connect authorization to server)
       background: linear-gradient(
         165.87deg,
         rgba(51, 169, 255, 0.31) 3.04%,
@@ -89,6 +107,7 @@
       backdrop-filter: blur(80px);
       border-radius: 40px;
       width: 100%;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       height: 85%;
@@ -105,13 +124,22 @@
 =======
       height: 80vh;
 >>>>>>> 8a852ba (auth UI)
+=======
+      height: 85%;
+>>>>>>> 35a46db (connect authorization to server)
 
       &__container {
         background-image: url("../../assets/images/noise.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 40px;
         width: 100%;
         height: 100%;
+<<<<<<< HEAD
         z-index: 1;
 >>>>>>> c41847c (:construction: auth form structure)
+=======
+>>>>>>> 35a46db (connect authorization to server)
         display: flex;
         flex-direction: column;
         justify-content: center;

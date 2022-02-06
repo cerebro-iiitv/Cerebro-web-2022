@@ -1,13 +1,8 @@
-<<<<<<< HEAD
 
 import React, { useContext } from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import AuthContext, { AuthContextProvider } from "./store/AuthContext";
 import Navbar from "./containers/Navbar/Navbar"
-=======
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { AuthContextProvider } from "./store/AuthContext";
->>>>>>> 66eaef8 (:art: auth context and axios instance)
 import Login from "./containers/Login/Login";
 import Signup from "./containers/Signup/Signup";
 import "./App.css";

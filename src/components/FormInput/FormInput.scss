@@ -1,8 +1,11 @@
 .forminput {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   padding-top: 10px;
 >>>>>>> 8a852ba (auth UI)
+=======
+>>>>>>> 35a46db (connect authorization to server)
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,10 +20,14 @@
     // font-style: normal;
     font-weight: 500;
 <<<<<<< HEAD
+<<<<<<< HEAD
     font-size: 20px;
 =======
     font-size: 23px;
 >>>>>>> 8a852ba (auth UI)
+=======
+    font-size: 20px;
+>>>>>>> 35a46db (connect authorization to server)
     color: #b9b9b9;
   }
 
@@ -39,6 +46,9 @@
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 35a46db (connect authorization to server)
   &__input {
     background: #44658c;
     padding: 8px;
@@ -46,8 +56,11 @@
     color: white;
   }
 
+<<<<<<< HEAD
 =======
 >>>>>>> 8a852ba (auth UI)
+=======
+>>>>>>> 35a46db (connect authorization to server)
   &__error {
     margin-top: 2px;
     font-size: 15px;
@@ -71,12 +84,18 @@
     &__address {
       width: 100%;
 <<<<<<< HEAD
+<<<<<<< HEAD
       padding: 5px 5px;
       resize: none;
       overflow-y: clip;
 =======
       height: 100px;
 >>>>>>> 8a852ba (auth UI)
+=======
+      padding: 5px 5px;
+      resize: none;
+      overflow-y: clip;
+>>>>>>> 35a46db (connect authorization to server)
     }
 
     &__email {
@@ -87,6 +106,7 @@
       width: 100%;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     &__degree {
       margin-top: 5px;
@@ -106,6 +126,12 @@
     // }
 
 >>>>>>> 8a852ba (auth UI)
+=======
+    &__degree {
+      margin-top: 5px;
+    }
+
+>>>>>>> 35a46db (connect authorization to server)
     &__password {
       float: left;
       padding-right: 20px;
@@ -116,9 +142,13 @@
     &__email {
       width: 544.65px;
 <<<<<<< HEAD
+<<<<<<< HEAD
       margin-bottom: 10px;
 =======
 >>>>>>> 8a852ba (auth UI)
+=======
+      margin-bottom: 10px;
+>>>>>>> 35a46db (connect authorization to server)
     }
   }
 }

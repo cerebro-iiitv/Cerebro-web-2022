@@ -11,6 +11,7 @@ export const FormInput = ({ label, name, type, setFieldValue, page }) => {
       {type === "file" ? (
         <input
 <<<<<<< HEAD
+<<<<<<< HEAD
           accept="application/pdf, application/jpg, application/jpeg, application/png"
           className={`forminput__input ${custom}`}
           {...{ name, type }}
@@ -28,6 +29,19 @@ export const FormInput = ({ label, name, type, setFieldValue, page }) => {
           onChange={(event) => {
             setFieldValue(name, event.currentTarget.files[0]);
 >>>>>>> 8a852ba (auth UI)
+=======
+          accept="application/pdf, application/jpg, application/jpeg, application/png"
+          className={`forminput__input ${custom}`}
+          {...{ name, type }}
+          onChange={(event) => {
+            const file = event.target.files[0];
+            if (file.size > 100000) {
+              alert("File size should be less than 100kb");
+              event.target.value = "";
+            } else {
+              setFieldValue(name, file);
+            }
+>>>>>>> 35a46db (connect authorization to server)
           }}
         />
       ) : (

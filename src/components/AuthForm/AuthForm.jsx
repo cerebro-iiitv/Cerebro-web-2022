@@ -4,6 +4,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import leftarm from "../../assets/images/left-arm.svg";
 import rightarm from "../../assets/images/right-arm.svg";
+<<<<<<< HEAD
 import "./AuthForm.scss";
 
 const AuthForm = ({ title, children, to, text, link }) => {
@@ -14,6 +15,8 @@ import { Link } from "react-router-dom";
 import leftarm from "../../assets/images/left-arm.svg";
 import rightarm from "../../assets/images/right-arm.svg";
 import noise from "../../assets/images/noise-3.svg";
+=======
+>>>>>>> 35a46db (connect authorization to server)
 import "./AuthForm.scss";
 
 <<<<<<< HEAD
@@ -34,6 +37,7 @@ const AuthForm = ({ title, children, to, text, link }) => {
       <div className="authform__center">
         <div className="authform__center__title">
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className="authform__center__title__text">{title}</div>
         </div>
         <div className="authform__center__form">
@@ -51,6 +55,8 @@ const AuthForm = ({ title, children, to, text, link }) => {
           </div>
 =======
           <img src={noise} alt="noise" />
+=======
+>>>>>>> 35a46db (connect authorization to server)
           <div className="authform__center__title__text">{title}</div>
         </div>
         <div className="authform__center__form">

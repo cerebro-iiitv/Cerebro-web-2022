@@ -86,10 +86,14 @@ export const validatePage = (values, page) => {
     if (!values.proof) errors.proof = "Proof of bachelors is required";
     if (!values.password) errors.password = "Password is required";
 <<<<<<< HEAD
+<<<<<<< HEAD
     else if (values.password.length < 7)
 =======
     else if (values.password.length < 5)
 >>>>>>> 8a852ba (auth UI)
+=======
+    else if (values.password.length < 7)
+>>>>>>> 35a46db (connect authorization to server)
       errors.password = "Password is too small";
     if (!values.confirmPassword)
       errors.confirmPassword = "Re-enter password again";
