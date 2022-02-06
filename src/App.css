@@ -1,4 +1,14 @@
-*{
+* {
   margin: 0;
   padding: 0;
+}
+
+@font-face {
+  font-family: Bruno Ace SC;
+  src: url("./assets/fonts/Bruno_Ace_SC.ttf");
+}
+
+@font-face {
+  font-family: Calculator;
+  src: url("./assets/fonts/Calculator.ttf");
 }

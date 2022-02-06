@@ -1,18 +1,20 @@
 import React, { useState, useEffect } from "react";
+
 import NavMenuCard from "../../components/NavMenuCard/NavMenuCard";
 
-import "./HorizontalMenu.scss";
+import arrow_img from "../../assets/images/navbar_arrow.svg"
+import "./HorizontalNavMenu.scss";
 
 let navMenuDetails = [
-    { title: "Option1" },
-    { title: "Option2" },
-    { title: "Option3" },
-    { title: "Option4" },
-    { title: "Option5" },
+    { title: "Timeline" },
+    { title: "FAQ's" },
+    { title: "Home" },
+    { title: "Event" },
+    { title: "Team" },
 ]
 navMenuDetails = [...navMenuDetails, ...navMenuDetails, ...navMenuDetails];
 
-const HorizontalMenu = () => {
+const HorizontalNavMenu = () => {
     const [leftCardIndex, setLeftCardIndex] = useState(5);
     const [leftAndRightDisabled, setLeftAndRightDisabled] = useState(false);
     const [isTransitionEnabled, setIsTransitionEnabled] = useState(true)
@@ -124,7 +126,7 @@ const HorizontalMenu = () => {
                     <button className="hori-menu__carousel__left-arrow"
                         onClick={!leftAndRightDisabled ? scrollLeft : null}
                     >
-                        left
+                        <img src={arrow_img} alt="left" />
                     </button>
                     <div className="hori-menu__carousel-content-wrapper"
                         onTouchStart={handleTouchStart}
@@ -141,7 +143,7 @@ const HorizontalMenu = () => {
                     <button className="hori-menu__carousel__right-arrow"
                         onClick={!leftAndRightDisabled ? scrollRight : null}
                     >
-                        right
+                        <img src={arrow_img} alt="right" />
                     </button>
                 </div>
             </div>
@@ -149,4 +151,4 @@ const HorizontalMenu = () => {
     )
 }
 
-export default HorizontalMenu;
+export default HorizontalNavMenu;

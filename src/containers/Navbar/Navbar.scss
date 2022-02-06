@@ -1,0 +1,19 @@
+.navbar {
+  background-color: #071e40;
+  &__bg-img {
+    background: url("../../assets/images/navbar_bg.svg") no-repeat center center/cover;
+    height: 18rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  &__lower-cont{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 82vw;
+    margin-bottom: 8px;
+    margin-top: 22px;
+  }
+}

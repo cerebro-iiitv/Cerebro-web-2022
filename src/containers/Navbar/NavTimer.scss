@@ -1,0 +1,31 @@
+.timer {
+  &__main-container {
+    width: 18vw;
+  }
+
+  &__titles-container {
+    img {
+      width: 96%;
+    }
+  }
+
+  &__inner-container {
+    padding: 1px 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: url("../../assets/images/navtimer_bg.png") no-repeat center
+      center/cover;
+    .timer-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .timer-value {
+        color: white;
+        font-family: Calculator;
+        font-size: 2rem;
+      }
+    }
+  }
+}
