@@ -85,7 +85,7 @@ export const validatePage = (values, page) => {
     if (!values.degree) errors.degree = "Degree is required";
     if (!values.proof) errors.proof = "Proof of bachelors is required";
     if (!values.password) errors.password = "Password is required";
-    else if (values.password.length < 5)
+    else if (values.password.length < 7)
       errors.password = "Password is too small";
     if (!values.confirmPassword)
       errors.confirmPassword = "Re-enter password again";

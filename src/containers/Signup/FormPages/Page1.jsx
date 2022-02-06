@@ -15,13 +15,13 @@ const Page1 = ({ setFieldValue }) => {
           setFieldValue={setFieldValue}
         />
       ))}
-      <div className="signup__buttons">
-        <button className="signup__buttons__page" type="submit">
+      <div className="signup__bottom__buttons">
+        <button className="signup__bottom__buttons__page" type="submit">
           Next Page
           <img
             src={rightarrow}
             alt="next"
-            className="signup__buttons__page__arrow"
+            className="signup__bottom__buttons__page__arrow"
           />
         </button>
       </div>

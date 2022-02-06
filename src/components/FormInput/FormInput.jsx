@@ -10,10 +10,17 @@ export const FormInput = ({ label, name, type, setFieldValue, page }) => {
       <label className="forminput__label">{label}</label>
       {type === "file" ? (
         <input
+          accept="application/pdf, application/jpg, application/jpeg, application/png"
           className={`forminput__input ${custom}`}
           {...{ name, type }}
           onChange={(event) => {
-            setFieldValue(name, event.currentTarget.files[0]);
+            const file = event.target.files[0];
+            if (file.size > 100000) {
+              alert("File size should be less than 100kb");
+              event.target.value = "";
+            } else {
+              setFieldValue(name, file);
+            }
           }}
         />
       ) : (
