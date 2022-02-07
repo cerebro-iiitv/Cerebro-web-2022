@@ -6,11 +6,11 @@ import arrow_img from "../../assets/images/navbar_arrow.svg"
 import "./HorizontalNavMenu.scss";
 
 let navMenuDetails = [
-    { title: "Timeline" },
+    { title: "Team" },
     { title: "FAQ's" },
     { title: "Home" },
     { title: "Event" },
-    { title: "Team" },
+    { title: "Timeline" },
 ]
 navMenuDetails = [...navMenuDetails, ...navMenuDetails, ...navMenuDetails];
 
