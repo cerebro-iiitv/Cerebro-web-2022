@@ -46,7 +46,7 @@ const NavTimer = () => {
                 <img src={navtimer_titles} alt="timer titles" />
             </div>
             <div className="timer__inner-container">
-                <div className="timer-item">
+                <div className="timer-item first">
                     <div className="timer-value">{days}</div>
                 </div>
                 {colonBetweenTime}
@@ -58,7 +58,7 @@ const NavTimer = () => {
                     <div className="timer-value">{minutes}</div>
                 </div>
                 {colonBetweenTime}
-                <div className="timer-item">
+                <div className="timer-item last">
                     <div className="timer-value">{seconds}</div>
                 </div>
             </div>

@@ -1,4 +1,5 @@
 .hori-menu {
+  width: 66vw;
   &__carousel {
     &-container {
       width: 65%;
@@ -16,7 +17,6 @@
     &-content-wrapper {
       overflow: hidden;
       width: 100%;
-      height: 100%;
     }
 
     &-content {
@@ -40,18 +40,23 @@
 
     &__left-arrow,
     &__right-arrow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       position: absolute;
-      top: 30%;
-      background-color: #05386e;
+      top: 25%;
+      background: transparent;
       border: none;
+      height: 55%;
+      width: auto;
       img {
-        width: 40px;
-        height: 40px;
+        width: 100%;
+        height: 100%;
       }
     }
 
     &__left-arrow {
-      left: -50px;
+      left: -50px; 
     }
 
     &__right-arrow {
@@ -60,3 +65,4 @@
     }
   }
 }
+

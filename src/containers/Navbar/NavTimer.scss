@@ -1,31 +1,63 @@
 .timer {
   &__main-container {
-    width: 18vw;
+    margin-right:4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 12vw;
+    height: 5vh;
+
   }
 
   &__titles-container {
     img {
-      width: 96%;
+      width: 9vw;
     }
   }
 
   &__inner-container {
-    padding: 1px 30px;
+    // margin-left: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 9vh;
+    width: 9vw;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     background: url("../../assets/images/navtimer_bg.png") no-repeat center
-      center/cover;
-    .timer-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      .timer-value {
-        color: white;
-        font-family: Calculator;
-        font-size: 2rem;
-      }
-    }
+      center/contain;
+    
+  }
+}
+.timer-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.timer-value {
+  color: white;
+  font-family: Calculator;
+  font-size: 1.4rem;
+}
+
+.first{
+  padding-left: 8px;
+}
+
+.last{
+  padding-right: 8px;
+}
+
+@media screen and (max-width:1024px) {
+  .timer__main-container {
+    height: 4vh;
+    margin-bottom: 10px;
+  }
+  .timer-value{
+    font-size: 1.2rem;
   }
 }

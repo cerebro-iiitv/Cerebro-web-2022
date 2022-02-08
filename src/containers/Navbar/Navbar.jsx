@@ -8,10 +8,12 @@ const Navbar = () => {
     return (
         <div className="navbar">
             <div className="navbar__bg-img">
-                <HorizontalNavMenu />
+                <div className="navbar__content"    >
+                <div className="navbar__hori"><HorizontalNavMenu /></div>
                 <div className="navbar__lower-cont">
                     <BrochureNavBtn />
                     <NavTimer />
+                </div>
                 </div>
             </div>
         </div>
