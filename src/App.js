@@ -10,6 +10,7 @@ import "./App.css";
 
 import Events from "./containers/Events/events.component";
 
+import Events from './components/main-event/main-event.component';
 function App() {
   const authCtx = useContext(AuthContext);
   const token = localStorage.getItem("token");
