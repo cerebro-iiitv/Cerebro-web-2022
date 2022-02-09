@@ -1,0 +1,118 @@
+{
+    "events": [
+        {
+            "id": 1,
+            "name": "The Bug",
+            "price": "XXXX",
+            "deadline": "3 days"
+        },
+        {
+            "id": 2,
+            "name": "Build It Better",
+            "price": "XXXX",
+            "deadline": "3 days"
+        },
+        {
+            "id": 3,
+            "name": "Valorant",
+            "price": "XXXX",
+            "deadline": "3 days"
+        },
+        {
+            "id": 4,
+            "name": "CSGO",
+            "price": "XXXX",
+            "deadline": "3 days"
+        },
+        {
+            "id": 5,
+            "name": "Clash Royale",
+            "price": "XXXX",
+            "deadline": "3 days"
+        },
+        {
+            "id": 6,
+            "name": "Rocket League",
+            "price": "XXXX",
+            "deadline": "3 days"
+        },
+        {
+            "id": 7,
+            "name": "CODM",
+            "price": "XXXX",
+            "deadline": "3 days"
+        },
+        {
+            "id": 8,
+            "name": "Penumbra",
+            "price": "XXXX",
+            "deadline": "3 days"
+        },
+        {
+            "id": 9,
+            "name": "EVENT9",
+            "price": "XXXX",
+            "deadline": "3 days"
+        },
+        {
+            "id": 10,
+            "name": "EVENT 10",
+            "price": "XXXX",
+            "deadline": "3 days"
+        },
+        {
+            "id": 11,
+            "name": "EVENT 11",
+            "price": "XXXX",
+            "deadline": "3 days"
+        },
+        {
+            "id": 12,
+            "name": "EVENT 12",
+            "price": "XXXX",
+            "deadline": "3 days"
+        },
+        {
+            "id": 13,
+            "name": "EVENT 13",
+            "price": "XXXX",
+            "deadline": "3 days"
+        },
+        {
+            "id": 14,
+            "name": "EVENT 14",
+            "price": "XXXX",
+            "deadline": "3 days"
+        },
+        {
+            "id": 15,
+            "name": "EVENT 15",
+            "price": "XXXX",
+            "deadline": "3 days"
+        },
+        {
+            "id": 16,
+            "name": "EVENT 16",
+            "price": "XXXX",
+            "deadline": "3 days"
+        },
+        {
+            "id": 17,
+            "name": "EVENT 17",
+            "price": "XXXX",
+            "deadline": "3 days"
+        },
+        {
+            "id": 18,
+            "name": "EVENT 18",
+            "price": "XXXX",
+            "deadline": "3 days"
+        },
+        {
+            "id": 19,
+            "name": "EVENT 19",
+            "price": "XXXX",
+            "deadline": "3 days"
+        }
+    ]
+}
