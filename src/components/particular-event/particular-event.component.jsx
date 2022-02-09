@@ -11,7 +11,11 @@ export const ParticularEvent = ({ title, deadline, prize }) => {
     <div className='event'>
       <div className="details">
         <h2 className='event-title'>{title}</h2>
-        <p className='event-para'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto ipsam fuga reiciendis minima adipisci et mollitia placeat quidem perspiciatis harum numquam nisi temporibus sequi, aperiam cupiditate atque architecto aspernatur debitis.</p>
+        <div className="event-container">
+            <p className='event-para'>1 tblspn Greedy, ¾ tblspn DP, ⅝ tblspn Divide and Conquer, and a pinch of CP
+            For further communication, join our <a href='#' className='discord-server'>Discord Server</a> </p>
+        </div>
+        
         <div className='time-line'>
           <div className='date1'>
                 <p className='date1-items'>10-03-2022 <br />
@@ -26,21 +30,43 @@ export const ParticularEvent = ({ title, deadline, prize }) => {
           </div>
         </div>
         <div className="event-detail">
-          <div className="prize-details">
-            <p><span className='detail-start'>Prize Worth</span>{prize} INR <br />
-            <span className='detail-start'>Team Size</span> 3</p>
-            <h4>Rules and Regulations <br/>
-              Social Media
+          <div className="prize-queries">
+            <h4 className='prize-worth-query'>Prize Worth</h4>
+            <h4 className='team-size-query'>Team Size</h4>
+            <h4 className='rules-regulations'> <a href="#">Rules and Regulations</a> <br/>
+              <a href="#">Social Media</a> 
             </h4>
           </div>
-          <img src={midLine} alt="midLine" />
-          <div className="event-organizers">
-            <h4><span>Convenor</span> Dhruv Dave</h4>
-            <h4><span>Co-Convenor</span> Parth Chandravadiya<br />Dhruv Dave</h4>
-            <h4><span>Members</span> Parth Chandravadiya<br />Dhruv Dave</h4>
+
+          <div className="prize-details">
+            <h4 className='prize-worth-detail'>{prize} INR</h4>
+            <h4 className='team-size-detail'>3</h4>
           </div>
+          <img src={midLine} alt="midLine" />
+          
+          <div className="organizers-queries">
+            <h4>Convenor</h4>
+            <h4>Co-Convenor</h4>
+            <h4 id = "members">Members</h4>
+          </div>
+
+          <div className="organizers-details">
+            <h4>Dhruv Dave</h4>
+            <h4>Parth Chandravadiya <br /> Dhruv Dave</h4>
+            <h4>Parth Chandravadiya <br /> Dhruv Dave</h4>
+          </div>
+          
         </div>
+        <form action="#">
+        <div className='button-container'>
+          <button>Register Here</button>
+          <button>Join Team</button>
+
+        </div>
+      </form>
       </div>
+
+      
     </div>
   )
 };

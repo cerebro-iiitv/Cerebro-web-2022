@@ -6,7 +6,7 @@ import { ParticularEvent } from "../particular-event/particular-event.component"
 
 import { default as sphere} from '../../assets/images/sphere.svg';
 import {default as line} from '../../assets/images/line.svg';
-import {default as selectionDot} from '../../assets/images/selection-dot.svg';
+import {default as selectedDot} from '../../assets/images/selected-dot.svg';
 import {default as button} from '../../assets/images/button.svg';
 import {default as buttonLeft} from '../../assets/images/button-left.svg'
 
@@ -61,7 +61,7 @@ const Events = () => {
                             events.slice(visible, visible + 6).map((event,idx) => (
                                 <div onClick={() => { return loadPage(event,idx+visible) }} key={event.id} className="particular-element">
                                         <img src={sphere} alt="small-sphere" className="sphere"/>
-                                        <img src={selectionDot} alt="selection-dot" className={idx+visible === bgColor.id ? "showDot dot"  : "dot"} />
+                                        <img src={selectedDot} alt="selected-dot" className={idx+visible === bgColor.id ? "showDot dot"  : "dot"} />
                                         <h4 style={idx+visible === bgColor.id ? {color: bgColor.color}:{color: "white"}} className={idx % 2 !==0 ? "text-down" : "text-up"}>{event.name}</h4>
                                 </div>
                             ))

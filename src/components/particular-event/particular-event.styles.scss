@@ -3,12 +3,14 @@
     src: url("../../assets/fonts/RektBrush.otf");
 }
 
+@font-face {
+    font-family: Changa;
+    src: url("../../assets/fonts/chang_and_eng/Chane___.ttf");
+}
 
 .event{
     background: url("../../assets/images/1.svg") no-repeat center center;
-    // background-repeat: no-repeat;
     background-size: contain;
-    // background: radial-gradient(ellipse at top,#071E40, #0D3979);
     width: 100%;
     height: 100%;
     display: flex;
@@ -25,19 +27,33 @@
             font-family: RektBrush;
             text-transform: uppercase;
         }
-        .event-para{
-            text-align: center;
-            font-family: 'Times New Roman', Times, serif;
-            font-size: 16px;
-            line-height: 19.2px;
+        .event-container{
+            margin-top: -3%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            .event-para{
+                width: 80%;
+                text-align: center;
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 18px;
+                font-weight: 200;
+                line-height: 19.2px;
+                .discord-server{
+                    text-decoration: none;
+                    color: #1CA0FF;
+                }
+            }
+
         }
+        
         .time-line{
             display: flex;
             justify-content: space-evenly;
 
             .to-dot{
                 position: absolute;
-                top: 35.85%;
+                top: 32.85%;
             }
             .to{
                 z-index: 10;
@@ -48,11 +64,12 @@
                 background-repeat: no-repeat;
                 background-size: cover;
                 height: 6rem;
+                width: 9rem;
                 .date1-items{
                     text-align: center;
+                    font-weight: bold;
                 }
                 .date-line{
-                    // margin-left: 10%;
                     width: 65%;
                     height: 2px;
                 }
@@ -60,23 +77,70 @@
         }
 
         .event-detail{
-            margin-left: 1%;
+            width: 106%;
+            // margin-left: 1%;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-evenly;
 
-            .prize-details{
-                p{
-                    font-size: 24.25px;
-                    font-weight: 700;
-                }
-                .detail-start{
+            .prize-queries{
+                .prize-worth-query{
+                    font-size: 22px;
+                    font-weight: bold;
                     color: #1CA0FF;
+                }
+                .team-size-query{
+                    font-size: 22px;
+                    font-weight: bold;
+                    color: #1CA0FF;
+                }
+                .rules-regulations{
+                    a{
+                        text-decoration: none;
+                        color: #1CA0FF;
+                    }
                 }
             }
 
-        }
+            .prize-details{
+                .prize-worth-detail{
+                    font-size: 22px;
+                    font-weight: bold;
+                }
+                .team-size-detail{
+                    font-size: 22px;
+                    font-weight: bold;
+                }
+            }
 
-        
+            .organizers-queries{
+                margin-top: 1%;
+                color: #1CA0FF;
+                font-weight: 600;
+                #members{
+                    margin-top: 35%;
+                }
+            }
+            .organizers-details{
+                // margin-top: 1%;
+                font-weight: 300;
+            }
+
+        }
+        .button-container{
+            display: flex;
+            justify-content: space-evenly;
+            button {
+                // font-family: Changa;
+                font-weight: 700;
+                background: none;
+                border: 1px solid black;
+                border-radius: 50px;
+                padding: 10px 30px;
+                background-color: #EBC027;
+                color:#29457C;
+                font-size: 20px;
+                box-shadow: 0px 3.17885px 3.17885px rgba(0, 0, 0, 0.25);
+            }
+        }
     }
-    
 }

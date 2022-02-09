@@ -1,6 +1,6 @@
 @font-face {
     font-family: Baumans;
-    src: url("https://fonts.googleapis.com/css2?family=Baumans&display=swap");
+    src: url("../../assets/fonts/bauman/Bauman-Regular.otf");
 }
 
 .main-event {
@@ -24,7 +24,7 @@
 
         .event-rendering {
             margin-top: 2%;
-            height: 65%;
+            height: 70%;
             width: 55%;
             margin-bottom: 5%;
         }
@@ -47,7 +47,7 @@
 
                 .text-up {
                     position: absolute;
-                    top: 73%;
+                    top: 74%;
                     font-size: 18px;
                     font-family: Baumans;
                     font-style: normal;
@@ -59,7 +59,7 @@
 
                 .text-down {
                     position: absolute;
-                    top: 80%;
+                    top: 81%;
                     font-size: 18px;
                     font-family: Baumans;
                     font-style: normal;
@@ -80,9 +80,10 @@
                     z-index: 10;
                 }
                 .dot{
+                    display: none;
                     position: absolute;
                     z-index: 10;
-                    top: 79.2%;
+                    top: 80.2%;
                     display: none;
                 }
                 .showDot{
@@ -109,16 +110,17 @@
                 
             }
             .button1{
+                cursor: pointer;
                 position: absolute;
-                top: 77%;
+                top: 78%;
                 left: 26.5%;
             }
 
             .button2{
+                cursor: pointer;
                 position: absolute;
-                top: 77%;
+                top: 78%;
                 left: 71%;
-
             }
         }
     }
