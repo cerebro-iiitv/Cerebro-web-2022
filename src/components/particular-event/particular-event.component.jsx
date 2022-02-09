@@ -74,6 +74,13 @@ export const ParticularEvent = ({ title, start_time, prize, end_time, descriptio
             <p>{co_convenor1}, {co_convenor2}</p>
             <p>{mem1}, {mem2}</p>
           </div>
+
+          <div className="organizers-details">
+            <h4>Dhruv Dave</h4>
+            <h4>Parth Chandravadiya <br /> Dhruv Dave</h4>
+            <h4>Parth Chandravadiya <br /> Dhruv Dave</h4>
+          </div>
+          
         </div>
         <form>
           <div className='button-container'>
@@ -98,6 +105,8 @@ export const ParticularEvent = ({ title, start_time, prize, end_time, descriptio
       <div className="right-door-container">
         <img src={door} alt="right-door" className='right-door' />
       </div>
+
+      
     </div>
   )
 };

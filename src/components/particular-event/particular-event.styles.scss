@@ -270,7 +270,16 @@
             
             }
 
-        }
+            .prize-details{
+                .prize-worth-detail{
+                    font-size: 22px;
+                    font-weight: bold;
+                }
+                .team-size-detail{
+                    font-size: 22px;
+                    font-weight: bold;
+                }
+            }
 
         .button-container {
             display: flex;
@@ -299,4 +308,4 @@
             }
         }
     }
-}
+}}
