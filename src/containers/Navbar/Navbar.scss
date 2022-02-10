@@ -37,8 +37,7 @@
 }
 
 
-
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1240px)  {
   .navbar {
     &__bg-img {
       height: 202px;
@@ -51,15 +50,24 @@
   
 }
 
-@media screen and (min-width:1440px) and (max-width: 1690px) {
+@media screen and (min-width:1024px) and (max-width: 1440px) {
   .navbar {
     &__bg-img {
       height: 232px;
     }
   }  
-  .navbar__lower-cont{
-  // margin-top: 1.5%;
-  }
+}
+
+@media screen and (min-width:1440px) and (max-width: 1690px) {
+  .navbar {
+    &__bg-img {
+      height: 232px;
+    }
+    &__hori{
+      margin-bottom: 0%;
+    }
+  }  
+  
 }
 
 @media screen and (min-width:1690px) and (max-width: 2160px) {
@@ -69,9 +77,7 @@
       height: 232px;
     }
   }  
-  .navbar__lower-cont{
-    // margin-top: 3%;
-    }
+  
 }
 
 @media screen and (max-width:1024px) {
