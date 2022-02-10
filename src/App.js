@@ -15,26 +15,50 @@ function App() {
 
   return (
     <div className="App">
-    <AuthContextProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route
-            path="/"
-            element={
+      <AuthContextProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                // Temp navigation for deploy preview
+                <div>
+                  <Link to="/login">Login</Link>
+                  <br />
+                  <Link to="signup">Signup</Link>
+                </div>
+              }
+            />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/team" element={
               // Temp navigation for deploy preview
               <div>
-                <Link to="/login">Login</Link>
-                <br />
-                <Link to="signup">Signup</Link>
+                <h1>Team</h1>
               </div>
-            }
-          />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-        </Routes>
-      </BrowserRouter>
-    </AuthContextProvider>
-    <Navbar/>
+            } />
+            <Route path="/faq" element={
+              // Temp navigation for deploy preview
+              <div>
+                <h1>FAQ</h1>
+              </div>
+            } />
+            <Route path="/event" element={
+              // Temp navigation for deploy preview
+              <div>
+                <h1>Event</h1>
+              </div>
+            } />
+            <Route path="/timeline" element={
+              // Temp navigation for deploy preview
+              <div>
+                <h1>Timeline</h1>
+              </div>
+            } />
+          </Routes>
+          <Navbar />
+        </BrowserRouter>
+      </AuthContextProvider>
     </div>
   );
 }
