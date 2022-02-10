@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 
 import NavMenuCard from "../../components/NavMenuCard/NavMenuCard";
 
@@ -43,20 +42,10 @@ const HorizontalNavMenu = () => {
                 tiltClass = "visible-card--5";
             }
 
-            let linkAddr = "/" + option.title.toLowerCase();
-            if (linkAddr === "faq's") {
-                linkAddr = "/faq"
-            }
-            if (linkAddr === "/home") {
-                linkAddr = "/"
-            }
-
             return (
-                <Link to={linkAddr}>
-                    <NavMenuCard className={tiltClass}
-                        title={option.title}
-                        isTransitionEnabled={isTransitionEnabled} />
-                </Link>
+                <NavMenuCard className={tiltClass}
+                    title={option.title}
+                    isTransitionEnabled={isTransitionEnabled} />
             )
         });
         return tempArr;
