@@ -3,7 +3,7 @@ import "./NavMenuCard.scss";
 
 const NavCard = (props) => {
     let linkAddr = "/" + props.title.toLowerCase();
-    if (linkAddr === "faq's") {
+    if (linkAddr === "/faq's") {
         linkAddr = "/faq"
     }
     if (linkAddr === "/home") {
