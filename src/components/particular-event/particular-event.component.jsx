@@ -106,7 +106,7 @@ export const ParticularEvent = ({ title, start_time, prize, end_time, descriptio
         <img src={door} alt="right-door" className='right-door' />
       </div>
 
-      
+      <img src={door} alt="right-door" className='right-door'/>
     </div>
   )
 };

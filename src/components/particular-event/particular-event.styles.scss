@@ -275,9 +275,19 @@
                     font-size: 22px;
                     font-weight: bold;
                 }
-                .team-size-detail{
+
+                .team-size-detail {
                     font-size: 22px;
                     font-weight: bold;
+                }
+
+                @media (max-width: 1526px) and (min-width: 1122px){
+                    .prize-worth-detail{
+                        font-size: 18px;
+                    }
+                    .team-size-detail{
+                        font-size: 18px;
+                    }
                 }
             }
 
