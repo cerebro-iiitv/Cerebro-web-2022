@@ -8,138 +8,231 @@
     src: url("../../assets/fonts/chang_and_eng/Chane___.ttf");
 }
 
-.event{
-    background: url("../../assets/images/1.svg") no-repeat center center;
-    background-size: contain;
-    width: 100%;
-    height: 100%;
+.event {
+    background: radial-gradient(100% 100% at 50% 0%, rgba(7, 30, 64, 0.68) 0%, rgba(13, 57, 121, 0.595) 100%);
     display: flex;
     justify-content: center;
     align-items: center;
+    .left-door{
+        position: absolute;
+        left: 20%;
+        // height: 54.5%;
+    }
+    @media only screen and (max-width: 1708px) and (min-width: 1466px){
+        .left-door{
+            height: 66%;
+            left: 19%;
+        }
+        .right-door{
+            height: 66%;
+            right: 19%;
+        }
 
-    .details{
+    }
+
+    @media only screen and (max-width: 1465px) and (min-width: 1122px){
+        .left-door{
+            height: 68%;
+            left: 16%;
+        }
+        .right-door{
+            height: 68%;
+            left: 71%;
+        }
+    }
+    @media only screen and (max-width: 1121px) and (min-width: 1021px) {
+        .left-door{
+            height: 71%;
+            left: 15%;
+        }
+        .right-door{
+            height: 71%;
+            left: 71%;
+        }
+    }
+
+    @media only screen and (max-width: 1020px) and (min-width: 983px){
+        .left-door{
+            height: 75%;
+            left: 14%;
+        }
+        .right-door{
+            height: 75%;
+            left: 70%;
+        }
+    }
+    @media only screen and (max-width: 982px) and (min-width: 868px){
+        .left-door{
+            height: 78%;
+            left: 12%;
+        }
+        .right-door{
+            height: 78%;
+            left: 70%;
+        }
+    }
+    @media only screen and (max-width: 867px) and (min-width: 768px){
+        .left-door{
+            height: 80%;
+            left: 8%;
+        }
+        .right-door{
+            height: 80%;
+            left: 71%;
+        }
+    }
+    .right-door{
+        // height: 54.5%;
+        right: 20%;
+        position: absolute;
+        transform: rotateZ(180deg);
+    }
+    .details {
         width: 70%;
-
-        .event-title{
+        .event-title {
             text-align: center;
             font-weight: 400;
-            font-size: 30px;
+            font-size: 2em;
             font-family: RektBrush;
             text-transform: uppercase;
         }
-        .event-container{
+
+        .event-container {
             margin-top: -3%;
-            width: 100%;
             display: flex;
             justify-content: center;
-            .event-para{
+
+            .event-para {
                 width: 80%;
                 text-align: center;
                 font-family: 'Times New Roman', Times, serif;
-                font-size: 18px;
+                font-size: 1.1rem;
                 font-weight: 200;
-                line-height: 19.2px;
-                .discord-server{
+                line-height: 1.5rem;
+
+                .discord-server {
                     text-decoration: none;
                     color: #1CA0FF;
                 }
             }
 
         }
-        
-        .time-line{
+
+        .time-line {
+            margin-top: 1%;
             display: flex;
             justify-content: space-evenly;
 
-            .to-dot{
-                position: absolute;
-                top: 32.85%;
-            }
-            .to{
-                z-index: 10;
-                color: black;
-            }
-            .date1{
+            .date1 {
                 background-image: url("../../assets/images/time-background.svg");
                 background-repeat: no-repeat;
                 background-size: cover;
                 height: 6rem;
                 width: 9rem;
-                .date1-items{
+
+                .date1-items {
                     text-align: center;
                     font-weight: bold;
                 }
-                .date-line{
+
+                .date-line {
                     width: 65%;
-                    height: 2px;
+                    height: 0.5rem;
                 }
             }
         }
 
-        .event-detail{
-            width: 106%;
-            // margin-left: 1%;
+        .event-detail {
             display: flex;
-            justify-content: space-evenly;
+            justify-content: center;
 
-            .prize-queries{
-                .prize-worth-query{
-                    font-size: 22px;
+            .prize-queries {
+                .prize-worth-query {
+                    font-size: 1.4rem;
                     font-weight: bold;
                     color: #1CA0FF;
                 }
-                .team-size-query{
-                    font-size: 22px;
+
+                .team-size-query {
+                    font-size: 1.4rem;
                     font-weight: bold;
                     color: #1CA0FF;
                 }
-                .rules-regulations{
-                    a{
+
+                .rules-regulations {
+                    a {
                         text-decoration: none;
                         color: #1CA0FF;
                     }
                 }
             }
-
-            .prize-details{
-                .prize-worth-detail{
+            .mid-line{
+                border-right: 1px solid rgba(255,255,255,40%);
+            }
+            .prize-details {
+                // border-right: 1px solid white;
+                padding-right: 5%;
+                .prize-worth-detail {
                     font-size: 22px;
                     font-weight: bold;
                 }
-                .team-size-detail{
+
+                .team-size-detail {
                     font-size: 22px;
                     font-weight: bold;
+                }
+
+                @media (max-width: 1526px) and (min-width: 1122px){
+                    .prize-worth-detail{
+                        font-size: 18px;
+                    }
+                    .team-size-detail{
+                        font-size: 18px;
+                    }
                 }
             }
 
-            .organizers-queries{
-                margin-top: 1%;
+            .organizers-queries {
+                padding-left: 5%;
+                margin-right: 4%;
+                margin-top: 2%;
                 color: #1CA0FF;
+                font-size: 0.9rem;
                 font-weight: 600;
-                #members{
+                #members {
                     margin-top: 35%;
                 }
             }
-            .organizers-details{
-                // margin-top: 1%;
+
+            .organizers-details {
+                margin-top: 2%;
+                font-size: 0.9rem;
                 font-weight: 300;
             }
 
         }
-        .button-container{
+
+        .button-container {
+            margin-bottom: 2%;
+            margin-top: 1%;
             display: flex;
             justify-content: space-evenly;
+
+            #single-button{
+                margin-right: -3%;
+            }
             button {
                 // font-family: Changa;
                 font-weight: 700;
                 background: none;
                 border: 1px solid black;
                 border-radius: 50px;
-                padding: 10px 30px;
+                padding: 0.8rem 1.8rem;
                 background-color: #EBC027;
-                color:#29457C;
-                font-size: 20px;
+                color: #29457C;
+                font-size: 0.8rem;
                 box-shadow: 0px 3.17885px 3.17885px rgba(0, 0, 0, 0.25);
+                cursor: pointer;
             }
         }
     }

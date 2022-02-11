@@ -2,116 +2,116 @@
     "events": [
         {
             "id": 1,
-            "name": "The Bug",
-            "price": "XXXX",
+            "title": "The Bug",
+            "prize": "XXXX",
             "deadline": "3 days"
         },
         {
             "id": 2,
-            "name": "Build It Better",
-            "price": "XXXX",
+            "title": "Build It Better",
+            "prize": "XXXX",
             "deadline": "3 days"
         },
         {
             "id": 3,
-            "name": "Valorant",
-            "price": "XXXX",
+            "title": "Valorant",
+            "prize": "XXXX",
             "deadline": "3 days"
         },
         {
             "id": 4,
-            "name": "CSGO",
-            "price": "XXXX",
+            "title": "CSGO",
+            "prize": "XXXX",
             "deadline": "3 days"
         },
         {
             "id": 5,
-            "name": "Clash Royale",
-            "price": "XXXX",
+            "title": "Clash Royale",
+            "prize": "XXXX",
             "deadline": "3 days"
         },
         {
             "id": 6,
-            "name": "Rocket League",
-            "price": "XXXX",
+            "title": "Rocket League",
+            "prize": "XXXX",
             "deadline": "3 days"
         },
         {
             "id": 7,
-            "name": "CODM",
-            "price": "XXXX",
+            "title": "CODM",
+            "prize": "XXXX",
             "deadline": "3 days"
         },
         {
             "id": 8,
-            "name": "Penumbra",
-            "price": "XXXX",
+            "title": "Penumbra",
+            "prize": "XXXX",
             "deadline": "3 days"
         },
         {
             "id": 9,
-            "name": "EVENT9",
-            "price": "XXXX",
+            "title": "EVENT9",
+            "prize": "XXXX",
             "deadline": "3 days"
         },
         {
             "id": 10,
-            "name": "EVENT 10",
-            "price": "XXXX",
+            "title": "EVENT 10",
+            "prize": "XXXX",
             "deadline": "3 days"
         },
         {
             "id": 11,
-            "name": "EVENT 11",
-            "price": "XXXX",
+            "title": "EVENT 11",
+            "prize": "XXXX",
             "deadline": "3 days"
         },
         {
             "id": 12,
-            "name": "EVENT 12",
-            "price": "XXXX",
+            "title": "EVENT 12",
+            "prize": "XXXX",
             "deadline": "3 days"
         },
         {
             "id": 13,
-            "name": "EVENT 13",
-            "price": "XXXX",
+            "title": "EVENT 13",
+            "prize": "XXXX",
             "deadline": "3 days"
         },
         {
             "id": 14,
-            "name": "EVENT 14",
-            "price": "XXXX",
+            "title": "EVENT 14",
+            "prize": "XXXX",
             "deadline": "3 days"
         },
         {
             "id": 15,
-            "name": "EVENT 15",
-            "price": "XXXX",
+            "title": "EVENT 15",
+            "prize": "XXXX",
             "deadline": "3 days"
         },
         {
             "id": 16,
-            "name": "EVENT 16",
-            "price": "XXXX",
+            "title": "EVENT 16",
+            "prize": "XXXX",
             "deadline": "3 days"
         },
         {
             "id": 17,
-            "name": "EVENT 17",
-            "price": "XXXX",
+            "title": "EVENT 17",
+            "prize": "XXXX",
             "deadline": "3 days"
         },
         {
             "id": 18,
-            "name": "EVENT 18",
-            "price": "XXXX",
+            "title": "EVENT 18",
+            "prize": "XXXX",
             "deadline": "3 days"
         },
         {
             "id": 19,
-            "name": "EVENT 19",
-            "price": "XXXX",
+            "title": "EVENT 19",
+            "prize": "XXXX",
             "deadline": "3 days"
         }
     ]

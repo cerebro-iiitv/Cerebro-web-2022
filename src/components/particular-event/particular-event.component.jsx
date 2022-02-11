@@ -4,27 +4,27 @@ import './particular-event.styles.scss';
 
 import {default as toDot} from '../../assets/images/to-dot.svg';
 import {default as dateLine} from '../../assets/images/date-line.svg';
-import {default as midLine} from '../../assets/images/mid-line.svg';
+import {default as door} from '../../assets/images/door.svg';
 
-export const ParticularEvent = ({ title, deadline, prize }) => {
+export const ParticularEvent = ({ title, start_time, prize, end_time, description, team_size }) => {
   return (
     <div className='event'>
+      <img src={door} alt="left-door" className='left-door'/>
       <div className="details">
         <h2 className='event-title'>{title}</h2>
         <div className="event-container">
-            <p className='event-para'>1 tblspn Greedy, ¾ tblspn DP, ⅝ tblspn Divide and Conquer, and a pinch of CP
-            For further communication, join our <a href='#' className='discord-server'>Discord Server</a> </p>
+            <p className='event-para'>{description} <br /> <a href='#' className='discord-server'>Discord Server</a> </p>
         </div>
         
         <div className='time-line'>
           <div className='date1'>
-                <p className='date1-items'>10-03-2022 <br />
+                <p className='date1-items'>{start_time}<br />
                <img src={dateLine} alt="date-line" className='date-line'/><br />
                  8:00PM</p>
           </div>
           <img src={toDot} alt="to-dot-image" className='to-dot'/>
           <div className='date1'>
-          <p className='date1-items'>10-03-2022 <br />
+          <p className='date1-items'>{end_time}<br />
                <img src={dateLine} alt="date-line" className='date-line'/><br />
                  8:00PM</p>
           </div>
@@ -40,9 +40,10 @@ export const ParticularEvent = ({ title, deadline, prize }) => {
 
           <div className="prize-details">
             <h4 className='prize-worth-detail'>{prize} INR</h4>
-            <h4 className='team-size-detail'>3</h4>
+            <h4 className='team-size-detail'>{team_size}</h4>
           </div>
-          <img src={midLine} alt="midLine" />
+          <div className='mid-line'></div>
+          {/* <img src={midLine} alt="midLine" className='mid-line' /> */}
           
           <div className="organizers-queries">
             <h4>Convenor</h4>
@@ -59,14 +60,19 @@ export const ParticularEvent = ({ title, deadline, prize }) => {
         </div>
         <form action="#">
         <div className='button-container'>
-          <button>Register Here</button>
+          <button id = "single-button">Register Here</button>
+          {
+            team_size > 1 ? 
           <button>Join Team</button>
+            :
+            ""
+          }
 
         </div>
       </form>
       </div>
 
-      
+      <img src={door} alt="right-door" className='right-door'/>
     </div>
   )
 };
