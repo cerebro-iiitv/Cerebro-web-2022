@@ -5,8 +5,17 @@ import './particular-event.styles.scss';
 import {default as toDot} from '../../assets/images/to-dot.svg';
 import {default as dateLine} from '../../assets/images/date-line.svg';
 import {default as door} from '../../assets/images/door.svg';
+import {default as midButtonLine} from '../../assets/images/mid-button-line.svg';
 
-export const ParticularEvent = ({ title, start_time, prize, end_time, description, team_size }) => {
+export const ParticularEvent = ({ title, start_time, prize, end_time, description, team_size, convenor, co_convenor1, co_convenor2, mem1, mem2 }) => {
+
+  if(title === "CSGO"){
+    title = "Counter-Strike: Global Offensive";
+  }
+  else if (title === "CODM"){
+    title = "Call of Duty: Mobile";
+  }
+
   return (
     <div className='event'>
       <img src={door} alt="left-door" className='left-door'/>
@@ -52,15 +61,21 @@ export const ParticularEvent = ({ title, start_time, prize, end_time, descriptio
           </div>
 
           <div className="organizers-details">
-            <h4>Dhruv Dave</h4>
-            <h4>Parth Chandravadiya <br /> Dhruv Dave</h4>
-            <h4>Parth Chandravadiya <br /> Dhruv Dave</h4>
+            <h4>{convenor !== null ? convenor : "Parth Chandravadiya" }</h4>
+            <h4>{co_convenor1 !== null ? co_convenor1 : "Parth Chandravadiya"} <br /> {co_convenor2 !== null ? co_convenor2 : "Dhruv Dave"}</h4>
+            <h4>{mem1 !== null ? mem1 : "Parth Chandravadiya"} <br /> {mem2 !== null ? mem2 : "Dhruv Dave"}</h4>
           </div>
           
         </div>
         <form action="#">
         <div className='button-container'>
           <button id = "single-button">Register Here</button>
+          {
+            team_size > 1 ? 
+            <img src={midButtonLine} className = "mid-button-line" alt="mid-button-line" />
+            :
+            ""
+          }
           {
             team_size > 1 ? 
           <button>Join Team</button>

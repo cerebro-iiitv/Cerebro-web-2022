@@ -10,8 +10,6 @@
     align-items: center;
     background-color: rgb(25, 25, 71);
     color: white;
-    // border: 2px solid white;
-
 
     .event-outer {
         display: flex;
@@ -86,6 +84,7 @@
                     position: absolute;
                     left: 27.5%;
                     width: 46%;
+                    margin-top: 0.3%;
                     // top: 82.4%;
                 }
                 @media only screen and (max-width: 1390px) and (min-width: 1281px){
@@ -99,10 +98,12 @@
 
                 @media only screen and (max-width: 1280px) and (min-width: 1157px){
                     .text-up{
-                        margin-top: 4.25%;
+                        margin-top: 3.75%;
+                        font-size: 18px !important;
                     }
                     .text-down {
-                        margin-top: 4%;
+                        margin-top: 3%;
+                        font-size: 18px !important;
                     }
                 }
                 
@@ -127,9 +128,11 @@
                 @media only screen and (max-width: 1055px) and (min-width: 1024px){
                     .text-up{
                         margin-top: 6.5%;
+                        font-size: 14px !important;
                     }
                     .text-down{
-                        margin-top: 6.5%;
+                        font-size: 14px !important;
+                        margin-top: 5.25%;
                     }
                 }
                 @media only screen and (max-width: 1023px) and (min-width: 976px){
@@ -161,8 +164,8 @@
                 }
                 .text-up {
                     position: absolute;
-                    top: 74%;
-                    font-size: 1.2rem;
+                    top: 75%;
+                    font-size: 20px;
                     font-family: Baumans;
                     font-style: normal;
                     font-weight: normal;
@@ -193,8 +196,8 @@
 
                 .text-down {
                     position: absolute;
-                    top: 81%;
-                    font-size: 1.2rem;
+                    top: 82%;
+                    font-size: 20px;
                     font-family: Baumans;
                     font-style: normal;
                     font-weight: normal;
@@ -204,12 +207,10 @@
                 }
                 @media (max-width: 1440px) and (min-width: 1394px ){
                     .text-down{
-                        // border-bottom: 2px solid yellow;
-                        margin-top: 3%;
+                        margin-top: 2%;
                     }
                     .text-up{
-                        // border-bottom: 2px solid yellow;
-                        margin-top: 3%;
+                        margin-top: 2.5%;
                     }
                 }
                 @media (min-width: 1441px) and (max-width: 1714px){
@@ -226,7 +227,6 @@
                 pointer-events: none;
             }
             .particular-element {
-
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -250,37 +250,21 @@
                 display: none;
             }
             .button-cover2 {
-                // width: 20%;
-                // height: 40%;
                 z-index: 10;
-                display: flex;
-                justify-content: flex-end;
             }
             .button-cover1 {
-                // width: 20%;
-                // height: 40%;
-                margin-bottom: 1%;
                 z-index: 10;
-                display: flex;
-                justify-content: flex-start;
-                
             }
             .button1{
+                position: relative;
+                top: -12%;
                 cursor: pointer;
-                // position: absolute;
-                // top: 78%;
-                // left: 26.5%;
                 transform: rotateZ(180deg);
-                // padding-bottom: 1%;
             }
 
             .button2{
                 cursor: pointer;
-                // position: absolute;
-                // top: 79%;
-                // left: 71%;
             }
         }
     }
 }
-
