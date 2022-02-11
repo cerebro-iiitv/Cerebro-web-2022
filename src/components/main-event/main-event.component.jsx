@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
 
 import './main-event.styles.scss';
-import eventJson from '../../assets/jsons/events.json'
 import { ParticularEvent } from "../particular-event/particular-event.component";
 
-import { default as sphere} from '../../assets/images/sphere.svg';
-import {default as line} from '../../assets/images/line.svg';
-import {default as selectedDot} from '../../assets/images/selected-dot.svg';
-import {default as button} from '../../assets/images/button.svg';
-// import {default as buttonLeft} from '../../assets/images/button-left.svg'
+import { default as sphere} from '../../assets/images/Events/sphere.svg';
+import {default as line} from '../../assets/images/Events/line.svg';
+import {default as selectedDot} from '../../assets/images/Events/selected-dot.svg';
+import {default as button} from '../../assets/images/Events/button.svg';
+
 
 const Events = () => {
     const [events, setEvents] = useState([]);

@@ -2,10 +2,10 @@ import React from 'react';
 
 import './particular-event.styles.scss';
 
-import {default as toDot} from '../../assets/images/to-dot.svg';
-import {default as dateLine} from '../../assets/images/date-line.svg';
-import {default as door} from '../../assets/images/door.svg';
-import {default as midButtonLine} from '../../assets/images/mid-button-line.svg';
+import {default as toDot} from '../../assets/images/Events/to-dot.svg';
+import {default as dateLine} from '../../assets/images/Events/date-line.svg';
+import {default as door} from '../../assets/images/Events/door.svg';
+import {default as midButtonLine} from '../../assets/images/Events/mid-button-line.svg';
 
 export const ParticularEvent = ({ title, start_time, prize, end_time, description, team_size, convenor, co_convenor1, co_convenor2, mem1, mem2 }) => {
 
@@ -52,7 +52,6 @@ export const ParticularEvent = ({ title, start_time, prize, end_time, descriptio
             <h4 className='team-size-detail'>{team_size}</h4>
           </div>
           <div className='mid-line'></div>
-          {/* <img src={midLine} alt="midLine" className='mid-line' /> */}
           
           <div className="organizers-queries">
             <h4>Convenor</h4>
