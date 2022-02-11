@@ -7,7 +7,10 @@
     font-family: Barlow;
     src: url("../../assets/fonts/Barlow/Barlow-Regular.ttf");
 }
-
+@font-face {
+    font-family: Barlow;
+    src: url("../../assets/fonts/Barlow/Barlow-Regular.ttf");
+}
 @font-face {
     font-family: Changa;
     src: url("../../assets/fonts/chang_and_eng/Chane___.ttf");
@@ -277,6 +280,7 @@
                 }
 
                 .team-size-detail {
+                    font-family: Barlow;
                     font-size: 22px;
                     font-weight: bold;
                 }
