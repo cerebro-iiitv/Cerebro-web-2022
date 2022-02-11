@@ -62,7 +62,6 @@ export const ParticularEvent = ({ title, start_time, prize, end_time, descriptio
           </div>
 
           <div className='mid-line'></div>
-
           <div className="organizers-queries">
               <h4>Convenor</h4>
               <h4>Co-Convenor</h4>
