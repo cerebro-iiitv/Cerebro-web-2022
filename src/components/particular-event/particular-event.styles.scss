@@ -19,9 +19,10 @@
     .left-door{
         position: absolute;
         left: 20%;
-        // height: 62.5%;
     }
-    @media only screen and (max-width: 1708px) and (min-width: 1466px){
+
+    // Code for responsive design till 1024px (All laptop sizes)....
+    @media only screen and (max-width: 1888px) and (min-width: 1466px){
         .left-door{
             height: 66%;
             left: 19%;
@@ -41,6 +42,24 @@
             height: 62%;
             left: 71%;
         }
+         .prize-worth-detail{
+                    font-size: 18px !important;
+                }
+                .prize-worth-query{
+                    font-size: 18px !important;
+                }
+                .team-size-detail{
+                    font-size: 18px !important;
+                }
+                .team-size-query{
+                    font-size: 18px !important;
+                }
+                #members {
+                    margin-top: 65% !important;
+                }
+                .organizers-details{
+                    width: 20% !important;
+                }
     }
     @media only screen and (max-width: 1121px) and (min-width: 1021px) {
         .left-door{
@@ -50,6 +69,28 @@
         .right-door{
             height: 66%;
             left: 71%;
+        }
+        .prize-worth-detail{
+            font-size: 14px !important;
+        }
+        .prize-worth-query{
+            font-size: 14px !important;
+        }
+        .team-size-detail{
+            font-size: 14px !important;
+        }
+        .team-size-query{
+            font-size: 14px !important;
+        }
+        .rules-regulations{
+            font-size: 14px !important;
+        }
+        #members{
+            margin-top: 85% !important;
+        }
+        .mid-line{
+            height: 10rem;
+            margin-top: 5%;
         }
     }
 
@@ -146,6 +187,7 @@
         }
 
         .event-detail {
+            width: 100%;
             display: flex;
             justify-content: center;
 
@@ -166,6 +208,7 @@
 
                 .rules-regulations {
                     a {
+                        font-weight: 100;
                         font-family: Barlow;
                         text-decoration: none;
                         color: #1CA0FF;
@@ -178,37 +221,6 @@
                 border: 1px solid rgba(255,255,255,40%);
             }
 
-            @media only screen and (max-width: 1440px){
-                .prize-worth-detail{
-                    font-size: 18px !important;
-                }
-                .prize-worth-query{
-                    font-size: 18px !important;
-                }
-                .team-size-detail{
-                    font-size: 18px !important;
-                }
-                .team-size-query{
-                    font-size: 18px !important;
-                }
-            }
-            @media only screen and (max-width: 1024px){
-                .prize-worth-detail{
-                    font-size: 14px !important;
-                }
-                .prize-worth-query{
-                    font-size: 14px !important;
-                }
-                .team-size-detail{
-                    font-size: 14px !important;
-                }
-                .team-size-query{
-                    font-size: 14px !important;
-                }
-                .rules-regulations{
-                    font-size: 14px !important;
-                }
-            }
             .prize-details {
                 padding-right: 3%;
                 .prize-worth-detail {
@@ -221,15 +233,6 @@
                     font-family: Barlow;
                     font-size: 22px;
                     font-weight: bold;
-                }
-
-                @media (max-width: 1526px) and (min-width: 1122px){
-                    .prize-worth-detail{
-                        font-size: 18px;
-                    }
-                    .team-size-detail{
-                        font-size: 18px;
-                    }
                 }
             }
 
@@ -247,6 +250,7 @@
             }
 
             .organizers-details {
+                width: 16%;
                 font-family: Barlow;
                 margin-top: 2%;
                 font-size: 0.9rem;
