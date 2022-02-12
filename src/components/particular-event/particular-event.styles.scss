@@ -54,6 +54,24 @@
         .organizers-queries {
             font-size: 16px !important;
         }
+         .prize-worth-detail{
+                    font-size: 18px !important;
+                }
+                .prize-worth-query{
+                    font-size: 18px !important;
+                }
+                .team-size-detail{
+                    font-size: 18px !important;
+                }
+                .team-size-query{
+                    font-size: 18px !important;
+                }
+                #members {
+                    margin-top: 65% !important;
+                }
+                .organizers-details{
+                    width: 20% !important;
+                }
     }
 
     @media only screen and (max-width: 1121px) and (min-width: 1021px) {
@@ -283,15 +301,6 @@
                     font-family: Barlow;
                     font-size: 22px;
                     font-weight: bold;
-                }
-
-                @media (max-width: 1526px) and (min-width: 1122px){
-                    .prize-worth-detail{
-                        font-size: 18px;
-                    }
-                    .team-size-detail{
-                        font-size: 18px;
-                    }
                 }
             }
 

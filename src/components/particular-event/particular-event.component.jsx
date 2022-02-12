@@ -75,9 +75,9 @@ export const ParticularEvent = ({ title, start_time, prize, end_time, descriptio
           </div>
 
           <div className="organizers-details">
-            <h4>{convenor !== null ? convenor : "Parth Chandravadiya" }</h4>
-            <h4>{co_convenor1 !== null ? co_convenor1 : "Parth Chandravadiya"} <br /> {co_convenor2 !== null ? co_convenor2 : "Dhruv Dave"}</h4>
-            <h4>{mem1 !== null ? mem1 : "Parth Chandravadiya"} <br /> {mem2 !== null ? mem2 : "Dhruv Dave"}</h4>
+            <h4>{convenor}</h4>
+            <h4>{co_convenor1}, <br /> {co_convenor2}</h4>
+            <h4>{mem1}, <br /> {mem2}</h4>
           </div>
           
         </div>

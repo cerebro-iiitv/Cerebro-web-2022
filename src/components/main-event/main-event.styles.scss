@@ -52,6 +52,7 @@
                     animation-name: tweak-down;
                     animation-duration: 1s;
                 }
+                
                 @keyframes tweak-down {
                     0% {
                         transform: translateY(0px);
@@ -68,6 +69,7 @@
                     animation-name: tweak-up;
                     animation-duration: 1s;
                 }
+        
                 @keyframes tweak-up {
                     0% {
                         transform: translateY(0px);
@@ -162,9 +164,9 @@
                         font-size: 5px;
                     }
                 }
-                .text-up {
+                .text-up{
                     position: absolute;
-                    top: 75%;
+                    top: 75.5%;
                     font-size: 20px;
                     font-family: Baumans;
                     font-style: normal;
@@ -172,8 +174,6 @@
                     text-transform: uppercase;
                     color: rgba(255, 255, 255, 0.8);
                     line-height: 21px;
-
-                    
                 }
                 .gradient-text{
                     // background-color:white;
