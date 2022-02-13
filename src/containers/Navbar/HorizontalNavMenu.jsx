@@ -126,7 +126,7 @@ const HorizontalNavMenu = () => {
                     <button className="hori-menu__carousel__left-arrow"
                         onClick={!leftAndRightDisabled ? scrollLeft : null}
                     >
-                        <img src={arrow_img} alt="left" />
+                        <img src={arrow_img} alt="left" className="arrow" />
                     </button>
                     <div className="hori-menu__carousel-content-wrapper"
                         onTouchStart={handleTouchStart}
@@ -143,7 +143,7 @@ const HorizontalNavMenu = () => {
                     <button className="hori-menu__carousel__right-arrow"
                         onClick={!leftAndRightDisabled ? scrollRight : null}
                     >
-                        <img src={arrow_img} alt="right" />
+                        <img src={arrow_img} alt="right" className="arrow" />
                     </button>
                 </div>
             </div>

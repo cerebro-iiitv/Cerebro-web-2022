@@ -1,91 +1,245 @@
+
+
+.Hero{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+.navhover{
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-end;
+  align-items: center;
+  transform: translateY(58%);
+  animation: initial-down 2s;
+  transition: transform 2s;
+  &:hover{
+    transform: translateY(0%);
+  }
+  &:hover .navbar__content__hoverbar{
+    animation: barout 2s forwards ease;
+  }
+}
+
+@keyframes barout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes initial-down{
+  0%{
+    transform: translateY(0%);
+  }
+  100%{
+    transform: translateY(58%);
+  }
+
+  
+}
+
 .navbar {
-  background-color: #071e40;
-  // height: 402px;
-  // width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 30%;
   &__bg-img {
-    background: url("../../assets/images/navbar_bg.svg") no-repeat center bottom;
+    background: url("../../assets/images/navbar_bg.svg") no-repeat  bottom;
     background-size: contain;
     width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content:flex-end;
     align-items: center;
+    height: 100%;
   }
   &__lower-cont{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    width: 62vw;
-    margin-bottom: 12px;
+    align-items: flex-end;
+    width: 58vw;
+    margin-bottom: 7px;
+    height: 28%;
   }
   &__content{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+
+    &__hoverbar{
+      width:40vw;
+      height:3.2vh ;
+      background:url("../../assets/images/hovtonav.svg") no-repeat center /contain;
+      margin-right: 5px;
+    }
   }
   &__hori{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    height: 50%;
     width: 60vw;
-    margin-bottom: 2%;
+    margin-bottom: 1%;
   }
   
 }
 
-
-@media screen and (max-width: 1240px)  {
+@media screen and (max-width:1025px) {
   .navbar {
-    &__bg-img {
-      height: 202px;
-    }
     &__hori{
       margin-bottom: 0%;
     }
   }  
-
-  
+  .navbar__lower-cont{
+    margin-bottom: 2px;
+  }
 }
-
-@media screen and (min-width:1024px) and (max-width: 1440px) {
+@media screen and (min-width:1025px) and (max-width: 1140px)  {
   .navbar {
-    &__bg-img {
-      height: 232px;
-    }
-  }  
-}
-
-@media screen and (min-width:1440px) and (max-width: 1690px) {
-  .navbar {
-    &__bg-img {
-      height: 232px;
-    }
     &__hori{
-      margin-bottom: 0%;
+      margin-bottom: 0.5%;
     }
   }  
-  
+  .navbar__lower-cont{
+    margin-bottom: 4px;
+  }
+  .navbar__content__hoverbar{
+    height:3vh ;
+  }
 }
+
+@media screen and (min-width:1140px) and (max-width: 1280px)  {
+  .navbar {
+    &__hori{
+      margin-bottom: 1.5%;
+    }
+  }  
+  .navbar__lower-cont{
+    margin-bottom: 4px;
+  }
+  .navbar__content__hoverbar{
+    height:3.2vh ;
+  }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1340px)  {
+  .navbar {
+    &__hori{
+      margin-bottom: 1.5%;
+    }
+  }  
+  .navbar__lower-cont{
+    margin-bottom: 4px;
+  }
+  .navbar__content__hoverbar{
+    height:3.2vh ;
+  }
+}
+@media screen and (min-width: 1340px) and (max-width: 1439px)  {
+  .navbar {
+    &__hori{
+      margin-bottom:1.75%;
+    }
+  }  
+  .navbar__lower-cont{
+    margin-bottom: 4px;
+  }
+  .navbar__content__hoverbar{
+    height:3.2vh ;
+  }
+}
+
+
 
 @media screen and (min-width:1690px) and (max-width: 2160px) {
   .navbar {
     &__bg-img {
       background-size:cover;
-      height: 232px;
     }
   }  
   
 }
 
+
 @media screen and (max-width:1024px) {
-  .navbar__content{
-    height: 40% ;
-  }  
-  .navbar__hori{
-    width: 60vw;
+  .navhover{
+  transform: translateY(45%);
+  }
+
+  @keyframes initial-down{
+    0%{
+      transform: translateY(0%);
+    }
+    100%{
+      transform: translateY(45%);
+    }
+  
+    
+  }
+  
+}
+ 
+@media screen and (min-width:1024px) and (max-width:1100px) {
+  .navhover{
+  transform: translateY(48%);
+  }
+
+  @keyframes initial-down{
+    0%{
+      transform: translateY(0%);
+    }
+    100%{
+      transform: translateY(48%);
+    }
+  
+    
+  }
+  
+}
+
+
+@media screen and (min-width:1100px) and (max-width:1280px) {
+  .navhover{
+  transform: translateY(55%);
+  }
+
+  @keyframes initial-down{
+    0%{
+      transform: translateY(0%);
+    }
+    100%{
+      transform: translateY(55%);
+    }
+  
+    
+  }
+  
+}
+
+@media screen and (min-width:1280px) and (max-width:1439px) {
+  .navhover{
+  transform: translateY(57%);
+  }
+
+  @keyframes initial-down{
+    0%{
+      transform: translateY(0%);
+    }
+    100%{
+      transform: translateY(57%);
+    }
+  
+    
   }
   
 }

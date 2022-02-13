@@ -43,9 +43,10 @@ const NavTimer = () => {
     return (
         <div className="timer__main-container">
             <div className="timer__titles-container">
-                <img src={navtimer_titles} alt="timer titles" />
+                <img src={navtimer_titles} alt="timer-titles" className="timer-titles"/>
             </div>
             <div className="timer__inner-container">
+                <div className="timer-items">
                 <div className="timer-item first">
                     <div className="timer-value">{days}</div>
                 </div>
@@ -60,6 +61,7 @@ const NavTimer = () => {
                 {colonBetweenTime}
                 <div className="timer-item last">
                     <div className="timer-value">{seconds}</div>
+                </div>
                 </div>
             </div>
         </div>
