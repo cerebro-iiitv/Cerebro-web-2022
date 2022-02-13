@@ -162,7 +162,7 @@
                 }
                 .text-up{
                     position: absolute;
-                    top: 75.5%;
+                    top: 74.5%;
                     font-size: 20px;
                     font-family: Baumans;
                     font-style: normal;
@@ -203,7 +203,7 @@
 
                 .text-down {
                     position: absolute;
-                    top: 82%;
+                    top: 81%;
                     font-size: 20px;
                     font-family: Baumans;
                     font-style: normal;
@@ -214,10 +214,10 @@
                 }
                 @media (max-width: 1440px) and (min-width: 1394px ){
                     .text-down{
-                        margin-top: 2%;
+                        margin-top: 2.5%;
                     }
                     .text-up{
-                        margin-top: 2.5%;
+                        margin-top: 2.25%;
                     }
                 }
                 @media (min-width: 1441px) and (max-width: 1714px){
@@ -252,6 +252,7 @@
                     display: block;
                 }
             }
+            
             .disable {
                 display: none;
             }
@@ -263,13 +264,39 @@
             }
             .button1{
                 position: relative;
-                top: -12%;
+                top: -9%;
+                left: -4%;
                 cursor: pointer;
                 transform: rotateZ(180deg);
             }
 
+            @media only screen and (max-width: 1440px) and (min-width: 1394px ){
+                .button2{
+                    top: -16% !important;
+                }
+                .button1{
+                    top: -18% !important;
+                    left: -10% !important;
+                }
+            }
+
+            @media only screen and (max-width: 1280px) and (min-width: 1024px ){
+                .button2{
+                    top: -21% !important;
+                }
+                .button1{
+                    top: -21% !important;
+                    left: -10% !important;
+                }
+            }
+           
+
             .button2{
+                position: relative;
+                top: -9%;
+                left: 50%;
                 cursor: pointer;
+                
             }
         }
     }

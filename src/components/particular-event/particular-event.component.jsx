@@ -76,8 +76,8 @@ export const ParticularEvent = ({ title, start_time, prize, end_time, descriptio
 
           <div className="organizers-details">
             <h4>{convenor}</h4>
-            <h4>{co_convenor1}, <br /> {co_convenor2}</h4>
-            <h4>{mem1}, <br /> {mem2}</h4>
+            <h4>{co_convenor1}, {co_convenor2}</h4>
+            <h4>{mem1}, {mem2}</h4>
           </div>
           
         </div>

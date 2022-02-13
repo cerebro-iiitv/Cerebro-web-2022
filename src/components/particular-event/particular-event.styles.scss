@@ -16,6 +16,16 @@
     src: url("../../assets/fonts/chang_and_eng/Chane___.ttf");
 }
 
+@media only screen and (width: 1024px){
+    .event{
+        height: 550px;
+    }
+}
+@media only screen and (max-width: 1465px) and (min-width: 1122px){
+    .event{
+        height: 490px;
+    }
+}
 .event {
     background: radial-gradient(100% 100% at 50% 0%, rgba(7, 30, 64, 0.68) 0%, rgba(13, 57, 121, 0.595) 100%);
     border: 0.01px solid #2162A7;
@@ -194,6 +204,9 @@
                     font-size: 17px;
                 }
 
+                .time{
+                    font-size: 17px;
+                }
                 .date-line {
                     width: 65%;
                     height: 0.5rem;
