@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Formik, Form } from "formik";
 import AuthForm from "../../components/AuthForm/AuthForm";
 import FormInput from "../../components/FormInput/FormInput";
+import axiosInstance from "../../services/AxiosInstance";
 import {
   forgotPasswordFormData,
   initialValues,
@@ -9,8 +10,19 @@ import {
 } from "./util/ForgotPasswordFormData";
 
 const ForgotPassword = () => {
-  const onSubmit = (values, { setSubmitting, setFieldError }) => {
-    console.log(values);
+  const [submitStatus, setSubmitStatus] = useState("");
+
+  const onSubmit = async (values, { setSubmitting, setFieldError }) => {
+    try {
+      const res = await axiosInstance.post(
+        "account/request-reset-password/",
+        values
+      );
+      if (res.data.success) setSubmitStatus(res.data.success);
+      else setFieldError("authentication", res.data.status);
+    } catch (error) {
+      setFieldError("authentication", "Invalid email address");
+    }
     setSubmitting(false);
   };
 
@@ -22,7 +34,7 @@ const ForgotPassword = () => {
       link="Sign Up"
     >
       <Formik {...{ validate, initialValues, onSubmit }}>
-        {({ isSubmitting }) => (
+        {({ isSubmitting, errors }) => (
           <Form>
             {forgotPasswordFormData.map(({ label, name, type }, index) => (
               <FormInput
@@ -32,6 +44,16 @@ const ForgotPassword = () => {
               />
             ))}
             <div className="auth">
+              {errors.authentication && (
+                <span className="auth__status__error">
+                  {errors.authentication}
+                </span>
+              )}
+              {submitStatus && (
+                <span className="auth__status__success">
+                  Check your email for a link to reset your password
+                </span>
+              )}
               <button
                 type="submit"
                 disabled={isSubmitting}

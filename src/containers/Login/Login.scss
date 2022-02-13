@@ -28,9 +28,17 @@
     }
   }
 
-  &__error {
-    font-size: 15px;
-    font-weight: 500;
-    color: #ff0033;
+  &__status {
+    &__error {
+      font-size: 15px;
+      font-weight: 500;
+      color: #ff0033;
+    }
+
+    &__success {
+      font-size: 15px;
+      font-weight: 500;
+      color: #12ca50;
+    }
   }
 }

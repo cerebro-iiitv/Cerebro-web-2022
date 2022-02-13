@@ -34,7 +34,7 @@ const Login = () => {
             ))}
             <div className="auth">
               {errors.authentication && (
-                <span className="auth__error">{errors.authentication}</span>
+                <span className="auth__status__error">{errors.authentication}</span>
               )}
               <button
                 type="submit"
