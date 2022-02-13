@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useLocation } from 'react-router-dom';
+import { useNavigate, useLocation } from "react-router-dom";
 
 import NavMenuCard from "../../components/NavMenuCard/NavMenuCard";
 
@@ -24,6 +24,7 @@ const getInitialCardIndex = (currPath) => {
 }
 
 const HorizontalNavMenu = () => {
+    const navigate = useNavigate();
     const location = useLocation();
     const initialCardIndex = getInitialCardIndex(location.pathname);
 
@@ -123,10 +124,28 @@ const HorizontalNavMenu = () => {
     }, [leftAndRightDisabled])
 
     const scrollLeft = () => {
+        console.log(leftCardIndex);
+        let linkAddr = "/" + navMenuDetails[leftCardIndex + 1].title.toLowerCase();
+        if (linkAddr === "/faq's") {
+            linkAddr = "/faq"
+        }
+        if (linkAddr === "/home") {
+            linkAddr = "/"
+        }
+        navigate(linkAddr, { replace: false });
         setLeftCardIndex((prevState) => prevState - 1)
     }
 
     const scrollRight = () => {
+        console.log(leftCardIndex);
+        let linkAddr = "/" + navMenuDetails[leftCardIndex + 3].title.toLowerCase();
+        if (linkAddr === "/faq's") {
+            linkAddr = "/faq"
+        }
+        if (linkAddr === "/home") {
+            linkAddr = "/"
+        }
+        navigate(linkAddr, { replace: false });
         setLeftCardIndex((prevState) => prevState + 1)
     }
 
