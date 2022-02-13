@@ -11,6 +11,16 @@
     src: url("../../assets/fonts/chang_and_eng/Chane___.ttf");
 }
 
+@media only screen and (width: 1024px){
+    .event{
+        height: 550px;
+    }
+}
+@media only screen and (max-width: 1465px) and (min-width: 1122px){
+    .event{
+        height: 490px;
+    }
+}
 .event {
     background: radial-gradient(100% 100% at 50% 0%, rgba(7, 30, 64, 0.68) 0%, rgba(13, 57, 121, 0.595) 100%);
     display: flex;
@@ -20,27 +30,27 @@
         position: absolute;
         left: 20%;
     }
-
+    
     // Code for responsive design till 1024px (All laptop sizes)....
     @media only screen and (max-width: 1888px) and (min-width: 1466px){
         .left-door{
-            height: 66%;
+            height: 65%;
             left: 19%;
         }
         .right-door{
-            height: 66%;
+            height: 65%;
             right: 19%;
         }
     }
 
     @media only screen and (max-width: 1465px) and (min-width: 1122px){
         .left-door{
-            height: 63%;
+            height: 57.5%;
             left: 16%;
         }
         .right-door{
-            height: 63%;
-            left: 71%;
+            height: 57.5%;
+            left: 73%;
         }
          .prize-worth-detail{
                     font-size: 18px !important;
@@ -61,14 +71,15 @@
                     width: 20% !important;
                 }
     }
+    
     @media only screen and (max-width: 1121px) and (min-width: 1021px) {
         .left-door{
-            height: 69%;
-            left: 15%;
+            height: 65%;
+            left: 14%;
         }
         .right-door{
-            height: 69%;
-            left: 71%;
+            height: 65%;
+            left: 72%;
         }
         .prize-worth-detail{
             font-size: 14px !important;
@@ -171,14 +182,18 @@
                 background-image: url("../../assets/images/Events/time-background.svg");
                 background-repeat: no-repeat;
                 background-size: cover;
-                height: 6rem;
-                width: 9rem;
-
+                height: 4rem;
+                width: 12rem;
+                line-height: 12px;
                 .date1-items {
                     text-align: center;
-                    font-weight: bold;
+                    // font-weight: bold;
+                    font-size: 17px;
                 }
 
+                .time{
+                    font-size: 17px;
+                }
                 .date-line {
                     width: 65%;
                     height: 0.5rem;
@@ -250,11 +265,11 @@
             }
 
             .organizers-details {
-                width: 16%;
+                width: 18%;
                 font-family: Barlow;
                 margin-top: 2%;
                 font-size: 0.9rem;
-                font-weight: 200;
+                // font-weight: 200;
             }
 
         }

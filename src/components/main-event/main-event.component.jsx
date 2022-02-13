@@ -75,8 +75,8 @@ const Events = () => {
                                         <img src={idx + visible === bgColor.id ? selectedDot : sphere} alt="small-sphere" className="sphere"/>
                                         
                                         {
-                                            idx === 0 ? <h4 style={idx+visible === bgColor.id ? {color: bgColor.color}:{color: ""}} className={idx % 2 !==0  ? "text-down" : "text-up  gradient-text"}>{event.title}</h4>
-                                            : <h4 id = {idx % 6 === 0 || idx + visible === 18 ? "gradient-text0": ""} style={idx+visible === bgColor.id ? {color: bgColor.color}:{color: ""}} className={idx % 2 !==0  ? "text-down" : "text-up"}>{event.title}</h4>
+                                            idx+visible != 0 && idx === 0 ? <h4 style={idx+visible === bgColor.id ? {textShadow: "0px 0px 4.85399px #FEC600"}:{color: ""}} className={idx % 2 !==0  ? "text-down" : "text-up  gradient-text"}>{event.title}</h4>
+                                            : <h4 id = { (idx+visible !== 0) && ((idx % 6 === 0) || (idx + visible === 18))  ? "gradient-text0": ""} style={idx+visible === bgColor.id ? {textShadow: "0px 0px 4.85399px #FEC600"}:{color: ""}} className={idx % 2 !==0  ? "text-down" : "text-up"}>{event.title}</h4>
                                         }
                                 </div>
                             ))

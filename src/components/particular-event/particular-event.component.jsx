@@ -27,8 +27,8 @@ export const ParticularEvent = ({ title, start_time, prize, end_time, descriptio
         
         <div className='time-line'>
           <div className='date1'>
-                <p className='date1-items'>{start_time}<br />
-               <img src={dateLine} alt="date-line" className='date-line'/><br />
+                <p className='date1-items'>{start_time} <br />
+               <img src={dateLine} alt="date-line" className='date-line'/> <br />
                  8:00PM</p>
           </div>
           <img src={toDot} alt="to-dot-image" className='to-dot'/>
@@ -61,8 +61,8 @@ export const ParticularEvent = ({ title, start_time, prize, end_time, descriptio
 
           <div className="organizers-details">
             <h4>{convenor}</h4>
-            <h4>{co_convenor1}, <br /> {co_convenor2}</h4>
-            <h4>{mem1}, <br /> {mem2}</h4>
+            <h4>{co_convenor1}, {co_convenor2}</h4>
+            <h4>{mem1}, {mem2}</h4>
           </div>
           
         </div>
