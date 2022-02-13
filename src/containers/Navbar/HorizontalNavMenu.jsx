@@ -26,26 +26,36 @@ const HorizontalNavMenu = () => {
     const cardComponentsWithClones = React.useMemo(() => {
         let tempArr = navMenuDetails.map((option, i) => {
             let tiltClass = "";
+            let shift = 0;
             if (i === leftCardIndex) {
                 tiltClass = "visible-card--1";
+                shift = -2;
             }
             if (i === leftCardIndex + 1) {
                 tiltClass = "visible-card--2";
+                shift = -1;
             }
             if (i === leftCardIndex + 2) {
                 tiltClass = "visible-card--3";
             }
             if (i === leftCardIndex + 3) {
                 tiltClass = "visible-card--4";
+                shift = 1;
             }
             if (i === leftCardIndex + 4) {
                 tiltClass = "visible-card--5";
+                shift = 2;
+            }
+
+            const cardClickHandler = () => {
+                setLeftCardIndex((prevState) => prevState + shift);
             }
 
             return (
                 <NavMenuCard className={tiltClass}
                     title={option.title}
-                    isTransitionEnabled={isTransitionEnabled} />
+                    isTransitionEnabled={isTransitionEnabled}
+                    transitionAfterClick={cardClickHandler} />
             )
         });
         return tempArr;

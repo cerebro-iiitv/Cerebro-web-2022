@@ -1,7 +1,8 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./NavMenuCard.scss";
 
 const NavCard = (props) => {
+    const navigate = useNavigate();
     let linkAddr = "/" + props.title.toLowerCase();
     if (linkAddr === "/faq's") {
         linkAddr = "/faq"
@@ -9,17 +10,21 @@ const NavCard = (props) => {
     if (linkAddr === "/home") {
         linkAddr = "/"
     }
+    const cardClickHandler = () => {
+        navigate(linkAddr, { replace: false });
+        props.transitionAfterClick();
+    }
     return (
         <div className="navcard__wrapper">
             <div className={`navcard__container ${props.className}`}
                 style={{
                     transition: props.isTransitionEnabled ? undefined : 'none',
                 }}>
-                <Link to={linkAddr} className="navcard__link">
+                <button className="navcard__btn" onClick={cardClickHandler}>
                     <div className="navcard__grad-border">
                         <div className="navcard__content">{props.title}</div>
                     </div>
-                </Link>
+                </button>
             </div>
         </div>
     )
