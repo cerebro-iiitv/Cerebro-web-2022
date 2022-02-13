@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useLocation } from 'react-router-dom';
 
 import NavMenuCard from "../../components/NavMenuCard/NavMenuCard";
 
@@ -14,13 +15,24 @@ let navMenuDetails = [
 ]
 navMenuDetails = [...navMenuDetails, ...navMenuDetails, ...navMenuDetails];
 
+const getInitialCardIndex = (currPath) => {
+    if (currPath === "/team") return 3;
+    if (currPath === "/faq") return 4;
+    if (currPath === "/event") return 6;
+    if (currPath === "/timeline") return 7;
+    return 5; // for "/home" and any other path
+}
+
 const HorizontalNavMenu = () => {
-    const [leftCardIndex, setLeftCardIndex] = useState(5);
+    const location = useLocation();
+    const initialCardIndex = getInitialCardIndex(location.pathname);
+
+    const [leftCardIndex, setLeftCardIndex] = useState(initialCardIndex);
     const [leftAndRightDisabled, setLeftAndRightDisabled] = useState(false);
     const [isTransitionEnabled, setIsTransitionEnabled] = useState(true)
     const [touchPosition, setTouchPosition] = useState(null);
 
-    const transitionDuration = 500;
+    const transitionDuration = 400;
 
     // Setting up the tilt css classes using wrappers around the visible cards
     const cardComponentsWithClones = React.useMemo(() => {
@@ -71,6 +83,14 @@ const HorizontalNavMenu = () => {
             }, transitionDuration)
         }
 
+        if (leftCardIndex + 4 === cardComponentsWithClones.length - 2) {
+            setLeftAndRightDisabled(true)
+            setTimeout(() => {
+                setIsTransitionEnabled(false)
+                setLeftCardIndex(4)
+            }, transitionDuration)
+        }
+
         if (leftCardIndex === 0) {
             setLeftAndRightDisabled(true)
             setTimeout(() => {
@@ -79,7 +99,15 @@ const HorizontalNavMenu = () => {
             }, transitionDuration)
         }
 
-        if (leftCardIndex === 5) {
+        if (leftCardIndex === 1) {
+            setLeftAndRightDisabled(true)
+            setTimeout(() => {
+                setIsTransitionEnabled(false)
+                setLeftCardIndex(6)
+            }, transitionDuration)
+        }
+
+        if (leftCardIndex === 4 || leftCardIndex === 5 || leftCardIndex === 6) {
             setTimeout(() => {
                 setIsTransitionEnabled(true)
             }, transitionDuration)
