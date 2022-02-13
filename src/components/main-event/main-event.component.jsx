@@ -10,7 +10,7 @@ import {default as button} from '../../assets/images/Events/button.svg';
 
 
 const Events = () => {
-    
+
     const [events, setEvents] = useState([]);
     const [visible, setVisible] = useState(0);
     const [currEvent, setCurrEvent] = useState({});
@@ -73,16 +73,10 @@ const Events = () => {
                             events.slice(visible, visible + 7).map((event,idx) => (
                                 <div onClick={() => { loadPage(event,idx+visible) }} key={event.id} className={ (idx % 6 === 0 && visible !== 0) || (visible === 0 && idx === 6) ? "disable-on particular-element" : "particular-element"}>
                                         <img src={idx + visible === bgColor.id ? selectedDot : sphere} alt="small-sphere" className="sphere"/>
-                                        {/* for the first index to keep it active */}
+                                        
                                         {
-                                            idx === 0 ? <h4 id = {bgColor.id === idx + visible ? "tweak-up" : ""} style={idx+visible === bgColor.id ? {color: bgColor.color}:{color: ""}} className={idx % 2 !==0  ? "text-down  gradient-text" : "text-up  gradient-text"}>{event.title}</h4>
-                                            : <h4 id = {bgColor.id === idx + visible ? "tweak-up" : ""} style={idx+visible === bgColor.id ? {color: bgColor.color}:{color: "rgba(255, 255, 255, 0.1)"}, idx === 6 ? {display: "none"} : {display: "block"}} className={idx % 2 !==0  ? "text-down" : "text-up"}>{event.title}</h4>
-                                        }
-                                        {/* for other index except the 0 so that they have fading effect */}
-                                        {
-                                            // Inline style is for getting the color as yellow when clicked      
-                                            idx % 6 === 0 && idx !== 0 ? <h4 id = {bgColor.id === idx + visible ? "tweak-up" : ""} style={idx+visible === bgColor.id ? {color: bgColor.color}:{color: ""}} className="text-up gradient-text0">{event.title}</h4>
-                                            : <h4 id = {bgColor.id === idx + visible ? "tweak-up" : ""}  style={idx+visible === bgColor.id ? {color: bgColor.color}:{color: "rgba(255, 255, 255, 0.1)"}} className={idx % 2 !==0 ? "text-down" : "text-up"}>{event.title}</h4>
+                                            idx === 0 ? <h4 style={idx+visible === bgColor.id ? {color: bgColor.color}:{color: ""}} className={idx % 2 !==0  ? "text-down" : "text-up  gradient-text"}>{event.title}</h4>
+                                            : <h4 id = {idx % 6 === 0 || idx + visible === 18 ? "gradient-text0": ""} style={idx+visible === bgColor.id ? {color: bgColor.color}:{color: ""}} className={idx % 2 !==0  ? "text-down" : "text-up"}>{event.title}</h4>
                                         }
                                 </div>
                             ))
