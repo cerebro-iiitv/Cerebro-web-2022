@@ -47,35 +47,31 @@
                 height: 100%;
                 display: flex;
                 justify-content: space-around;
-                
-                #tweak-down{
-                    animation-name: tweak-down;
-                    animation-duration: 1s;
-                }
+            
                 
                 @keyframes tweak-down {
                     0% {
                         transform: translateY(0px);
                     }
                     50% {
-                        transform: translateY(10px);
+                        transform: translateY(8px);
                     }
                     100%{
                         transform: translateY(0px);
                     }
                 }
 
-                #tweak-up{
-                    animation-name: tweak-up;
-                    animation-duration: 1s;
-                }
+                // #tweak-up{
+                //     animation-name: tweak-up;
+                //     animation-duration: 1s;
+                // }
         
                 @keyframes tweak-up {
                     0% {
                         transform: translateY(0px);
                     }
                     50% {
-                        transform: translateY(-10px);
+                        transform: translateY(-8px);
                     }
                     100%{
                         transform: translateY(0px);
@@ -129,7 +125,7 @@
 
                 @media only screen and (max-width: 1055px) and (min-width: 1024px){
                     .text-up{
-                        margin-top: 6.5%;
+                        margin-top: 5.5%;
                         font-size: 14px !important;
                     }
                     .text-down{
@@ -175,8 +171,20 @@
                     color: rgba(255, 255, 255, 0.8);
                     line-height: 21px;
                 }
+
+                .particular-element:active {
+                    .text-up{
+                        animation-name: tweak-up;
+                        animation-duration: 0.6s;
+                    }
+                    .text-down{
+                        animation-name: tweak-down;
+                        animation-duration: 0.6s;
+                    }
+                }
+                
+
                 .gradient-text{
-                    // background-color:white;
                     background-image: linear-gradient(270deg, rgba(231, 202, 202, 0.6) 2.87%, rgba(231, 202, 202, 0) 107.47%);
                     background-size: 100%;
                     -webkit-background-clip: text;
@@ -184,8 +192,7 @@
                     -webkit-text-fill-color: transparent; 
                     -moz-text-fill-color: transparent;
                 }
-                .gradient-text0{
-                    // background-color:white;
+                #gradient-text0{
                     background-image: linear-gradient(90deg, rgba(231, 202, 202, 0.6) 0%, rgba(231, 202, 202, 0) 131.91%);
                     background-size: 100%;
                     -webkit-background-clip: text;
@@ -245,7 +252,6 @@
                     display: block;
                 }
             }
-
             .disable {
                 display: none;
             }
