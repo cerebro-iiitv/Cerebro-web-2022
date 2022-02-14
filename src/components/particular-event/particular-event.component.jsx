@@ -42,8 +42,8 @@ export const ParticularEvent = ({ title, start_time, prize, end_time, descriptio
           <div className="prize-queries">
             <h4 className='prize-worth-query'>Prize Worth</h4>
             <h4 className='team-size-query'>Team Size</h4>
-            <h4 className='rules-regulations'> <a href="#">Rules and Regulations</a> <br/>
-              <a href="#">Social Media</a> 
+            <h4 className='rules-regulations'> <a href="https://discord.gg/QaYWmeBc">Rules and Regulations</a> <br/>
+              <a href="https://discord.gg/QaYWmeBc">Social Media</a> 
             </h4>
           </div>
 
@@ -66,7 +66,7 @@ export const ParticularEvent = ({ title, start_time, prize, end_time, descriptio
           </div>
           
         </div>
-        <form action="#">
+        <form>
         <div className='button-container'>
           <button id = "single-button">Register Here</button>
           {
