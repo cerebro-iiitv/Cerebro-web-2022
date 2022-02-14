@@ -22,7 +22,7 @@ export const ParticularEvent = ({ title, start_time, prize, end_time, descriptio
       <div className="details">
         <h2 className='event-title'>{title}</h2>
         <div className="event-container">
-            <p className='event-para'>{description}, join our <a href='#' className='discord-server'>Discord Server</a> </p>
+            <p className='event-para'>{description}, join our <a href='https://discord.gg/QaYWmeBc' className='discord-server'>Discord Server</a> </p>
         </div>
         
         <div className='time-line'>
@@ -31,7 +31,7 @@ export const ParticularEvent = ({ title, start_time, prize, end_time, descriptio
                <img src={dateLine} alt="date-line" className='date-line'/> <br />
                  8:00PM</p>
           </div>
-          <img src={toDot} alt="to-dot-image" className='to-dot'/>
+          <img src={toDot} alt="to-dot" className='to-dot'/>
           <div className='date1'>
           <p className='date1-items'>{end_time} <br />
                <img src={dateLine} alt="date-line" className='date-line'/> <br />
