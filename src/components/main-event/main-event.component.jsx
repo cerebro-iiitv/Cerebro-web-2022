@@ -52,11 +52,12 @@ const Events = () => {
             <div className="event-outer">
                 
                 <div className="upper-nav">
-
+                        {/* space kept for the upper nav design */}
                 </div>
 
                 <div className="event-rendering">
                     {
+                        // isActive is for knowing if any change has occured and through state it renders the current event
                         isActive === true ? <ParticularEvent key={currEvent.id} title={currEvent.title} prize={currEvent.prize} team_size = {currEvent.team_size} start_time = {currEvent.start_time} end_time = {currEvent.end_time} description = {currEvent.description} convenor = {currEvent.contacts[0]  ? currEvent.contacts[0].name : "Dhruv Dave"}
                         co_convenor1 = {currEvent.contacts[1] ? currEvent.contacts[1].name : "Dhruv Dave"} co_convenor2 = {currEvent.contacts[2] ? currEvent.contacts[2].name : "Dhruv Dave"} mem1 = {currEvent.contacts[3]  ? currEvent.contacts[3].name : "Dhruv Dave"} mem2 = {currEvent.contacts[4] ? currEvent.contacts[4].name : "Dhruv Dave"} />
                             : <ParticularEvent key={1} title={"Tech Hunt"} prize={10000} team_size = {5} start_time = {"18/3/2022"} end_time = {"20/3/2022"} description = {"Tech Hunt event"} convenor = {"Shreyansh Mishra"} co_convenor1 = {"Prathak Garg"} co_convenor2 = {"Anubhav Kushwaha"} mem1 = {"Spruha Thorat"} mem2 = {"Raghav Agiwal"}/>
