@@ -16,16 +16,53 @@
     src: url("../../assets/fonts/chang_and_eng/Chane___.ttf");
 }
 
-@media only screen and (width: 1024px){
+@media only screen and (min-width: 1024px) and (max-width: 1121px){
     .event{
         height: 550px;
     }
-}
-@media only screen and (max-width: 1465px) and (min-width: 1122px){
-    .event{
-        height: 490px;
+    .event-detail{
+        // border: 2px solid white;
+        width: 110% !important;
+        margin-left: -10% !important;
+    }
+    .button-container{
+        margin-bottom: 8% !important;
     }
 }
+
+@media only screen and (max-width: 1465px) and (min-width: 1122px){
+    .event{
+        height: 515px;
+    }
+    .event-detail{
+        margin-left: -10% !important;
+    }
+}
+
+@media only screen and (width: 1280px){
+    .event-detail{
+        width: 35rem !important;
+    }
+    .button-container{
+        margin-bottom: 5% !important;
+    }
+}
+
+@media only screen and (width: 1366px){
+    .left-door{
+        height: 71% !important;
+    }
+    .right-door{
+        height: 71% !important;
+    }
+    .event-detail{
+        width: 113% !important;
+    }
+    .button-container{
+        margin-left: -2.5% !important;
+    }
+}
+
 .event {
     background: radial-gradient(100% 100% at 50% 0%, rgba(7, 30, 64, 0.68) 0%, rgba(13, 57, 121, 0.595) 100%);
     border: 0.01px solid #2162A7;
@@ -65,22 +102,26 @@
             font-size: 16px !important;
         }
          .prize-worth-detail{
-                    font-size: 18px !important;
+                    font-size: 22px !important;
                 }
                 .prize-worth-query{
-                    font-size: 18px !important;
+                    font-size: 22px !important;
                 }
                 .team-size-detail{
-                    font-size: 18px !important;
+                    font-size: 22px !important;
                 }
                 .team-size-query{
-                    font-size: 18px !important;
+                    font-size: 22px !important;
                 }
                 #members {
-                    margin-top: 65% !important;
+                    margin-top: 48% !important;
                 }
                 .organizers-details{
+                    font-size: 16px !important;
                     width: 20% !important;
+                }
+                .organizers-queries{
+                    font-size: 16px !important;
                 }
     }
 
@@ -137,7 +178,6 @@
             transform: rotateZ(180deg);
         }
     }
-
     .details {
         width: 80%;
         display: flex;
@@ -187,6 +227,10 @@
                 margin-right: 8%;
             }
 
+            .to-dot{
+                margin-left: 8%;
+                margin-right: 8%;
+            }
             .date1 {
                 background-image: url("../../assets/images/Events/time-background.svg");
                 background-repeat: no-repeat;
@@ -341,6 +385,14 @@
                 font-size: 20px;
                 box-shadow: 0px 3.17885px 3.17885px rgba(0, 0, 0, 0.25);
                 cursor: pointer;
+
+                @media only screen and (width: 1440px){
+                    .button-container{
+                        button{
+                            padding: 0.6rem 2.5rem;
+                        }
+                    }
+                }
             }
         }
     }

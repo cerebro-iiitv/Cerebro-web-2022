@@ -15,7 +15,7 @@ const Events = () => {
     const [visible, setVisible] = useState(0);
     const [currEvent, setCurrEvent] = useState({});
     const [isActive, setIsActive] = useState(false);
-    const [bgColor, setBgColor] = useState({id: -1, color: '#FFFCC9'});
+    const [currIdx, setCurrIdx] = useState(-1);
     
     useEffect(async function eventHandler() {
         const response = await fetch('http://cerebro2022.herokuapp.com/events/');
@@ -43,7 +43,7 @@ const Events = () => {
     function loadPage(event,idx) {         
         setCurrEvent(event);
         setIsActive(true);
-        setBgColor({color: '#FFFCC9', id: idx});
+        setCurrIdx(idx);
     }   
 
     
@@ -66,17 +66,31 @@ const Events = () => {
 
                 <div className="event-scroller">
                     <div className="button-cover1">
-                         <img onClick={loadless6} className={visible === 0 ? "button disable" : "button1"} src = {button} />
+                         <img onClick={loadless6} alt="nav-button-left" className={visible === 0 ? "button disable" : "button1"} src = {button} />
                     </div>     
                     <div className="scroll-bar">
                         {
                             events.slice(visible, visible + 7).map((event,idx) => (
+                                // onclick it goes to the function loadPage where it takes the event we clicked and then we are using it to display it above in the rendering div.
+                                // in the class name the logic is for -> disabling the buttons on idx 6 and we are not supposed to disable the button at start and end i.e., event 1 and 19
+
                                 <div onClick={() => { loadPage(event,idx+visible) }} key={event.id} className={ (idx % 6 === 0 && visible !== 0) || (visible === 0 && idx === 6) ? "disable-on particular-element" : "particular-element"}>
-                                        <img src={idx + visible === bgColor.id ? selectedDot : sphere} alt="small-sphere" className="sphere"/>
+                                        
+                                        {/* If we have selected or clicked on any button then we have to show the selected sphere else we have to show the normal sphere. */}
+                                        <img src={idx + visible === currIdx ? selectedDot : sphere} alt="small-sphere" className="sphere"/>
                                         
                                         {
-                                            idx+visible != 0 && idx === 0 ? <h4 style={idx+visible === bgColor.id ? {textShadow: "0px 0px 4.85399px #FEC600"}:{color: ""}} className={idx % 2 !==0  ? "text-down" : "text-up  gradient-text"}>{event.title}</h4>
-                                            : <h4 id = { (idx+visible !== 0) && ((idx % 6 === 0) || (idx + visible === 18))  ? "gradient-text0": ""} style={idx+visible === bgColor.id ? {textShadow: "0px 0px 4.85399px #FEC600"}:{color: ""}} className={idx % 2 !==0  ? "text-down" : "text-up"}>{event.title}</h4>
+                                            /* 
+                                             here -> We have used the logic of idx+visible==currIdx so that we can know if the current element is clicked or not.
+                                            //  if clicked we give it a style of selected yellow glowing color else we dont.
+
+                                            // Also if idx % 2 === 0 (i.e., at even index) then the text is supposed to be up else text is down. those classnames are in scss file.
+                                            //  Also we are supposed to give a blur effect to the idx 6 (keeping in mind we are rendering 7 at a time out of which 2 are not supposed to be active)
+                                            // we have created these for them.
+                                            */  
+
+                                            idx+visible != 0 && idx === 0 ? <p style={idx+visible === currIdx ? {textShadow: "0px 0px 4.85399px #FEC600",color:"#FFFCC9"}:{color: ""}} className={idx % 2 !==0  ? "text-down" : "text-up  gradient-text"}>{event.title}</p>
+                                            : <p id = { (idx+visible !== 0) && ((idx % 6 === 0))  ? "gradient-text0": ""} style={idx+visible === currIdx ? {textShadow: "0px 0px 4.85399px #FEC600",color:"#FFFCC9"}:{color: ""}} className={idx % 2 !==0  ? "text-down" : "text-up"}>{event.title}</p>
                                         }
                                 </div>
                             ))
@@ -85,7 +99,7 @@ const Events = () => {
 
                     </div>           
                     <div className="button-cover2">
-                        <img onClick={loadMore6} src = {button} className={visible === 15 ? "button disable" : "button2"} />
+                        <img onClick={loadMore6} src = {button} alt="nav-button-right" className={visible === 15 ? "button disable" : "button2"} />
                     </div>
                 </div>
             </div>
