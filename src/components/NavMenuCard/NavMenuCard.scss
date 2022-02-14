@@ -14,7 +14,8 @@
     justify-content: center;
     align-items: center;
   }
-  &__btn{
+  &__btn {
+    cursor: pointer;
     height: 100%;
     width: 100%;
     text-decoration: none;
@@ -192,11 +193,11 @@
   }
 }
 
-@media screen and (max-width:1024px) {
-  .navcard__wrapper{
-     height: 3.6rem;
+@media screen and (max-width: 1024px) {
+  .navcard__wrapper {
+    height: 3.6rem;
   }
   .navcard__content {
-    font-size:0.8rem;
+    font-size: 0.8rem;
   }
 }

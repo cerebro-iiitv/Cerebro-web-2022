@@ -1,3 +1,10 @@
+.brochure-btn-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
 .brochure_link {
   height: 5vh;
   width: 14vw;
@@ -6,18 +13,11 @@
   justify-content: space-around;
 }
 
-.brochure_title {
-  color: white;
-  font-family: Rekt Brush;
-  font-size: 2rem;
-}
-
-.brochure-btn-cont {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-}
+// .brochure_title {
+//   color: white;
+//   font-family: Rekt Brush;
+//   font-size: 2rem;
+// }
 
 @media screen and (max-width:1024px) {
   .brochure-btn-cont{
