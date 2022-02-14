@@ -1,9 +1,11 @@
 .main-event {
+    padding-top: 20px;
+    user-select: none;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(25, 25, 71);
+    background-color: #071E40;
     color: white;
 
     .event-outer {
@@ -13,6 +15,7 @@
         width: 80%;
 
         .event-rendering {
+            height: 100%;
             width: 60%;
             margin-bottom: 4%;
             

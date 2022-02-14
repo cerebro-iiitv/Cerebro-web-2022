@@ -3,33 +3,303 @@
     src: url("../../assets/fonts/bauman/Bauman-Regular.otf");
 }
 
-@media only screen and (height: 1080px){
-    .scroll-bar{
+@media only screen and (height: 1080px) {
+    .scroll-bar {
         margin-top: 9% !important;
     }
-    .button-cover1{
+
+    .button-cover1 {
         display: flex;
         flex-direction: column;
-        justify-content: end;
+        justify-content: flex-end;
         margin-top: 6.25% !important;
     }
-    .button-cover2{
+
+    .button-cover2 {
         display: flex;
         flex-direction: column;
-        justify-content: end;
+        justify-content: flex-end;
         margin-top: 6.25% !important;
     }
 }
 
-.scroll-bar {
+// .scroll {
+//     display: flex;
+//     justify-content: space-between;
+
+//     .particular-element-even{
+//         // width: 100%;
+//         // height: 100%;
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         justify-content: center;
+//         p{
+//             cursor: pointer;
+//             font-size: 20px;
+//             font-family: Baumans;
+//             font-style: normal;
+//             font-weight: normal;
+//             text-transform: uppercase;
+//             color: rgba(255, 255, 255, 0.8);
+//             line-height: 21px;
+//         }
+//     }
+//     .particular-element-odd{
+//         width: 100%;
+//         // height: 100%;
+//         position: relative;
+//         top: 65%;
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         justify-content: center;
+//         p{
+//             cursor: pointer;
+//             font-size: 20px;
+//             font-family: Baumans;
+//             font-style: normal;
+//             font-weight: normal;
+//             text-transform: uppercase;
+//             color: rgba(255, 255, 255, 0.8);
+//             line-height: 21px;
+//         }
+//     }
+// }
+// // DONT TOUCH BELOW 
+
+// .disable {
+//     display: none;
+// }
+
+// .button-cover2 {
+//     z-index: 10;
+// }
+
+// .button-cover1 {
+//     z-index: 10;
+// }
+
+// .button1 {
+//     position: relative;
+//     top: -9%;
+//     left: -4%;
+//     cursor: pointer;
+//     transform: rotateZ(180deg);
+// }
+
+// .button2 {
+//     position: relative;
+//     top: -9%;
+//     left: 10%;
+//     cursor: pointer;
+// }
+
+// .scroll-navigator {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-evenly;
+//     align-content: space-between;
+//     // border: 1px solid white;
+//     width: 100%;
+//     margin-left: 2.5%;
+
+//     .nav-line {
+//         position: absolute;
+//         left: 31.5%;
+//         width: 38%;
+//         // margin-top: 0.3%;
+//         // top: 82.4%;
+//     }
+
+//     .sphere {
+//         cursor: pointer;
+//         margin: 10px 0;
+//         z-index: 10;
+//     }
+
+//     #disable-on {
+//         pointer-events: none;
+//     }
+
+//     .gradient-text {
+//         pointer-events: none;
+//         background-image: linear-gradient(270deg, rgba(231, 202, 202, 0.6) 2.87%, rgba(231, 202, 202, 0) 107.47%);
+//         background-size: 100%;
+//         -webkit-background-clip: text;
+//         -moz-background-clip: text;
+//         -webkit-text-fill-color: transparent;
+//         -moz-text-fill-color: transparent;
+//     }
+
+//     #gradient-text0 {
+//         pointer-events: none;
+//         background-image: linear-gradient(90deg, rgba(231, 202, 202, 0.6) 0%, rgba(231, 202, 202, 0) 131.91%);
+//         background-size: 100%;
+//         -webkit-background-clip: text;
+//         -moz-background-clip: text;
+//         -webkit-text-fill-color: transparent;
+//         -moz-text-fill-color: transparent;
+//     }
+
+//     .row-1 {
+//         // position: relative;
+//         // right: 8%;
+//         // width: 44em;
+//         // border: 1px solid white;
+//         // width: 155%;
+//         // display: flex;
+//         // justify-content: space-between;
+//         display: grid;
+//         grid-template-columns: repeat(7, auto);
+
+//         .element-1 {
+//             position: relative;
+//             top: 35%;
+//             display: flex;
+//             flex-direction: column;
+//             justify-content: center;
+//             align-items: center;
+//         }
+
+//         .element-1 p {
+//             cursor: pointer;
+//             font-size: 20px;
+//             font-family: Baumans;
+//             font-style: normal;
+//             font-weight: normal;
+//             text-transform: uppercase;
+//             color: rgba(255, 255, 255, 0.8);
+//             line-height: 21px;
+//         }
+
+//         .element-1:nth-of-type(even) {
+//             cursor: none;
+//             pointer-events: none;
+//             user-select: none;
+//             opacity: 0;
+//             width: 0;
+//             height: 0;
+//         }
+
+//         .element-1:nth-of-type(odd):active {
+//             p{
+//                 animation-name: tweak-up;
+//                 animation-duration: 0.6s;
+//             }
+            
+//         }
+
+
+//     }
+
+//     .row-2 {
+//         // border: 1px solid white;
+//         position: relative;
+//         // right: 20%;
+//         left: 7%;
+//         // width: 44em;       
+
+//         display: grid;
+//         grid-template-columns: repeat(7, 100px);
+//     }
+
+    
+//         .row-3 {
+//             // position: relative;
+//             // right: 30%;
+//             // width: 200%;
+//             // border: 1px solid white;
+//             // position: relative;
+//             // right: 22%;
+//             // border: 1px solid white;
+//             display: grid;
+//             grid-template-columns: repeat(7, auto);
+    
+//             .element-2 {
+//                 position: relative;
+//                 top: -32%;
+//                 // margin-left: 18%;
+//                 // margin-right: 4%;
+//                 display: flex;
+//                 flex-direction: column;
+//                 justify-content: center;
+//                 align-items: center;
+//             }
+    
+//             .element-2 p {
+//                 cursor: pointer;
+//                 font-size: 20px;
+//                 font-family: Baumans;
+//                 font-style: normal;
+//                 text-transform: uppercase;
+//                 color: rgba(255, 255, 255, 0.8);
+//                 line-height: 21px;
+//             }
+    
+//             .element-2:nth-of-type(odd) {
+//                 opacity: 0;
+//                 cursor: none;
+//                 pointer-events: none;
+//                 user-select: none;
+//                 width: 0;
+//                 height: 0;
+//             }
+    
+//             .element-2:nth-of-type(even):active {
+//                 p{
+//                     animation-name: tweak-down;
+//                     animation-duration: 0.6s;
+//                 }
                 
+//             }
+//         }
+    
+
+    
+
+//     @keyframes tweak-down {
+//         0% {
+//             transform: translateY(0px);
+//         }
+
+//         50% {
+//             transform: translateY(8px);
+//         }
+
+//         100% {
+//             transform: translateY(0px);
+//         }
+//     }
+
+//     @keyframes tweak-up {
+//         0% {
+//             transform: translateY(0px);
+//         }
+
+//         50% {
+//             transform: translateY(-8px);
+//         }
+
+//         100% {
+//             transform: translateY(0px);
+//         }
+//     }
+// }
+
+
+
+// DONT TOUCH BELOW
+
+.scroll-bar {
+
     margin-top: 2%;
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: space-around;
 
-    
+
     @keyframes tweak-down {
         0% {
             transform: translateY(0px);
@@ -53,7 +323,7 @@
             transform: translateY(0px);
         }
     }
-    
+
     .nav-line {
         position: absolute;
         left: 31.5%;
@@ -61,7 +331,7 @@
         margin-top: 0.3%;
         // top: 82.4%;
     }
-    
+
     @media only screen and (max-width: 1280px) and (min-width: 1157px){
         .text-up{
             top: 75% !important;
@@ -74,7 +344,7 @@
             font-size: 18px !important;
         }
     }
-    
+
     @media only screen and (max-width: 1156px) and (min-width: 1075px){
         .text-up{
             // margin-top: 5.5%;
@@ -85,7 +355,7 @@
             // margin-top: 5.25%;
             top: 81% !important;
             font-size: 16px !important;
-            
+
         }
     }
 
@@ -104,13 +374,13 @@
 
     @media only screen and (max-width: 1055px) and (min-width: 1024px){
         .text-up{
-            top: 75% !important;
+            top: 78% !important;
             // margin-top: 7.5%;
             font-size: 13px !important;
         }
         .text-down{
             // top: 78%;
-            top: 80% !important;
+            top: 85% !important;
             font-size: 13px !important;
             // margin-top: 6.25%;
         }
@@ -144,7 +414,7 @@
     }
     .text-up{
         position: absolute;
-        top: 73%;
+        top: 75%;
         font-size: 20px;
         font-family: Baumans;
         font-style: normal;
@@ -164,7 +434,7 @@
             animation-duration: 0.6s;
         }
     }
-    
+
 
     .gradient-text{
         background-image: linear-gradient(270deg, rgba(231, 202, 202, 0.6) 2.87%, rgba(231, 202, 202, 0) 107.47%);
@@ -185,7 +455,7 @@
 
     .text-down {
         position: absolute;
-        top: 80%;
+        top: 82%;
         font-size: 20px;
         font-family: Baumans;
         font-style: normal;
@@ -196,13 +466,13 @@
     }
     @media (max-width: 1440px) and (min-width: 1394px ){
         .text-down{
-            top: 82% !important;
+            top: 86% !important;
             // margin-top: 3.5%;
             font-size: 18px !important;
 
         }
         .text-up{
-            top: 75% !important;
+            top: 80% !important;
             font-size: 18px !important;
             // margin-top: 3%;
         }
@@ -211,28 +481,28 @@
     // 1080px height responsive widths
     @media only screen and (max-width: 1920px) and (min-width: 1441px) and (height: 1080px){
         .text-down{
-            top: 80% !important;
+            top: 83.5% !important;
             // margin-top: 3.5%;
             font-size: 20px !important;
 
         }
         .text-up{
-            top: 74% !important;
+            top: 77% !important;
             font-size: 20px !important;
             // margin-top: 3%;
         }
     }
 
     @media only screen and (max-width: 1440px) and (min-width: 1301px) and (height: 1080px){
-        
+
         .text-down{
-            top: 79% !important;
+            top: 82% !important;
             // margin-top: 3.5%;
             font-size: 16px !important;
 
         }
         .text-up{
-            top: 73% !important;
+            top: 76% !important;
             font-size: 16px !important;
             // margin-top: 3%;
         }
@@ -240,13 +510,13 @@
 
     @media only screen and (max-width: 1300px) and (min-width: 1024px) and (height: 1080px){
         .text-down{
-            top: 77% !important;
+            top: 79.5% !important;
             // margin-top: 3.5%;
             font-size: 13px !important;
 
         }
         .text-up{
-            top: 71.5% !important;
+            top: 75.5% !important;
             font-size: 13px !important;
             // margin-top: 3%;
         }
@@ -254,11 +524,11 @@
 
     @media only screen and (width: 1366px) and (height: 1080px){
         .text-up{
-            top: 72% !important;
+            top: 76% !important;
             font-size: 16px !important;
         }
         .text-down{
-            top: 76.5% !important;
+            top: 81.5% !important;
             font-size: 16px !important;
         }
     }
@@ -267,28 +537,28 @@
     // 768px responsive widths
     @media only screen and (max-width: 1920px) and (min-width: 1441px) and (height: 768px){
         .text-down{
-            top: 88% !important;
+            top: 92% !important;
             // margin-top: 3.5%;
             font-size: 20px !important;
 
         }
         .text-up{
-            top: 80% !important;
+            top: 84% !important;
             font-size: 20px !important;
             // margin-top: 3%;
         }
     }
 
     @media only screen and (max-width: 1440px) and (min-width: 1301px) and (height: 768px){
-        
+
         .text-down{
-            top: 87% !important;
+            top: 91% !important;
             // margin-top: 3.5%;
             font-size: 16px !important;
 
         }
         .text-up{
-            top: 79.5% !important;
+            top: 83.5% !important;
             font-size: 16px !important;
             // margin-top: 3%;
         }
@@ -296,13 +566,13 @@
 
     @media only screen and (max-width: 1300px) and (min-width: 1024px) and (height: 768px){
         .text-down{
-            top: 86% !important;
+            top: 89% !important;
             // margin-top: 3.5%;
             font-size: 13px !important;
 
         }
         .text-up{
-            top: 78% !important;
+            top: 83% !important;
             font-size: 13px !important;
             // margin-top: 3%;
         }
@@ -310,11 +580,11 @@
 
     @media only screen and (width: 1366px) and (height: 768px){
         .text-up{
-            top: 77.5% !important;
+            top: 83.5% !important;
             font-size: 16px !important;
         }
         .text-down{
-            top: 84% !important;
+            top: 91.5% !important;
             font-size: 16px !important;
         }
     }
@@ -329,11 +599,12 @@
             margin-top: 1.5%;
         }
     }
-    
+
 }
-.disable-on{
-    pointer-events: none;
-}
+    .disable-on {
+        pointer-events: none;
+    }
+
 .particular-element {
     display: flex;
     flex-direction: column;
@@ -371,6 +642,15 @@
     transform: rotateZ(180deg);
 }
 
+@media only screen and (width: 1920px) and (height: 882px){
+    .text-up{
+        top: 81% !important;
+    }
+
+    .text-down{
+        top: 87% !important;
+    }
+}
 @media only screen and (max-width: 1440px) and (min-width: 1394px ){
     .button2{
         height: 60px !important;
@@ -411,11 +691,13 @@
     }
     .text-up{
         font-size: 16px !important;
-        margin-top: 2%;
+        top: 79% !important;
+        // margin-top: 2%;
     }
     .text-down{
         font-size: 16px !important;
-        margin-top: 2.75%;
+        top: 86% !important;
+        // margin-top: 2.75%;
     }
 }
 
@@ -425,5 +707,5 @@
     top: -9%;
     left: 10%;
     cursor: pointer;
-    
+
 }
