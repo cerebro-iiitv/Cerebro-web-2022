@@ -11,18 +11,56 @@
     src: url("../../assets/fonts/chang_and_eng/Chane___.ttf");
 }
 
-@media only screen and (width: 1024px){
+@media only screen and (min-width: 1024px) and (max-width: 1121px){
     .event{
         height: 550px;
     }
-}
-@media only screen and (max-width: 1465px) and (min-width: 1122px){
-    .event{
-        height: 490px;
+    .event-detail{
+        // border: 2px solid white;
+        width: 110% !important;
+        margin-left: -10% !important;
+    }
+    .button-container{
+        margin-bottom: 8% !important;
     }
 }
+
+@media only screen and (max-width: 1465px) and (min-width: 1122px){
+    .event{
+        height: 515px;
+    }
+    .event-detail{
+        margin-left: -10% !important;
+    }
+}
+
+@media only screen and (width: 1280px){
+    .event-detail{
+        width: 35rem !important;
+    }
+    .button-container{
+        margin-bottom: 5% !important;
+    }
+}
+
+@media only screen and (width: 1366px){
+    .left-door{
+        height: 71% !important;
+    }
+    .right-door{
+        height: 71% !important;
+    }
+    .event-detail{
+        width: 113% !important;
+    }
+    .button-container{
+        margin-left: -2.5% !important;
+    }
+}
+
 .event {
     background: radial-gradient(100% 100% at 50% 0%, rgba(7, 30, 64, 0.68) 0%, rgba(13, 57, 121, 0.595) 100%);
+    border: 0.01px solid #2162A7;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,6 +70,15 @@
     }
     
     // Code for responsive design till 1024px (All laptop sizes)....
+    @media screen {
+        .left-door{
+            height: 52%;
+        }
+        .right-door{
+            height: 52%;
+        }
+    }
+
     @media only screen and (max-width: 1888px) and (min-width: 1466px){
         .left-door{
             height: 65%;
@@ -45,53 +92,57 @@
 
     @media only screen and (max-width: 1465px) and (min-width: 1122px){
         .left-door{
-            height: 57.5%;
-            left: 16%;
+            height: 62.5%;
+            left: 17%;
         }
         .right-door{
-            height: 57.5%;
-            left: 73%;
+            height: 62.5%;
+            left: 72%;
         }
          .prize-worth-detail{
-                    font-size: 18px !important;
+                    font-size: 22px !important;
                 }
                 .prize-worth-query{
-                    font-size: 18px !important;
+                    font-size: 22px !important;
                 }
                 .team-size-detail{
-                    font-size: 18px !important;
+                    font-size: 22px !important;
                 }
                 .team-size-query{
-                    font-size: 18px !important;
+                    font-size: 22px !important;
                 }
                 #members {
-                    margin-top: 65% !important;
+                    margin-top: 48% !important;
                 }
                 .organizers-details{
+                    font-size: 16px !important;
                     width: 20% !important;
+                }
+                .organizers-queries{
+                    font-size: 16px !important;
                 }
     }
     
     @media only screen and (max-width: 1121px) and (min-width: 1021px) {
         .left-door{
-            height: 65%;
+            height: 66.8%;
             left: 14%;
         }
         .right-door{
-            height: 65%;
+            height: 67.5%;
             left: 72%;
         }
         .prize-worth-detail{
-            font-size: 14px !important;
+            font-size: 18px !important;
         }
         .prize-worth-query{
-            font-size: 14px !important;
+            font-size: 18px !important;
         }
         .team-size-detail{
-            font-size: 14px !important;
+            font-size: 18px !important;
         }
         .team-size-query{
-            font-size: 14px !important;
+            font-size: 18px !important;
         }
         .rules-regulations{
             font-size: 14px !important;
@@ -100,7 +151,7 @@
             margin-top: 85% !important;
         }
         .mid-line{
-            height: 10rem;
+            height: 12rem !important;
             margin-top: 5%;
         }
     }
@@ -135,8 +186,8 @@
             left: 71%;
         }
     }
+    
     .right-door{
-        // height: 62.5%;
         right: 20%;
         position: absolute;
         transform: rotateZ(180deg);
@@ -176,18 +227,22 @@
         .time-line {
             margin-top: 1%;
             display: flex;
-            justify-content: space-evenly;
+            justify-content: center;
 
+            .to-dot{
+                margin-left: 8%;
+                margin-right: 8%;
+            }
             .date1 {
                 background-image: url("../../assets/images/Events/time-background.svg");
                 background-repeat: no-repeat;
                 background-size: cover;
-                height: 4rem;
-                width: 12rem;
-                line-height: 12px;
+                height: 70px;
+                width: 145px;
+                line-height: 10px;
+                
                 .date1-items {
                     text-align: center;
-                    // font-weight: bold;
                     font-size: 17px;
                 }
 
@@ -202,9 +257,10 @@
         }
 
         .event-detail {
-            width: 100%;
+            width: 40rem;
+            margin-left: 4%;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
 
             .prize-queries {
                 .prize-worth-query {
@@ -230,14 +286,16 @@
                     }
                 }
             }
+
             .mid-line{
-                margin-top: 5%;
+                display: flex;
+                flex-direction: column;
+                align-self: center;
                 height: 8rem;
                 border: 1px solid rgba(255,255,255,40%);
             }
 
             .prize-details {
-                padding-right: 3%;
                 .prize-worth-detail {
                     font-family: Barlow;
                     font-size: 22px;
@@ -253,8 +311,6 @@
 
             .organizers-queries {
                 font-family: Barlow;
-                padding-left: 5%;
-                margin-right: 4%;
                 margin-top: 2%;
                 color: #1CA0FF;
                 font-size: 0.9rem;
@@ -267,6 +323,7 @@
             .organizers-details {
                 width: 18%;
                 font-family: Barlow;
+                font-weight: 100;
                 margin-top: 2%;
                 font-size: 0.9rem;
                 // font-weight: 200;
@@ -277,28 +334,39 @@
         .button-container {
             margin-right: 2%;
             margin-bottom: 2%;
-            margin-top: 1%;
+            margin-top: 3%;
             display: flex;
             justify-content: center;
+
             .mid-button-line{
-                margin-left: 5%;
+                margin-left: 6%;
                 margin-right: 3%;
             }
+
             #single-button{
                 margin-right: -3%;
             }
+
             button {
                 font-family: Barlow;
                 font-weight: 700;
                 background: none;
                 border: 1px solid black;
-                border-radius: 50px;
-                padding: 0.2rem 2rem;
+                border-radius: 17px;
+                padding: 0.5rem 2.3rem;
                 background-color: #EBC027;
                 color: #29457C;
-                font-size: 1.2rem;
+                font-size: 1.1rem;
                 box-shadow: 0px 3.17885px 3.17885px rgba(0, 0, 0, 0.25);
                 cursor: pointer;
+
+                @media only screen and (width: 1440px){
+                    .button-container{
+                        button{
+                            padding: 0.6rem 2.5rem;
+                        }
+                    }
+                }
             }
         }
     }

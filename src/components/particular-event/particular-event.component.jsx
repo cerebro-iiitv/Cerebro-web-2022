@@ -22,7 +22,7 @@ export const ParticularEvent = ({ title, start_time, prize, end_time, descriptio
       <div className="details">
         <h2 className='event-title'>{title}</h2>
         <div className="event-container">
-            <p className='event-para'>{description} <br /> <a href='#' className='discord-server'>Discord Server</a> </p>
+            <p className='event-para'>{description}, join our <a href='#' className='discord-server'>Discord Server</a> </p>
         </div>
         
         <div className='time-line'>
@@ -33,8 +33,8 @@ export const ParticularEvent = ({ title, start_time, prize, end_time, descriptio
           </div>
           <img src={toDot} alt="to-dot-image" className='to-dot'/>
           <div className='date1'>
-          <p className='date1-items'>{end_time}<br />
-               <img src={dateLine} alt="date-line" className='date-line'/><br />
+          <p className='date1-items'>{end_time} <br />
+               <img src={dateLine} alt="date-line" className='date-line'/> <br />
                  8:00PM</p>
           </div>
         </div>
@@ -60,9 +60,9 @@ export const ParticularEvent = ({ title, start_time, prize, end_time, descriptio
           </div>
 
           <div className="organizers-details">
-            <h4>{convenor}</h4>
-            <h4>{co_convenor1}, {co_convenor2}</h4>
-            <h4>{mem1}, {mem2}</h4>
+            <p>{convenor}</p>
+            <p>{co_convenor1}, {co_convenor2}</p>
+            <p>{mem1}, {mem2}</p>
           </div>
           
         </div>

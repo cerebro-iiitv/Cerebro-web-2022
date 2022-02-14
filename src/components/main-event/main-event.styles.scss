@@ -3,6 +3,7 @@
     src: url("../../assets/fonts/bauman/Bauman-Regular.otf");
 }
 
+
 .main-event {
     height: 100vh;
     display: flex;
@@ -28,7 +29,6 @@
             height: 72.6%;
             width: 55%;
             margin-bottom: 4%;
-            // border: 2px solid white;
         }
 
         .event-scroller {
@@ -36,13 +36,11 @@
             width: 48%;
             display: flex;
             justify-content: space-between;
-            // border: 2px solid white;
             margin-bottom: 7%;
 
             .scroll-bar {
                 
                 margin-top: 2%;
-                // border: 2px solid green;
                 width: 100%;
                 height: 100%;
                 display: flex;
@@ -60,11 +58,6 @@
                         transform: translateY(0px);
                     }
                 }
-
-                // #tweak-up{
-                //     animation-name: tweak-up;
-                //     animation-duration: 1s;
-                // }
         
                 @keyframes tweak-up {
                     0% {
@@ -80,27 +73,19 @@
                 
                 .nav-line {
                     position: absolute;
-                    left: 27.5%;
+                    left: 26.5%;
                     width: 46%;
                     margin-top: 0.3%;
                     // top: 82.4%;
                 }
-                @media only screen and (max-width: 1390px) and (min-width: 1281px){
-                    .text-up{
-                        margin-top: 3.65%;
-                    }
-                    .text-down {
-                        margin-top: 3%;
-                    }
-                }
-
+                
                 @media only screen and (max-width: 1280px) and (min-width: 1157px){
                     .text-up{
-                        margin-top: 3.75%;
+                        margin-top: 4.5%;
                         font-size: 18px !important;
                     }
                     .text-down {
-                        margin-top: 3%;
+                        margin-top: 4%;
                         font-size: 18px !important;
                     }
                 }
@@ -125,12 +110,12 @@
 
                 @media only screen and (max-width: 1055px) and (min-width: 1024px){
                     .text-up{
-                        margin-top: 5.5%;
+                        margin-top: 7.5%;
                         font-size: 14px !important;
                     }
                     .text-down{
                         font-size: 14px !important;
-                        margin-top: 5.25%;
+                        margin-top: 6.25%;
                     }
                 }
                 @media only screen and (max-width: 1023px) and (min-width: 976px){
@@ -207,17 +192,20 @@
                     font-size: 20px;
                     font-family: Baumans;
                     font-style: normal;
-                    font-weight: normal;
+                    // font-weight: normal;
                     text-transform: uppercase;
                     color: rgba(255, 255, 255, 0.8);
                     line-height: 21px;
                 }
                 @media (max-width: 1440px) and (min-width: 1394px ){
                     .text-down{
-                        margin-top: 2.5%;
+                        margin-top: 3.5%;
+                        font-size: 18px !important;
+
                     }
                     .text-up{
-                        margin-top: 2.25%;
+                        font-size: 18px !important;
+                        margin-top: 3%;
                     }
                 }
                 @media (min-width: 1441px) and (max-width: 1714px){
@@ -272,29 +260,57 @@
 
             @media only screen and (max-width: 1440px) and (min-width: 1394px ){
                 .button2{
-                    top: -16% !important;
+                    height: 60px !important;
+                    left: 2% !important;
                 }
                 .button1{
-                    top: -18% !important;
-                    left: -10% !important;
+                    top: -13% !important;
+                    height: 60px !important;  
+                }
+                .button-cover1{
+                    margin-left: -2%;
+                    // border: 1px solid white;
                 }
             }
 
             @media only screen and (max-width: 1280px) and (min-width: 1024px ){
                 .button2{
                     top: -21% !important;
+                    height: 60px !important;  
                 }
                 .button1{
                     top: -21% !important;
-                    left: -10% !important;
+                    left: -50% !important;
+                    height: 60px !important;  
                 }
             }
-           
+
+            @media only screen and (width: 1366px){
+                .button2{
+                    top: -16% !important;
+                    height: 60px !important;  
+                    left: 8% !important;
+                }
+                .button1{
+                    top: -16% !important;
+                    left: -50% !important;
+                    height: 60px !important;  
+                }
+                .text-up{
+                    font-size: 16px !important;
+                    margin-top: 2%;
+                }
+                .text-down{
+                    font-size: 16px !important;
+                    margin-top: 2.75%;
+                }
+            }
+
 
             .button2{
                 position: relative;
                 top: -9%;
-                left: 50%;
+                left: 10%;
                 cursor: pointer;
                 
             }
