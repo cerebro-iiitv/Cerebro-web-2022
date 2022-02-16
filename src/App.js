@@ -7,7 +7,8 @@ import Signup from "./containers/Signup/Signup";
 import "./App.css";
 
 
-import Events from './components/main-event/main-event.component';
+import Events from "./containers/Events/events.component";
+
 function App() {
   const authCtx = useContext(AuthContext);
   const token = localStorage.getItem("token");

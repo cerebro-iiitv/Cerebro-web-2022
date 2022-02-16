@@ -1,0 +1,27 @@
+.main-event {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(25, 25, 71);
+    color: white;
+
+    .event-outer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+
+        .event-rendering {
+            width: 60%;
+            margin-bottom: 4%;
+            
+        }
+
+        .event-scroller {
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}

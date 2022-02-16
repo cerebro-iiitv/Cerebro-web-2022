@@ -2,200 +2,121 @@
     font-family: RektBrush;
     src: url("../../assets/fonts/Rekt Brush/RektBrush.otf");
 }
+
 @font-face {
     font-family: Barlow;
     src: url("../../assets/fonts/Barlow/Barlow-Regular.ttf");
 }
+
 @font-face {
     font-family: Changa;
     src: url("../../assets/fonts/chang_and_eng/Chane___.ttf");
-}
-
-@media only screen and (min-width: 1024px) and (max-width: 1121px){
-    .event{
-        height: 550px;
-    }
-    .event-detail{
-        // border: 2px solid white;
-        width: 110% !important;
-        margin-left: -10% !important;
-    }
-    .button-container{
-        margin-bottom: 8% !important;
-    }
-}
-
-@media only screen and (max-width: 1465px) and (min-width: 1122px){
-    .event{
-        height: 515px;
-    }
-    .event-detail{
-        margin-left: -10% !important;
-    }
-}
-
-@media only screen and (width: 1280px){
-    .event-detail{
-        width: 35rem !important;
-    }
-    .button-container{
-        margin-bottom: 5% !important;
-    }
-}
-
-@media only screen and (width: 1366px){
-    .left-door{
-        height: 71% !important;
-    }
-    .right-door{
-        height: 71% !important;
-    }
-    .event-detail{
-        width: 113% !important;
-    }
-    .button-container{
-        margin-left: -2.5% !important;
-    }
 }
 
 .event {
     background: radial-gradient(100% 100% at 50% 0%, rgba(7, 30, 64, 0.68) 0%, rgba(13, 57, 121, 0.595) 100%);
     border: 0.01px solid #2162A7;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    .left-door{
-        position: absolute;
-        left: 20%;
-    }
-    
-    // Code for responsive design till 1024px (All laptop sizes)....
-    @media screen {
-        .left-door{
-            height: 52%;
+    justify-content: space-between;
+
+
+    @media only screen and (max-width: 1465px) and (min-width: 1122px) {
+
+       
+        .prize-worth-detail {
+            font-size: 22px !important;
         }
-        .right-door{
-            height: 52%;
+
+        .prize-worth-query {
+            font-size: 22px !important;
+        }
+
+        .team-size-detail {
+            font-size: 22px !important;
+        }
+
+        .team-size-query {
+            font-size: 22px !important;
+        }
+
+        #members {
+            margin-top: 48% !important;
+        }
+
+        .organizers-details {
+            font-size: 16px !important;
+            width: 20% !important;
+        }
+
+        .organizers-queries {
+            font-size: 16px !important;
         }
     }
 
-    @media only screen and (max-width: 1888px) and (min-width: 1466px){
-        .left-door{
-            height: 65%;
-            left: 19%;
-        }
-        .right-door{
-            height: 65%;
-            right: 19%;
-        }
-    }
-
-    @media only screen and (max-width: 1465px) and (min-width: 1122px){
-        .left-door{
-            height: 62.5%;
-            left: 17%;
-        }
-        .right-door{
-            height: 62.5%;
-            left: 72%;
-        }
-         .prize-worth-detail{
-                    font-size: 22px !important;
-                }
-                .prize-worth-query{
-                    font-size: 22px !important;
-                }
-                .team-size-detail{
-                    font-size: 22px !important;
-                }
-                .team-size-query{
-                    font-size: 22px !important;
-                }
-                #members {
-                    margin-top: 48% !important;
-                }
-                .organizers-details{
-                    font-size: 16px !important;
-                    width: 20% !important;
-                }
-                .organizers-queries{
-                    font-size: 16px !important;
-                }
-    }
-    
     @media only screen and (max-width: 1121px) and (min-width: 1021px) {
-        .left-door{
-            height: 66.8%;
-            left: 14%;
-        }
-        .right-door{
-            height: 67.5%;
-            left: 72%;
-        }
-        .prize-worth-detail{
+
+        
+        .prize-worth-detail {
             font-size: 18px !important;
         }
-        .prize-worth-query{
+
+        .prize-worth-query {
             font-size: 18px !important;
         }
-        .team-size-detail{
+
+        .team-size-detail {
             font-size: 18px !important;
         }
-        .team-size-query{
+
+        .team-size-query {
             font-size: 18px !important;
         }
-        .rules-regulations{
+
+        .rules-regulations {
             font-size: 14px !important;
         }
-        #members{
+
+        #members {
             margin-top: 85% !important;
-        }
-        .mid-line{
-            height: 12rem !important;
-            margin-top: 5%;
         }
     }
 
-    @media only screen and (max-width: 1020px) and (min-width: 983px){
-        .left-door{
-            height: 75%;
-            left: 14%;
-        }
-        .right-door{
-            height: 75%;
-            left: 70%;
-        }
-    }
-    @media only screen and (max-width: 982px) and (min-width: 868px){
-        .left-door{
-            height: 78%;
-            left: 12%;
-        }
-        .right-door{
-            height: 78%;
-            left: 70%;
+
+    .left-door-container {
+        width: 10%;
+        display: flex;
+        justify-content: flex-end;
+
+        .left-door {
+            height: 109%;
+            top: -4%;
+            position: relative;
         }
     }
-    @media only screen and (max-width: 867px) and (min-width: 768px){
-        .left-door{
-            height: 80%;
-            left: 8%;
-        }
-        .right-door{
-            height: 80%;
-            left: 71%;
+
+    .right-door-container {
+        width: 10%;
+        display: flex;
+        justify-content: flex-start;
+        .right-door {
+            height: 109%;
+            top: -4%;
+            left: 10%;
+            position: relative;
+            transform: rotateZ(180deg);
         }
     }
-    
-    .right-door{
-        right: 20%;
-        position: absolute;
-        transform: rotateZ(180deg);
-    }
+
     .details {
-        width: 70%;
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
         .event-title {
-            width: 100%;
+            
             text-align: center;
             font-weight: 400;
             font-size: 2em;
@@ -204,12 +125,12 @@
         }
 
         .event-container {
-            margin-top: -3%;
+
+
             display: flex;
             justify-content: center;
 
             .event-para {
-                width: 100%;
                 text-align: center;
                 font-family: Barlow;
                 font-size: 1.1rem;
@@ -225,30 +146,33 @@
         }
 
         .time-line {
-            margin-top: 1%;
+          
+
             display: flex;
             justify-content: center;
 
-            .to-dot{
+            .to-dot {
                 margin-left: 8%;
                 margin-right: 8%;
             }
+
             .date1 {
                 background-image: url("../../assets/images/Events/time-background.svg");
                 background-repeat: no-repeat;
                 background-size: cover;
                 height: 70px;
-                width: 145px;
+                width: 10rem;
                 line-height: 10px;
-                
+
                 .date1-items {
                     text-align: center;
                     font-size: 17px;
                 }
 
-                .time{
+                .time {
                     font-size: 17px;
                 }
+
                 .date-line {
                     width: 65%;
                     height: 0.5rem;
@@ -257,12 +181,58 @@
         }
 
         .event-detail {
-            width: 40rem;
-            margin-left: 4%;
+            margin-right: 7%;
+            width: 100%;
             display: flex;
             justify-content: space-between;
+                .prize-container{
+                    display: flex;
+                    justify-content: space-evenly;
+                }
+                .organizer-container{
+                    display: flex;
+                    justify-content: space-evenly;
+                }
+                .prize-details {
+                    .prize-worth-detail {
+                        font-family: Barlow;
+                        font-size: 22px;
+                        font-weight: bold;
+                    }
+    
+                    .team-size-detail {
+                        font-family: Barlow;
+                        font-size: 22px;
+                        font-weight: bold;
+                    }
+    
+                }
+    
+                .organizers-queries {
+                    font-family: Barlow;
+                    margin-top: 2%;
+                    color: #1CA0FF;
+                    font-size: 0.9rem;
+                    font-weight: 400;
+                    #members {
+                        margin-top: 35%;
+                    }
+                }
+    
+                .mid-line {
+                    display: flex;
+                    flex-direction: column;
+                    align-self: center;
+                    height: 133px;
+                    border: 1px solid rgba(255, 255, 255, 40%);
+                    margin-right: 1.1rem;
+                    margin-left: 1.1rem;
+                }
+          
+            
 
             .prize-queries {
+
                 .prize-worth-query {
                     font-size: 1.4rem;
                     font-family: Barlow;
@@ -287,38 +257,9 @@
                 }
             }
 
-            .mid-line{
-                display: flex;
-                flex-direction: column;
-                align-self: center;
-                height: 8rem;
-                border: 1px solid rgba(255,255,255,40%);
-            }
 
-            .prize-details {
-                .prize-worth-detail {
-                    font-family: Barlow;
-                    font-size: 22px;
-                    font-weight: bold;
-                }
 
-                .team-size-detail {
-                    font-family: Barlow;
-                    font-size: 22px;
-                    font-weight: bold;
-                }
-            }
 
-            .organizers-queries {
-                font-family: Barlow;
-                margin-top: 2%;
-                color: #1CA0FF;
-                font-size: 0.9rem;
-                font-weight: 400;
-                #members {
-                    margin-top: 35%;
-                }
-            }
 
             .organizers-details {
                 width: 18%;
@@ -326,24 +267,20 @@
                 font-weight: 100;
                 margin-top: 2%;
                 font-size: 0.9rem;
-                // font-weight: 200;
+            
             }
 
         }
 
         .button-container {
-            margin-right: 2%;
-            margin-bottom: 2%;
-            margin-top: 3%;
             display: flex;
-            justify-content: center;
-
-            .mid-button-line{
+            width: 110%;
+            .mid-button-line {
                 margin-left: 6%;
                 margin-right: 3%;
             }
 
-            #single-button{
+            #single-button {
                 margin-right: -3%;
             }
 
@@ -353,20 +290,12 @@
                 background: none;
                 border: 1px solid black;
                 border-radius: 17px;
-                padding: 0.5rem 2.3rem;
+                padding: 0.01rem 2.1rem;
                 background-color: #EBC027;
                 color: #29457C;
-                font-size: 1.1rem;
+                font-size: 20px;
                 box-shadow: 0px 3.17885px 3.17885px rgba(0, 0, 0, 0.25);
                 cursor: pointer;
-
-                @media only screen and (width: 1440px){
-                    .button-container{
-                        button{
-                            padding: 0.6rem 2.5rem;
-                        }
-                    }
-                }
             }
         }
     }
