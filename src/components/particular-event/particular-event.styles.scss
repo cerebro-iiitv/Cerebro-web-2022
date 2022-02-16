@@ -1,0 +1,302 @@
+@font-face {
+    font-family: RektBrush;
+    src: url("../../assets/fonts/Rekt Brush/RektBrush.otf");
+}
+
+@font-face {
+    font-family: Barlow;
+    src: url("../../assets/fonts/Barlow/Barlow-Regular.ttf");
+}
+
+@font-face {
+    font-family: Changa;
+    src: url("../../assets/fonts/chang_and_eng/Chane___.ttf");
+}
+
+.event {
+    background: radial-gradient(100% 100% at 50% 0%, rgba(7, 30, 64, 0.68) 0%, rgba(13, 57, 121, 0.595) 100%);
+    border: 0.01px solid #2162A7;
+    display: flex;
+    justify-content: space-between;
+
+
+    @media only screen and (max-width: 1465px) and (min-width: 1122px) {
+
+       
+        .prize-worth-detail {
+            font-size: 22px !important;
+        }
+
+        .prize-worth-query {
+            font-size: 22px !important;
+        }
+
+        .team-size-detail {
+            font-size: 22px !important;
+        }
+
+        .team-size-query {
+            font-size: 22px !important;
+        }
+
+        #members {
+            margin-top: 48% !important;
+        }
+
+        .organizers-details {
+            font-size: 16px !important;
+            width: 20% !important;
+        }
+
+        .organizers-queries {
+            font-size: 16px !important;
+        }
+    }
+
+    @media only screen and (max-width: 1121px) and (min-width: 1021px) {
+
+        
+        .prize-worth-detail {
+            font-size: 18px !important;
+        }
+
+        .prize-worth-query {
+            font-size: 18px !important;
+        }
+
+        .team-size-detail {
+            font-size: 18px !important;
+        }
+
+        .team-size-query {
+            font-size: 18px !important;
+        }
+
+        .rules-regulations {
+            font-size: 14px !important;
+        }
+
+        #members {
+            margin-top: 85% !important;
+        }
+    }
+
+
+    .left-door-container {
+        width: 10%;
+        display: flex;
+        justify-content: flex-end;
+
+        .left-door {
+            height: 109%;
+            top: -4%;
+            position: relative;
+        }
+    }
+
+    .right-door-container {
+        width: 10%;
+        display: flex;
+        justify-content: flex-start;
+        .right-door {
+            height: 109%;
+            top: -4%;
+            left: 10%;
+            position: relative;
+            transform: rotateZ(180deg);
+        }
+    }
+
+    .details {
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .event-title {
+            
+            text-align: center;
+            font-weight: 400;
+            font-size: 2em;
+            font-family: RektBrush;
+            text-transform: uppercase;
+        }
+
+        .event-container {
+
+
+            display: flex;
+            justify-content: center;
+
+            .event-para {
+                text-align: center;
+                font-family: Barlow;
+                font-size: 1.1rem;
+                font-weight: 200;
+                line-height: 1.5rem;
+
+                .discord-server {
+                    text-decoration: none;
+                    color: #1CA0FF;
+                }
+            }
+
+        }
+
+        .time-line {
+          
+
+            display: flex;
+            justify-content: center;
+
+            .to-dot {
+                margin-left: 8%;
+                margin-right: 8%;
+            }
+
+            .date1 {
+                background-image: url("../../assets/images/Events/time-background.svg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 70px;
+                width: 10rem;
+                line-height: 10px;
+
+                .date1-items {
+                    text-align: center;
+                    font-size: 17px;
+                }
+
+                .time {
+                    font-size: 17px;
+                }
+
+                .date-line {
+                    width: 65%;
+                    height: 0.5rem;
+                }
+            }
+        }
+
+        .event-detail {
+            margin-right: 7%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+                .prize-container{
+                    display: flex;
+                    justify-content: space-evenly;
+                }
+                .organizer-container{
+                    display: flex;
+                    justify-content: space-evenly;
+                }
+                .prize-details {
+                    .prize-worth-detail {
+                        font-family: Barlow;
+                        font-size: 22px;
+                        font-weight: bold;
+                    }
+    
+                    .team-size-detail {
+                        font-family: Barlow;
+                        font-size: 22px;
+                        font-weight: bold;
+                    }
+    
+                }
+    
+                .organizers-queries {
+                    font-family: Barlow;
+                    margin-top: 2%;
+                    color: #1CA0FF;
+                    font-size: 0.9rem;
+                    font-weight: 400;
+                    #members {
+                        margin-top: 35%;
+                    }
+                }
+    
+                .mid-line {
+                    display: flex;
+                    flex-direction: column;
+                    align-self: center;
+                    height: 133px;
+                    border: 1px solid rgba(255, 255, 255, 40%);
+                    margin-right: 1.1rem;
+                    margin-left: 1.1rem;
+                }
+          
+            
+
+            .prize-queries {
+
+                .prize-worth-query {
+                    font-size: 1.4rem;
+                    font-family: Barlow;
+                    font-weight: bold;
+                    color: #1CA0FF;
+                }
+
+                .team-size-query {
+                    font-family: Barlow;
+                    font-size: 1.4rem;
+                    font-weight: bold;
+                    color: #1CA0FF;
+                }
+
+                .rules-regulations {
+                    a {
+                        font-weight: 100;
+                        font-family: Barlow;
+                        text-decoration: none;
+                        color: #1CA0FF;
+                    }
+                }
+            }
+
+
+
+
+
+            .organizers-details {
+                width: 18%;
+                font-family: Barlow;
+                font-weight: 100;
+                margin-top: 2%;
+                font-size: 0.9rem;
+            
+            }
+
+        }
+
+        .button-container {
+            display: flex;
+            width: 110%;
+            .mid-button-line {
+                margin-left: 6%;
+                margin-right: 3%;
+            }
+
+            #single-button {
+                margin-right: -3%;
+            }
+
+            button {
+                font-family: Barlow;
+                font-weight: 700;
+                background: none;
+                border: 1px solid black;
+                border-radius: 17px;
+                padding: 0.01rem 2.1rem;
+                background-color: #EBC027;
+                color: #29457C;
+                font-size: 20px;
+                box-shadow: 0px 3.17885px 3.17885px rgba(0, 0, 0, 0.25);
+                cursor: pointer;
+            }
+        }
+    }
+}

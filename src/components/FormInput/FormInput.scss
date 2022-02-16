@@ -1,0 +1,91 @@
+.forminput {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  input:-webkit-autofill,
+  textarea:-webkit-autofill,
+  select:-webkit-autofill {
+    transition-delay: 3600s;
+  }
+
+  &__label {
+    // font-family: Barlow;
+    // font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    color: #b9b9b9;
+  }
+
+  &__field {
+    padding: 0px 5px;
+    margin-top: 5px;
+    background: #44658c;
+    box-shadow: 0px 3.77495px 7.54991px #152c4d;
+    border-radius: 5.09844px;
+    border: none;
+    width: 249px;
+    height: 35px;
+    color: #ffffff;
+    font-size: 16px;
+    outline: none;
+  }
+
+  &__input {
+    background: #44658c;
+    padding: 8px;
+    margin: 2px;
+    color: white;
+  }
+
+  &__error {
+    margin-top: 2px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #ff0033;
+  }
+
+  &__signup {
+    &__firstname {
+      float: left;
+      padding-right: 20px;
+    }
+
+    &__phone {
+      margin-top: 22px;
+      input {
+        margin-top: 2px;
+      }
+    }
+
+    &__address {
+      width: 100%;
+      padding: 5px 5px;
+      resize: none;
+      overflow-y: clip;
+    }
+
+    &__email {
+      width: 100%;
+    }
+
+    &__institute {
+      width: 100%;
+    }
+
+    &__degree {
+      margin-top: 5px;
+    }
+
+    &__password {
+      float: left;
+      padding-right: 20px;
+    }
+  }
+
+  &__login {
+    &__email {
+      width: 544.65px;
+      margin-bottom: 10px;
+    }
+  }
+}
