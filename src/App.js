@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import AuthContext, { AuthContextProvider } from "./store/AuthContext";
 import './App.css';
+import CommonLayer from "./containers/CommonLayer/CommonLayer";
 
 function App() {
   const authCtx = useContext(AuthContext);
@@ -40,7 +41,7 @@ function App() {
               </div>
             } />
           </Routes>
-          <Navbar  status='hover'/>
+          <CommonLayer status="hover"/>
         </BrowserRouter>
       </AuthContextProvider>
     </div>
