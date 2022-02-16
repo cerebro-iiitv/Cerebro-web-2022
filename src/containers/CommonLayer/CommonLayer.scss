@@ -83,3 +83,23 @@
     transform: translateY(-9.5%);
   }
 }
+
+#lgndash{
+font-family: Rekt Brush;
+color: white;
+font-style: normal;
+font-weight:400;
+font-size: 14px;
+line-height: 15px;
+}
+
+.dashboard-content{
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  img{
+    margin-bottom: 5px;
+  }
+}

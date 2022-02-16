@@ -15,3 +15,9 @@
   font-family: Calculator;
   src: url("./assets/fonts/Calculator.ttf");
 }
+
+
+@font-face {
+  font-family: Rekt Brush;
+  src: url("./assets/fonts/RektBrush.otf");
+}
