@@ -1,16 +1,21 @@
 .main-wrapper {
+  position: absolute;
   height: 100vh;
   width: 100vw;
+  z-index:0;
 }
 
 .blur-layer {
+  background: url("../../assets/images/glass-top.svg") no-repeat center center/cover;
   position: absolute;
   height: 100%;
   width: 100%;
-  z-index: 1;
+  opacity: 0;
+  z-index: 0;
 }
 
 .visible-layer {
+  
   position: absolute;
   height: 100vh;
   width: 100%;
@@ -77,10 +82,18 @@
   &:hover .visible-layer-top-center {
     transform: translateY(0%);
   }
+  &:hover .blur-layer {
+    opacity: 1;
+    
+  }
 }
 .visible-layer-top {
   &:hover .visible-layer-top-center {
     transform: translateY(-9.5%);
+  }
+  &:hover .blur-layer {
+    opacity: 0;
+    
   }
 }
 
