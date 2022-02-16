@@ -10,7 +10,10 @@ import "./App.css";
 
 import Events from "./containers/Events/events.component";
 
+<<<<<<< HEAD
 import Events from './components/main-event/main-event.component';
+=======
+>>>>>>> 39fb767 (add changes to responsive design, and structured the code, added axios instance)
 function App() {
   const authCtx = useContext(AuthContext);
   const token = localStorage.getItem("token");
