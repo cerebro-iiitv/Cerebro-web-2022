@@ -7,21 +7,21 @@ const CommonLayer = () => {
   function LoginButton(props) {
     return (
       //  <Link to="/login">
-      <>
+      <div className="login-btn-container">
         <p id="lgndash" onClick={props.onClick}>
           LOGIN / SIGNUP
         </p>
-      </>
+      </div>
       //  </Link>
     );
   }
   function Dashboard() {
     return (
       //  <Link to="/dashboard">
-      <>
+      <div className="login-btn">
         <img src={dashboard} alt="dashboard"></img>{" "}
         <p id="lgndash">DASHBOARD</p>
-      </>
+      </div>
       //  </Link>
     );
   }
@@ -45,22 +45,23 @@ const CommonLayer = () => {
   }
 
   return (
-    // <div className="main-wrapper">
-    <div className="visible-layer">
-      <div className="visible-layer-top">
-        <div className="blur-layer"></div>
-        <div className="visible-layer-top-spacer"></div>
-        <div className="visible-layer-top-center"></div>
-        <div className="visible-layer-top-dashboard">
-          <div className="visible-layer-top-dashboard-main">
-            <LogStatus />
-          </div>
+    <>
+      <div className="visible-layer">
+        <div className="visible-layer-top-hud">
+        </div>
+        <div className="login-button-container">
+          <Dashboard />
+        </div>
+        <div className="navhover">
+          <Navbar status="hover" />
+        </div>
+        <div className="blur-layer"></div>;
+        <div className="test">
         </div>
       </div>
-      <Navbar status="hover" />
-    </div>
-    // </div>
+    </>
   );
 };
 
 export default CommonLayer;
+// 

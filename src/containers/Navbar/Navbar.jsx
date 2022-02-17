@@ -5,7 +5,7 @@ import NavTimer from "./NavTimer";
 import "./Navbar.scss";
 const Navbar = (props) => {
   return (
-    <div className={props.status === "hover" ? "navhover navbar" : "navbar"}>
+    <div className={props.status === "hover" ? "navbar" : "navbar"}>
       <div className="navbar__bg-img">
         <div className="navbar__content">
           <div className="navbar__content__hoverbar"></div>
