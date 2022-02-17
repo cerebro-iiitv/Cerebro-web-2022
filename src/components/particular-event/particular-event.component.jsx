@@ -69,17 +69,24 @@ export const ParticularEvent = ({ title, start_time, prize, end_time, descriptio
             </div>
           </div>
 
-        
-          <div className="prize-details">
-              <h4 className='prize-worth-detail'>{prize} INR</h4>
-              <h4 className='team-size-detail'>{team_size}</h4>
-          </div>
 
-          <div className='mid-line'></div>
-          <div className="organizers-queries">
-              <h4>Convenor</h4>
-              <h4>Co-Convenor</h4>
-              <h4 id="members">Members</h4>
+          <div className="mid-line"></div>
+
+          <div className="right-event-container">
+              <div className="convenor-sec">
+                <p className='conv'>Convenor</p>
+                <div className="convenor-dets">
+                  <p>{convenor}</p>
+                </div>
+              </div>
+              <div className="co-convenor-sec">
+                <p className='coconv'>Co Convenor</p>
+                <p className='co_convenor-details'>{co_convenor1}, {co_convenor2}</p>
+              </div>
+              <div className="members-sec">
+                <p className='mems'>Members</p>
+                <p className='members-details'>{mem1}, {mem2}</p>
+              </div>
           </div>
 
         </div>

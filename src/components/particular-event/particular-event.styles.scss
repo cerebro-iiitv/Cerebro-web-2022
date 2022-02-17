@@ -129,8 +129,6 @@
         }
 
         .event-container {
-
-
             display: flex;
             justify-content: center;
 
@@ -181,10 +179,6 @@
 
                 .time {
                     font-family: Barlow;
-                    font-size: 17px;
-                }
-
-                .time{
                     font-size: 17px;
                 }
 
@@ -361,18 +355,10 @@
                 }
             }
 
-            .prize-details{
-                .prize-worth-detail{
-                    font-size: 22px;
-                    font-weight: bold;
-                }
 
-                .team-size-detail {
-                    font-family: Barlow;
-                    font-size: 22px;
-                    font-weight: bold;
-                }
-            }
+
+
+        }
 
         .button-container {
             display: flex;
@@ -402,4 +388,4 @@
             }
         }
     }
-}}
+}
