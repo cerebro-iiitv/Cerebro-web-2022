@@ -6,6 +6,7 @@ import Login from "./containers/Login/Login";
 import Signup from "./containers/Signup/Signup";
 import "./App.css";
 
+import Events from "./containers/Events/events.component";
 function App() {
   const authCtx = useContext(AuthContext);
   const token = localStorage.getItem("token");
@@ -45,9 +46,7 @@ function App() {
             } />
             <Route path="/event" element={
               // Temp navigation for deploy preview
-              <div>
-                <h1>Event</h1>
-              </div>
+              <Events />
             } />
             <Route path="/timeline" element={
               // Temp navigation for deploy preview

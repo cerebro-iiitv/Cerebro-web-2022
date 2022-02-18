@@ -1,0 +1,395 @@
+@font-face {
+    font-family: RektBrush;
+    src: url("../../assets/fonts/Rekt Brush/RektBrush.otf");
+}
+
+@font-face {
+    font-family: Barlow;
+    src: url("../../assets/fonts/Barlow/Barlow-Regular.ttf");
+}
+@font-face {
+    font-family: Barlow;
+    src: url("../../assets/fonts/Barlow/Barlow-Regular.ttf");
+}
+
+@font-face {
+    font-family: Changa;
+    src: url("../../assets/fonts/chang_and_eng/Chane___.ttf");
+}
+
+.event {
+    background: radial-gradient(100% 100% at 50% 0%, rgba(7, 30, 64, 0.68) 0%, rgba(13, 57, 121, 0.595) 100%);
+    border: 0.01px solid #2162A7;
+    // height: 80% !important;
+    display: flex;
+    justify-content: space-between;
+
+
+    @media only screen and (max-width: 1465px) and (min-width: 1122px) {
+
+        .left-event-details{
+            .prize-sec p{
+                font-size: 20px !important;
+            }
+            .team-sec p{
+                font-size: 20px !important;
+            }
+        }
+
+        .right-event-container{
+            p{
+                font-size: 18px !important;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1121px) and (min-width: 1021px) {
+        
+        .left-event-details{
+            .prize-sec p{
+                font-size: 18px !important;
+            }
+            .team-sec p{
+                font-size: 18px !important;
+            }
+            .rules{
+                a{
+                    font-size: 14px !important;
+                }
+            }
+        }
+
+        .right-event-container{
+            p{
+                font-size: 14px !important;
+            }
+        }
+
+        
+    }
+
+    @media only screen and (width: 1366px){
+        .left-event-details{
+            .prize-sec p{
+                font-size: 18px !important;
+            }
+            .team-sec p{
+                font-size: 18px !important;
+            }
+        }
+
+        .right-event-container{
+            p{
+                font-size: 16px !important;
+            }
+        }
+    }
+
+
+    .left-door-container {
+        width: 10%;
+        display: flex;
+        justify-content: flex-end;
+
+        .left-door {
+            height: 109%;
+            top: -4%;
+            position: relative;
+        }
+    }
+
+    .right-door-container {
+        width: 10%;
+        display: flex;
+        justify-content: flex-start;
+
+        .right-door {
+            height: 109%;
+            top: -4%;
+            left: 10%;
+            position: relative;
+            transform: rotateZ(180deg);
+        }
+    }
+    .details {
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .event-title {
+
+            text-align: center;
+            font-weight: 400;
+            font-size: 2em;
+            font-family: RektBrush;
+            text-transform: uppercase;
+        }
+
+        .event-container {
+            display: flex;
+            justify-content: center;
+
+            .event-para {
+                text-align: center;
+                font-family: Barlow;
+                font-size: 1.1rem;
+                font-weight: 200;
+                line-height: 1.5rem;
+
+                .discord-server {
+                    text-decoration: none;
+                    color: #1CA0FF;
+                }
+            }
+
+        }
+
+        .time-line {
+            display: flex;
+            justify-content: center;
+
+            .to-dot {
+                margin-left: 8%;
+                margin-right: 8%;
+            }
+
+            .to-dot{
+                margin-left: 8%;
+                margin-right: 8%;
+            }
+
+            .date1 {
+                background-image: url("../../assets/images/Events/time-background.svg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 165px;
+
+                .date1-items {
+                    font-family: Barlow;
+                    text-align: center;
+                    font-size: 17px;
+                }
+
+                .time {
+                    font-family: Barlow;
+                    font-size: 17px;
+                }
+
+                .date-line {
+                    width: 65%;
+                    height: 0.5rem;
+                }
+            }
+        }
+
+        .event-detail {
+            // border: 1px solid red;
+            width: 100%;
+            height: 10rem;
+            display: flex;
+            justify-content: space-between;
+
+
+            .left-event-details {
+                // border: 1px solid green;
+
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+
+                .prize-sec {
+                    // border: 1px solid yellow;
+
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+
+                    .prize-worth-query {
+                        color: #1CA0FF;
+                        font-size: 24px;
+                        font-weight: bold;
+                        font-family: Barlow;
+                    }
+
+                    .prize-dets {
+                        margin-right: 4%;
+                        font-size: 24px;
+                        font-weight: bold;
+                        font-family: Barlow;
+                        width: 30%;
+                        text-align: left;
+                    }
+                }
+
+                .team-sec {
+                    // border: 1px solid yellow;
+
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+
+                    .team-size-query {
+                        color: #1CA0FF;
+                        font-size: 24px;
+                        font-weight: bold;
+                        font-family: Barlow;
+                    }
+
+                    .team-dets {
+                        margin-right: 4%;
+                        font-size: 24px;
+                        font-weight: bold;
+                        font-family: Barlow;
+                        width: 30%;
+                        text-align: left;
+                    }
+                }
+
+                .rules {
+                    a{
+                        text-decoration: none;
+                        color:#1CA0FF;
+                        font-family: Barlow;
+                    }
+                    display: flex;
+                    // justify-content: space-between;
+                    // border: 1px solid yellow;
+                    width: 100%;
+                }
+            }
+
+            .mid-line {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: 9.2rem;
+                border: 0.851231px solid rgba(255, 255, 255, 0.4);
+            }
+
+            .right-event-container {
+                // border: 1px solid green;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+
+                .convenor-sec {
+                    // border: 1px solid yellow;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+
+                    .conv {
+                        font-family: Barlow;
+                        font-size: 1.18rem;
+                        color: #1CA0FF;
+                        width: 40%;
+                        margin-left: 6%;
+                    }
+
+                    .convenor-dets {
+                        font-family: Barlow;
+                        font-size: 1.18rem;
+                        width: 50%;
+                        // border: 1px solid pink;
+                        text-align: left;
+                    }
+                }
+
+                .co-convenor-sec {
+                    // border: 1px solid yellow;
+
+                    width: 100%;
+
+                    display: flex;
+                    justify-content: space-between;
+
+                    .coconv {
+                        font-family: Barlow;
+                        color: #1CA0FF;
+                        font-size: 1.18rem;
+                        width: 40%;
+                        margin-left: 6%;
+
+                    }
+
+                    .co_convenor-details {
+                        font-family: Barlow;
+                        font-size: 1.18rem;
+                        width: 50%;
+                    }
+                }
+
+                .members-sec {
+                    // border: 1px solid yellow;
+
+                    .mems {
+                        font-family: Barlow;
+                        color: #1CA0FF;
+                        font-size: 1.18rem;
+                        width: 40%;
+                        margin-left: 6%;
+                    }
+
+                    width: 100%;
+
+                    display: flex;
+                    justify-content: space-between;
+
+                    .members-details {
+                        font-family: Barlow;
+                        font-size: 1.18rem;
+                        width: 50%;
+                    }
+
+                }
+            }
+
+
+
+
+        }
+
+        .button-container {
+            display: flex;
+            width: 110%;
+
+            .mid-button-line {
+                margin-left: 6%;
+                margin-right: 3%;
+            }
+
+            #single-button {
+                margin-right: -3%;
+            }
+
+            button {
+                font-family: Barlow;
+                font-weight: 700;
+                // border: 1px solid black;
+                border: none;
+                border-radius: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 10rem;
+                padding: 0.20em 0;
+                background-color: #EBC027;
+                color: #29457C;
+                font-size: 20px;
+                box-shadow: 0px 3.17885px 3.17885px rgba(0, 0, 0, 0.25);
+                cursor: pointer;
+            }
+        }
+    }
+}
