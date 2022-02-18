@@ -5,6 +5,7 @@ import Navbar from "./containers/Navbar/Navbar"
 import Login from "./containers/Login/Login";
 import Signup from "./containers/Signup/Signup";
 import "./App.css";
+import Team from "./containers/Team/Team";
 
 function App() {
   const authCtx = useContext(AuthContext);
@@ -31,12 +32,7 @@ function App() {
             />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
-            <Route path="/team" element={
-              // Temp navigation for deploy preview
-              <div>
-                <h1>Team</h1>
-              </div>
-            } />
+            <Route path="/team" element={<Team />} />
             <Route path="/faq" element={
               // Temp navigation for deploy preview
               <div>

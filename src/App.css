@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 @font-face {
@@ -11,4 +12,14 @@
 @font-face {
   font-family: Calculator;
   src: url("./assets/fonts/Calculator.ttf");
+}
+
+@font-face {
+  font-family: Avenir Next;
+  src: url("./assets/fonts/AvenirNext.otf");
+}
+
+@font-face {
+  font-family: Baumans;
+  src: url("./assets/fonts/Baumans.ttf");
 }

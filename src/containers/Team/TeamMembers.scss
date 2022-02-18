@@ -1,0 +1,16 @@
+.team-members {
+  background: url("../../assets/images/team-bg.png") no-repeat center bottom;
+  background-size: contain;
+  margin: 0% 13%;
+}
+
+.team-members-cont {
+  height: 80vh;
+  width: 75%;
+  margin: 0 auto;
+  padding: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
