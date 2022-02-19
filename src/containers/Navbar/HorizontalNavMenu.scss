@@ -54,10 +54,12 @@
     }
 
     &__left-arrow {
+      cursor: pointer;
       left: -50px; 
     }
 
     &__right-arrow {
+      cursor: pointer;
       right: -50px;
       transform: rotate(180deg);
     }

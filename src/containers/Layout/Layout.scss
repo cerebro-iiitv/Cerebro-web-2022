@@ -46,6 +46,7 @@
     opacity: 1;
     backdrop-filter: blur(10px);
   }
+  
   &:hover .navbar__content__hoverbar {
     animation: barout 2s forwards ease;
   }
@@ -159,13 +160,12 @@
   align-items: center;
 }
 
-.MainContent{
-
+#main-content{
   position: absolute;
-  height: 70vh;
+  height: 100vh;
   width: 100vw;
-
 }
+
 @media screen and (max-width: 1025px) {
   .navhover {
     transform: translateY(45%);

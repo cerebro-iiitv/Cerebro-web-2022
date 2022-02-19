@@ -19,6 +19,7 @@ button{
     align-items: center;
   }
   &__grad-border {
+    
     height: 100%;
     width: 100%;
     display: flex;
@@ -44,6 +45,7 @@ button{
     border-radius: 7px;
   }
   &__btn{
+    cursor: pointer;
     background: transparent;
     height: 100%;
     width: 100%;
@@ -51,6 +53,7 @@ button{
 }
 
 .visible-card-- {
+
   &1 {
     transform: perspective(400px) rotateX(0deg) rotateY(-25deg) scale3d(1, 1, 1);
     height: 52%;
