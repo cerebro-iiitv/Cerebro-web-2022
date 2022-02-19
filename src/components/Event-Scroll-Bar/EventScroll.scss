@@ -15,6 +15,7 @@
         justify-content: center;
 
         .button1{
+            cursor: pointer;
             z-index: 10;
             transform: rotateZ(180deg);
         }
@@ -32,6 +33,7 @@
         justify-content: center;
         
         .button2{
+            cursor: pointer;
             z-index: 10;
         }
     }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './particular-event.styles.scss';
+import './ParticularEvent.scss';
 
 import { default as toDot } from '../../assets/images/Events/to-dot.svg';
 import { default as dateLine } from '../../assets/images/Events/date-line.svg';
