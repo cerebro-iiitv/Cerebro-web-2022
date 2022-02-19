@@ -3,35 +3,38 @@
     src: url("../../assets/fonts/bauman/Bauman-Regular.otf");
 }
 
-.item-container{
+.item-container {
 
-    .text-dot-container-even:active{
-        .text p{
+    // width: 100%;
+    .text-dot-container-even:active {
+        .text p {
             animation-name: tweak-up;
             animation-duration: 0.6s;
         }
     }
-   
-    .text-dot-container-even{
+
+    .text-dot-container-even {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         flex-wrap: row-wrap;
 
-        @media only screen and (width: 1024px){
-            .text{
-                .text-up{
+        @media only screen and (width: 1024px) {
+            .text {
+                .text-up {
                     font-size: 14px;
                 }
             }
         }
-        .text{
+
+        .text {
             height: 40px;
             display: flex;
             justify-content: center;
             align-items: center;
-            .text-up{
+
+            .text-up {
                 text-align: center;
                 font-size: 16px;
                 font-family: Baumans;
@@ -44,52 +47,61 @@
             }
         }
 
-        .line-dot-container{
+
+        .line-dot-container {
             display: flex;
             justify-content: center;
             align-items: center;
+            // border: 1px solid white;
 
-            .left-line{
-                width: 100%;
-                height: 100%;
+            .line-cont {
+                display: flex;
+                .left-line {
+                    // z-index: -0.5;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .right-line {
+                    // z-index: -0.5;
+                    width: 100%;
+                    height: 100%;
+                }
             }
-            .right-line{
-                width: 100%;
-                height: 100%;
-            }
+
         }
-        
+
     }
 
-    .text-dot-container-odd:active{
-        .text p{
+    .text-dot-container-odd:active {
+        .text p {
             animation-name: tweak-down;
             animation-duration: 0.6s;
         }
     }
 
-    .text-dot-container-odd{
+    .text-dot-container-odd {
         display: flex;
         flex-direction: column;
         justify-content: center;
         flex-wrap: row-wrap;
 
-        @media only screen and (width: 1024px){
-            .text{
-                .text-down{
+        @media only screen and (width: 1024px) {
+            .text {
+                .text-down {
                     font-size: 14px;
                 }
             }
         }
 
-        .text{
+        .text {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 40px;
 
-            .text-down{
+            .text-down {
                 text-align: center;
                 font-size: 16px;
                 font-family: Baumans;
@@ -98,40 +110,52 @@
                 color: rgba(255, 255, 255, 0.8);
                 line-height: 21px;
                 cursor: pointer;
-                }
-            
+            }
+
         }
-        .temp-div{
+
+        .temp-div {
             height: 2.50em;
 
         }
-        .line-dot-container{
+
+        .line-dot-container {
             display: flex;
             justify-content: center;
             align-items: center;
-            .left-line{
-                width: 100%;
-                height: 100%;
+// border: 1px solid white;
+
+            .line-cont {
+                display: flex;
+
+                .left-line {
+                    // z-index: -0.5;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .right-line {
+                    // z-index: -0.5;
+                    width: 100%;
+                    height: 100%;
+                }
             }
-            .right-line{
-                width: 100%;
-                height: 100%;
-            }
+
         }
-        
+
     }
 }
 
-.line{
+.line {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.sphere{
+.sphere {
     margin: 10px 0;
-    z-index: 10;
+    // z-index: 1;
     cursor: pointer;
 }
 
@@ -159,10 +183,12 @@
     0% {
         transform: translateY(0px);
     }
+
     50% {
         transform: translateY(8px);
     }
-    100%{
+
+    100% {
         transform: translateY(0px);
     }
 }
@@ -171,14 +197,16 @@
     0% {
         transform: translateY(0px);
     }
+
     50% {
         transform: translateY(-8px);
     }
-    100%{
+
+    100% {
         transform: translateY(0px);
     }
 }
 
-#disable-on{
+#disable-on {
     pointer-events: none;
 }

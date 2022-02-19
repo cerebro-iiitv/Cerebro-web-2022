@@ -37,12 +37,14 @@ export const EventScrollItem = ({ event, idx, currIdx, visible, loadPage, isSele
                     }
 
                     <div className="line-dot-container">
-                        {
-                            idx === 0 && visible === 0 ?
-                                <img src={leftLine} alt="left-line" className='left-line' />
-                                :
-                                <img src={rightLine} alt="left-line" className='left-line' />
-                        }
+                        <div className='line-cont'>
+                            {
+                                idx === 0 && visible === 0 ?
+                                    <img src={leftLine} alt="left-line" className='left-line' />
+                                    :
+                                    <img src={rightLine} alt="left-line" className='left-line' />
+                            }
+                        </div>
 
                         {
                             isSelected === false ?
@@ -51,7 +53,11 @@ export const EventScrollItem = ({ event, idx, currIdx, visible, loadPage, isSele
                                 <img src={idx + visible === currIdx ? selectedDot : sphere} alt="small-sphere" className="sphere" />
                         }
 
-                        <img src={rightLine} alt="right-line" className='right-line' />
+
+
+                        <div className="line-cont">
+                            <img src={rightLine} alt="right-line" className='right-line' />
+                        </div>
                     </div>
 
                 </div> :
@@ -60,9 +66,16 @@ export const EventScrollItem = ({ event, idx, currIdx, visible, loadPage, isSele
 
                         </div>
                         <div className="line-dot-container">
-                            <img src={rightLine} alt="left-line" className='left-line' />
+                            <div className="line-cont">
+                                <img src={rightLine} alt="left-line" className='left-line' />
+                            </div>
+
                             <img src={idx + visible === currIdx ? selectedDot : sphere} alt="small-sphere" className="sphere" />
-                            <img src={rightLine} alt="right-line" className='right-line' />
+
+
+                            <div className="line-cont">
+                                <img src={rightLine} alt="right-line" className='right-line' />
+                            </div>
                         </div>
                         <div className="text">
                             <p className="text-down" style={idx + visible === currIdx ? { textShadow: "0px 0px 4.85399px #FEC600", color: "#FFFCC9" } : { color: "" }}>{event.title}</p>

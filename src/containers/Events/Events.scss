@@ -1,8 +1,15 @@
+@media only screen and (width: 1024px){
+    .event-outer{
+        height: 91vh !important;
+    }
+}
+
 .event-outer {
+    
     box-sizing: border-box;
     padding: 10% 0;
     user-select: none;
-    row-gap: 6%;
+    row-gap: 5%;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -12,6 +19,7 @@
     background-color: #071E40;
     color: white;
 
+    
     .event-rendering {
         width: 60%;
     }
