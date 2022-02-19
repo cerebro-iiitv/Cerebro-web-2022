@@ -9,8 +9,8 @@ const BrochureNavBtn = () => {
         <div className="brochure-btn-cont">
             {/* <NavLink to=""> */}
             <div className="brochure_link">
-                <img src={brochure_nav_btn_top} alt="" />
-                <img src={brochure_nav_btn} alt="brochure" style={{ cursor: "pointer" }} />
+                <img src={brochure_nav_btn_top} alt="" className="brotop"/>
+                <img src={brochure_nav_btn} alt="brochure" style={{ cursor: "pointer" }} className="bro"/>
             </div>
             {/* </NavLink> */}
         </div>

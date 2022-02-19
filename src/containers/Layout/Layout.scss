@@ -1,0 +1,260 @@
+.hud-top{
+  position: absolute;
+  height: 90px;
+  width: 100vw;
+  z-index: 2;
+  top: 0;
+  background: url("../../assets/images/commonlayer_top.svg") no-repeat top
+    center/auto;
+}
+.tophover {
+  position: absolute;
+  height: 85px;
+  width: 100vw;
+  z-index: 2;
+  top: 0;
+  background: url("../../assets/images/commonlayer_top.svg") no-repeat top
+    center/auto;
+  transform: translateY(-80px);
+  transition: transform 2s;
+}
+.navbarr{
+  display: flex;
+  z-index: 2;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.navhover {
+  display: flex;
+  z-index: 2;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  height:30vh;
+  transform: translateY(60%);
+  animation: initial-down 2s;
+  transition: transform 2s;
+  &:hover {
+    transform: translateY(0%);
+  }
+  &:hover ~ .tophover {
+    transform: translateY(0%);
+  }
+  &:hover ~ .blur-layer {
+    height: 100%;
+    opacity: 1;
+    backdrop-filter: blur(10px);
+  }
+  
+  &:hover .navbar__content__hoverbar {
+    animation: barout 2s forwards ease;
+  }
+}
+
+
+.blur-layer {
+  background: url("../../assets/images/glass-top.svg") no-repeat center
+    center/cover;
+  position: absolute;
+  height: 0%;
+  width: 100%;
+  opacity: 0;
+  z-index: 0;
+}
+
+.visible-layer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  justify-content: space-between;
+  &-top {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    &-dashboard {
+      height: 100%;
+    }
+  }
+
+  &-bottom {
+    height: 30%;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+
+@keyframes initial-up {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-9.5%);
+  }
+}
+
+.visible-layer {
+  &:hover .visible-layer-top-center {
+    transform: translateY(0%);
+  }
+}
+
+#lgndash {
+  font-family: Rekt Brush;
+  color: white;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 15px;
+}
+
+.dashboard-content {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  img {
+    margin-bottom: 5px;
+  }
+}
+.login-btn {
+  column-gap: 10px;
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: url("../../assets/images/commonlayer_login.svg") no-repeat
+    center center;
+  height: 50px;
+}
+
+.dashboard-btn {
+  column-gap: 10px;
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: url("../../assets/images/commonlayer_login.svg") no-repeat
+    center center;
+  height: 50px;
+  &-img{
+    margin-bottom: 2.5%;
+  }
+}
+
+.login-button-container {
+  margin-top: 2vh;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 2vw;
+  align-items: center;
+}
+
+#main-content{
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+}
+
+@media screen and (max-width: 1025px) {
+  .navhover {
+    transform: translateY(45%);
+  }
+
+  @keyframes initial-down {
+    0% {
+      transform: translateY(0%);
+    }
+    100% {
+      transform: translateY(45%);
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1100px) {
+  .navhover {
+    transform: translateY(48%);
+  }
+
+  @keyframes initial-down {
+    0% {
+      transform: translateY(0%);
+    }
+    100% {
+      transform: translateY(48%);
+    }
+  }
+}
+
+@media screen and (min-width: 1100px) and (max-width: 1280px) {
+  .navhover {
+    transform: translateY(53%);
+  }
+
+  @keyframes initial-down {
+    0% {
+      transform: translateY(0%);
+    }
+    100% {
+      transform: translateY(53%);
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1439px) {
+  .navhover {
+    transform: translateY(62%);
+  }
+
+  @keyframes initial-down {
+    0% {
+      transform: translateY(0%);
+    }
+    100% {
+      transform: translateY(62%);
+    }
+  }
+}
+
+
+@media screen and (min-width: 1440px) and (max-width: 1800px) {
+  .navhover {
+    transform: translateY(63%);
+  }
+
+  @keyframes initial-down {
+    0% {
+      transform: translateY(0%);
+    }
+    100% {
+      transform: translateY(63%);
+    }
+  }
+}
+
+
+
+@media screen and (min-width: 1800px) and (max-width: 1880px) {
+  .navhover {
+    transform: translateY(68%);
+  }
+
+  @keyframes initial-down {
+    0% {
+      transform: translateY(0%);
+    }
+    100% {
+      transform: translateY(68%);
+    }
+  }
+}
