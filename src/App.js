@@ -2,7 +2,6 @@ import MainLayout from "./containers/Layout/Layout";
 import React, { useContext } from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import AuthContext, { AuthContextProvider } from "./store/AuthContext";
-import Navbar from "./containers/Navbar/Navbar"
 import Login from "./containers/Login/Login";
 import Signup from "./containers/Signup/Signup";
 import "./App.css";
