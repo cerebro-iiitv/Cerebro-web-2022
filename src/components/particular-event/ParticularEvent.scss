@@ -7,6 +7,7 @@
     font-family: Barlow;
     src: url("../../assets/fonts/Barlow/Barlow-Regular.ttf");
 }
+
 @font-face {
     font-family: Barlow;
     src: url("../../assets/fonts/Barlow/Barlow-Regular.ttf");
@@ -20,66 +21,71 @@
 .event {
     background: radial-gradient(100% 100% at 50% 0%, rgba(7, 30, 64, 0.68) 0%, rgba(13, 57, 121, 0.595) 100%);
     border: 0.01px solid #2162A7;
-    // height: 80% !important;
     display: flex;
     justify-content: space-between;
-
+    // background-image: url("../../assets//images/Events/background.svg");
+    // background-repeat: no-repeat;
+    // width: 100%;
 
     @media only screen and (max-width: 1465px) and (min-width: 1122px) {
 
-        .left-event-details{
-            .prize-sec p{
+        .left-event-details {
+            .prize-sec p {
                 font-size: 20px !important;
             }
-            .team-sec p{
+
+            .team-sec p {
                 font-size: 20px !important;
             }
         }
 
-        .right-event-container{
-            p{
+        .right-event-container {
+            p {
                 font-size: 18px !important;
             }
         }
     }
 
     @media only screen and (max-width: 1121px) and (min-width: 1021px) {
-        
-        .left-event-details{
-            .prize-sec p{
+
+        .left-event-details {
+            .prize-sec p {
                 font-size: 18px !important;
             }
-            .team-sec p{
+
+            .team-sec p {
                 font-size: 18px !important;
             }
-            .rules{
-                a{
+
+            .rules {
+                a {
                     font-size: 14px !important;
                 }
             }
         }
 
-        .right-event-container{
-            p{
+        .right-event-container {
+            p {
                 font-size: 14px !important;
             }
         }
 
-        
+
     }
 
-    @media only screen and (width: 1366px){
-        .left-event-details{
-            .prize-sec p{
+    @media only screen and (width: 1366px) {
+        .left-event-details {
+            .prize-sec p {
                 font-size: 18px !important;
             }
-            .team-sec p{
+
+            .team-sec p {
                 font-size: 18px !important;
             }
         }
 
-        .right-event-container{
-            p{
+        .right-event-container {
+            p {
                 font-size: 16px !important;
             }
         }
@@ -87,37 +93,36 @@
 
 
     .left-door-container {
-        width: 10%;
         display: flex;
-        justify-content: flex-end;
-
+        justify-content: flex-start;
         .left-door {
             height: 109%;
-            top: -4%;
+            left: -10%;
+            bottom: 4%;
             position: relative;
         }
     }
 
     .right-door-container {
-        width: 10%;
         display: flex;
-        justify-content: flex-start;
+        justify-content: flex-end;
 
         .right-door {
             height: 109%;
-            top: -4%;
-            left: 10%;
             position: relative;
+            left: 10%;
+            bottom: 4%;
             transform: rotateZ(180deg);
         }
     }
+
     .details {
-        width: 80%;
+        width: 100%;
         display: flex;
-        flex-wrap: wrap;
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
+        // flex-wrap: wrap;
 
         .event-title {
 
@@ -156,7 +161,7 @@
                 margin-right: 8%;
             }
 
-            .to-dot{
+            .to-dot {
                 margin-left: 8%;
                 margin-right: 8%;
             }
@@ -256,11 +261,12 @@
                 }
 
                 .rules {
-                    a{
+                    a {
                         text-decoration: none;
-                        color:#1CA0FF;
+                        color: #1CA0FF;
                         font-family: Barlow;
                     }
+
                     display: flex;
                     // justify-content: space-between;
                     // border: 1px solid yellow;
