@@ -20,10 +20,10 @@ const NavCard = (props) => {
                 style={{
                     transition: props.isTransitionEnabled ? undefined : 'none',
                 }}>
-                     <button className="navcard__btn" onClick={cardClickHandler}>
-                <div className="navcard__grad-border">
-                    <div className="navcard__content">{props.title}</div>
-                </div>
+                <button className="navcard__btn" onClick={cardClickHandler}>
+                    <div className="navcard__grad-border">
+                        <div className="navcard__content">{props.title}</div>
+                    </div>
                 </button>
             </div>
         </div>

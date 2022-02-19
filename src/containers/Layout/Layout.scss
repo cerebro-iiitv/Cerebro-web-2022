@@ -44,11 +44,13 @@
   &:hover ~ .blur-layer {
     height: 100%;
     opacity: 1;
+    backdrop-filter: blur(10px);
   }
   &:hover .navbar__content__hoverbar {
     animation: barout 2s forwards ease;
   }
 }
+
 
 .blur-layer {
   background: url("../../assets/images/glass-top.svg") no-repeat center
@@ -157,7 +159,13 @@
   align-items: center;
 }
 
+.MainContent{
 
+  position: absolute;
+  height: 70vh;
+  width: 100vw;
+
+}
 @media screen and (max-width: 1025px) {
   .navhover {
     transform: translateY(45%);

@@ -50,7 +50,7 @@ const Layout = (props) => {
         <div className="login-button-container">
           <LogStatus />
         </div>
-        <div> {props.children} </div>
+        <div classname="MainContent"> {props.children} </div>
         <div className={props.status === "hover" ? "navhover navbarr" : "navbarr"}>
           <Navbar />
         </div>

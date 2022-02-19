@@ -10,7 +10,7 @@ const BrochureNavBtn = () => {
             {/* <NavLink to=""> */}
             <div className="brochure_link">
                 <img src={brochure_nav_btn_top} alt="" className="brotop"/>
-                <img src={brochure_nav_btn} alt="brochure" className="bro"/>
+                <img src={brochure_nav_btn} alt="brochure" style={{ cursor: "pointer" }} className="bro"/>
             </div>
             {/* </NavLink> */}
         </div>

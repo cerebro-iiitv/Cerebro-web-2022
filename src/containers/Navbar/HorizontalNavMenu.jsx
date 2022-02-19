@@ -114,7 +114,6 @@ const HorizontalNavMenu = () => {
         }
     }, [leftCardIndex, cardComponentsWithClones.length])
 
-
     useEffect(() => {
         if (leftAndRightDisabled) {
             setTimeout(() => {
