@@ -1,35 +1,38 @@
 .timer {
   &__main-container {
-    margin-right:4%;
+    // margin-right:4%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    width: 12vw;
-    height: 5vh;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 21%;
+    height:100%;
 
-  }
-
-  &__titles-container {
-    img {
-      width: 9vw;
-    }
   }
 
   &__inner-container {
     // margin-left: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    height: 9vh;
-    width: 9vw;
+    // padding-left: 10px;
+    // padding-right: 10px;
+    width: 100%;
+    height: 70%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
-    background: url("../../assets/images/navtimer_bg.png") no-repeat center
+    background: url("../../assets/images/navtimer_bg.png") no-repeat left
       center/contain;
     
   }
+}
+.timer-titles{
+  width: 94%;
+}
+.timer__titles-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 .timer-item {
   display: flex;
@@ -37,7 +40,14 @@
   align-items: center;
   
 }
-
+.timer-items{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 96%;
+  height: 100%;
+}
 .timer-value {
   color: white;
   font-family: Calculator;
@@ -53,10 +63,7 @@
 }
 
 @media screen and (max-width:1024px) {
-  .timer__main-container {
-    height: 4vh;
-    margin-bottom: 10px;
-  }
+  
   .timer-value{
     font-size: 1.2rem;
   }
