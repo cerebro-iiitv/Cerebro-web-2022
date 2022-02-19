@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import AuthContext, { AuthContextProvider } from "./store/AuthContext";
 import './App.css';
 import MainLayout from "./containers/Layout/Layout";
+
 function App() {
   const authCtx = useContext(AuthContext);
   const token = localStorage.getItem("token");
@@ -14,11 +15,12 @@ function App() {
     <div className="App">
       <AuthContextProvider>
         <BrowserRouter>
+        <MainLayout status="hover">
           <Routes>
             <Route path="/team" element={
               // Temp navigation for deploy preview
               <div>
-                <h1>Team</h1>
+                {/* <h1>Team</h1> */}
               </div>
             } />
             <Route path="/faq" element={
@@ -40,7 +42,8 @@ function App() {
               </div>
             } />
           </Routes>
-          <MainLayout status="hover"/>
+          </MainLayout>
+          {/* <MainLayout status="hover"/> */}
         </BrowserRouter>
       </AuthContextProvider>
     </div>
