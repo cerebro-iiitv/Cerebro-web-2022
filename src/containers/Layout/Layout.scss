@@ -8,10 +8,8 @@
     center/auto;
 }
 .top-btn{
+  z-index: 1;
   cursor: pointer;
-}
-.DispNone{
-  display: none;
 }
 .tophover {
   position: absolute;
@@ -71,12 +69,6 @@
   z-index: 0;
 }
 
-.blurimg{
-  opacity: 0;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
 
 .visible-layer {
   display: flex;
