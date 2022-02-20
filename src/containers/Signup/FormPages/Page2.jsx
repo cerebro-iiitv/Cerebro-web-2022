@@ -25,7 +25,6 @@ const Page2 = ({
         <div className="signup__bottom__status">
           {errors.authentication && (
             <span className="signup__bottom__status__error">
-              {console.log(errors.authentication)}
               {typeof errors.authentication === "object"
                 ? ""
                 : errors.authentication}
