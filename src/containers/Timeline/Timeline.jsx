@@ -56,13 +56,13 @@ const Timeline = () => {
                 </span>
               </div>
             </div>
-            {timelineData.upper.map((item) => (
-              <TimelineItem top item={item} />
+            {timelineData.upper.map((item, index) => (
+              <TimelineItem top item={item} key={index} />
             ))}
           </div>
           <div className="timeline__container__lower">
-            {timelineData.lower.map((item) => (
-              <TimelineItem item={item} />
+            {timelineData.lower.map((item, index) => (
+              <TimelineItem item={item} key={index} />
             ))}
           </div>
         </div>
