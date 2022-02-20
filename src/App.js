@@ -1,23 +1,26 @@
+import MainLayout from "./containers/Layout/Layout";
 import React, { useContext } from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import AuthContext, { AuthContextProvider } from "./store/AuthContext";
-import Navbar from "./containers/Navbar/Navbar"
 import Login from "./containers/Login/Login";
 import Signup from "./containers/Signup/Signup";
 import "./App.css";
 
 import Events from "./containers/Events/Events";
+import FAQ from "./containers/FAQs/FAQs";
+
 function App() {
   const authCtx = useContext(AuthContext);
   const token = localStorage.getItem("token");
   if (token) {
     authCtx.login(token);
   }
-
   return (
     <div className="App">
       <AuthContextProvider>
         <BrowserRouter>
+
+<MainLayout status="hover">
           <Routes>
             <Route
               path="/"
@@ -35,14 +38,12 @@ function App() {
             <Route path="/team" element={
               // Temp navigation for deploy preview
               <div>
-                <h1>Team</h1>
+                {/* <h1>Team</h1> */}
               </div>
             } />
             <Route path="/faq" element={
               // Temp navigation for deploy preview
-              <div>
-                <h1>FAQ</h1>
-              </div>
+              <FAQ />
             } />
             <Route path="/event" element={
               // Temp navigation for deploy preview
@@ -51,11 +52,12 @@ function App() {
             <Route path="/timeline" element={
               // Temp navigation for deploy preview
               <div>
-                <h1>Timeline</h1>
+                {/* <h1>Timeline</h1> */}
               </div>
             } />
           </Routes>
-          <Navbar />
+          </MainLayout>
+          {/* <MainLayout status="hover"/> */}
         </BrowserRouter>
       </AuthContextProvider>
     </div>
