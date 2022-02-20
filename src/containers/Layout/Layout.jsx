@@ -2,7 +2,7 @@ import Navbar from "../Navbar/Navbar";
 import "./Layout.scss";
 import React from "react";
 import dashboard from "../../assets/images/dashboard icon.svg";
-import blurlayer from "../../assets/images/glass-top.svg";
+
 const Layout = (props) => {
   function LoginButton(props) {
     return (
