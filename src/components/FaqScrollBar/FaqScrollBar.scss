@@ -1,0 +1,17 @@
+.faq-scroll-bar{
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .buttons{
+        width: 50%;
+        display: flex;
+        justify-content: space-evenly;
+
+        img{
+            cursor: pointer;
+        }
+    }
+}

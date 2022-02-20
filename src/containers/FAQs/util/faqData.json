@@ -1,0 +1,29 @@
+{
+    "faqs": [
+        {
+            "id": 1,
+            "question": "Who can register in the festival1 ?",
+            "answer": "Anyone currently pursuing an undergraduate degree from any institution in India, across all streams is eligible to participate in Cerebro 2022. Alumnus of IIITV and graduated students of any institute are not permitted to participate."
+        },
+        {
+            "id": 2,
+            "question": "Who can register in the festival2 ?",
+            "answer": "Anyone currently pursuing an undergraduate degree from any institution in India, across all streams is eligible to participate in Cerebro 2022. Alumnus of IIITV and graduated students of any institute are not permitted to participate."
+        },
+        {
+            "id": 3,
+            "question": "Who can register in the festival3 ?",
+            "answer": "Anyone currently pursuing an undergraduate degree from any institution in India, across all streams is eligible to participate in Cerebro 2022. Alumnus of IIITV and graduated students of any institute are not permitted to participate."
+        },
+        {
+            "id": 4,
+            "question": "Who can register in the festival4 ?",
+            "answer": "Anyone currently pursuing an undergraduate degree from any institution in India, across all streams is eligible to participate in Cerebro 2022. Alumnus of IIITV and graduated students of any institute are not permitted to participate."
+        },
+        {
+            "id": 5,
+            "question": "Who can register in the festival5 ?",
+            "answer": "Anyone currently pursuing an undergraduate degree from any institution in India, across all streams is eligible to participate in Cerebro 2022. Alumnus of IIITV and graduated students of any institute are not permitted to participate."
+        }
+    ]
+}
