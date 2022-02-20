@@ -5,6 +5,7 @@ import Login from "./containers/Login/Login";
 import Signup from "./containers/Signup/Signup";
 import ForgotPassword from "./containers/ForgotPassword/ForgotPassword";
 import ResetPassword from "./containers/ResetPassword/ResetPassword";
+import Timeline from "./containers/Timeline/Timeline";
 import "./App.css";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <br />
         <Link to="/forgot-password">Forgot Password</Link>
         <br />
+        <Link to="/timeline">Timeline</Link>
       </div>
     );
   };
@@ -40,6 +42,7 @@ function App() {
             path="/account/password-reset/:uidb64/:token"
             element={<ResetPassword />}
           />
+          <Route path="/timeline" element={<Timeline />} />
           <Route path="*" element={<div>404</div>} />
         </Routes>
       </BrowserRouter>
