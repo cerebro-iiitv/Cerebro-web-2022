@@ -1,7 +1,7 @@
 import React from "react";
 import "./TimelineItem.scss";
 
-const TimelineItem = ({ top }) => {
+const TimelineItem = ({ top, item }) => {
   const custom = top ? "" : "timeline-item__bottom";
 
   return (
@@ -17,19 +17,19 @@ const TimelineItem = ({ top }) => {
             className={`timeline-item__container__inner__title  ${custom}__title`}
           >
             <span className="timeline-item__container__inner__title__text">
-              CS:GO
+              {item.name}
             </span>
           </div>
           <div className="timeline-item__container__inner__timestamp">
             <span
               className={`timeline-item__container__inner__timestamp__text ${custom}__timestamp`}
             >
-              10-03-2022
+              {item.start}
             </span>
             <span
               className={`timeline-item__container__inner__timestamp__text ${custom}__timestamp`}
             >
-              2:00PM
+              {item.time}
             </span>
           </div>
         </div>
