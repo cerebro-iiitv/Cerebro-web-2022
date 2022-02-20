@@ -1,0 +1,227 @@
+button{
+  border: 0px;
+}
+
+.navcard {
+  &__wrapper {
+    height: 4.8rem;
+    width: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__container {
+    transform-style: preserve-3d;
+    // transition duration should match with that of sliding
+    transition: all 500ms linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__grad-border {
+    
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 2px;
+    border-radius: 7px;
+  }
+  &__content {
+    font-family: Bruno Ace SC;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.1rem;
+    letter-spacing: 0em;
+    color: white;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+  }
+  &__btn{
+    cursor: pointer;
+    background: transparent;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.visible-card-- {
+
+  &1 {
+    transform: perspective(400px) rotateX(0deg) rotateY(-25deg) scale3d(1, 1, 1);
+    height: 52%;
+    box-shadow: 7px 0px 4px 0px #00000099;
+    .navcard {
+      &__grad-border {
+        background-image: radial-gradient(
+            95.22% 52.58% at 49.11% 47.42%,
+            #8c4424 0%,
+            rgba(140, 68, 36, 0) 100%
+          ),
+          radial-gradient(
+            2.39% 52.58% at 49.11% 47.42%,
+            #00349a 0%,
+            rgba(0, 52, 154, 0.58) 100%
+          ),
+          linear-gradient(180deg, #0349a7 -5.16%, rgba(3, 73, 167, 0) 100%);
+      }
+      &__content {
+        background: radial-gradient(
+          117.86% 105.16% at -9.82% -5.16%,
+          rgba(255, 255, 255, 0.4) 0%,
+          rgba(255, 255, 255, 0) 100%
+        );
+      }
+    }
+  }
+  &2 {
+    transform: perspective(500px) rotateX(0deg) rotateY(-25deg) scale3d(1, 1, 1);
+    height: 59%;
+    box-shadow: 6px 0px 4px 0px #00000099;
+    .navcard {
+      &__grad-border {
+        background-image: radial-gradient(
+            80.79% 50% at 50% 50%,
+            #8c4424 0%,
+            rgba(140, 68, 36, 0) 100%
+          ),
+          radial-gradient(
+            2.03% 50% at 50% 50%,
+            #0255f5 0%,
+            rgba(2, 85, 245, 0.58) 100%
+          ),
+          linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+      }
+      &__content {
+        background: radial-gradient(
+          100% 100% at 0% 0%,
+          rgba(255, 255, 255, 0.4) 0%,
+          rgba(255, 255, 255, 0) 100%
+        );
+      }
+    }
+  }
+  &3 {
+    transform: perspective(500px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);
+    height: 65%;
+    .navcard {
+      &__grad-border {
+        background: radial-gradient(
+            80.79% 50% at 50% 50%,
+            #8c4424 0%,
+            rgba(140, 68, 36, 0) 100%
+          ),
+          linear-gradient(0deg, #84b1d9, #84b1d9);
+      }
+      &__content {
+        background: radial-gradient(
+          100% 100% at 0% 0%,
+          rgba(255, 255, 255, 0.4) 0%,
+          rgba(255, 255, 255, 0) 100%
+        );
+      }
+    }
+  }
+  &4 {
+    transform: perspective(500px) rotateX(0deg) rotateY(25deg) scale3d(1, 1, 1);
+    height: 59%;
+    box-shadow: -6px 0px 4px 0px #00000099;
+    .navcard {
+      &__grad-border {
+        background: radial-gradient(
+            80.79% 50% at 50% 50%,
+            #8c4424 0%,
+            rgba(140, 68, 36, 0) 100%
+          ),
+          radial-gradient(
+            2.03% 50% at 50% 50%,
+            #0255f5 0%,
+            rgba(2, 85, 245, 0.58) 100%
+          ),
+          linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+      }
+      &__content {
+        background: radial-gradient(
+          100% 100% at 0% 0%,
+          rgba(255, 255, 255, 0.4) 0%,
+          rgba(255, 255, 255, 0) 100%
+        );
+      }
+    }
+  }
+  &5 {
+    transform: perspective(400px) rotateX(0deg) rotateY(25deg) scale3d(1, 1, 1);
+    height: 52%;
+    box-shadow: -7px 0px 4px 0px #00000099;
+    .navcard {
+      &__grad-border {
+        background-image: radial-gradient(
+            95.22% 52.58% at 49.11% 47.42%,
+            #8c4424 0%,
+            rgba(140, 68, 36, 0) 100%
+          ),
+          radial-gradient(
+            2.39% 52.58% at 49.11% 47.42%,
+            #00349a 0%,
+            rgba(0, 52, 154, 0.58) 100%
+          ),
+          linear-gradient(180deg, #0349a7 -5.16%, rgba(3, 73, 167, 0) 100%);
+      }
+      &__content {
+        background: radial-gradient(
+          117.86% 105.16% at -9.82% -5.16%,
+          rgba(255, 255, 255, 0.4) 0%,
+          rgba(255, 255, 255, 0) 100%
+        );
+      }
+    }
+  }
+  &1,
+  &2,
+  &3,
+  &4,
+  &5 {
+    width: 90%;
+    border-radius: 7px;
+    .navcard__content {
+      color: white;
+      background-color: #043d78;
+    }
+  }
+}
+
+@media screen and (max-width:1024px) {
+  .navcard__wrapper{
+     height: 3.6rem;
+  }
+  .navcard__content {
+    font-size:0.8rem;
+  }
+}
+
+
+@media screen and (min-width:1024px) and (max-width:1280px) {
+  .navcard__wrapper{
+     height: 3.8rem;
+  }
+  .navcard__content {
+    font-size:0.9rem;
+  }
+}
+
+
+@media screen and (min-width:1280px) and (max-width:1439px) {
+  .navcard__wrapper{
+     height: 4rem;
+  }
+  .navcard__content {
+    font-size:1rem;
+  }
+}

@@ -1,0 +1,28 @@
+.brochure_link {
+  height:100%;
+  width: 12vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.brochure_title {
+  color: white;
+  font-family: Rekt Brush;
+  font-size: 2rem;
+}
+
+.brochure-btn-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.brotop{
+  width: 92%;
+  margin-bottom: 4px;
+}
+.bro{
+  width: 98%;
+}

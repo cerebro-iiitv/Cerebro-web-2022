@@ -1,0 +1,70 @@
+.timer {
+  &__main-container {
+    // margin-right:4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 21%;
+    height:100%;
+
+  }
+
+  &__inner-container {
+    // margin-left: 5px;
+    // padding-left: 10px;
+    // padding-right: 10px;
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background: url("../../assets/images/navtimer_bg.png") no-repeat left
+      center/contain;
+    
+  }
+}
+.timer-titles{
+  width: 94%;
+}
+.timer__titles-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.timer-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.timer-items{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 96%;
+  height: 100%;
+}
+.timer-value {
+  color: white;
+  font-family: Calculator;
+  font-size: 1.4rem;
+}
+
+.first{
+  padding-left: 8px;
+}
+
+.last{
+  padding-right: 8px;
+}
+
+@media screen and (max-width:1024px) {
+  
+  .timer-value{
+    font-size: 1.2rem;
+  }
+}
