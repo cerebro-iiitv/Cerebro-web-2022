@@ -40,7 +40,7 @@ const Layout = (props) => {
       } else {
         button = <LoginButton />;
       }
-      return <div>{button}</div>;
+      return <div className="top-btn">{button}</div>;
     }
   }
 
