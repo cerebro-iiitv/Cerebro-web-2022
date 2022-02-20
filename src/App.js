@@ -6,6 +6,7 @@ import Login from "./containers/Login/Login";
 import Signup from "./containers/Signup/Signup";
 import "./App.css";
 
+import FAQs from "./containers/FAQs/FAQs";
 function App() {
   const authCtx = useContext(AuthContext);
   const token = localStorage.getItem("token");
@@ -40,9 +41,8 @@ function App() {
             } />
             <Route path="/faq" element={
               // Temp navigation for deploy preview
-              <div>
-                {/* <h1>FAQ</h1> */}
-              </div>
+              
+              <FAQs />
             } />
             <Route path="/event" element={
               // Temp navigation for deploy preview
