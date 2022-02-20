@@ -1,11 +1,23 @@
 .timeline {
-  padding-left: 20px;
+  padding-left: 80px;
   height: 100%;
   overflow-x: auto;
   display: flex;
   flex-direction: row;
-  overflow-y: scroll;
+  position: relative;
 
+  &::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    box-shadow: inset 100px 0px 50px -25px rgb(7, 30, 64, 1),
+      inset -150px 0 50px -55px rgb(7, 30, 64, 1);
+    pointer-events: none;
+  }
 
   @media screen and (min-height: 600px) {
     align-items: center;
@@ -90,6 +102,57 @@
       margin-top: 285px;
       display: flex;
       flex-direction: row;
+    }
+  }
+
+  &__button {
+    &__right {
+      position: fixed;
+      right: 10px;
+      top: 50%;
+      width: 58px;
+      height: 28.36px;
+      cursor: pointer;
+      z-index: 1;
+      border: 2px solid #ffffff;
+      box-sizing: border-box;
+      border-radius: 25.7783px;
+      display: flex;
+      align-items: center;
+
+      &__line {
+        width: 16px;
+        height: 2px;
+        margin-left: 10px;
+        background-color: #e4c142;
+        border: 1px solid #e4c142;
+        border-radius: 7px 7px 7px 7px;
+      }
+    }
+
+    &__left {
+      position: fixed;
+      left: 10px;
+      top: 50%;
+      width: 58px;
+      height: 28.36px;
+      cursor: pointer;
+      z-index: 1;
+      border: 2px solid #ffffff;
+      box-sizing: border-box;
+      border-radius: 25.7783px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      &__line {
+        width: 16px;
+        height: 2px;
+        margin-right: 10px;
+        background-color: #e4c142;
+        border: 1px solid #e4c142;
+        border-radius: 7px 7px 7px 7px;
+      }
     }
   }
 }
