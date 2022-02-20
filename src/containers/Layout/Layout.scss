@@ -7,6 +7,7 @@
   background: url("../../assets/images/commonlayer_top.svg") no-repeat top
     center/auto;
 }
+
 .top-btn{
   z-index: 1;
   cursor: pointer;
@@ -22,6 +23,7 @@
   transform: translateY(-80px);
   transition: transform 1.5s;
   animation: initial-up 1.5s;
+
 }
 .navbarr{
   display: flex;
@@ -29,7 +31,9 @@
   align-items: center;
   flex-direction: column;
   justify-content: flex-end;
+
   height:30vh;
+
 }
 .navhover {
   display: flex;
@@ -41,6 +45,7 @@
   transform: translateY(60%);
   animation: initial-down 1.5s;
   transition: transform 1.5s;
+
   &:hover {
     transform: translateY(0%);
   }
@@ -55,6 +60,7 @@
   }
   &:hover .navbar__content__hoverbar {
     animation: barout 1.5s forwards ease;
+
   }
 }
 
@@ -104,6 +110,7 @@
   }
   100% {
     transform: translateY(-85px);
+
   }
 }
 
@@ -147,6 +154,7 @@
 
 .dashboard-btn {
   cursor: pointer;
+
   column-gap: 10px;
   width: 200px;
   display: flex;
