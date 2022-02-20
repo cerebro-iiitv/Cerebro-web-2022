@@ -40,6 +40,7 @@ const Layout = (props) => {
       } else {
         button = <LoginButton />;
       }
+
       return <div className={props.status === "hover" ? "top-btn DispNone" : "top-btn"}>{button}</div>;
     }
   }

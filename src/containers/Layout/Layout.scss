@@ -7,12 +7,14 @@
   background: url("../../assets/images/commonlayer_top.svg") no-repeat top
     center/auto;
 }
+
 .top-btn{
   cursor: pointer;
 }
 .DispNone{
   display: none;
 }
+
 .tophover {
   position: absolute;
   height: 85px;
@@ -24,6 +26,7 @@
   transform: translateY(-80px);
   transition: transform 1.5s;
   animation: initial-up 1.5s;
+
 }
 .navbarr{
   display: flex;
@@ -31,7 +34,9 @@
   align-items: center;
   flex-direction: column;
   justify-content: flex-end;
+
   height:30vh;
+
 }
 .navhover {
   display: flex;
@@ -43,6 +48,7 @@
   transform: translateY(60%);
   animation: initial-down 1.5s;
   transition: transform 1.5s;
+
   &:hover {
     transform: translateY(0%);
   }
@@ -57,6 +63,7 @@
   }
   &:hover .navbar__content__hoverbar {
     animation: barout 1.5s forwards ease;
+
   }
 }
 
@@ -71,12 +78,6 @@
   z-index: 0;
 }
 
-.blurimg{
-  opacity: 0;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
 
 .visible-layer {
   display: flex;
@@ -112,6 +113,7 @@
   }
   100% {
     transform: translateY(-85px);
+
   }
 }
 
@@ -155,6 +157,7 @@
 
 .dashboard-btn {
   cursor: pointer;
+
   column-gap: 10px;
   width: 200px;
   display: flex;
