@@ -28,6 +28,16 @@ const Timeline = () => {
 
   const scroll = (offset) => (scrollRef.current.scrollLeft += offset);
 
+  let leftScroll;
+  const startLeftScroll = () =>
+    (leftScroll = setInterval(() => scroll(-5), 10));
+  const stopLeftScroll = () => clearInterval(leftScroll);
+
+  let rightScroll;
+  const startRightScroll = () =>
+    (rightScroll = setInterval(() => scroll(5), 10));
+  const stopRightScroll = () => clearInterval(rightScroll);
+
   return (
     <>
       <div className="timeline" ref={scrollRef}>
@@ -57,11 +67,21 @@ const Timeline = () => {
           </div>
         </div>
       </div>
-      <div className="timeline__button__right" onClick={() => scroll(100)}>
-        <hr className="timeline__button__right__line" />
-      </div>
-      <div className="timeline__button__left" onClick={() => scroll(-100)}>
+      <div
+        className="timeline__button__left"
+        onClick={() => scroll(-2000)}
+        onMouseEnter={startLeftScroll}
+        onMouseLeave={stopLeftScroll}
+      >
         <hr className="timeline__button__left__line" />
+      </div>
+      <div
+        className="timeline__button__right"
+        onClick={() => scroll(2000)}
+        onMouseEnter={startRightScroll}
+        onMouseLeave={stopRightScroll}
+      >
+        <hr className="timeline__button__right__line" />
       </div>
     </>
   );
