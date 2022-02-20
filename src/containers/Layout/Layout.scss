@@ -16,7 +16,7 @@
   background: url("../../assets/images/commonlayer_top.svg") no-repeat top
     center/auto;
   transform: translateY(-80px);
-  transition: transform 2s;
+  transition: transform 1.5s;
 }
 .navbarr{
   display: flex;
@@ -33,8 +33,8 @@
   justify-content: flex-end;
   height:30vh;
   transform: translateY(60%);
-  animation: initial-down 2s;
-  transition: transform 2s;
+  animation: initial-down 1.5s;
+  transition: transform 1.5s;
   &:hover {
     transform: translateY(0%);
   }
@@ -42,13 +42,13 @@
     transform: translateY(0%);
   }
   &:hover ~ .blur-layer {
+    transition:height 0s,opacity 1.5s,backdrop-filter 1.5s;
     height: 100%;
     opacity: 1;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px); 
   }
-  
   &:hover .navbar__content__hoverbar {
-    animation: barout 2s forwards ease;
+    animation: barout 1.5s forwards ease;
   }
 }
 
@@ -61,6 +61,13 @@
   width: 100%;
   opacity: 0;
   z-index: 0;
+}
+
+.blurimg{
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .visible-layer {
@@ -126,6 +133,7 @@
   }
 }
 .login-btn {
+  cursor: pointer;
   column-gap: 10px;
   width: 200px;
   display: flex;
@@ -138,6 +146,7 @@
 }
 
 .dashboard-btn {
+  cursor: pointer;
   column-gap: 10px;
   width: 200px;
   display: flex;
