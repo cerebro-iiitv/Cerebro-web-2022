@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./AboutUs.scss";
 import React from "react";
 
@@ -20,8 +21,8 @@ const AboutUs = () => {
               </p>
             </div>
           </div>
-          <div className="sponser-and-circles">
-            <div className="aboutus-sponser">
+          <div className="sponsor-and-circles">
+            <div className="aboutus-sponsor">
               <p className="joindis">
                 Join the{" "}
                 <a href="https://discord.com/channels/796739253186592849/935117726295420988">
@@ -29,9 +30,15 @@ const AboutUs = () => {
                 </a>{" "}
                 for further communication!
               </p>
-              <div className="our-sponsers">
-                <p className="our-sponsers-text">Our Sponsors</p>
+
+
+              <Link to='/sponsors' className="sponsordiv">
+              <div className="our-sponsors">
+                <p className="our-sponsors-text">Our Sponsors</p>
               </div>
+              </Link>
+            
+            
             </div>
             <div className="aboutus-circles">
               <div className="hov1">

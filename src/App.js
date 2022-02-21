@@ -100,7 +100,7 @@ function App() {
               path="/sponsors"
               element={
                 <MainLayout status="hover">
-                  <Sponsors />
+                  <Sponsors/>
                 </MainLayout>
               }
             />
