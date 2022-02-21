@@ -1,10 +1,11 @@
 import React from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import Dashboard from "./containers/Dashboard/Dashboard";
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 import useAuth from "./hooks/useAuth";
 import MainLayout from "./containers/Layout/Layout";
+import Dashboard from "./containers/Dashboard/Dashboard"
 import Login from "./containers/Login/Login";
 import Signup from "./containers/Signup/Signup";
+import Hero from "./containers/Hero/Hero";
 import ForgotPassword from "./containers/ForgotPassword/ForgotPassword";
 import ResetPassword from "./containers/ResetPassword/ResetPassword";
 import ChangePassword from "./containers/ChangePassword/ChangePassword";
@@ -18,68 +19,121 @@ import "./App.css";
 function App() {
   const auth = useAuth();
   const token = localStorage.getItem("token");
+  const [redirect,setredirect] = React.useState(false);
+  const [flag,setflag] = React.useState(true);
+
   if (token) {
     auth.login(token);
   }
 
   return (
     <div className="App">
-      <BrowserRouter>
-        <MainLayout status="hover">
+        <BrowserRouter>
           <Routes>
             <Route
               path="/"
               element={
-                // Temp navigation for deploy preview
-                <div>
-                  <Link to="/login">Login</Link>
-                  <br />
-                  <Link to="/signup">Signup</Link>
-                  <br />
-                  <Link to="/forgot-password">Forgot Password</Link>
-                  <br />
-                  <Link to="/change-password">Change Password</Link>
-                  <br />
-                  <Link to="/sponsors">Sponsors</Link>
-                  <br />
-                  <Link to="/dashboard">Dashboard</Link>
-                </div>
+                <>
+                  <MainLayout status="no-hover">
+                    <Hero redir={redirect} setredir={setredirect} flagprop={flag} setflagprop={setflag} />
+                  </MainLayout>
+                </>
               }
             />
+          </Routes>
+
+          <Routes>
             <Route element={<UserRoute />}>
-              <Route path="/login" element={<Login />} />
-              <Route path="/signup" element={<Signup />} />
-              <Route path="/forgot-password" element={<ForgotPassword />} />
+              <Route
+                path="/login"
+                element={
+
+                  <Login />
+
+                }
+              />
+              <Route
+                path="/signup"
+                element={
+
+                  <Signup />
+
+                }
+              />
+              <Route
+                path="/forgot-password"
+                element={
+
+                  <ForgotPassword />
+
+                }
+              />
               <Route
                 path="/account/password-reset/:uidb64/:token"
-                element={<ResetPassword />}
+                element={
+                  <ResetPassword />
+                }
               />
+
             </Route>
+
             <Route element={<PrivateRoute />}>
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/change-password" element={<ChangePassword />} />
             </Route>
-            <Route path="/sponsors" element={<Sponsors />} />
+
+
+
+            <Route
+              path="/dashboard"
+              element={
+                <p>Hello Human</p>
+              }
+            />
+
+            <Route
+              path="/sponsors"
+              element={
+                <MainLayout status="hover">
+                  <Sponsors/>
+                </MainLayout>
+              }
+            />
+
             <Route
               path="/team"
               element={
-                // Temp navigation for deploy preview
-                <div>{/* <h1>Team</h1> */}</div>
+                <MainLayout status="hover">
+                  <div>{/* <h1>Team</h1> */}</div>
+                </MainLayout>
               }
             />
-            <Route path="/faq" element={<FAQs />} />
+            <Route
+              path="/faq"
+              element={
+                <MainLayout status="hover">
+                  <FAQs />
+                </MainLayout>
+              }
+            />
             <Route
               path="/event"
               element={
-                // Temp navigation for deploy preview
-                <div>{/* <h1>Event</h1> */}</div>
+                <MainLayout status="hover">
+                  <div>{/* <h1>Event</h1> */}</div>
+                </MainLayout>
               }
             />
-            <Route path="/timeline" element={<Timeline />} />
+            <Route
+              path="/timeline"
+              element={
+                <MainLayout status="hover">
+                  <Timeline />
+                </MainLayout>
+              }
+            />
           </Routes>
-        </MainLayout>
-        {/* <MainLayout status="hover"/> */}
-      </BrowserRouter>
+        </BrowserRouter>
     </div>
   );
 }
