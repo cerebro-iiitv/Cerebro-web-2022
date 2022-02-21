@@ -4,7 +4,6 @@
 }
 
 .faq-card-arrow-cont{
-    // border: 2px solid red;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -14,7 +13,6 @@
     .arrow-left{
         height: 100%;
         width: 4.5%;
-        // border: 1px solid white;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -26,7 +24,6 @@
     .arrow-right{
         height: 100%;
         width: 4.5%;
-        // border: 1px solid white;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -36,14 +33,12 @@
     }
     .details-container{
         height: 100%;
-        // border: 1px solid white;
         display: flex;
         flex-direction: column;
         justify-content: center;
         width: 65%;
         
         .particular-faq{
-            // border: 1px solid yellow;
             height: 70%;
             display: flex;
             flex-direction: column;
@@ -74,10 +69,6 @@
                 
             }
             .faq-answer{
-                // border: 1px solid red;
-
-                // height: 100%;
-                // width: 60%;
                 .answer{
                     font-family: Poppins;
                     text-align: center;
