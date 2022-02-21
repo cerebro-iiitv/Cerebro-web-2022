@@ -177,7 +177,7 @@ color: #FFFFFF;
     position: relative;
     width: 100%;
     height: 100%;
-    transition: all 1s ease-in-out;
+    transition: all 0.5s ease-in-out;
 
     background: url("../../assets/images/circle1.svg") no-repeat center center/contain;
 }
@@ -197,7 +197,7 @@ color: #FFFFFF;
     position: relative;
     width: 100%;
     height: 100%;
-    transition: all 1s ease-in-out;
+    transition: all 0.5s ease-in-out;
     background: url("../../assets/images/circle1.svg") no-repeat center center/contain;
 }   
 
@@ -215,7 +215,7 @@ color: #FFFFFF;
     position: relative;
     width: 100%;
     height: 100%;
-    transition: all 1s ease-in-out;
+    transition: all 0.5s ease-in-out;
     background: url("../../assets/images/circle1.svg") no-repeat center center/contain;
 }
 
@@ -269,35 +269,35 @@ color: #FFC700;
 }
 
 .fl1{
-    transition: all 1s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 .sl1{
-    transition: all 1s ease-in-out;
+    transition: all 0.5s ease-in-out;
     padding-right: 5px;
 }
 .fl2 {
-    transition: all 1s ease-in-out;
+    transition: all 0.5s ease-in-out;
     width:2vw ;
     font-size: 18px;
     line-height: 20px;
 }
 
 .sl2{
-    transition: all 1s ease-in-out;
+    transition: all 0.5s ease-in-out;
     width:2vw ;
     font-size: 28px;
     line-height: 28px;
 }
 
 .fl3{
-    transition: all 1s ease-in-out;
+    transition: all 0.5s ease-in-out;
     width:1vw;
     font-size: 12px;
     line-height: 14px;
 }
 
 .sl3{
-    transition: all 1s ease-in-out;
+    transition: all 0.5s ease-in-out;
     width:1vw ;
     font-size: 24px;
     line-height: 24px;
@@ -309,7 +309,7 @@ color: #FFC700;
         opacity: 0;
     }
     &:hover .sl1{
-        transition-delay: 1s;
+        transition-delay: 0.5s;
         opacity: 1;
     }
     &:hover .circle1{
@@ -323,7 +323,7 @@ color: #FFC700;
         opacity: 0;
     }
     &:hover .sl2{
-        transition-delay: 1s;
+        transition-delay: 0.5s;
         opacity: 1;
     }
     &:hover .circle2{
@@ -337,7 +337,7 @@ color: #FFC700;
         opacity: 0;
     }
     &:hover .sl3{
-        transition-delay: 1s;
+        transition-delay: 0.5s;
         opacity: 1;
     }
     &:hover .circle3{
