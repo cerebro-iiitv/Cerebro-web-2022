@@ -35,7 +35,7 @@ const Layout = (props) => {
 
     render() {
       let button;
-      if (AuthContext.Provider.isLoggedIn===true) {
+      if (authcontext.isLoggedIn===true) {
         button = <Dashboard />;
       } else {
         button = <LoginButton />;
