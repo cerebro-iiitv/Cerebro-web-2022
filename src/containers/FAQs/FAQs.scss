@@ -1,4 +1,9 @@
-.faq-bg{
+@font-face {
+    font-family: Poppins;
+    src: url("../../assets/fonts/Poppins-Regular.ttf");
+}
+
+.faq-bg {
     user-select: none;
     box-sizing: border-box;
     background-color: #071E40;
@@ -7,19 +12,63 @@
     background-repeat: no-repeat;
     background-position: 50% 50%;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    .main-cont{
-        // border: 1px solid white;
-        height: 55%;
+    .main-cont {
+        padding-top: 2%;
+        height: 80%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-between;
-        .card-arrow-cont{
-            // border: 1px solid pink;
+        justify-content: space-around;
+
+        .title-social {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            height: 20%;
+
+            .faq-title {
+                background-image: url("../../assets/images/FAQ/backgroundTitle.png");
+                background-size: cover;
+                background-position: 50% 50%;
+                background-repeat: no-repeat;
+                width: 30%;
+                text-align: center;
+
+                @media only screen and (max-width: 1440px){
+                    .title{
+                        font-size: 2em !important;
+                    }
+                }
+                .title {
+                    font-size: 2.2em;
+                    color: white;
+                    font-family: Poppins;
+                }
+            }
+
+            .faq-social {
+                @media only screen and (max-width: 1440px){
+                    .social{
+                        font-size: 0.8em !important;
+                    }
+                }
+                width: 100%;
+                .social {
+                    font-family: Poppins;
+                    color: white;
+                    font-size: 1em;
+                    font-weight: 500;
+                    a{
+                        text-decoration: none;
+                        color: #1CA0FF;
+                    }
+                }
+            }
+        }
+
+        .card-arrow-cont {
             height: 90%;
             width: 50%;
             display: flex;
@@ -27,12 +76,12 @@
             justify-content: center;
             align-items: center;
         }
-        .faq-scroll-cont{
+
+        .faq-scroll-cont {
             height: 10%;
             width: 50%;
-            // border: 1px solid greenyellow;
         }
     }
-    
+
 
 }
