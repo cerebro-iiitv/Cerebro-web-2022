@@ -1,13 +1,14 @@
 import Navbar from "../Navbar/Navbar";
 import "./Layout.scss";
 import dashboard from "../../assets/images/dashboard icon.svg";
-import AuthContext, { AuthContextProvider } from "../../store/AuthContext";
+import useAuth from "../../hooks/useAuth";
 import {Link} from "react-router-dom";
-import React, { useContext } from "react";
+import React from "react";
 
 
 const Layout = (props) => {
-  const authcontext = useContext(AuthContext);
+
+const auth = useAuth();
 
   function LoginButton() {
     return (
@@ -35,7 +36,7 @@ const Layout = (props) => {
 
     render() {
       let button;
-      if (authcontext.isLoggedIn===true) {
+      if (auth.isLoggedIn===true) {
         button = <Dashboard />;
       } else {
         button = <LoginButton />;

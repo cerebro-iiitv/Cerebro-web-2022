@@ -1,7 +1,5 @@
-
-// import AuthContext, { AuthContextProvider } from "./store/AuthContext";
 import React from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 import useAuth from "./hooks/useAuth";
 import MainLayout from "./containers/Layout/Layout";
 import Login from "./containers/Login/Login";
@@ -20,13 +18,15 @@ import "./App.css";
 function App() {
   const auth = useAuth();
   const token = localStorage.getItem("token");
+  const [redirect,setredirect] = React.useState(false);
+  const [flag,setflag] = React.useState(true);
+
   if (token) {
     auth.login(token);
   }
 
   return (
     <div className="App">
-      <AuthContextProvider>
         <BrowserRouter>
           <Routes>
             <Route
@@ -34,7 +34,7 @@ function App() {
               element={
                 <>
                   <MainLayout status="no-hover">
-                    <Hero />
+                    <Hero redir={redirect} setredir={setredirect} flagprop={flag} setflagprop={setflag} />
                   </MainLayout>
                 </>
               }
@@ -139,7 +139,6 @@ function App() {
             />
           </Routes>
         </BrowserRouter>
-      </AuthContextProvider>
     </div>
   );
 }

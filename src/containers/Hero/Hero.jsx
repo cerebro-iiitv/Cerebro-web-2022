@@ -1,29 +1,27 @@
-import React,{Component} from "react";
+import React, { Component } from "react";
 import HeroInitial from "../../components/Hero-Initial/Hero-Initial";
 import AboutUs from "../AboutUs/AboutUs";
-const Hero=()=>{
-
-    class Redeeirect extends Component {
-        state = {
-          redirect: false
-        }
-      
-        componentDidMount() {
-          this.id = setTimeout(() => this.setState({ redirect: true }), 5000)
-        }
-      
-        render() {
-          return this.state.redirect
-            ? <AboutUs/>
-            : <HeroInitial/>
-        }
+const Hero = (props) => {
+  class Redeeirect extends Component {
+    componentDidMount() {
+      if (props.flagprop === true) {
+        this.id = setTimeout(() => {
+          props.setredir(true);
+          props.setflagprop(false);
+        }, 5000);
       }
+    }
 
-    return(
-        <>
-            <Redeeirect/>
-        </>
-    )
-}
+    render() {
+      return props.redir ? <AboutUs /> : <HeroInitial />;
+    }
+  }
+
+  return (
+    <>
+      <Redeeirect />
+    </>
+  );
+};
 
 export default Hero;

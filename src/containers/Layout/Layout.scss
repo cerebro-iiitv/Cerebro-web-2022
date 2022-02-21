@@ -1,4 +1,4 @@
-.hud-top{
+.hud-top {
   position: absolute;
   height: 90px;
   width: 100vw;
@@ -8,12 +8,12 @@
     center/auto;
 }
 
-.top-btn{
+.top-btn {
   z-index: 2;
   cursor: pointer;
-  &-higher{
+  &-higher {
     z-index: 3;
-  cursor: pointer;
+    cursor: pointer;
   }
 }
 .tophover {
@@ -27,17 +27,15 @@
   transform: translateY(-80px);
   transition: transform 1.5s;
   animation: initial-up 1.5s;
-
 }
-.navbarr{
+.navbarr {
   display: flex;
   z-index: 2;
   align-items: center;
   flex-direction: column;
   justify-content: flex-end;
 
-  height:30vh;
-
+  height: 30vh;
 }
 .navhover {
   display: flex;
@@ -45,7 +43,7 @@
   align-items: center;
   flex-direction: column;
   justify-content: flex-end;
-  height:30vh;
+  height: 30vh;
   transform: translateY(60%);
   animation: initial-down 1.5s;
   transition: transform 1.5s;
@@ -57,17 +55,24 @@
     transform: translateY(0%);
   }
   &:hover ~ .blur-layer {
-    transition:height 0s,opacity 1.5s,backdrop-filter 1.5s;
+    transition: height 0s, opacity 1.5s, backdrop-filter 1.5s;
     height: 100%;
     opacity: 1;
-    backdrop-filter: blur(10px); 
+    backdrop-filter: blur(10px);
   }
   &:hover .navbar__content__hoverbar {
     animation: barout 1.5s forwards ease;
-
   }
 }
 
+@keyframes initial-down {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
 
 .blur-layer {
   background: url("../../assets/images/glass-top.svg") no-repeat center
@@ -78,7 +83,6 @@
   opacity: 0;
   z-index: 0;
 }
-
 
 .visible-layer {
   display: flex;
@@ -113,8 +117,7 @@
     transform: translateY(0px);
   }
   100% {
-    transform: translateY(-85px);
-
+    transform: translateY(0px);
   }
 }
 
@@ -151,8 +154,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background: url("../../assets/images/commonlayer_login.svg") no-repeat
-    center center;
+  background: url("../../assets/images/commonlayer_login.svg") no-repeat center
+    center;
   height: 50px;
 }
 
@@ -165,10 +168,10 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background: url("../../assets/images/commonlayer_login.svg") no-repeat
-    center center;
+  background: url("../../assets/images/commonlayer_login.svg") no-repeat center
+    center;
   height: 50px;
-  &-img{
+  &-img {
     margin-bottom: 2.5%;
   }
 }
@@ -181,10 +184,10 @@
   align-items: center;
 }
 
-.tophud-text{
+.tophud-text {
   text-align: center;
   font-family: Rekt Brush;
-  color: rgba(256,256,256,0.85);
+  color: rgba(256, 256, 256, 0.85);
   font-style: normal;
   font-weight: 400;
   font-size: 28px;
@@ -192,11 +195,11 @@
   margin-top: 2vh;
 }
 
-.notext{
+.notext {
   display: none;
 }
 
-#main-content{
+#main-content {
   position: absolute;
   height: 100vh;
   width: 100vw;
@@ -206,29 +209,11 @@
   .navhover {
     transform: translateY(45%);
   }
-
-  @keyframes initial-down {
-    0% {
-      transform: translateY(0%);
-    }
-    100% {
-      transform: translateY(45%);
-    }
-  }
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1100px) {
   .navhover {
     transform: translateY(48%);
-  }
-
-  @keyframes initial-down {
-    0% {
-      transform: translateY(0%);
-    }
-    100% {
-      transform: translateY(48%);
-    }
   }
 }
 
@@ -236,61 +221,22 @@
   .navhover {
     transform: translateY(53%);
   }
-
-  @keyframes initial-down {
-    0% {
-      transform: translateY(0%);
-    }
-    100% {
-      transform: translateY(53%);
-    }
-  }
 }
 
 @media screen and (min-width: 1280px) and (max-width: 1439px) {
   .navhover {
     transform: translateY(62%);
   }
-
-  @keyframes initial-down {
-    0% {
-      transform: translateY(0%);
-    }
-    100% {
-      transform: translateY(62%);
-    }
-  }
 }
-
 
 @media screen and (min-width: 1440px) and (max-width: 1800px) {
   .navhover {
     transform: translateY(63%);
   }
-
-  @keyframes initial-down {
-    0% {
-      transform: translateY(0%);
-    }
-    100% {
-      transform: translateY(63%);
-    }
-  }
 }
-
-
 
 @media screen and (min-width: 1800px) and (max-width: 1880px) {
   .navhover {
     transform: translateY(68%);
-  }
-
-  @keyframes initial-down {
-    0% {
-      transform: translateY(0%);
-    }
-    100% {
-      transform: translateY(68%);
-    }
   }
 }
