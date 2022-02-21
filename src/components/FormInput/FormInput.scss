@@ -105,4 +105,11 @@
       width: 450px;
     }
   }
+
+  &__change-pass {
+    &__oldPassword, &__newPassword, &__confirmPassword {
+      margin-bottom: 10px;
+      width: 450px;
+    }
+  }
 }
