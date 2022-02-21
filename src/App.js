@@ -21,61 +21,101 @@ function App() {
   return (
     <div className="App">
       <AuthContextProvider>
-        <MainLayout status="no-hover">
-          <BrowserRouter>
-            <Routes>
-              <Route
-                path="/"
-                element={
-                  <>
-                    <Hero />
-                  </>
-                }
-              />
-            </Routes>
-          </BrowserRouter>
-        </MainLayout>
-
         <BrowserRouter>
           <Routes>
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="/forgot-password" element={<ForgotPassword />} />
+            <Route
+              path="/"
+              element={
+                <>
+                  <MainLayout status="no-hover">
+                    <Hero />
+                  </MainLayout>
+                </>
+              }
+            />
+          </Routes>
+
+          <Routes>
+            <Route
+              path="/login"
+              element={
+                
+                  <Login />
+             
+              }
+            />
+            <Route
+              path="/signup"
+              element={
+                
+                  <Signup />
+                
+              }
+            />
+            <Route
+              path="/forgot-password"
+              element={
+                
+                  <ForgotPassword />
+                
+              }
+            />
             <Route
               path="/account/password-reset/:uidb64/:token"
-              element={<ResetPassword />}
+              element={
+                
+                  <ResetPassword />
+                
+              }
+            />
+            <Route
+              path="/dashboard"
+              element={
+                
+                  <p>Hello Human</p>
+              
+              }
+            />
+          </Routes>
+
+          <Routes>
+            {/* <MainLayout status="hover"> */}
+
+            <Route
+              path="/team"
+              element={
+                <MainLayout status="hover">
+                  <div>{/* <h1>Team</h1> */}</div>
+                </MainLayout>
+              }
+            />
+            <Route
+              path="/faq"
+              element={
+                <MainLayout status="hover">
+                  <FAQs />
+                </MainLayout>
+              }
+            />
+            <Route
+              path="/event"
+              element={
+                <MainLayout status="hover">
+                  
+                  <div>{/* <h1>Event</h1> */}</div>
+                </MainLayout>
+              }
+            />
+            <Route
+              path="/timeline"
+              element={
+                <MainLayout status="hover">
+                  <Timeline />
+                </MainLayout>
+              }
             />
           </Routes>
         </BrowserRouter>
-
-        <MainLayout status="hover">
-          <BrowserRouter>
-            <Routes>
-              <Route
-                path="/team"
-                element={
-                  // Temp navigation for deploy preview
-                  <div>{/* <h1>Team</h1> */}</div>
-                }
-              />
-              <Route path="/faq" element={<FAQs />} />
-              <Route
-                path="/event"
-                element={
-                  // Temp navigation for deploy preview
-                  <div>{/* <h1>Event</h1> */}</div>
-                }
-              />
-              <Route
-                path="/timeline"
-                element={
-                  <Timeline/>
-                }
-              />
-            </Routes>
-            {/* <MainLayout status="hover"/> */}
-          </BrowserRouter>
-        </MainLayout>
       </AuthContextProvider>
     </div>
   );

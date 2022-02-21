@@ -1,10 +1,14 @@
 import Navbar from "../Navbar/Navbar";
 import "./Layout.scss";
-import React from "react";
 import dashboard from "../../assets/images/dashboard icon.svg";
+import AuthContext, { AuthContextProvider } from "../../store/AuthContext";
 import {Link} from "react-router-dom";
+import React, { useContext } from "react";
+
 
 const Layout = (props) => {
+  const authcontext = useContext(AuthContext);
+
   function LoginButton() {
     return (
        <Link to="/login">
@@ -28,15 +32,10 @@ const Layout = (props) => {
   }
 
   class LogStatus extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = { isLoggedIn: false };
-    }
 
     render() {
-      const isLoggedIn = this.state.isLoggedIn;
       let button;
-      if (isLoggedIn) {
+      if (AuthContext.Provider.isLoggedIn===true) {
         button = <Dashboard />;
       } else {
         button = <LoginButton />;
