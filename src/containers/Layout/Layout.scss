@@ -11,6 +11,10 @@
 .top-btn{
   z-index: 1;
   cursor: pointer;
+  &-higher{
+    z-index: 3;
+  cursor: pointer;
+  }
 }
 .tophover {
   position: absolute;
@@ -175,6 +179,21 @@
   justify-content: flex-end;
   margin-right: 2vw;
   align-items: center;
+}
+
+.tophud-text{
+  text-align: center;
+  font-family: Rekt Brush;
+  color: rgba(256,256,256,0.85);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 30px;
+  margin-top: 2vh;
+}
+
+.notext{
+  display: none;
 }
 
 #main-content{

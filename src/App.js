@@ -1,9 +1,10 @@
 import MainLayout from "./containers/Layout/Layout";
 import React, { useContext } from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 import AuthContext, { AuthContextProvider } from "./store/AuthContext";
 import Login from "./containers/Login/Login";
 import Signup from "./containers/Signup/Signup";
+import Hero from "./containers/Hero/Hero";
 import "./App.css";
 
 import FAQs from "./containers/FAQs/FAQs";
@@ -17,18 +18,23 @@ function App() {
     <div className="App">
       <AuthContextProvider>
         <BrowserRouter>
-
-<MainLayout status="hover">
+        <Routes>
+          
+        </Routes>
+<MainLayout status="hoer">
           <Routes>
             <Route
               path="/"
               element={
-                // Temp navigation for deploy preview
-                <div>
+                <>
+                {/* // Temp navigation for deploy preview */}
+                {/* <div>
                   <Link to="/login">Login</Link>
                   <br />
                   <Link to="signup">Signup</Link>
-                </div>
+                </div> */}
+                 < Hero/>
+                 </> 
               }
             />
             <Route path="/login" element={<Login />} />

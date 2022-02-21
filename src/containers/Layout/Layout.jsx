@@ -40,7 +40,7 @@ const Layout = (props) => {
       } else {
         button = <LoginButton />;
       }
-      return <div className="top-btn">{button}</div>;
+      return <div className={props.status === "hover" ? "top-btn" : "top-btn-higher"}>{button}</div>;
     }
   }
 
@@ -50,12 +50,13 @@ const Layout = (props) => {
         <div className="login-button-container">
           <LogStatus />
         </div>
-        <div classname="main-content" id="main-content"> {props.children} </div>
+        <div className="main-content" id="main-content"> {props.children} </div>
         <div className={props.status === "hover" ? "navhover navbarr" : "navbarr"}>
-          <Navbar />
+          <Navbar status={props.status}/>
         </div>
         <div className="blur-layer"></div>
         <div className={props.status === "hover" ? "tophover" : "hud-top"}>
+          <p className={props.status === "hover" ? "tophud-text" : "notext"}>CEREBRO'22</p>
         </div>
       </div>
     </>
