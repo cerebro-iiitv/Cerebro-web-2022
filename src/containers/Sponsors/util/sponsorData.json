@@ -2,35 +2,35 @@
     "sponsors": [
         {
             "id": 1,
-            "type": "title",
+            "type": "Title",
             "logo": "https://i.imgur.com/DlQi3Ie.png",
             "websiteLink": "https://www.apple.com/in/",
             "background": "https://i.imgur.com/6A9TJZx.png"
         },
         {
             "id": 2,
-            "type": "event",
+            "type": "Event",
             "logo": "https://i.imgur.com/DlQi3Ie.png",
             "websiteLink": "https://www.apple.com/in/",
             "background": "https://i.imgur.com/6A9TJZx.png"
         },
         {
             "id": 3,
-            "type": "associate",
+            "type": "Associate",
             "logo": "https://i.imgur.com/DlQi3Ie.png",
             "websiteLink": "https://www.apple.com/in/",
             "background": "https://i.imgur.com/6A9TJZx.png"
         },
         {
             "id": 4,
-            "type": "gold",
+            "type": "Gold",
             "logo": "https://i.imgur.com/DlQi3Ie.png",
             "websiteLink": "https://www.apple.com/in/",
             "background": "https://i.imgur.com/NZDEuTZ.png"
         },
         {
             "id": 5,
-            "type": "silver",
+            "type": "Silver",
             "logo": "https://i.imgur.com/DlQi3Ie.png",
             "websiteLink": "https://www.apple.com/in/",
             "background": "https://i.imgur.com/3yGMqjP.png"
@@ -38,7 +38,7 @@
         },
         {
             "id": 6,
-            "type": "platinum",
+            "type": "Platinum",
             "logo": "https://i.imgur.com/DlQi3Ie.png",
             "websiteLink": "https://www.apple.com/in/",
             "background": "https://i.imgur.com/0XNJMe3.png"
@@ -46,7 +46,7 @@
         },
         {
             "id": 7,
-            "type": "bronze7",
+            "type": "Bronze7",
             "logo": "https://i.imgur.com/DlQi3Ie.png",
             "websiteLink": "https://www.apple.com/in/",
             "background": "https://i.imgur.com/0XNJMe3.png"
@@ -54,7 +54,7 @@
         },
         {
             "id": 8,
-            "type": "bronze8",
+            "type": "Bronze8",
             "logo": "https://i.imgur.com/DlQi3Ie.png",
             "websiteLink": "https://www.apple.com/in/",
             "background": "https://i.imgur.com/0XNJMe3.png"
@@ -62,7 +62,7 @@
         },
         {
             "id": 9,
-            "type": "bronze9",
+            "type": "Bronze9",
             "logo": "https://i.imgur.com/DlQi3Ie.png",
             "websiteLink": "https://www.apple.com/in/",
             "background": "https://i.imgur.com/0XNJMe3.png"
@@ -70,7 +70,7 @@
         },
         {
             "id": 10,
-            "type": "bronze10",
+            "type": "Bronze10",
             "logo": "https://i.imgur.com/DlQi3Ie.png",
             "websiteLink": "https://www.apple.com/in/",
             "background": "https://i.imgur.com/0XNJMe3.png"
@@ -78,7 +78,7 @@
         },
         {
             "id": 11,
-            "type": "bronze11",
+            "type": "Bronze11",
             "logo": "https://i.imgur.com/DlQi3Ie.png",
             "websiteLink": "https://www.apple.com/in/",
             "background": "https://i.imgur.com/0XNJMe3.png"
@@ -87,6 +87,63 @@
         {
             "id": 12,
             "type": "bronze12",
+            "logo": "https://i.imgur.com/DlQi3Ie.png",
+            "websiteLink": "https://www.apple.com/in/",
+            "background": "https://i.imgur.com/0XNJMe3.png"
+        },
+        {
+            "id": 13,
+            "type": "bronze13",
+            "logo": "https://i.imgur.com/DlQi3Ie.png",
+            "websiteLink": "https://www.apple.com/in/",
+            "background": "https://i.imgur.com/0XNJMe3.png"
+
+        },
+        {
+            "id": 14,
+            "type": "bronze14",
+            "logo": "https://i.imgur.com/DlQi3Ie.png",
+            "websiteLink": "https://www.apple.com/in/",
+            "background": "https://i.imgur.com/0XNJMe3.png"
+        },
+        {
+            "id": 15,
+            "type": "bronze15",
+            "logo": "https://i.imgur.com/DlQi3Ie.png",
+            "websiteLink": "https://www.apple.com/in/",
+            "background": "https://i.imgur.com/0XNJMe3.png"
+        },
+        {
+            "id": 16,
+            "type": "bronze16",
+            "logo": "https://i.imgur.com/DlQi3Ie.png",
+            "websiteLink": "https://www.apple.com/in/",
+            "background": "https://i.imgur.com/0XNJMe3.png"
+        },
+        {
+            "id": 17,
+            "type": "bronze17",
+            "logo": "https://i.imgur.com/DlQi3Ie.png",
+            "websiteLink": "https://www.apple.com/in/",
+            "background": "https://i.imgur.com/0XNJMe3.png"
+        },
+        {
+            "id": 18,
+            "type": "bronze18",
+            "logo": "https://i.imgur.com/DlQi3Ie.png",
+            "websiteLink": "https://www.apple.com/in/",
+            "background": "https://i.imgur.com/0XNJMe3.png"
+        },
+        {
+            "id": 19,
+            "type": "bronze19",
+            "logo": "https://i.imgur.com/DlQi3Ie.png",
+            "websiteLink": "https://www.apple.com/in/",
+            "background": "https://i.imgur.com/0XNJMe3.png"
+        },
+        {
+            "id": 20,
+            "type": "bronze20",
             "logo": "https://i.imgur.com/DlQi3Ie.png",
             "websiteLink": "https://www.apple.com/in/",
             "background": "https://i.imgur.com/0XNJMe3.png"

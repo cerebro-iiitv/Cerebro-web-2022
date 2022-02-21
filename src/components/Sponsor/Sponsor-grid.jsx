@@ -24,7 +24,7 @@ const SponsorGrid = ({sponsorData, loadMore, loadLess, visible}) => {
             </div>
 
             <div className="right-arrow">
-                <img id = {visible === (sponsorData.length) - 6 ? "disable-on" : ""} onClick={loadMore} src={rightArrow} alt="right-arrow" className="right-arrow-img"/>
+                <img id = {(visible === (sponsorData.length) - 6) || (visible === (sponsorData.length)-(sponsorData.length % 6)) ? "disable-on" : ""} onClick={loadMore} src={rightArrow} alt="right-arrow" className="right-arrow-img"/>
             </div>
         </div>
     )
