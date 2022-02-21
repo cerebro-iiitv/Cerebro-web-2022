@@ -8,7 +8,7 @@ const Navbar = (props) => {
     <div className="navbar">
       <div className="navbar__bg-img">
         <div className="navbar__content">
-          <div className="navbar__content__hoverbar"></div>
+          <div className={props.status === "hover" ? "navbar__content__hoverbar" : "navbar__content__hoverbar notvisible"}></div>
           <div className="navbar__hori">
             <HorizontalNavMenu />
           </div>

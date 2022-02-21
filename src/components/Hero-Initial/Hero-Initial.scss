@@ -1,0 +1,64 @@
+
+.hi-mainwrap{
+    height: 100vh ;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    animation: fade-out 1s ease-out 4s forwards;
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+.heroinitial{
+    z-index: 1;
+    height: 82vh;
+    width: 100vw;
+    background: url("../../assets/images/hero-img-1.svg") no-repeat bottom center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cerebro-logo{
+    margin-bottom: 7%;
+    animation: hovering 2s ease-in-out;
+    animation-iteration-count: 2;
+}
+
+@keyframes hovering{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+    
+
+
+@media screen and (min-width: 1000px) and (max-width: 1440px){
+    .heroinitial{
+        height: 88vh;
+        background:url("../../assets/images/hero-img-1-1280px.svg") no-repeat bottom center;
+    }
+    .cerebro-logo{
+        width:200px;
+        height:200px;
+        margin-bottom: 10%;
+    }
+}
+    
+
