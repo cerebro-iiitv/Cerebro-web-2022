@@ -7,6 +7,8 @@ import Signup from "./containers/Signup/Signup";
 import "./App.css";
 
 import FAQs from "./containers/FAQs/FAQs";
+import Sponsors from "./containers/Sponsors/Sponsors";
+
 function App() {
   const authCtx = useContext(AuthContext);
   const token = localStorage.getItem("token");
@@ -28,11 +30,15 @@ function App() {
                   <Link to="/login">Login</Link>
                   <br />
                   <Link to="signup">Signup</Link>
+                  <br />
+                  <Link to = "/sponsors">Sponsors</Link>
                 </div>
               }
             />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
+            <Route path="/sponsors" element={<Sponsors />} />
+            
             <Route path="/team" element={
               // Temp navigation for deploy preview
               <div>

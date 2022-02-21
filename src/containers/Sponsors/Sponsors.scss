@@ -1,0 +1,87 @@
+@font-face {
+    font-family: Barlow;
+    src: url("../../assets/fonts/Barlow-Regular.ttf");
+}
+
+.sponsors{
+    user-select: none;
+    box-sizing: border-box;
+    background-color: #071E40;
+    height: 100vh;
+    width: 100vw;
+    // padding-top: 2%;
+    display: flex;
+    justify-content: space-between;
+    .left-pillar{
+        height: 100vh;
+        width: 35%;
+        img{
+            height: 100%;
+            width: 100%;
+        }
+    //   width: 10%;
+    //   border: 1px solid white;
+    }
+    .right-pillar{
+        height: 100vh;
+        width: 35%;
+        img{
+            height: 100%;
+            width: 100%;
+
+        }
+        // width: 10%;
+    //    border: 1px solid white;
+    }
+    .main-cont{
+        // z-index: 10;
+        position: absolute;
+        // border: 1px solid white;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 80%;
+
+        .title-cont{
+            height: 10%;
+            .title{
+                color: #E9CB2B;
+                font-family: Barlow;
+            }
+        }
+        .sponsor-grid{
+            height: 90%;
+            width: 100%;
+        }
+        // border: 1px solid white;
+
+        
+    }
+
+    
+
+
+    // display: flex;
+    // justify-content: space-between;
+    // background-image: url("../../assets/images/Sponsors/sponsors-bg.png");
+    // background-size: contain;
+    // background-repeat: no-repeat;
+
+    // .left-pillar{
+    //     height: 100vh;
+    //     width: 20%;
+    //     background-image: url("../../assets/images/Sponsors/left-pillar.png");
+    //     background-size: contain;
+    //     background-repeat: no-repeat;
+    // }
+
+    // .right-pillar{
+    //     height: 100vh;
+    //     width: 20%;
+    //     background-image: url("../../assets/images/Sponsors/right-pillar.png");
+    //     background-size: contain;
+    //     background-repeat: no-repeat;
+    // }
+}
