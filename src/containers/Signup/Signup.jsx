@@ -34,6 +34,7 @@ const Signup = () => {
       form.append("address", values.address);
       form.append("institute_name", values.institute);
       form.append("degree", values.degree);
+      console.log(form);
       let res;
       try {
         res = await axiosInstance.post("/account/signup/", form, {
