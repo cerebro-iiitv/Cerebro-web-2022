@@ -1,0 +1,51 @@
+@font-face {
+    font-family: Barlow;
+    src: url("../../assets/fonts/Barlow-Regular.ttf");
+}
+
+.sponsors{
+    user-select: none;
+    box-sizing: border-box;
+    background-color: #071E40;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    .left-pillar{
+        height: 100vh;
+        width: 35%;
+        img{
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .right-pillar{
+        height: 100vh;
+        width: 35%;
+        img{
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .main-cont{
+        position: absolute;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 80%;
+
+        .title-cont{
+            height: 10%;
+            .title{
+                color: #E9CB2B;
+                font-family: Barlow;
+            }
+        }
+        .sponsor-grid{
+            height: 90%;
+            width: 100%;
+        }
+    }
+}
