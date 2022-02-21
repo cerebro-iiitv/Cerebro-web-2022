@@ -9,7 +9,11 @@ import ForgotPassword from "./containers/ForgotPassword/ForgotPassword";
 import ResetPassword from "./containers/ResetPassword/ResetPassword";
 import Timeline from "./containers/Timeline/Timeline";
 import FAQs from "./containers/FAQs/FAQs";
+import Sponsors from "./containers/Sponsors/Sponsors";
+
 import "./App.css";
+
+
 
 function App() {
   const authCtx = useContext(AuthContext);
@@ -34,11 +38,14 @@ function App() {
                     <Link to="/signup">Signup</Link>
                     <br />
                     <Link to="/forgot-password">Forgot Password</Link>
+                    <br />
+                    <Link to="/sponsors">Sponsors</Link>
                   </div>
                 }
               />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
+              <Route path="/sponsors" element={<Sponsors />} />
               <Route path="/forgot-password" element={<ForgotPassword />} />
               <Route
                 path="/account/password-reset/:uidb64/:token"
