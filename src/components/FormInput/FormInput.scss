@@ -88,4 +88,21 @@
       margin-bottom: 10px;
     }
   }
+
+  &__forgot-pass {
+    &__email {
+      width: 450px;
+    }
+  }
+
+  &__reset-pass {
+    &__password {
+      width: 450px;
+    }
+
+    &__confirmPassword {
+      margin-top: 10px;
+      width: 450px;
+    }
+  }
 }

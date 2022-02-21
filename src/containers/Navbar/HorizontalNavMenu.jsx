@@ -67,7 +67,8 @@ const HorizontalNavMenu = () => {
                 <NavMenuCard className={tiltClass}
                     title={option.title}
                     isTransitionEnabled={isTransitionEnabled}
-                    transitionAfterClick={cardClickHandler}  />
+                    transitionAfterClick={cardClickHandler}  
+                    key={i}/>
             )
         });
         return tempArr;

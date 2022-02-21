@@ -1,9 +1,9 @@
-.login {
+.auth {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 60px 0px 10px 0px;
+  margin: 40px 0px 10px 0px;
 
   &__button {
     margin-top: 5px;
@@ -14,6 +14,11 @@
     box-shadow: 0px 0px 10px rgba(236, 180, 39, 0.6);
     border-radius: 5px;
 
+    &:active {
+      box-shadow: 0 1px #666;
+      transform: translateY(0.5px);
+    }
+
     &__text {
       // font-family: Be Vietnam Pro;
       // font-style: normal;
@@ -23,9 +28,17 @@
     }
   }
 
-  &__error {
-    font-size: 15px;
-    font-weight: 500;
-    color: #ff0033;
+  &__status {
+    &__error {
+      font-size: 15px;
+      font-weight: 500;
+      color: #ff0033;
+    }
+
+    &__success {
+      font-size: 15px;
+      font-weight: 500;
+      color: #12ca50;
+    }
   }
 }
