@@ -16,29 +16,35 @@ function App() {
   }
   return (
     <div className="App">
+
       <AuthContextProvider>
+
+      <MainLayout status="no-hover">              
         <BrowserRouter>
         <Routes>
-          
-        </Routes>
-<MainLayout status="hoer">
-          <Routes>
-            <Route
+        <Route
               path="/"
               element={
                 <>
-                {/* // Temp navigation for deploy preview */}
-                {/* <div>
-                  <Link to="/login">Login</Link>
-                  <br />
-                  <Link to="signup">Signup</Link>
-                </div> */}
                  < Hero/>
-                 </> 
+                </> 
               }
             />
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
+        </Routes>
+        </BrowserRouter>
+        </MainLayout>
+
+
+        <BrowserRouter>
+        <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        </Routes>
+        </BrowserRouter>
+
+<MainLayout status="hover">
+<BrowserRouter>
+          <Routes>
             <Route path="/team" element={
               // Temp navigation for deploy preview
               <div>
@@ -46,8 +52,6 @@ function App() {
               </div>
             } />
             <Route path="/faq" element={
-              // Temp navigation for deploy preview
-              
               <FAQs />
             } />
             <Route path="/event" element={
@@ -63,9 +67,9 @@ function App() {
               </div>
             } />
           </Routes>
-          </MainLayout>
           {/* <MainLayout status="hover"/> */}
         </BrowserRouter>
+        </MainLayout>
       </AuthContextProvider>
     </div>
   );
