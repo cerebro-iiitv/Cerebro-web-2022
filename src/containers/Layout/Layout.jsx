@@ -2,27 +2,28 @@ import Navbar from "../Navbar/Navbar";
 import "./Layout.scss";
 import React from "react";
 import dashboard from "../../assets/images/dashboard icon.svg";
+import {Link} from "react-router-dom";
 
 const Layout = (props) => {
-  function LoginButton(props) {
+  function LoginButton() {
     return (
-      //  <Link to="/login">
+       <Link to="/login">
       <div className="login-btn">
         <p id="lgndash">
           LOGIN / SIGNUP
         </p>
       </div>
-      //  </Link>
+     </Link>
     );
   }
   function Dashboard() {
     return (
-      //  <Link to="/dashboard">
+       <Link to="/dashboard">
       <div className="dashboard-btn">
         <img src={dashboard} alt="dashboard" className="dashboard-btn-img"></img>{" "}
         <p id="lgndash">DASHBOARD</p>
       </div>
-      //  </Link>
+      </Link>
     );
   }
 
