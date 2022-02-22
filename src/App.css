@@ -50,6 +50,11 @@
 
 
 @font-face {
-  font-family: changa;
+  font-family: Changa;
   src: url("./assets/fonts/Changa-Regular.ttf");
+}
+
+@font-face {
+  font-family: Baumans;
+  src: url("./assets/fonts/Bauman-Regular.otf");
 }
