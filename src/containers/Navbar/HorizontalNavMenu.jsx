@@ -22,7 +22,7 @@ const getInitialCardIndex = (currPath) => {
     return 5; // for "/home" and any other path
 }
 
-const HorizontalNavMenu = () => {
+const HorizontalNavMenu = (props) => {
     const navigate = useNavigate();
     const location = useLocation();
     const initialCardIndex = getInitialCardIndex(location.pathname);
@@ -68,7 +68,8 @@ const HorizontalNavMenu = () => {
                     title={option.title}
                     isTransitionEnabled={isTransitionEnabled}
                     transitionAfterClick={cardClickHandler}  
-                    key={i}/>
+                    key={i}
+                    nohover={props.nohover}/>
             )
         });
         return tempArr;

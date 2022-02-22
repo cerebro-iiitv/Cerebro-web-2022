@@ -13,6 +13,7 @@ const NavCard = (props) => {
     const cardClickHandler = () => {
         navigate(linkAddr, { replace: false });
         props.transitionAfterClick();
+        props.nohover();
     }
     return (
         <div className="navcard__wrapper">

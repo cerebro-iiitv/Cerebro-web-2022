@@ -128,7 +128,6 @@
         background-color: #e4c142;
         border: 1px solid #e4c142;
         border-radius: 7px 7px 7px 7px;
-        animation: tweeking-r 1s ease-in-out infinite ;
       }
     }
 
@@ -154,36 +153,7 @@
         background-color: #e4c142;
         border: 1px solid #e4c142;
         border-radius: 7px 7px 7px 7px;
-        animation: tweeking-l 1s ease-in-out infinite ;
-
       }
     }
   }
 }
-
-@keyframes tweeking-r {
-  0% {
-    transform: translateX(0px);
-  }
-  50% {
-    transform: translateX(16px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
-}
-  
-
-@keyframes tweeking-l {
-  0% {
-    transform: translateX(0px);
-  }
-  50%{
-    transform: translateX(-16px);
-
-  }
-  100% {
-    transform: translateX(0px);
-  }
-}
-  

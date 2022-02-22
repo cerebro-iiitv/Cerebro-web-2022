@@ -10,7 +10,7 @@ const Navbar = (props) => {
         <div className="navbar__content">
           <div className={props.status === "hover" ? "navbar__content__hoverbar" : "navbar__content__hoverbar notvisible"}></div>
           <div className="navbar__hori">
-            <HorizontalNavMenu />
+            <HorizontalNavMenu nohover={props.nohover}/>
           </div>
           <div className="navbar__lower-cont">
             <BrochureNavBtn />

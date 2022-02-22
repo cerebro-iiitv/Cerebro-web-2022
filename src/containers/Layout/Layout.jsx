@@ -10,6 +10,11 @@ const Layout = (props) => {
 
 const auth = useAuth();
 
+function hoveroff(){
+    props.sethover(false);
+    setTimeout(()=>{props.sethover(true)}, 1000);    
+  }
+
   function LoginButton() {
     return (
        <Link to="/login">
@@ -52,11 +57,11 @@ const auth = useAuth();
           <LogStatus />
         </div>
         <div className="main-content" id="main-content"> {props.children} </div>
-        <div className={props.status === "hover" ? "navhover navbarr" : "navbarr"}>
-          <Navbar status={props.status}/>
+        <div id={(((props.status === "hover") && props.hover) ? "navhover" : "")} className={props.status === "hover" ? "navbarr-hover" : "navbarr"}>
+          <Navbar status={props.status} nohover={hoveroff}/>
         </div>
         <div className="blur-layer"></div>
-        <div className={props.status === "hover" ? "tophover" : "hud-top"}>
+        <div className={props.status === "hover" ? "tophover" : "hud-top"} id="temp">
           <p className={props.status === "hover" ? "tophud-text" : "notext"}>CEREBRO'22</p>
         </div>
       </div>
