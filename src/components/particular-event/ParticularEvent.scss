@@ -1,23 +1,3 @@
-@font-face {
-    font-family: RektBrush;
-    src: url("../../assets/fonts/Rekt Brush/RektBrush.otf");
-}
-
-@font-face {
-    font-family: Barlow;
-    src: url("../../assets/fonts/Barlow/Barlow-Regular.ttf");
-}
-
-@font-face {
-    font-family: Barlow;
-    src: url("../../assets/fonts/Barlow/Barlow-Regular.ttf");
-}
-
-@font-face {
-    font-family: Changa;
-    src: url("../../assets/fonts/chang_and_eng/Chane___.ttf");
-}
-
 @media only screen and (max-width: 1200px){
     .left-door-container{
         left: 28% !important;
@@ -26,7 +6,7 @@
 
 .event {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto 0.7fr auto;
     grid-template-rows: auto;
     height: 100%;
     width: 100%;
@@ -169,7 +149,7 @@
             text-align: center;
             font-weight: 400;
             font-size: 2em;
-            font-family: RektBrush;
+            font-family: Rekt Brush;
             text-transform: uppercase;
         }
 

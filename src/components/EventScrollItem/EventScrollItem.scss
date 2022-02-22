@@ -3,9 +3,19 @@
     src: url("../../assets/fonts/bauman/Bauman-Regular.otf");
 }
 
+@media only screen and (max-width: 1024px){
+    .text{
+        .text-up{
+            font-size: 10px !important;
+        }
+        .text-down{
+            font-size: 10px !important;
+        }
+    }
+}
 .item-container {
+    width: 90%;
     // border: 1px solid white;
-    // width: 100%;
     .text-dot-container-even:active {
         .text p {
             animation-name: tweak-up;
@@ -31,7 +41,7 @@
         @media only screen and (min-width: 1025px) and (max-width: 1280px){
             .text{
                 .text-up{
-                    font-size: 16px;
+                    font-size: 14px !important;
                 }
             }
         }
@@ -56,22 +66,18 @@
 
 
         .line-dot-container {
-            // width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            // border: 1px solid white;
 
             .line-cont {
                 display: flex;
                 .left-line {
-                    // z-index: -0.5;
                     width: 100%;
                     height: 100%;
                 }
 
                 .right-line {
-                    // z-index: -0.5;
                     width: 100%;
                     height: 100%;
                 }
@@ -97,7 +103,7 @@
         @media only screen and (max-width: 1024px) {
             .text {
                 .text-down {
-                    font-size: 14px;
+                    font-size: 14px !important;
                 }
             }
         }
@@ -105,7 +111,7 @@
         @media only screen and (min-width: 1025px) and (max-width: 1280px){
             .text{
                 .text-down{
-                    font-size: 16px;
+                    font-size: 14px !important;
                 }
             }
         }
@@ -139,19 +145,16 @@
             display: flex;
             justify-content: center;
             align-items: center;
-// border: 1px solid white;
 
             .line-cont {
                 display: flex;
 
                 .left-line {
-                    // z-index: -0.5;
                     width: 100%;
                     height: 100%;
                 }
 
                 .right-line {
-                    // z-index: -0.5;
                     width: 100%;
                     height: 100%;
                 }
