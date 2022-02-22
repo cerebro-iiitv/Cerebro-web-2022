@@ -36,6 +36,7 @@ const HorizontalNavMenu = (props) => {
 
     // Setting up the tilt css classes using wrappers around the visible cards
     const cardComponentsWithClones = React.useMemo(() => {
+
         let tempArr = navMenuDetails.map((option, i) => {
             let tiltClass = "";
             let shift = 0;
@@ -73,7 +74,7 @@ const HorizontalNavMenu = (props) => {
             )
         });
         return tempArr;
-    }, [leftCardIndex, isTransitionEnabled]);
+    }, [leftCardIndex, isTransitionEnabled,props.nohover]);
 
 
     useEffect(() => {
