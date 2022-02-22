@@ -1,7 +1,7 @@
 import DashboardCardWrapper from "./Wrapper/DashboardCardWrapper";
 import "./DashboardAboutCard.scss";
 
-const DashboardAboutCard = ({ name, institute, email, contactnum }) => {
+const DashboardAboutCard = ({ name, instituteName, email, mobileNo }) => {
     return (
         <DashboardCardWrapper darkBg={true} className="dashboard-about-card">
             <div className="dashboard-about-card__row">
@@ -10,7 +10,7 @@ const DashboardAboutCard = ({ name, institute, email, contactnum }) => {
             </div>
             <div className="dashboard-about-card__row">
                 <div className="dashboard-about-card__row__title">Institute</div>
-                <div className="dashboard-about-card__row__value">{institute}</div>
+                <div className="dashboard-about-card__row__value">{instituteName}</div>
             </div>
             <div className="dashboard-about-card__row">
                 <div className="dashboard-about-card__row__title">Email</div>
@@ -18,7 +18,7 @@ const DashboardAboutCard = ({ name, institute, email, contactnum }) => {
             </div>
             <div className="dashboard-about-card__row">
                 <div className="dashboard-about-card__row__title">Contact No.</div>
-                <div className="dashboard-about-card__row__value">{contactnum}</div>
+                <div className="dashboard-about-card__row__value">{mobileNo}</div>
             </div>
         </DashboardCardWrapper>
     )

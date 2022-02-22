@@ -41,6 +41,8 @@ function App() {
                   <Link to="/change-password">Change Password</Link>
                   <br />
                   <Link to="/sponsors">Sponsors</Link>
+                  <br />
+                  <Link to="/dashboard">Dashboard</Link>
                 </div>
               }
             />
@@ -54,6 +56,7 @@ function App() {
               />
             </Route>
             <Route element={<PrivateRoute />}>
+              <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/change-password" element={<ChangePassword />} />
             </Route>
             <Route path="/sponsors" element={<Sponsors />} />

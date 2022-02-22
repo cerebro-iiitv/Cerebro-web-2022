@@ -8,9 +8,11 @@
     line-height: 1.8rem;
     letter-spacing: 0em;
     color: #f8b813;
+    padding-bottom: 8%;
   }
   &__dt-cont {
     text-align: center;
+    padding-bottom: 7%;
     &__date {
       font-family: Chakra Petch;
       font-size: 1.125rem;
@@ -32,12 +34,13 @@
     }
   }
   &__team-size {
+    margin-bottom: 6%;
     background: url("../../../assets/images/dashboard-event-team-bg.png")
       no-repeat center center/cover;
     width: 100%;
     height: 17%;
     font-family: Chakra Petch;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     font-style: normal;
     font-weight: 600;
     line-height: 1.2rem;
@@ -88,6 +91,6 @@
   height: 35vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }

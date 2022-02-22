@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import DashboardEventCard from "../../components/Dashboard/Cards/DashboardEventCard";
-
 import arrow_img from "../../assets/images/dashboard-event-carousel-btn.png";
 import "./DashboardEventsCarousel.scss";
 
@@ -10,36 +9,14 @@ const DashboardEventCarousel = ({ eventsData }) => {
     const [isRightDisabled, setIsRigthDisabled] = useState(false);
     const [touchPosition, setTouchPosition] = useState(null);
 
-    const cardComponentsWithClones = React.useMemo(() => {
-        let tempArr = eventsData.map((event, i) => {
-            let shift = 0;
-            if (i === leftCardIndex) {
-                shift = -2;
-            }
-            if (i === leftCardIndex + 1) {
-                shift = -1;
-            }
-            if (i === leftCardIndex + 2) {
-            }
-            if (i === leftCardIndex + 3) {
-                shift = 1;
-            }
-            if (i === leftCardIndex + 4) {
-                shift = 2;
-            }
-
-            const cardClickHandler = () => {
-                setLeftCardIndex((prevState) => prevState + shift);
-            }
-
+    const cardComponents = React.useMemo(() => {
+        return eventsData.map((event) => {
             return (
                 <DashboardEventCard
-                    {...event}
-                    onClick={cardClickHandler} />
+                    {...event} />
             )
         });
-        return tempArr;
-    }, [eventsData, leftCardIndex]);
+    }, [eventsData]);
 
     useEffect(() => {
         if (leftCardIndex === 0) {
@@ -110,7 +87,7 @@ const DashboardEventCarousel = ({ eventsData }) => {
                                 transform: `translateX(-${leftCardIndex * (20)}%)`,
                             }}
                         >
-                            {cardComponentsWithClones}
+                            {cardComponents}
                         </div>
                     </div>
                     {!isRightDisabled

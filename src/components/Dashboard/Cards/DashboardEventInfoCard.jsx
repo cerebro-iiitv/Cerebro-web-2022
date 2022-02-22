@@ -4,17 +4,17 @@ import DashboardCardWrapper from "./Wrapper/DashboardCardWrapper";
 import 'react-circular-progressbar/dist/styles.css';
 import "./DashboardEventInfoCard.scss";
 
-const DashboardEventInfoCard = ({ maxNumEvents, numEvents }) => {
-    
+const DashboardEventInfoCard = ({ noOfRegsiteredEvents }) => {
+
     return (
         <DashboardCardWrapper darkBg={true} className="dashboard-event-info-card">
             <div className="dashboard-event-info-card__vert-bar"></div>
             <div className="dashboard-event-info-card__details-cont">
                 <div className="dashboard-event-info-card__details-cont__indicator">
                     <CircularProgressbarWithChildren
-                        value={numEvents}
+                        value={noOfRegsiteredEvents}
                         minValue="0"
-                        maxValue={maxNumEvents}
+                        maxValue="20"
                         strokeWidth="5"
                         styles={buildStyles({
                             strokeLinecap: 'round',
@@ -24,7 +24,7 @@ const DashboardEventInfoCard = ({ maxNumEvents, numEvents }) => {
                         })}
                     >
                         <div className="dashboard-event-info-card__details-cont__indicator__text">
-                            {numEvents}
+                            {noOfRegsiteredEvents}
                         </div>
                     </CircularProgressbarWithChildren>
                 </div>

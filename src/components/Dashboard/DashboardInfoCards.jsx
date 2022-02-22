@@ -3,16 +3,16 @@ import DashboardEventInfoCard from "./Cards/DashboardEventInfoCard";
 import DashboardSocialsCard from "./Cards/DashboardSocialsCard";
 import "./DashboardInfoCards.scss";
 
-const DashboardInfoCards = ({ name, institute, email, contactnum, maxNumEvents, numEvents }) => {
+const DashboardInfoCards = ({ name, instituteName, email, mobileNo, noOfRegsiteredEvents }) => {
     return (
         <div className="dashboard-info-cards-cont">
             <DashboardAboutCard
-                name="Madhur Gupta"
-                institute="IIIT Vadodara"
-                email="202051112@gmail.com"
-                contactnum="1234567890"
+                name={name}
+                instituteName={instituteName}
+                email={email}
+                mobileNo={mobileNo}
             />
-            <DashboardEventInfoCard maxNumEvents="20" numEvents="8" />
+            <DashboardEventInfoCard noOfRegsiteredEvents={noOfRegsiteredEvents} />
             <DashboardSocialsCard />
         </div>
     )
