@@ -1,8 +1,8 @@
-a{
+a {
     text-decoration: none;
 }
 
-.aboutus{
+.aboutus {
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -11,18 +11,20 @@ a{
     opacity: 1;
     animation: fade-in 1s ease-in;
 }
-@keyframes fade-in{
-    0%{
+
+@keyframes fade-in {
+    0% {
         opacity: 0;
     }
-    100%{
+
+    100% {
         opacity: 1;
     }
 }
-    
 
 
-.aboutus-main{
+
+.aboutus-main {
     height: 56%;
     width: 69vw;
     display: flex;
@@ -31,8 +33,9 @@ a{
     flex-direction: column;
     background: url("../../assets/images/aboutus-background.png") no-repeat center center/contain;
     margin-bottom: 8%;
+
     // border: 2px solid white;
-    &-content{
+    &-content {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -43,7 +46,7 @@ a{
     }
 }
 
-.name-and-info{
+.name-and-info {
     width: 100%;
     height: 40%;
     display: flex;
@@ -51,17 +54,17 @@ a{
     align-items: center;
 }
 
-.aboutus-name{
+.aboutus-name {
     width: 50%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    border-right:3px solid #FFC700;
+    border-right: 3px solid #FFC700;
 }
 
-.aboutus-info{
+.aboutus-info {
     width: 50%;
     height: 100%;
     display: flex;
@@ -70,7 +73,7 @@ a{
     align-items: center;
 }
 
-.sponsor-and-circles{
+.sponsor-and-circles {
     width: 100%;
     height: 50%;
     display: flex;
@@ -79,7 +82,7 @@ a{
 
 }
 
-.aboutus-sponsor{
+.aboutus-sponsor {
     width: 49%;
     height: 100%;
     display: flex;
@@ -88,7 +91,7 @@ a{
     align-items: flex-start;
 }
 
-.aboutus-circles{
+.aboutus-circles {
     width: 51%;
     height: 100%;
     display: flex;
@@ -100,59 +103,59 @@ a{
     background-size: 10% 58%;
 }
 
-.mainhead{
+.mainhead {
 
-font-family: Cendre;
-font-style: normal;
-font-weight: normal;
-font-size: 47px;
-line-height: 53px;
-margin-left: 20%;
-color: #FFC700;
-}
-
-.sechead{
     font-family: Cendre;
-font-style: normal;
-font-weight: normal;
-font-size: 25px;
-line-height: 26px;
-margin-left: 20%;
-color: #FFFFFF;
-}
-
-.infotext{
-font-family: avenir;
-font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 22px;
-margin-left: 5%;
-margin-right: 20%;
-color: rgba(255, 255, 255, 0.75);
-}
-
-.joindis{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 47px;
+    line-height: 53px;
     margin-left: 20%;
-font-family: Barlow;
-font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 22px;
-color: #FFFFFF;
+    color: #FFC700;
 }
 
-#disserver{
-    color:#B08A00;
+.sechead {
+    font-family: Cendre;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 26px;
+    margin-left: 20%;
+    color: #FFFFFF;
 }
 
-.sponsordiv{
+.infotext {
+    font-family: avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    margin-left: 5%;
+    margin-right: 20%;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.joindis {
+    margin-left: 20%;
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+#disserver {
+    color: #B08A00;
+}
+
+.sponsordiv {
     width: 32%;
     height: 24%;
     margin-left: 20%;
 }
 
-.our-sponsors{
+.our-sponsors {
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -160,20 +163,21 @@ color: #FFFFFF;
     width: 100%;
     height: 100%;
     background: #00639B;
-box-shadow: 0px 4px 4px rgba(0, 20, 60, 0.5);
-border-radius: 20px;
-&-text{
-    font-family: Changa;
-font-style: normal;
-font-weight: normal;
-font-size: 20px;
-line-height: 37px;
-color: #FFFFFF;
-}
+    box-shadow: 0px 4px 4px rgba(0, 20, 60, 0.5);
+    border-radius: 20px;
+
+    &-text {
+        font-family: Changa;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 37px;
+        color: #FFFFFF;
+    }
 }
 
 
-.circle1{
+.circle1 {
     position: relative;
     width: 100%;
     height: 100%;
@@ -182,36 +186,18 @@ color: #FFFFFF;
     background: url("../../assets/images/circle1.svg") no-repeat center center/contain;
 }
 
-.hov1{
+.hov1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80% ;
-    width:26% ;
+    height: 80%;
+    width: 26%;
     margin-left: 3.6%;
-    margin-top:5%;
+    margin-top: 5%;
     border-radius: 50%;
 }
 
-.circle2{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: all 0.5s ease-in-out;
-    background: url("../../assets/images/circle1.svg") no-repeat center center/contain;
-}   
-
-.hov2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top:5% ;
-    height: 70% ;
-    width:23% ;
-    border-radius: 50%;
-}
-
-.circle3{
+.circle2 {
     position: relative;
     width: 100%;
     height: 100%;
@@ -219,311 +205,373 @@ color: #FFFFFF;
     background: url("../../assets/images/circle1.svg") no-repeat center center/contain;
 }
 
-.hov3{
+.hov2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top:5% ;
+    margin-top: 5%;
+    height: 70%;
+    width: 23%;
+    border-radius: 50%;
+}
+
+.circle3 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+    background: url("../../assets/images/circle1.svg") no-repeat center center/contain;
+}
+
+.hov3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
 
     margin-right: 8%;
-    height:60% ;
-    width:20% ;
+    height: 60%;
+    width: 20%;
     border-radius: 50%;
 }
-.firstlayer{
+
+.firstlayer {
     padding-left: 5px;
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    width:3vw ;
+    width: 3vw;
     opacity: 1;
     font-family: changa;
-font-style: normal;
-font-weight: normal;
-font-size: 22px;
-line-height: 26px;
-text-align: center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
 
-color: rgba(28, 160, 255, 0.75);
+    color: rgba(28, 160, 255, 0.75);
 
 }
 
-.secondlayer{
+.secondlayer {
     position: absolute;
     // height: 100% ;
     display: flex;
     justify-content: center;
     align-items: center;
-    width:3vw ;
+    width: 3vw;
     opacity: 0;
     font-family: changa;
-font-style: normal;
-font-weight: normal;
-font-size: 22px;
-line-height: 26px;
-text-align: center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
 
-color: #FFC700;
+    color: #FFC700;
 
 }
 
-.fl1{
+.fl1 {
     transition: all 0.5s ease-in-out;
 }
-.sl1{
+
+.sl1 {
     transition: all 0.5s ease-in-out;
     padding-right: 5px;
 }
+
 .fl2 {
     transition: all 0.5s ease-in-out;
-    width:2vw ;
+    width: 2vw;
     font-size: 18px;
     line-height: 20px;
 }
 
-.sl2{
+.sl2 {
     transition: all 0.5s ease-in-out;
-    width:2vw ;
+    width: 2vw;
     font-size: 28px;
     line-height: 28px;
 }
 
-.fl3{
+.fl3 {
     transition: all 0.5s ease-in-out;
-    width:1vw;
+    width: 1vw;
     font-size: 12px;
     line-height: 14px;
 }
 
-.sl3{
+.sl3 {
     transition: all 0.5s ease-in-out;
-    width:1vw ;
+    width: 1vw;
     font-size: 24px;
     line-height: 24px;
 }
 
-.hov1{
+.hov1 {
     cursor: pointer;
-    &:hover .fl1{
+
+    &:hover .fl1 {
         opacity: 0;
     }
-    &:hover .sl1{
+
+    &:hover .sl1 {
         transition-delay: 0.5s;
         opacity: 1;
     }
-    &:hover .circle1{
+
+    &:hover .circle1 {
         transform: rotate(160deg);
     }
 }
 
-.hov2{
+.hov2 {
     cursor: pointer;
-    &:hover .fl2{
+
+    &:hover .fl2 {
         opacity: 0;
     }
-    &:hover .sl2{
+
+    &:hover .sl2 {
         transition-delay: 0.5s;
         opacity: 1;
     }
-    &:hover .circle2{
+
+    &:hover .circle2 {
         transform: rotate(-140deg);
     }
 }
 
-.hov3{
+.hov3 {
     cursor: pointer;
-    &:hover .fl3{
+
+    &:hover .fl3 {
         opacity: 0;
     }
-    &:hover .sl3{
+
+    &:hover .sl3 {
         transition-delay: 0.5s;
         opacity: 1;
     }
-    &:hover .circle3{
+
+    &:hover .circle3 {
         transform: rotate(120deg);
     }
 }
 
+
  
-@media screen and   (max-width:1100px) {
-    .aboutus-main{
-     height: 44%;
+
+
+
+@media screen and (max-width:1100px) {
+    .aboutus-main {
+        height: 44%;
+
         width: 80vw;
-        &-content{
+
+        &-content {
             height: 82%;
         }
     }
-    .aboutus-sponsor{
-          width: 49.25%;
+
+    .aboutus-sponsor {
+        width: 49.25%;
     }
-    .aboutus-circles{
-          width: 50.75%;
+
+    .aboutus-circles {
+        width: 50.75%;
     }
-    .hov1{
+
+    .hov1 {
         margin-left: 4.2%;
     }
-    .infotext{
+
+    .infotext {
         font-size: 16px;
         line-height: 18px;
     }
-    .mainhead{
-        font-size:40px ;
+
+    .mainhead {
+        font-size: 40px;
         line-height: 42px;
     }
-    .sechead{
-        font-size:20px ;
+
+    .sechead {
+        font-size: 20px;
         line-height: 22px;
     }
-    .joindis{
-        font-size:16px ;
+
+    .joindis {
+        font-size: 16px;
         line-height: 18px;
     }
-    .our-sponsors-text{
+
+    .our-sponsors-text {
         font-size: 14px;
         line-height: 26px;
     }
-    .fl1{
-        font-size:18px ;
+
+    .fl1 {
+        font-size: 18px;
         line-height: 20px;
     }
-    .fl2{
-        font-size:16px ;
-        line-height: 18px;
-    }   
-    .fl3{
-        font-size:14px ;
-        line-height: 16px;
-    } 
 
-    .sl1{
-        font-size:21px ;
+    .fl2 {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .fl3 {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .sl1 {
+        font-size: 21px;
         line-height: 23px;
     }
 }
-
  
 @media screen and  (min-width:1100px) and (max-width:1280px) {
     .aboutus-main{
      height: 52%;
 
+
         width: 80vw;
-        &-content{
+
+        &-content {
             height: 82%;
         }
     }
-    .aboutus-sponsor{
-          width: 49.25%;
+
+    .aboutus-sponsor {
+        width: 49.25%;
     }
-    .aboutus-circles{
-          width: 50.75%;
+
+    .aboutus-circles {
+        width: 50.75%;
     }
-    .hov1{
+
+    .hov1 {
         margin-left: 4.2%;
     }
 
-    .infotext{
+    .infotext {
         font-size: 18px;
         line-height: 20px;
     }
-    .mainhead{
-        font-size:44px ;
+
+    .mainhead {
+        font-size: 44px;
         line-height: 46px;
     }
-    .sechead{
-        font-size:22px ;
+
+    .sechead {
+        font-size: 22px;
         line-height: 24px;
     }
-    .joindis{
-        font-size:20px ;
+
+    .joindis {
+        font-size: 20px;
         line-height: 22px;
     }
-    .our-sponsors-text{
+
+    .our-sponsors-text {
         font-size: 20px;
         line-height: 26px;
     }
-    .fl1{
-        font-size:20px ;
+
+    .fl1 {
+        font-size: 20px;
         line-height: 22px;
     }
-    .fl2{
-        font-size:18px ;
-        line-height: 20px;
-    }   
-    .fl3{
-        font-size:16px ;
-        line-height: 18px;
-    } 
 
-    .sl1{
-        font-size:23px ;
+    .fl2 {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .fl3 {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .sl1 {
+        font-size: 23px;
         line-height: 25px;
     }
 }
 
-@media screen and  (min-width:1280px) and (max-width:1340px) {
-   .aboutus-main{
-    height: 52%;
-       width: 74vw;
-       &-content{
-           height: 82%;
-       }
-   }
-   .aboutus-sponsor{
-         width: 49.25%;
-   }
-   .aboutus-circles{
-         width: 50.75%;
-   }
-   .hov1{
-       margin-left: 4.2%;
-   }
+@media screen and (min-width:1280px) and (max-width:1340px) {
+    .aboutus-main {
+        height: 52%;
+        width: 74vw;
+
+        &-content {
+            height: 82%;
+        }
+    }
+
+    .aboutus-sponsor {
+        width: 49.25%;
+    }
+
+    .aboutus-circles {
+        width: 50.75%;
+    }
+
+    .hov1 {
+        margin-left: 4.2%;
+    }
 }
 
-@media screen and (min-width:1340px) and (max-width:1440px){
-    .aboutus-main{
+@media screen and (min-width:1340px) and (max-width:1440px) {
+    .aboutus-main {
         height: 54%;
         width: 70vw;
     }
- }
+}
 
- 
-@media screen and (min-width:1440px) and (max-width:1540px){
-    .aboutus-main{
+
+@media screen and (min-width:1440px) and (max-width:1540px) {
+    .aboutus-main {
         height: 55%;
         width: 68vw;
     }
- }
+}
 
- 
-@media screen and (min-width:1540px) and (max-width:1640px){
-    .aboutus-main{
+
+@media screen and (min-width:1540px) and (max-width:1640px) {
+    .aboutus-main {
         height: 55%;
         width: 70vw;
     }
- }
+}
 
- 
-@media screen and (min-width:1640px) and (max-width:1740px){
-    .aboutus-main{
+
+@media screen and (min-width:1640px) and (max-width:1740px) {
+    .aboutus-main {
         margin-bottom: 10%;
         height: 56%;
         width: 70vw;
     }
- }  
+}
 
- 
-@media screen and (min-width:1740px) and (max-width:1840px){
-    .aboutus-main{
+
+@media screen and (min-width:1740px) and (max-width:1840px) {
+    .aboutus-main {
         margin-bottom: 10%;
         height: 56%;
         width: 62vw;
     }
- }  
+}
 
- 
+
 @media screen and (min-width:1840px) {
-    .aboutus-main{
+    .aboutus-main {
         margin-bottom: 10%;
         height: 56%;
         width: 60vw;
