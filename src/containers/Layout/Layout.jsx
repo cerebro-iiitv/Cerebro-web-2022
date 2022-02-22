@@ -1,46 +1,47 @@
 import Navbar from "../Navbar/Navbar";
 import "./Layout.scss";
-import React from "react";
 import dashboard from "../../assets/images/dashboard icon.svg";
+import useAuth from "../../hooks/useAuth";
+import {Link} from "react-router-dom";
+import React from "react";
+
 
 const Layout = (props) => {
-  function LoginButton(props) {
+
+const auth = useAuth();
+
+  function LoginButton() {
     return (
-      //  <Link to="/login">
+       <Link to="/login">
       <div className="login-btn">
         <p id="lgndash">
           LOGIN / SIGNUP
         </p>
       </div>
-      //  </Link>
+     </Link>
     );
   }
   function Dashboard() {
     return (
-      //  <Link to="/dashboard">
+       <Link to="/dashboard">
       <div className="dashboard-btn">
         <img src={dashboard} alt="dashboard" className="dashboard-btn-img"></img>{" "}
         <p id="lgndash">DASHBOARD</p>
       </div>
-      //  </Link>
+      </Link>
     );
   }
 
   class LogStatus extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = { isLoggedIn: false };
-    }
 
     render() {
-      const isLoggedIn = this.state.isLoggedIn;
       let button;
-      if (isLoggedIn) {
+      if (auth.isLoggedIn===true) {
         button = <Dashboard />;
       } else {
         button = <LoginButton />;
       }
-      return <div className="top-btn">{button}</div>;
+      return <div className={props.status === "hover" ? "top-btn" : "top-btn-higher"}>{button}</div>;
     }
   }
 
@@ -52,10 +53,11 @@ const Layout = (props) => {
         </div>
         <div className="main-content" id="main-content"> {props.children} </div>
         <div className={props.status === "hover" ? "navhover navbarr" : "navbarr"}>
-          <Navbar />
+          <Navbar status={props.status}/>
         </div>
         <div className="blur-layer"></div>
         <div className={props.status === "hover" ? "tophover" : "hud-top"}>
+          <p className={props.status === "hover" ? "tophud-text" : "notext"}>CEREBRO'22</p>
         </div>
       </div>
     </>

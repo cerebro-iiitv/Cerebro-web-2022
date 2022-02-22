@@ -3,6 +3,7 @@ import { Formik, Form } from "formik";
 import { useParams } from "react-router-dom";
 import AuthForm from "../../components/AuthForm/AuthForm";
 import FormInput from "../../components/FormInput/FormInput";
+import AuthBtn from "../../components/AuthBtn/AuthBtn";
 import axiosInstance from "../../services/AxiosInstance";
 import {
   resetPasswordFormData,
@@ -47,25 +48,11 @@ const ResetPassword = () => {
                 key={index}
               />
             ))}
-            <div className="auth">
-              {errors.authentication && (
-                <span className="auth__status__error">
-                  {errors.authentication}
-                </span>
-              )}
-              {submitStatus && (
-                <span className="auth__status__success">
-                  Password changed successfully
-                </span>
-              )}
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="auth__button"
-              >
-                <span className="auth__button__text">Reset</span>
-              </button>
-            </div>
+            <AuthBtn
+              {...{ errors, submitStatus, isSubmitting }}
+              btnText="Reset"
+              successMessage="Password changed successfully"
+            />
           </Form>
         )}
       </Formik>

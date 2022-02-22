@@ -5,49 +5,53 @@ import FormInput from "../../components/FormInput/FormInput";
 import AuthBtn from "../../components/AuthBtn/AuthBtn";
 import axiosInstance from "../../services/AxiosInstance";
 import {
-  forgotPasswordFormData,
+  changePasswordFormData,
   initialValues,
   validate,
-} from "./util/ForgotPasswordFormData";
+} from "./util/ChangePasswordFormData";
 
-const ForgotPassword = () => {
+const ChangePassword = () => {
   const [submitStatus, setSubmitStatus] = useState("");
 
   const onSubmit = async (values, { setSubmitting, setFieldError }) => {
+    const data = {
+      old_password: values.oldPassword,
+      new_password1: values.newPassword,
+      new_password2: values.confirmPassword,
+    };
+    let res;
     try {
-      const res = await axiosInstance.post(
-        "/account/request-reset-password/",
-        values
-      );
-      if (res.data.success) setSubmitStatus(res.data.success);
-      else setFieldError("authentication", res.data.status);
+      res = await axiosInstance.patch("/account/change-password/", data);
+      console.log(res);
+      if (res.data.message) setSubmitStatus(res.data.message);
+      else setFieldError("authentication", "An error occurred");
     } catch (error) {
-      setFieldError("authentication", "Invalid email address");
+      setFieldError("authentication", "Wrong Password");
     }
     setSubmitting(false);
   };
 
   return (
     <AuthForm
-      title="Forgot Password"
-      to="/signup"
-      text="Don't have an account?"
-      link="Sign Up"
+      title="Change Password"
+      to="/"
+      text="Return to home?"
+      link="Home"
     >
       <Formik {...{ validate, initialValues, onSubmit }}>
         {({ isSubmitting, errors }) => (
           <Form>
-            {forgotPasswordFormData.map(({ label, name, type }, index) => (
+            {changePasswordFormData.map(({ label, name, type }, index) => (
               <FormInput
                 {...{ label, name, type }}
+                page="change-pass"
                 key={index}
-                page="forgot-pass"
               />
             ))}
             <AuthBtn
-              {...{ errors, submitStatus, isSubmitting }}
-              btnText="Mail Me"
-              successMessage="Check your email for a link to reset your password"
+              {...{ errors, isSubmitting, submitStatus }}
+              btnText="Change"
+              successMessage="Password changed successfully"
             />
           </Form>
         )}
@@ -56,4 +60,4 @@ const ForgotPassword = () => {
   );
 };
 
-export default ForgotPassword;
+export default ChangePassword;

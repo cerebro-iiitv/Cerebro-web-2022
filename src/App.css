@@ -23,3 +23,28 @@
   font-family: Rekt Brush;
   src: url("./assets/fonts/RektBrush.otf");
 }
+
+
+@font-face {
+  font-family: cendre;
+  src: url("./assets/fonts/Cendre.ttf");
+}
+
+
+@font-face {
+  font-family: Barlow;
+  src: url("./assets/fonts/Barlow-Regular.otf");
+}
+
+
+@font-face {
+  font-family: avenir;
+  src: url("./assets/fonts/avenir.otf");
+}
+
+
+
+@font-face {
+  font-family: changa;
+  src: url("./assets/fonts/Changa-Regular.ttf");
+}
