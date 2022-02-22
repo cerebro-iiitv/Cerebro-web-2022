@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import TimelineItem from "../../components/TimelineItem/TimelineItem";
 import { timelineData } from "./util/TimelineData";
 import useHorizontalScroll from "../../hooks/useHorizontalScroll";
