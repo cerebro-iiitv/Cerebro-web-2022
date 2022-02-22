@@ -7,7 +7,6 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    // border: 1px solid red;
 
     .button-cover1{
         width: 6%;
@@ -22,7 +21,6 @@
     }
 
     .scroll-bar{
-        // border: 1px solid green;
         width: 80%;
         display: flex;
         justify-content: center;
@@ -36,7 +34,6 @@
         
         .button2{
             cursor: pointer;
-            // z-index: 10;
         }
     }
 }
@@ -46,6 +43,3 @@
     pointer-events: none;
 }
 
-
-
-// style the button containers

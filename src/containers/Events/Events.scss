@@ -1,12 +1,5 @@
-// @media only screen and (width: 1024px){
-//     .event-outer{
-//         height: 91vh !important;
-//     }
-// }
-
 .event-outer {
     box-sizing: border-box;
-    // padding: 10% 0;
     user-select: none;
     row-gap: 2%;
     height: 100vh;
@@ -17,19 +10,19 @@
     width: 100%;
     background-color: #071E40;
     color: white;
-    // border: 1px solid red;
 
     .event-rendering {
-        height: 55%;
-        width: 60%;
-        // border: 1px solid white;
+        margin-right: 4%;
+        height: 60%;
+        width: 75%;
     }
 
     .event-scroller {
-        margin-left: 4%;
-        width: 60%;
+        width: 50%;
+        // height: 20%;
         display: flex;
         justify-content: center;
+        padding-bottom: 4%;
     }
 }
 

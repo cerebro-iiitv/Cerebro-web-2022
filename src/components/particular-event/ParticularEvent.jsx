@@ -19,9 +19,9 @@ export const ParticularEvent = ({ title, start_time, prize, end_time, descriptio
   return (
     <div className='event'>
 
-      {/* <div className="left-door-container">
+      <div className="left-door-container">
         <img src={door} alt="left-door" className='left-door' />
-      </div> */}
+      </div>
 
 
       <div className="details">
@@ -112,9 +112,9 @@ export const ParticularEvent = ({ title, start_time, prize, end_time, descriptio
         </form>
       </div>
 
-      {/* <div className="right-door-container">
+      <div className="right-door-container">
         <img src={door} alt="right-door" className='right-door' />
-      </div> */}
+      </div>
     </div>
   )
 };
