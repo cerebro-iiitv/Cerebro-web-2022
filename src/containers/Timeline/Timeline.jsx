@@ -1,27 +1,8 @@
 import React, { useRef, useEffect } from "react";
 import TimelineItem from "../../components/TimelineItem/TimelineItem";
 import { timelineData } from "./util/TimelineData";
+import useHorizontalScroll from "../../hooks/useHorizontalScroll";
 import "./Timeline.scss";
-
-const useHorizontalScroll = () => {
-  const elRef = useRef();
-  useEffect(() => {
-    const element = elRef.current;
-    if (element) {
-      const onWheel = (e) => {
-        if (e.deltaY === 0) return;
-        e.preventDefault();
-        element.scrollTo({
-          left: element.scrollLeft + e.deltaY,
-          // behavior: "smooth",
-        });
-      };
-      element.addEventListener("wheel", onWheel);
-      return () => element.removeEventListener("wheel", onWheel);
-    }
-  }, []);
-  return elRef;
-};
 
 const Timeline = () => {
   const scrollRef = useHorizontalScroll();
