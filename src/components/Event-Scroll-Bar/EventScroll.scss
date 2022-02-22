@@ -1,0 +1,44 @@
+
+
+.scroll-bar-button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .button-cover1{
+    // border: 1px solid greenyellow;
+
+        width: 6%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .button1{
+            cursor: pointer;
+            transform: rotateZ(180deg);
+        }
+    }
+
+    .scroll-bar{
+        width: 86%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .button-cover2{
+    // border: 1px solid greenyellow;
+        width: 6%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        .button2{
+            cursor: pointer;
+        }
+    }
+}
+
+.disable{
+    display: none;
+    pointer-events: none;
+}
+

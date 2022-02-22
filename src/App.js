@@ -15,6 +15,8 @@ import PrivateRoute from "./components/RouteElements/PrivateRoute";
 import UserRoute from "./components/RouteElements/UserRoute";
 import "./App.css";
 
+import Events from "./containers/Events/Events";
+
 function App() {
   const auth = useAuth();
   const token = localStorage.getItem("token");
@@ -24,7 +26,6 @@ function App() {
   if (token) {
     auth.login(token);
   }
-
   return (
     <div className="App">
         <BrowserRouter>
@@ -125,7 +126,7 @@ function App() {
               path="/event"
               element={
                 <MainLayout status="hover">
-                  <div>{/* <h1>Event</h1> */}</div>
+                  <Events />
                 </MainLayout>
               }
             />

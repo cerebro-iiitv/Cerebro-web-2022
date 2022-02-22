@@ -58,7 +58,7 @@
     transition: height 0s, opacity 1.5s, backdrop-filter 1.5s;
     height: 100%;
     opacity: 1;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px); 
   }
   &:hover .navbar__content__hoverbar {
     animation: barout 1.5s forwards ease;
