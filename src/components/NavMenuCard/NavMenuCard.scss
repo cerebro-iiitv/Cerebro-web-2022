@@ -225,3 +225,13 @@ button{
     font-size:1rem;
   }
 }
+
+@media screen and (min-height:400px) and (max-height:670px) {
+  .navcard__grad-border{
+    height:90%;
+    width:90% ;
+  }
+  .navcard__content {
+    font-size:0.7rem;
+  }
+}
