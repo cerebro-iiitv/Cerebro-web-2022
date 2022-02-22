@@ -345,7 +345,6 @@ color: #FFC700;
     }
 }
 
-
  
 @media screen and   (max-width:1100px) {
     .aboutus-main{
@@ -407,6 +406,7 @@ color: #FFC700;
 @media screen and  (min-width:1100px) and (max-width:1280px) {
     .aboutus-main{
      height: 52%;
+
         width: 80vw;
         &-content{
             height: 82%;
@@ -659,3 +659,4 @@ color: #FFC700;
         line-height: 20px;
     }
  }
+
