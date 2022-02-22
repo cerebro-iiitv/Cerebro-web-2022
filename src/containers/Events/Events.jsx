@@ -23,6 +23,7 @@ const Events = () => {
       // Using axios instance to get the data
       var data = await axiosInstance.get('/events/');
       data = data.data;
+      console.log(data);
       // To change the name of csgo and codm
       data[8].title = "CSGO";
       data[11].title = "CODM";

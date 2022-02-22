@@ -32,18 +32,16 @@ const Login = () => {
             {loginFormData.map(({ label, name, type }, index) => (
               <FormInput {...{ name, label, type }} key={index} page="login" />
             ))}
-            <div className="login">
+            <div className="auth">
               {errors.authentication && (
-                <span className="login__error">{errors.authentication}</span>
+                <span className="auth__status__error">{errors.authentication}</span>
               )}
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="login__button"
+                className="auth__button"
               >
-                <span className="login__button__text" disabled={isSubmitting}>
-                  Submit
-                </span>
+                <span className="auth__button__text">Submit</span>
               </button>
             </div>
           </Form>

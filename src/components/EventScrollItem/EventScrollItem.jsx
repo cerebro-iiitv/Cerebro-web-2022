@@ -12,7 +12,7 @@ export const EventScrollItem = ({ event, idx, currIdx, visible, loadPage, isSele
 
         <div className="item-container">
             {
-                idx % 2 === 0 ? <div className="text-dot-container-even" onClick={() => { loadPage(event, idx + visible) }} id={idx === 6 || (idx === 0 && visible !== 0) ? "disable-on" : ""}>
+                idx % 2 === 0 ? <div className="text-dot-container-even" onClick={() => { loadPage(event, idx + visible) }} id={idx === 6 || (idx === 0 && visible !== 0) ? "disable-onn" : ""}>
 
                     {
                         isSelected === false ?

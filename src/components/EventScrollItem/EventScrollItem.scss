@@ -4,7 +4,7 @@
 }
 
 .item-container {
-
+    // border: 1px solid white;
     // width: 100%;
     .text-dot-container-even:active {
         .text p {
@@ -49,6 +49,7 @@
 
 
         .line-dot-container {
+            // width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -207,6 +208,6 @@
     }
 }
 
-#disable-on {
+#disable-onn {
     pointer-events: none;
 }

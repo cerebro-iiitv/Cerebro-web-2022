@@ -19,48 +19,102 @@
 }
 
 .event {
-    background: radial-gradient(100% 100% at 50% 0%, rgba(7, 30, 64, 0.68) 0%, rgba(13, 57, 121, 0.595) 100%);
-    border: 0.01px solid #2162A7;
+    // background: radial-gradient(100% 100% at 50% 0%, rgba(7, 30, 64, 0.68) 0%, rgba(13, 57, 121, 0.595) 100%);
+    // padding: 1% 2%;
+    background-image: url("../../assets/images/Events/bg.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    height: 100%;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    // background-image: url("../../assets//images/Events/background.svg");
-    // background-repeat: no-repeat;
-    // width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 3%;
 
-    @media only screen and (max-width: 1465px) and (min-width: 1122px) {
+    // @media only screen and (max-width: 1465px) and (min-width: 1122px) {
 
-        .left-event-details {
-            .prize-sec p {
-                font-size: 20px !important;
-            }
+    //     .left-event-details {
+    //         .prize-sec p {
+    //             font-size: 16px !important;
+    //         }
 
-            .team-sec p {
-                font-size: 20px !important;
-            }
-        }
+    //         .team-sec p {
+    //             font-size: 18px !important;
+    //         }
+    //     }
 
-        .right-event-container {
-            p {
+    //     .right-event-container {
+    //         p {
+    //             font-size: 16px !important;
+    //         }
+    //     }
+    // }
+
+    // @media only screen and (max-width: 1121px) and (min-width: 1021px) {
+
+    //     .left-event-details {
+    //         .prize-sec p {
+    //             font-size: 18px !important;
+    //         }
+
+    //         .team-sec p {
+    //             font-size: 18px !important;
+    //         }
+
+    //         .rules {
+    //             a {
+    //                 font-size: 14px !important;
+    //             }
+    //         }
+    //     }
+
+    //     .right-event-container {
+    //         p {
+    //             font-size: 14px !important;
+    //         }
+    //     }
+
+
+    // }
+
+    @media only screen and (max-width: 1600px) and (height: 680px), (height: 705px) {
+        .event-title {
+            .title {
                 font-size: 18px !important;
             }
         }
-    }
 
-    @media only screen and (max-width: 1121px) and (min-width: 1021px) {
-
-        .left-event-details {
-            .prize-sec p {
-                font-size: 18px !important;
+        .event-container {
+            .event-para {
+                font-size: 12px !important;
             }
+        }
 
-            .team-sec p {
-                font-size: 18px !important;
+        .time-line {
+            .date1 {
+                p {
+                    font-size: 10px !important;
+                }
             }
+        }
 
-            .rules {
-                a {
+        form {
+            .button-container {
+                button {
                     font-size: 14px !important;
                 }
+            }
+        }
+
+        .left-event-details {
+            .prize-sec p {
+                font-size: 16px !important;
+            }
+
+            .team-sec p {
+                font-size: 16px !important;
             }
         }
 
@@ -69,18 +123,45 @@
                 font-size: 14px !important;
             }
         }
-
-
     }
 
-    @media only screen and (width: 1366px) {
+    
+    @media only screen and (max-width: 1880px) and (height: 768px), (height: 850px), (height: 882px){
+        .event-title {
+            .title {
+                font-size: 24px !important;
+            }
+        }
+
+        .event-container {
+            .event-para {
+                font-size: 16px !important;
+            }
+        }
+
+        .time-line {
+            .date1 {
+                p {
+                    font-size: 16px !important;
+                }
+            }
+        }
+
+        form {
+            .button-container {
+                button {
+                    font-size: 16px !important;
+                }
+            }
+        }
+
         .left-event-details {
             .prize-sec p {
-                font-size: 18px !important;
+                font-size: 20px !important;
             }
 
             .team-sec p {
-                font-size: 18px !important;
+                font-size: 20px !important;
             }
         }
 
@@ -92,38 +173,68 @@
     }
 
 
-    .left-door-container {
-        display: flex;
-        justify-content: flex-start;
-        .left-door {
-            height: 109%;
-            left: -10%;
-            bottom: 4%;
-            position: relative;
+    // .left-door-container {
+    //     // display: flex;
+    //     // justify-content: flex-start;
+    //     // .left-door {
+    //     //     height: 109%;
+    //     //     left: -10%;
+    //     //     bottom: 4%;
+    //     //     position: relative;
+    //     // }
+    //     // height: 100%;
+    //     // // width: 10%;
+    //     // background-image: url("../../assets/images/Events/door.png");
+    //     // background-size: contain;
+    //     // background-repeat: no-repeat;
+    //     // background-position: center center;
+    // }
+
+    // .right-door-container {
+    //     display: flex;
+    //     justify-content: flex-end;
+
+    //     .right-door {
+    //         // height: 109%;
+    //         // position: relative;
+    //         // left: 15%;
+    //         // bottom: 4%;
+    //         // transform: rotateZ(180deg);
+    //     }
+    // }
+
+    
+    @media only screen and (min-width: 1504px){
+        .details{
+            // border: 1px solid white;
+            width: 60% !important;
         }
     }
 
-    .right-door-container {
-        display: flex;
-        justify-content: flex-end;
-
-        .right-door {
-            height: 109%;
-            position: relative;
-            left: 15%;
-            bottom: 4%;
-            transform: rotateZ(180deg);
+    @media only screen and (min-width: 1880px){
+        .details{
+            width: 55% !important;
         }
     }
-
+    @media only screen and (max-width: 1190px){
+        .details{
+            width: 75% !important;
+            height: 50% !important;
+        }
+    }
     .details {
-        width: 100%;
+        
+        width: 65%;
+        height: 80%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: space-around;
+        // border: 1px solid yellowgreen;
         // flex-wrap: wrap;
-
+        // border: 1px solid white;
+        // flex-wrap: wrap;
+        
         .event-title {
 
             text-align: center;
@@ -197,14 +308,15 @@
 
         .event-detail {
             // border: 1px solid red;
+            // border: 1px solid green;
             width: 100%;
             height: 10rem;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-evenly;
 
 
             .left-event-details {
-                // border: 1px solid green;
+                // border: 1px solid red;
 
                 width: 100%;
                 height: 100%;
@@ -308,14 +420,11 @@
                         font-family: Barlow;
                         font-size: 1.18rem;
                         width: 50%;
-                        // border: 1px solid pink;
                         text-align: left;
                     }
                 }
 
                 .co-convenor-sec {
-                    // border: 1px solid yellow;
-
                     width: 100%;
 
                     display: flex;
@@ -338,8 +447,6 @@
                 }
 
                 .members-sec {
-                    // border: 1px solid yellow;
-
                     .mems {
                         font-family: Barlow;
                         color: #1CA0FF;

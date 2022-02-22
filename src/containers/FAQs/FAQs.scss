@@ -1,0 +1,38 @@
+.faq-bg{
+    user-select: none;
+    box-sizing: border-box;
+    background-color: #071E40;
+    background-image: url("../../assets/images/FAQ/bgImg.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .main-cont{
+        // border: 1px solid white;
+        height: 55%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        .card-arrow-cont{
+            // border: 1px solid pink;
+            height: 90%;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .faq-scroll-cont{
+            height: 10%;
+            width: 50%;
+            // border: 1px solid greenyellow;
+        }
+    }
+    
+
+}

@@ -7,27 +7,29 @@
     width: 100%;
     display: flex;
     justify-content: center;
-
+    // border: 1px solid red;
 
     .button-cover1{
+        width: 6%;
         display: flex;
         flex-direction: column;
         justify-content: center;
 
         .button1{
             cursor: pointer;
-            // z-index: 10;
             transform: rotateZ(180deg);
         }
     }
 
     .scroll-bar{
-        // width: 100%;
+        // border: 1px solid green;
+        width: 80%;
         display: flex;
         justify-content: center;
     }
 
     .button-cover2{
+        width: 6%;
         display: flex;
         flex-direction: column;
         justify-content: center;
