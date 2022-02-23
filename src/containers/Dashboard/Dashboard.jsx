@@ -3,9 +3,12 @@ import axiosInstance from "../../services/AxiosInstance";
 import DashboardTitle from "../../components/Dashboard/DashboardTitle";
 import DashboardInfoCards from "../../components/Dashboard/DashboardInfoCards";
 import DashboardEventsSection from "./DashboardEventsSection";
+import "./Dashboard.scss";
+import loadingLogo from '../../assets/images/Events/Logo.png';
 
 const Dashboard = () => {
     const [userData, setUserData] = useState({ infoCardData: {}, eventsSectionData: [] });
+    const [isLoading, setIsLoading] = useState(true);
 
     const getInfoCardData = (fetchedData) => {
         const isInfoCardDataPresent = fetchedData && fetchedData.personal_details;
@@ -39,18 +42,28 @@ const Dashboard = () => {
 
     useEffect(() => {
         axiosInstance.get("/account/dashboard/").then(res => {
-            console.log(res.data);
             const infoCardData = getInfoCardData(res.data);
             const eventsSectionData = getEventsSectionData(res.data);
             setUserData({ infoCardData, eventsSectionData });
+            setIsLoading(false);
         });
     }, []);
 
     return (
         <div className="dashboard">
             <DashboardTitle />
-            <DashboardInfoCards  {...userData.infoCardData} />
-            <DashboardEventsSection eventsData={userData.eventsSectionData} />
+            {
+                isLoading
+                    ?
+                    <div className="dashboard__loading-spinner-cont">
+                        <img src={loadingLogo} alt="cerebro-loading-logo" className="dashboard__loading-spinner" />
+                    </div>
+                    :
+                    <>
+                        <DashboardInfoCards  {...userData.infoCardData} />
+                        <DashboardEventsSection eventsData={userData.eventsSectionData} />
+                    </>
+            }
         </div>
     )
 }

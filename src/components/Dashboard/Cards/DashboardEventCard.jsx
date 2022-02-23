@@ -2,9 +2,9 @@ import DashboardCardWrapper from "./Wrapper/DashboardCardWrapper";
 import checkmarkimg from "../../../assets/images/dashboard-event-regismark.png";
 import "./DashboardEventCard.scss";
 
-const DashboardEventCard = ({ eventName, startDate, startTime, isTeamEvent, noMembersInTeam, teamMaxCapacity, teamName, isTeamFull }) => {
+const DashboardEventCard = ({ eventName, startDate, startTime, isTeamEvent, noMembersInTeam, teamMaxCapacity, teamName, isTeamFull, isEventsMoreThan5 }) => {
     return (
-        <DashboardCardWrapper className="dashboard-event-carousel-card" >
+        <DashboardCardWrapper className="dashboard-event-carousel-card" giveInlineFlex={isEventsMoreThan5}>
             <div className="dashboard-event-carousel-card__title">{eventName.toUpperCase()}</div>
             <div className="dashboard-event-carousel-card__dt-cont">
                 <div className="dashboard-event-carousel-card__dt-cont__date">{startDate}</div>

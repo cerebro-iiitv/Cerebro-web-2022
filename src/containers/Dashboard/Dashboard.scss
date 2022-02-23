@@ -1,3 +1,24 @@
-.dashboard{
-    background-color: #0a2245;
+.dashboard {
+  background-color: #0a2245;
+  &__loading-spinner-cont {
+    height: 72vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__loading-spinner {
+    height: 120px;
+    width: 120px;
+    animation: loading 2s infinite linear;
+  }
+
+  @keyframes loading {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(359deg);
+    }
+  }
 }

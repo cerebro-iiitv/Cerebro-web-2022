@@ -7,28 +7,25 @@ import "./DashboardEventsSection.scss";
 //         eventName: "Valorant", startDate: "10-03-2022", startTime: "2:00PM", isTeamEvent: true, noMembersInTeam: "3", teamMaxCapacity: "3", teamName: "ValoXD", isTeamFull: true,
 //     },
 //     {
-//         eventName: "Cook-a-code", startDate: "10-03-2022", startTime: "2:00PM", isTeamEvent: false
-//     },
-//     {
-//         eventName: "Hired", startDate: "10-03-2022", startTime: "2:00PM", isTeamEvent: true, noMembersInTeam: "1", teamMaxCapacity: "3", teamName: "ValoXD", isTeamFull: false,
+//         eventName: "Valorant", startDate: "10-03-2022", startTime: "2:00PM", isTeamEvent: true, noMembersInTeam: "3", teamMaxCapacity: "3", teamName: "ValoXD", isTeamFull: true,
 //     },
 //     {
 //         eventName: "Valorant", startDate: "10-03-2022", startTime: "2:00PM", isTeamEvent: true, noMembersInTeam: "3", teamMaxCapacity: "3", teamName: "ValoXD", isTeamFull: true,
 //     },
 //     {
-//         eventName: "Cook-a-code", startDate: "10-03-2022", startTime: "2:00PM", isTeamEvent: false
-//     },
-//     {
-//         eventName: "Hired", startDate: "10-03-2022", startTime: "2:00PM", isTeamEvent: true, noMembersInTeam: "1", teamMaxCapacity: "3", teamName: "ValoXD", isTeamFull: false,
+//         eventName: "Valorant", startDate: "10-03-2022", startTime: "2:00PM", isTeamEvent: true, noMembersInTeam: "3", teamMaxCapacity: "3", teamName: "ValoXD", isTeamFull: true,
 //     },
 //     {
 //         eventName: "Valorant", startDate: "10-03-2022", startTime: "2:00PM", isTeamEvent: true, noMembersInTeam: "3", teamMaxCapacity: "3", teamName: "ValoXD", isTeamFull: true,
 //     },
 //     {
-//         eventName: "Cook-a-code", startDate: "10-03-2022", startTime: "2:00PM", isTeamEvent: false
+//         eventName: "Valorant", startDate: "10-03-2022", startTime: "2:00PM", isTeamEvent: true, noMembersInTeam: "3", teamMaxCapacity: "3", teamName: "ValoXD", isTeamFull: true,
 //     },
 //     {
-//         eventName: "Hired", startDate: "10-03-2022", startTime: "2:00PM", isTeamEvent: true, noMembersInTeam: "1", teamMaxCapacity: "3", teamName: "ValoXD", isTeamFull: false,
+//         eventName: "Valorant", startDate: "10-03-2022", startTime: "2:00PM", isTeamEvent: true, noMembersInTeam: "3", teamMaxCapacity: "3", teamName: "ValoXD", isTeamFull: true,
+//     },
+//     {
+//         eventName: "Valorant", startDate: "10-03-2022", startTime: "2:00PM", isTeamEvent: true, noMembersInTeam: "3", teamMaxCapacity: "3", teamName: "ValoXD", isTeamFull: true,
 //     },
 // ]
 
@@ -38,8 +35,12 @@ const DashboardEventsSection = ({ eventsData }) => {
             <div className="dashboard-events__title">
                 My Events
             </div>
-            <DashboardEventCarousel eventsData={eventsData} />
-            {/* <DashboardEventCarousel eventsData={tempeventsData} /> */}
+            {!eventsData.length &&
+                <h3 className="dashboard-events__no-events">You haven't registered for any events yet.</h3>}
+            {eventsData.length &&
+                <DashboardEventCarousel eventsData={eventsData} />
+                // <DashboardEventCarousel eventsData={tempeventsData} />
+            }
         </div>
     )
 }

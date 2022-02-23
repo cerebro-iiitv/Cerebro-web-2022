@@ -4,7 +4,9 @@ import arrow_img from "../../assets/images/dashboard-event-carousel-btn.png";
 import "./DashboardEventsCarousel.scss";
 
 const DashboardEventCarousel = ({ eventsData }) => {
-    const [leftCardIndex, setLeftCardIndex] = useState(2);
+    const noOfEvents = eventsData.length;
+    const initialLeftCardIndex = noOfEvents > 5 ? Math.floor((noOfEvents - 5) / 2) : 0;
+    const [leftCardIndex, setLeftCardIndex] = useState(initialLeftCardIndex);
     const [isLeftDisabled, setIsLeftDisabled] = useState(false);
     const [isRightDisabled, setIsRigthDisabled] = useState(false);
     const [touchPosition, setTouchPosition] = useState(null);
@@ -13,7 +15,7 @@ const DashboardEventCarousel = ({ eventsData }) => {
         return eventsData.map((event) => {
             return (
                 <DashboardEventCard
-                    {...event} />
+                    {...event} isEventsMoreThan5={noOfEvents > 5} />
             )
         });
     }, [eventsData]);
@@ -25,13 +27,13 @@ const DashboardEventCarousel = ({ eventsData }) => {
         if (leftCardIndex === 1) {
             setIsLeftDisabled(false);
         }
-        if (leftCardIndex + 4 === eventsData.length - 1) {
+        if (leftCardIndex + 4 === noOfEvents - 1) {
             setIsRigthDisabled(true);
         }
-        if (leftCardIndex + 4 === eventsData.length - 2) {
+        if (leftCardIndex + 4 === noOfEvents - 2) {
             setIsRigthDisabled(false);
         }
-    }, [eventsData.length, leftCardIndex]);
+    }, [noOfEvents, leftCardIndex]);
 
     const scrollLeft = () => {
         setLeftCardIndex((prevState) => prevState - 1)
@@ -67,11 +69,13 @@ const DashboardEventCarousel = ({ eventsData }) => {
         setTouchPosition(null);
     }
 
+    const transformPptValue = noOfEvents > 5 ? `translateX(-${leftCardIndex * (20)}%)` : `translateX(-${leftCardIndex * (100 / noOfEvents)}%)`;
+
     return (
         <div className="event-menu">
             <div className="event-menu__carousel-container">
                 <div className="event-menu__carousel-wrapper">
-                    {!isLeftDisabled
+                    {!isLeftDisabled && noOfEvents > 5
                         &&
                         <button className="event-menu__carousel__left-arrow"
                             onClick={scrollLeft}
@@ -84,13 +88,14 @@ const DashboardEventCarousel = ({ eventsData }) => {
                         onTouchMove={handleTouchMove}>
                         <div className="event-menu__carousel-content"
                             style={{
-                                transform: `translateX(-${leftCardIndex * (20)}%)`,
+                                transform: transformPptValue,
+                                justifyContent: noOfEvents > 5 ? "flex-start" : "center",
                             }}
                         >
                             {cardComponents}
                         </div>
                     </div>
-                    {!isRightDisabled
+                    {!isRightDisabled && noOfEvents > 5
                         &&
                         <button className="event-menu__carousel__right-arrow"
                             onClick={scrollRight}
