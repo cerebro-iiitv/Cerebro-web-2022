@@ -18,7 +18,7 @@ const DashboardEventCarousel = ({ eventsData }) => {
                     {...event} isEventsMoreThan5={noOfEvents > 5} />
             )
         });
-    }, [eventsData]);
+    }, [eventsData, noOfEvents]);
 
     useEffect(() => {
         if (leftCardIndex === 0) {
