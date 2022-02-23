@@ -12,6 +12,16 @@ a {
     animation: fade-in 1s ease-in;
 }
 
+
+.aboutUs {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+}
+
 @keyframes fade-in {
     0% {
         opacity: 0;

@@ -6,14 +6,19 @@ const Hero = (props) => {
     componentDidMount() {
       if (props.flagprop === true) {
         this.id = setTimeout(() => {
+      
           props.setredir(true);
+        
+          setTimeout(() => {
           props.setflagprop(false);
-        }, 5000);
+        }, 1000);
+        
+      }, 5000);
       }
     }
 
     render() {
-      return props.redir ? <AboutUs /> : <HeroInitial />;
+      return props.redir ? <AboutUs status={props.flagprop ? "first" : "second" } /> : <HeroInitial />;
     }
   }
 

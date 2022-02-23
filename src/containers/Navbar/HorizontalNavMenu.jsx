@@ -176,12 +176,29 @@ const HorizontalNavMenu = (props) => {
         setTouchPosition(null);
     }
 
+const handleArrowClickRight = (e) => {
+    if(!leftAndRightDisabled){
+        scrollRight();
+    }
+
+    props.nohover();
+}
+
+
+const handleArrowClickLeft = (e) => {
+    if(!leftAndRightDisabled){
+        scrollLeft();
+    }
+
+    props.nohover();
+}
+
     return (
         <div className="hori-menu">
             <div className="hori-menu__carousel-container">
                 <div className="hori-menu__carousel-wrapper">
                     <button className="hori-menu__carousel__left-arrow"
-                        onClick={!leftAndRightDisabled ? scrollLeft : null}
+                        onClick={handleArrowClickLeft}
                     >
                         <img src={arrow_img} alt="left" className="arrow" />
                     </button>
@@ -198,7 +215,7 @@ const HorizontalNavMenu = (props) => {
                         </div>
                     </div>
                     <button className="hori-menu__carousel__right-arrow"
-                        onClick={!leftAndRightDisabled ? scrollRight : null}
+                        onClick={handleArrowClickRight}
                     >
                         <img src={arrow_img} alt="right" className="arrow" />
                     </button>

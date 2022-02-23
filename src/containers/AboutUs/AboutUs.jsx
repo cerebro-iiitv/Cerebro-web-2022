@@ -2,9 +2,12 @@ import { Link } from "react-router-dom";
 import "./AboutUs.scss";
 import React from "react";
 
-const AboutUs = () => {
+const AboutUs = (props) => {
+
+  console.log(props.status);
+
   return (
-    <div className="aboutus">
+    <div className={props.status==='first'?"aboutus":"aboutUs"}>
       <div className="aboutus-main">
         <div className="aboutus-main-content">
           <div className="name-and-info">

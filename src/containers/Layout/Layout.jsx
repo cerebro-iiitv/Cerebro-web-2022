@@ -9,11 +9,14 @@ import React from "react";
 const Layout = (props) => {
 
 const auth = useAuth();
+const hoveroff = () => {
+  props.sethover(false);
+  setTimeout(()=>{props.sethover(true)}, 5000);    
+}
 
-function hoveroff(){
-    props.sethover(false);
-    setTimeout(()=>{props.sethover(true)}, 1000);    
-  }
+const HandleMouseLeave = () => {
+  setTimeout(()=>{props.sethover(true)}, 50);    
+}
 
   function LoginButton() {
     return (
@@ -57,7 +60,7 @@ function hoveroff(){
           <LogStatus />
         </div>
         <div className="main-content" id="main-content"> {props.children} </div>
-        <div id={(((props.status === "hover") && props.hover) ? "navhover" : "")} className={props.status === "hover" ? "navbarr-hover" : "navbarr"}>
+        <div id={(((props.status === "hover") && props.hover) ? "navhover" : "")} className={props.status === "hover" ? "navbarr-hover" : "navbarr"} onMouseLeave={HandleMouseLeave}>
           <Navbar status={props.status} nohover={hoveroff}/>
         </div>
         <div className="blur-layer"></div>
