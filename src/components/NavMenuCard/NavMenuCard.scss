@@ -197,7 +197,17 @@ button{
   }
 }
 
-@media screen and (max-width:1024px) {
+
+@media screen and (min-width:767px) and (max-width:850px) {
+  .navcard__wrapper{
+     height: 2.8rem;
+  }
+  .navcard__content {
+    font-size:0.6rem;
+  }
+}
+
+@media screen and (min-width:850px) and (max-width:1025px) {
   .navcard__wrapper{
      height: 3.6rem;
   }
@@ -207,7 +217,7 @@ button{
 }
 
 
-@media screen and (min-width:1024px) and (max-width:1280px) {
+@media screen and (min-width:1025px) and (max-width:1280px) {
   .navcard__wrapper{
      height: 3.8rem;
   }

@@ -130,7 +130,7 @@ a {
     font-weight: normal;
     font-size: 25px;
     line-height: 26px;
-    margin-left: 20%;
+    margin-left: 20.5%;
     color: #FFFFFF;
 }
 
@@ -375,8 +375,81 @@ a {
  
 
 
+@media screen and (min-width:767px) and (max-width:850px) {
+    .aboutus-main {
+        height: 44%;
 
-@media screen and (max-width:1100px) {
+        width: 88vw;
+
+        &-content {
+            height: 82%;
+        }
+    }
+
+    .aboutus-sponsor {
+        width: 49.25%;
+    }
+
+    .aboutus-circles {
+        width: 50.75%;
+    }
+
+    .hov1 {
+        margin-left: 4.2%;
+    }
+
+    .infotext {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .mainhead {
+        font-size: 40px;
+        line-height: 38px;
+    }
+
+    .sechead {
+        font-size: 20px;
+        line-height: 22px;
+    }
+
+    .joindis {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .our-sponsors-text {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .hov1{
+        height: 78%;
+    }   
+    
+    .fl1 {
+        font-size: 17px;
+        line-height: 19px;
+    }
+
+    .fl2 {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .fl3 {
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    .sl1 {
+        font-size: 18px;
+        line-height: 20px;
+    }
+}
+
+
+@media screen and (min-width:850px) and (max-width:1100px) {
     .aboutus-main {
         height: 44%;
 
@@ -400,13 +473,13 @@ a {
     }
 
     .infotext {
-        font-size: 16px;
-        line-height: 18px;
+        font-size: 14px;
+        line-height: 16px;
     }
 
     .mainhead {
         font-size: 40px;
-        line-height: 42px;
+        line-height: 38px;
     }
 
     .sechead {
@@ -415,33 +488,37 @@ a {
     }
 
     .joindis {
-        font-size: 16px;
-        line-height: 18px;
+        font-size: 12px;
+        line-height: 16px;
     }
 
     .our-sponsors-text {
-        font-size: 14px;
-        line-height: 26px;
-    }
-
-    .fl1 {
-        font-size: 18px;
-        line-height: 20px;
-    }
-
-    .fl2 {
         font-size: 16px;
         line-height: 18px;
     }
 
-    .fl3 {
+    .hov1{
+        height: 78%;
+    }   
+    
+    .fl1 {
+        font-size: 17px;
+        line-height: 19px;
+    }
+
+    .fl2 {
         font-size: 14px;
         line-height: 16px;
     }
 
+    .fl3 {
+        font-size: 10px;
+        line-height: 12px;
+    }
+
     .sl1 {
-        font-size: 21px;
-        line-height: 23px;
+        font-size: 18px;
+        line-height: 20px;
     }
 }
  

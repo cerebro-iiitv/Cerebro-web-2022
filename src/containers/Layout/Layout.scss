@@ -213,8 +213,62 @@
   width: 100vw;
 }
 
-@media screen and (max-width: 1025px) {
-  .navhover {
+@media screen and (max-width:767px){
+  .visible-layer{
+    display: none;
+  }
+}
+
+@media screen and (min-width:767px) and (max-width: 850px) {
+  .tophover {
+    height: 60px;
+    width: 100vw;
+    background-size: contain;
+  }
+.login-btn{
+  background-size: contain;
+  width: 120px;
+&-container{
+  margin-top: 0%;
+}
+
+}
+.tophud-text{
+  font-size: 20px;
+}
+
+
+#lgndash{
+  font-size: 10px;
+}
+  
+  #navhover {
+    transform: translateY(36%);
+  }
+  
+@keyframes initial-down {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(36%);
+  }
+}
+}
+
+
+@media screen and (min-width:850px) and (max-width: 1025px) {
+ 
+.login-btn{
+  background-size: contain;
+  width: 140px;
+}
+
+#lgndash{
+  font-size: 12px;
+}
+  
+  #navhover {
     transform: translateY(45%);
   }
   
@@ -229,7 +283,7 @@
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1100px) {
-  .navhover {
+  #navhover {
     transform: translateY(48%);
   }
   
@@ -244,7 +298,7 @@
 }
 
 @media screen and (min-width: 1100px) and (max-width: 1280px) {
-  .navhover {
+  #navhover {
     transform: translateY(53%);
   }
   
@@ -259,7 +313,7 @@
 }
 
 @media screen and (min-width: 1280px) and (max-width: 1439px) {
-  .navhover {
+  #navhover {
     transform: translateY(62%);
   }
   
@@ -274,7 +328,7 @@
 }
 
 @media screen and (min-width: 1440px) and (max-width: 1800px) {
-  .navhover {
+  #navhover {
     transform: translateY(63%);
   }
   
@@ -289,7 +343,7 @@
 }
 
 @media screen and (min-width: 1800px) and (max-width: 1880px) {
-  .navhover {
+  #navhover {
     transform: translateY(68%);
   }
   
@@ -303,11 +357,6 @@
 }
 }
 @media screen and (min-height:400px) and (max-height:670px) {
-  .hud-top {
-    height: 60px;
-    width: 100vw;
-    background-size: contain;
-  }
 .login-btn{
   background-size: contain;
   width: 120px;
