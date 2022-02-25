@@ -22,6 +22,7 @@ function App() {
   const token = localStorage.getItem("token");
   const [redirect,setredirect] = React.useState(false);
   const [flag,setflag] = React.useState(true);
+  const [hover,sethover ] = React.useState(true);
 
   if (token) {
     auth.login(token);
@@ -34,7 +35,7 @@ function App() {
               path="/"
               element={
                 <>
-                  <MainLayout status="no-hover">
+                  <MainLayout status="no-hover" hover={hover} sethover={sethover}>
                     <Hero redir={redirect} setredir={setredirect} flagprop={flag} setflagprop={setflag} />
                   </MainLayout>
                 </>
@@ -100,7 +101,7 @@ function App() {
             <Route
               path="/sponsors"
               element={
-                <MainLayout status="hover">
+                <MainLayout status="hover" hover={hover} sethover={sethover}>
                   <Sponsors/>
                 </MainLayout>
               }
@@ -109,7 +110,7 @@ function App() {
             <Route
               path="/team"
               element={
-                <MainLayout status="hover">
+                <MainLayout status="hover" hover={hover} sethover={sethover}>
                   <div>{/* <h1>Team</h1> */}</div>
                 </MainLayout>
               }
@@ -117,7 +118,7 @@ function App() {
             <Route
               path="/faq"
               element={
-                <MainLayout status="hover">
+                <MainLayout status="hover" hover={hover} sethover={sethover}>
                   <FAQs />
                 </MainLayout>
               }
@@ -125,7 +126,8 @@ function App() {
             <Route
               path="/event"
               element={
-                <MainLayout status="hover">
+                <MainLayout status="hover" hover={hover} sethover={sethover}>
+                  <div>{/* <h1>Event</h1> */}</div>
                   <Events />
                 </MainLayout>
               }
@@ -133,7 +135,7 @@ function App() {
             <Route
               path="/timeline"
               element={
-                <MainLayout status="hover">
+                <MainLayout status="hover" hover={hover} sethover={sethover}>
                   <Timeline />
                 </MainLayout>
               }
