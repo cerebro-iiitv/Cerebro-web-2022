@@ -24,12 +24,12 @@ import "./DashboardEventsSection.scss";
 //     {
 //         eventName: "Valorant", startDate: "10-03-2022", startTime: "2:00PM", isTeamEvent: true, noMembersInTeam: "3", teamMaxCapacity: "3", teamName: "ValoXD", isTeamFull: true,
 //     },
-//     {
-//         eventName: "Valorant", startDate: "10-03-2022", startTime: "2:00PM", isTeamEvent: true, noMembersInTeam: "3", teamMaxCapacity: "3", teamName: "ValoXD", isTeamFull: true,
-//     },
+// {
+//     eventName: "Valorant", startDate: "10-03-2022", startTime: "2:00PM", isTeamEvent: true, noMembersInTeam: "3", teamMaxCapacity: "3", teamName: "ValoXD", isTeamFull: true,
+// },
 // ]
 
-const DashboardEventsSection = ({ eventsData }) => {
+const DashboardEventsSection = ({ participantDetails, eventsData }) => {
     return (
         <div className="dashboard-events">
             <div className="dashboard-events__title">
@@ -38,7 +38,10 @@ const DashboardEventsSection = ({ eventsData }) => {
             {!eventsData.length &&
                 <h3 className="dashboard-events__no-events">You haven't registered for any events yet.</h3>}
             {eventsData.length &&
-                <DashboardEventCarousel eventsData={eventsData} />
+                <DashboardEventCarousel
+                    eventsData={eventsData}
+                    participantDetails={participantDetails}
+                />
                 // <DashboardEventCarousel eventsData={tempeventsData} />
             }
         </div>

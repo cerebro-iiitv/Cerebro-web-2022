@@ -3,7 +3,7 @@ import DashboardEventCard from "../../components/Dashboard/Cards/DashboardEventC
 import arrow_img from "../../assets/images/dashboard-event-carousel-btn.png";
 import "./DashboardEventsCarousel.scss";
 
-const DashboardEventCarousel = ({ eventsData }) => {
+const DashboardEventCarousel = ({ participantDetails, eventsData }) => {
     const noOfEvents = eventsData.length;
     const initialLeftCardIndex = noOfEvents > 5 ? Math.floor((noOfEvents - 5) / 2) : 0;
     const [leftCardIndex, setLeftCardIndex] = useState(initialLeftCardIndex);
@@ -15,10 +15,13 @@ const DashboardEventCarousel = ({ eventsData }) => {
         return eventsData.map((event) => {
             return (
                 <DashboardEventCard
-                    {...event} isEventsMoreThan5={noOfEvents > 5} />
+                    key={event.eventName}
+                    eventData={event}
+                    isEventsMoreThan5={noOfEvents > 5}
+                    participantDetails={participantDetails} />
             )
         });
-    }, [eventsData, noOfEvents]);
+    }, [eventsData, noOfEvents, participantDetails]);
 
     useEffect(() => {
         if (leftCardIndex === 0) {

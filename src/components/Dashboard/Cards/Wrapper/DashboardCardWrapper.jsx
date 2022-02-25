@@ -1,6 +1,6 @@
 import "./DashboardCardWrapper.scss";
 
-const DashboardCardWrapper = ({ darkBg = false, giveInlineFlex = false, children, className }) => {
+const DashboardCardWrapper = ({ darkBg = false, giveInlineFlex = false, children, className, onClick }) => {
     let cardStyleClass = "dashboard-card-wrapper--light";
     if (darkBg) {
         cardStyleClass = "dashboard-card-wrapper--dark";
@@ -12,7 +12,11 @@ const DashboardCardWrapper = ({ darkBg = false, giveInlineFlex = false, children
         <div
             className={`${darkBg ? "dashboard-card-wrapper-bg" : ""} ${className}`}
             style={flexStyleObj} >
-            <div className={`dashboard-card-wrapper ${cardStyleClass}`}>
+            <div
+                className={`dashboard-card-wrapper ${cardStyleClass}`}
+                onClick={onClick}
+                style={{ cursor: !!onClick ? "pointer" : "default" }}
+            >
                 {children}
             </div>
         </div>

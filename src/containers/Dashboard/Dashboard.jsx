@@ -30,11 +30,16 @@ const Dashboard = () => {
                     eventName: event.event_title,
                     startDate: event.start_date,
                     startTime: event.start_time,
+                    endDate: event.end_date,
+                    endTime: event.end_time,
                     isTeamEvent: event.is_team_event,
+                    registrationData: event.registration_data,
+                    teamName: event.team_name,
+                    teamCode: event.team_code,
                     noMembersInTeam: event.current_size,
                     teamMaxCapacity: event.max_size,
-                    teamName: event.team_name,
                     isTeamFull: event.is_full,
+                    teamMember: event.team_member,
                 }
             )
         ) : [];
@@ -61,7 +66,13 @@ const Dashboard = () => {
                     :
                     <>
                         <DashboardInfoCards  {...userData.infoCardData} />
-                        <DashboardEventsSection eventsData={userData.eventsSectionData} />
+                        <DashboardEventsSection
+                            eventsData={userData.eventsSectionData}
+                            participantDetails={{
+                                participantName: userData.infoCardData.name,
+                                participantEmail: userData.infoCardData.email
+                            }}
+                        />
                     </>
             }
         </div>

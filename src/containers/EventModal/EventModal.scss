@@ -1,0 +1,189 @@
+.event-modal__backdrop {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #0a2245;
+  z-index: 3;
+}
+
+.event-modal__content::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.event-modal__content::-webkit-scrollbar-track {
+  background: #c6e7ff1a;
+}
+
+/* Handle */
+.event-modal__content::-webkit-scrollbar-thumb {
+  background: #e4c142;
+}
+
+/* Handle on hover */
+.event-modal__content::-webkit-scrollbar-thumb:hover {
+  background: #e4c142;
+}
+
+.event-modal {
+  width: 53%;
+  height: 100%;
+  margin: 0% auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3% 0;
+  border-radius: 8px;
+  &__title {
+    font-family: Lexie Readable;
+    color: #e4c142;
+    font-family: Lexie Readable;
+    font-size: 2.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 3.125rem;
+    letter-spacing: 0em;
+  }
+  &__content {
+    overflow-y: scroll;
+    & > * {
+      width: 80%;
+      display: flex;
+      text-align: left;
+    }
+    margin: 4% 0;
+    padding: 5% 0 3% 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(28, 160, 255, 0.1);
+    box-shadow: 0px 3.5px 3.5px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    &__schedule {
+      color: white;
+      &__key {
+        width: 50%;
+        font-family: Barlow;
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 1.625rem;
+        letter-spacing: 0em;
+        color: white;
+      }
+      &__value {
+        width: 50%;
+        font-family: Barlow;
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.625rem;
+        letter-spacing: 0em;
+        &__date {
+          color: #00e0ff;
+        }
+        &__time {
+          color: #e4c142;
+        }
+      }
+    }
+
+    &__registration {
+      padding-top: 2%;
+      &__key {
+        width: 50%;
+        font-family: Barlow;
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 1.625rem;
+        letter-spacing: 0em;
+        color: white;
+      }
+      &__value {
+        width: 50%;
+        &-complete,
+        &-incomplete {
+          font-family: Barlow;
+          font-size: 1.4rem;
+          font-style: normal;
+          font-weight: 600;
+          letter-spacing: 0em;
+        }
+        &-complete {
+          color: #11da00;
+        }
+        &-incomplete {
+          display: flex;
+          align-items: center;
+          &__text {
+            color: #e4c142;
+          }
+          &__remaining {
+            padding-left: 2%;
+            color: #00e0ff;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+
+    &__divider {
+      padding: 4% 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      img {
+        width: 90%;
+      }
+    }
+
+    &__part-details {
+      display: flex;
+      flex-direction: column;
+      &__detail {
+        display: flex;
+        margin-bottom: 3%;
+        &-key,
+        &-value {
+          width: 50%;
+          font-family: Barlow;
+          font-size: 1.4rem;
+          font-style: normal;
+          line-height: 1.625rem;
+          letter-spacing: 0em;
+        }
+        &-key {
+          font-weight: 600;
+          color: #1ca0ff;
+        }
+        &-value {
+          font-weight: 400;
+          color: white;
+        }
+        &-value > * {
+          padding-bottom: 2%;
+        }
+        &-value > *:nth-child(even) {
+          padding-bottom: 5%;
+        }
+      }
+    }
+  }
+  &__button {
+    cursor: pointer;
+    background: #1ca0ff99;
+    padding: 1% 2%;
+    font-family: Barlow;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5rem;
+    letter-spacing: 0em;
+    text-align: center;
+    border-radius: 11px;
+    color: white;
+  }
+}
