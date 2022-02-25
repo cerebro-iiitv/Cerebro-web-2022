@@ -1,13 +1,25 @@
 import React from 'react';
-
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './ParticularEvent.scss';
 
 import { default as toDot } from '../../assets/images/Events/to-dot.svg';
 import { default as dateLine } from '../../assets/images/Events/date-line.svg';
 import { default as door } from '../../assets/images/Events/door.png';
 import { default as midButtonLine } from '../../assets/images/Events/mid-button-line.svg';
+import { default as greenTick } from '../../assets/images/Events/green-tick.svg';
 
-export const ParticularEvent = ({ title, start_time, prize, end_time, description, team_size, convenor, co_convenor1, co_convenor2, mem1, mem2 }) => {
+
+// configuring toast
+toast.configure()
+export const ParticularEvent = ({ team_code, submitted, isLogged, isReg, subReq, title, start_time, prize, end_time, description, team_size, convenor, co_convenor1, co_convenor2, mem1, mem2 }) => {
+
+  // subReq = true;
+  // submitted = true;
+  // isLogged = false;
+  // isReg = undefined;
+  // submitted = undefined;
+  // subReq = undefined;
 
   if (title === "CSGO") {
     title = "Counter-Strike: Global Offensive";
@@ -16,6 +28,23 @@ export const ParticularEvent = ({ title, start_time, prize, end_time, descriptio
     title = "Call of Duty: Mobile";
   }
 
+  const authNotifier = () => {
+    toast.info("Log In to Register", { position: toast.POSITION.TOP_LEFT });
+  }
+
+  // function for submitting work
+  const submitWork = () => {
+    console.log("Called the submit work function");
+  }
+
+  // function for registering the user
+  const registerUser = () => {
+    console.log("Calling the registered function");
+  }
+
+  const joinTeam = () => {
+    console.log("Calling the join team function");
+  }
   return (
     <div className='event'>
 
@@ -41,7 +70,7 @@ export const ParticularEvent = ({ title, start_time, prize, end_time, descriptio
           <div className='date1'>
             <p className='date1-items'>{end_time} </p>
             <img src={dateLine} alt="date-line" className='date-line' />
-             <p>8:00PM</p>
+            <p>8:00PM</p>
           </div>
         </div>
 
@@ -73,43 +102,97 @@ export const ParticularEvent = ({ title, start_time, prize, end_time, descriptio
           <div className="mid-line"></div>
 
           <div className="right-event-container">
-              <div className="convenor-sec">
-                <p className='conv'>Convenor</p>
-                <div className="convenor-dets">
-                  <p>{convenor}</p>
-                </div>
+            <div className="convenor-sec">
+              <p className='conv'>Convenor</p>
+              <div className="convenor-dets">
+                <p>{convenor}</p>
               </div>
-              <div className="co-convenor-sec">
-                <p className='coconv'>Co Convenor</p>
-                <p className='co_convenor-details'>{co_convenor1}, {co_convenor2}</p>
-              </div>
-              <div className="members-sec">
-                <p className='mems'>Members</p>
-                <p className='members-details'>{mem1}, {mem2}</p>
-              </div>
+            </div>
+            <div className="co-convenor-sec">
+              <p className='coconv'>Co Convenor</p>
+              <p className='co_convenor-details'>{co_convenor1}, {co_convenor2}</p>
+            </div>
+            <div className="members-sec">
+              <p className='mems'>Members</p>
+              <p className='members-details'>{mem1}, {mem2}</p>
+            </div>
           </div>
 
         </div>
 
 
-        <form>
-          <div className='button-container'>
-            <button id="single-button">Register</button>
-            {
-              team_size > 1 ?
-                <img src={midButtonLine} className="mid-button-line" alt="mid-button-line" />
-                :
-                ""
-            }
-            {
-              team_size > 1 ?
-                <button>Join Team</button>
-                :
-                ""
-            }
+        <div className="buttonCont">
+          {
+            isLogged === false ?
+              <div className='button-container'>
+                <button id="single-button" onClick={authNotifier}>Register</button>
+                {
+                  team_size > 1 ?
+                    <img src={midButtonLine} className="mid-button-line" alt="mid-button-line" />
+                    :
+                    ""
+                }
+                {
+                  team_size > 1 ?
+                    <button onClick={authNotifier}>Join Team</button>
+                    :
+                    ""
+                }
+              </div>
+              : <div className='buttonCont'>
+                {
+                  // here the user is logged in now we check if isReg
+                  isReg === true ? <div className='button-container'>
+                    {
+                      subReq === true ? <div>
+                        {
+                          submitted === true ? <div className="submit-text"><p className="submitted_text">You have already submitted</p><img src={greenTick} alt="greenTick" className='green-tick' /></div>
+                            : <button id="single-button" onClick={submitWork}>Submit</button>
+                        }
+                      </div>
+                        : <div>
+                          {/* Here no submission is required */}
+                          {/* Route to details page */}
 
-          </div>
-        </form>
+                          <div className="submit-text">
+                            <div className="text_image">
+                              <p className="submitted_text">You have registered</p>
+                              <img src={greenTick} alt="greenTick" className='green-tick' />
+                            </div>
+                            <p className='team_code_text'>Check Dashboard for more details</p>
+                            {
+                              team_size > 1 ? 
+                            <p className="team_code_text">Team Code: <span className='teamCode'>{team_code}</span></p>
+                              :
+                              ""
+                            }
+                          </div>
+
+                        </div>
+                    }
+                  </div> :
+                    <div className='button-container'>
+                      <button id="single-button" onClick={registerUser}>Register</button>
+                      {
+                        team_size > 1 ?
+                          <img src={midButtonLine} className="mid-button-line" alt="mid-button-line" />
+                          :
+                          ""
+                      }
+                      {
+                        team_size > 1 ?
+                          <button onClick={joinTeam}>Join Team</button>
+                          :
+                          ""
+                      }
+                    </div>
+
+                }
+
+              </div>
+          }
+
+        </div>
       </div>
 
       <div className="right-door-container">
@@ -118,3 +201,5 @@ export const ParticularEvent = ({ title, start_time, prize, end_time, descriptio
     </div>
   )
 };
+
+// 

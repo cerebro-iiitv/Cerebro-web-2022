@@ -7,12 +7,12 @@ import { default as rightLine } from '../../assets/images/Events/sliced-right-li
 import { default as selectedDot } from '../../assets/images/Events/selected-dot.svg';
 import { default as sphere } from '../../assets/images/Events/sphere.svg';
 
-export const EventScrollItem = ({ event, idx, currIdx, visible, loadPage, isSelected }) => {
-    return (
+export const EventScrollItem = ({ boxClass, event, idx, currIdx, visible, loadPage, isSelected }) => {
 
+    return (
         <div className="item-container">
             {
-                idx % 2 === 0 ? <div className="text-dot-container-even" onClick={() => { loadPage(event, idx + visible) }} id={idx === 6 || (idx === 0 && visible !== 0) ? "disable-onn" : ""}>
+                idx % 2 === 0 ? <div className={idx + visible === currIdx ? boxClass.up.join(' ') : "text-dot-container-even"} onClick={() => { loadPage(event, idx + visible) }} id={idx === 6 || (idx === 0 && visible !== 0) ? "disable-onn" : ""}>
 
                     {
                         isSelected === false ?
@@ -61,7 +61,7 @@ export const EventScrollItem = ({ event, idx, currIdx, visible, loadPage, isSele
                     </div>
 
                 </div> :
-                    <div className="text-dot-container-odd" onClick={() => { loadPage(event, idx + visible) }}>
+                    <div className={idx + visible === currIdx ? boxClass.down.join(' ') : "text-dot-container-odd"} onClick={() => { loadPage(event, idx + visible) }}>
                         <div className="temp-div">
 
                         </div>

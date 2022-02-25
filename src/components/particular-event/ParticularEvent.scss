@@ -1,6 +1,130 @@
-@media only screen and (max-width: 1200px){
-    .left-door-container{
+@media only screen and (max-width: 1200px) {
+    .left-door-container {
         left: 28% !important;
+    }
+
+    .right-door-container {
+        right: 8% !important;
+    }
+
+    .event-title {
+        .title {
+            font-size: 24px !important;
+        }
+    }
+
+    .event-container {
+        .event-para {
+            font-size: 16px !important;
+        }
+    }
+
+    .time-line {
+        .date1 {
+            p {
+                font-size: 14px !important;
+            }
+        }
+    }
+
+    .buttonCont {
+        .submit-text{
+            p{
+                font-size: 10px !important;
+            }
+            .text_image{
+                p{
+                    font-size: 10px !important;
+                }
+            }
+        }
+        .button-container {
+            button {
+                font-size: 14px !important;
+            }
+        }
+    }
+
+    .left-event-details {
+        .prize-sec p {
+            font-size: 14px !important;
+        }
+
+        .team-sec p {
+            font-size: 14px !important;
+        }
+    }
+
+    .right-event-container {
+        p {
+            font-size: 12px !important;
+        }
+    }
+
+    .rules {
+        p {
+            font-size: 14px !important;
+        }
+    }
+}
+
+@media only screen and (width: 1024px) and (height: 850px) {
+    .left-door-container {
+        left: 28% !important;
+    }
+
+    .right-door-container {
+        right: 8% !important;
+    }
+
+    .event-title {
+        .title {
+            font-size: 24px !important;
+        }
+    }
+
+    .event-container {
+        .event-para {
+            font-size: 16px !important;
+        }
+    }
+
+    .time-line {
+        .date1 {
+            p {
+                font-size: 12px !important;
+            }
+        }
+    }
+
+    .buttonCont {
+        .button-container {
+            button {
+                font-size: 14px !important;
+            }
+        }
+    }
+
+    .left-event-details {
+        .prize-sec p {
+            font-size: 14px !important;
+        }
+
+        .team-sec p {
+            font-size: 14px !important;
+        }
+    }
+
+    .right-event-container {
+        p {
+            font-size: 12px !important;
+        }
+    }
+
+    .rules {
+        p {
+            font-size: 14px !important;
+        }
     }
 }
 
@@ -32,7 +156,7 @@
             }
         }
 
-        form {
+        .buttonCont {
             .button-container {
                 button {
                     font-size: 14px !important;
@@ -57,8 +181,55 @@
         }
     }
 
+    @media only screen and (max-height: 600px) {
+        .event-title {
+            .title {
+                font-size: 16px !important;
+            }
+        }
 
-    @media only screen and (max-width: 1880px) and (height: 768px), (height: 850px), (height: 882px){
+        .event-container {
+            .event-para {
+                font-size: 10px !important;
+            }
+        }
+
+        .time-line {
+            .date1 {
+                p {
+                    font-size: 10px !important;
+                }
+            }
+        }
+
+        .buttonCont {
+            .button-container {
+                button {
+                    font-size: 10px !important;
+                }
+            }
+        }
+
+        .left-event-details {
+            .prize-sec p {
+                font-size: 14px !important;
+            }
+
+            .team-sec p {
+                font-size: 14px !important;
+            }
+        }
+
+        .right-event-container {
+            p {
+                font-size: 12px !important;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1880px) and (height: 768px),
+    (height: 850px),
+    (height: 882px) {
         .event-title {
             .title {
                 font-size: 24px !important;
@@ -79,7 +250,7 @@
             }
         }
 
-        form {
+        .buttonCont {
             .button-container {
                 button {
                     font-size: 16px !important;
@@ -104,6 +275,66 @@
         }
     }
 
+    @media only screen and (width: 1024px) and (height: 850px) {
+        .left-door-container {
+            left: 28% !important;
+        }
+
+        .right-door-container {
+            right: 8% !important;
+        }
+
+        .event-title {
+            .title {
+                font-size: 24px !important;
+            }
+        }
+
+        .event-container {
+            .event-para {
+                font-size: 16px !important;
+            }
+        }
+
+        .time-line {
+            .date1 {
+                p {
+                    font-size: 12px !important;
+                }
+            }
+        }
+
+        .buttonCont {
+            .button-container {
+                button {
+                    font-size: 12px !important;
+                }
+            }
+        }
+
+        .left-event-details {
+            .prize-sec p {
+                font-size: 12px !important;
+            }
+
+            .team-sec p {
+                font-size: 12px !important;
+            }
+        }
+
+        .right-event-container {
+            p {
+                font-size: 12px !important;
+            }
+        }
+
+        .rules {
+            p {
+                font-size: 12px !important;
+            }
+        }
+    }
+
     .left-door-container {
         height: 100%;
         display: flex;
@@ -111,14 +342,14 @@
         min-width: 0;
         min-height: 0;
         position: relative;
-        left: 20%;
+        left: 18%;
         width: 100%;
-        
+
         .left-door {
             height: 100%;
         }
     }
-    
+
     .right-door-container {
         height: 100%;
         min-width: 0;
@@ -127,7 +358,8 @@
         width: 100%;
         justify-content: flex-start;
         position: relative;
-        right: 4%;
+        right: 2%;
+
         .right-door {
             height: 100%;
             transform: rotateZ(180deg);
@@ -146,21 +378,24 @@
         padding: 0 4%;
 
         .event-title {
+            width: 80%;
             text-align: center;
             font-weight: 400;
-            font-size: 2em;
+            font-size: 1.8em;
             font-family: Rekt Brush;
             text-transform: uppercase;
         }
 
         .event-container {
+            width: 80%;
             display: flex;
             justify-content: center;
 
             .event-para {
+                // width: 80%;
                 text-align: center;
                 font-family: Barlow;
-                font-size: 1.1rem;
+                font-size: 0.9rem;
                 font-weight: 200;
                 line-height: 1.5rem;
 
@@ -173,6 +408,7 @@
         }
 
         .time-line {
+            width: 80%;
             display: flex;
             justify-content: center;
 
@@ -200,12 +436,12 @@
                 .date1-items {
                     font-family: Barlow;
                     text-align: center;
-                    font-size: 17px;
+                    font-size: 15px;
                 }
 
                 .time {
                     font-family: Barlow;
-                    font-size: 17px;
+                    font-size: 15px;
                 }
 
                 .date-line {
@@ -216,7 +452,7 @@
         }
 
         .event-detail {
-            width: 90%;
+            width: 80%;
             height: 10rem;
             display: flex;
             justify-content: space-evenly;
@@ -236,14 +472,14 @@
 
                     .prize-worth-query {
                         color: #1CA0FF;
-                        font-size: 24px;
+                        font-size: 20px;
                         font-weight: bold;
                         font-family: Barlow;
                     }
 
                     .prize-dets {
                         margin-right: 4%;
-                        font-size: 24px;
+                        font-size: 20px;
                         font-weight: bold;
                         font-family: Barlow;
                         width: 30%;
@@ -258,14 +494,14 @@
 
                     .team-size-query {
                         color: #1CA0FF;
-                        font-size: 24px;
+                        font-size: 20px;
                         font-weight: bold;
                         font-family: Barlow;
                     }
 
                     .team-dets {
                         margin-right: 4%;
-                        font-size: 24px;
+                        font-size: 20px;
                         font-weight: bold;
                         font-family: Barlow;
                         width: 30%;
@@ -307,7 +543,7 @@
 
                     .conv {
                         font-family: Barlow;
-                        font-size: 1.18rem;
+                        font-size: 0.9rem;
                         color: #1CA0FF;
                         width: 40%;
                         margin-left: 6%;
@@ -315,7 +551,7 @@
 
                     .convenor-dets {
                         font-family: Barlow;
-                        font-size: 1.18rem;
+                        font-size: 0.9rem;
                         width: 50%;
                         text-align: left;
                     }
@@ -330,7 +566,7 @@
                     .coconv {
                         font-family: Barlow;
                         color: #1CA0FF;
-                        font-size: 1.18rem;
+                        font-size: 0.9rem;
                         width: 40%;
                         margin-left: 6%;
 
@@ -338,7 +574,7 @@
 
                     .co_convenor-details {
                         font-family: Barlow;
-                        font-size: 1.18rem;
+                        font-size: 0.9rem;
                         width: 50%;
                     }
                 }
@@ -347,7 +583,7 @@
                     .mems {
                         font-family: Barlow;
                         color: #1CA0FF;
-                        font-size: 1.18rem;
+                        font-size: 0.9rem;
                         width: 40%;
                         margin-left: 6%;
                     }
@@ -359,47 +595,90 @@
 
                     .members-details {
                         font-family: Barlow;
-                        font-size: 1.18rem;
+                        font-size: 0.9rem;
                         width: 50%;
                     }
 
                 }
             }
-
-
-
-
         }
 
-        .button-container {
+        .buttonCont {
             display: flex;
             justify-content: center;
+            width: 80%;
 
-            .mid-button-line {
-                margin-left: 7%;
-                margin-right: 4%;
-            }
+            .button-container {
+                
+                .submit-text {
+                    // border: 1px solid white;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    .text_image{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
 
-            #single-button {
-                margin-right: -3%;
-            }
+                        .submitted_text {
+                            color: #F8B813;
+                            font-family: Barlow;
+                            font-size: 16px;
+                            margin-right: 4%;
+                        }
+                        .green-tick{
+                            width: 10%;
+                        }
+                    }
 
-            button {
-                font-family: Barlow;
-                font-weight: 700;
-                border: none;
-                border-radius: 10px;
+                    .teamCode{
+                        color: white;
+                        font-weight: bold;
+                        font-family: Barlow;
+                        font-size: 16px;
+                    }
+                   
+                    .team_code_text {
+                        color: #F8B813;
+                        font-family: Barlow;
+                        font-size: 16px;
+                    }
+                }
+
+                width: 100%;
                 display: flex;
                 justify-content: center;
-                align-items: center;
-                width: 10rem;
-                padding: 0.30em 0;
-                background-color: #EBC027;
-                color: #29457C;
-                font-size: 20px;
-                box-shadow: 0px 3.17885px 3.17885px rgba(0, 0, 0, 0.25);
-                cursor: pointer;
+
+                .mid-button-line {
+                    margin-left: 7%;
+                    margin-right: 4%;
+                }
+
+                #single-button {
+                    margin-right: -3%;
+                }
+
+                button {
+                    font-family: Barlow;
+                    font-weight: 700;
+                    border: none;
+                    border-radius: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 10rem;
+                    padding: 0.30em 0;
+                    background-color: #EBC027;
+                    color: #29457C;
+                    font-size: 16px;
+                    box-shadow: 0px 3.17885px 3.17885px rgba(0, 0, 0, 0.25);
+                    cursor: pointer;
+                }
             }
         }
+
     }
 }
