@@ -12,6 +12,16 @@ a {
     animation: fade-in 1s ease-in;
 }
 
+
+.aboutUs {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+}
+
 @keyframes fade-in {
     0% {
         opacity: 0;
@@ -120,7 +130,7 @@ a {
     font-weight: normal;
     font-size: 25px;
     line-height: 26px;
-    margin-left: 20%;
+    margin-left: 20.5%;
     color: #FFFFFF;
 }
 
@@ -362,10 +372,14 @@ a {
 }
 
 
-@media screen and (min-width:1140px) and (max-width:1280px) {
+ 
+
+
+@media screen and (min-width:767px) and (max-width:850px) {
     .aboutus-main {
-        height: 51%;
-        width: 76vw;
+        height: 44%;
+
+        width: 88vw;
 
         &-content {
             height: 82%;
@@ -383,12 +397,62 @@ a {
     .hov1 {
         margin-left: 4.2%;
     }
+
+    .infotext {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .mainhead {
+        font-size: 40px;
+        line-height: 38px;
+    }
+
+    .sechead {
+        font-size: 20px;
+        line-height: 22px;
+    }
+
+    .joindis {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .our-sponsors-text {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .hov1{
+        height: 78%;
+    }   
+    
+    .fl1 {
+        font-size: 17px;
+        line-height: 19px;
+    }
+
+    .fl2 {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .fl3 {
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    .sl1 {
+        font-size: 18px;
+        line-height: 20px;
+    }
 }
 
 
-@media screen and (max-width:1100px) {
+@media screen and (min-width:850px) and (max-width:1100px) {
     .aboutus-main {
         height: 44%;
+
         width: 80vw;
 
         &-content {
@@ -409,13 +473,13 @@ a {
     }
 
     .infotext {
-        font-size: 16px;
-        line-height: 18px;
+        font-size: 14px;
+        line-height: 16px;
     }
 
     .mainhead {
         font-size: 40px;
-        line-height: 42px;
+        line-height: 38px;
     }
 
     .sechead {
@@ -424,40 +488,45 @@ a {
     }
 
     .joindis {
-        font-size: 16px;
-        line-height: 18px;
+        font-size: 12px;
+        line-height: 16px;
     }
 
     .our-sponsors-text {
-        font-size: 14px;
-        line-height: 26px;
-    }
-
-    .fl1 {
-        font-size: 18px;
-        line-height: 20px;
-    }
-
-    .fl2 {
         font-size: 16px;
         line-height: 18px;
     }
 
-    .fl3 {
+    .hov1{
+        height: 78%;
+    }   
+    
+    .fl1 {
+        font-size: 17px;
+        line-height: 19px;
+    }
+
+    .fl2 {
         font-size: 14px;
         line-height: 16px;
     }
 
+    .fl3 {
+        font-size: 10px;
+        line-height: 12px;
+    }
+
     .sl1 {
-        font-size: 21px;
-        line-height: 23px;
+        font-size: 18px;
+        line-height: 20px;
     }
 }
+ 
+@media screen and  (min-width:1100px) and (max-width:1280px) {
+    .aboutus-main{
+     height: 52%;
 
 
-@media screen and (min-width:1100px) and (max-width:1280px) {
-    .aboutus-main {
-        height: 48%;
         width: 80vw;
 
         &-content {
@@ -594,4 +663,135 @@ a {
         height: 56%;
         width: 60vw;
     }
-}
+ }  
+ @media screen and (min-height:580px) and (max-height:650px) {
+    .aboutus-main{
+        margin-bottom: 8%;
+        height: 60%;
+        width: 80vw;
+    }
+ }
+
+ @media screen and (min-height:520px) and (max-height:580px) {
+    .aboutus-main{
+        margin-bottom: 8%;
+        height: 50%;
+        width: 70vw;
+    }
+    .infotext{
+        font-size: 12px;
+        line-height: 14px;
+    }
+    .mainhead{
+        font-size:36px ;
+        line-height: 30px;
+    }
+    .sechead{
+        font-size:18px ;
+        line-height: 20px;
+    }
+    .joindis{
+        font-size:16px ;
+        line-height: 18px;
+    }
+    .our-sponsors-text{
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .fl1{
+        font-size:17px ;
+        line-height: 18px;
+    }
+    .fl2{
+        font-size:14px ;
+        line-height: 16px;
+    }   
+    .fl3{
+        font-size:10px ;
+        line-height: 14px;
+    } 
+
+    .sl1{
+        font-size:19px ;
+        line-height: 21px;
+    }
+ }
+
+ 
+ @media screen and (min-height:400px) and (max-height:520px) {
+    .aboutus-sponsor{
+        width: 48.5%;
+  }
+  .aboutus-circles{
+        width: 51.5%;
+        justify-content: space-around;
+  }
+  .hov1{
+      margin-left: 2%;
+    width: 24%;  
+      height: 86%;
+  }
+  .hov2{
+    width: 20%;  
+      height: 72%;
+  }
+  .hov3{
+    width: 18%;  
+      height: 65%;
+      margin-right: 15%;
+  }
+  .circle1 , .circle2 , .circle3{
+      height: 96%;
+      width: 96%;
+    }
+
+    
+    .aboutus-main{
+        background: url("../../assets/images/aboutus-background2.svg") no-repeat center center/contain;;
+        margin-bottom: 6%;
+        height: 50%;
+        width: 80vw;
+    }
+    .infotext{
+        font-size: 12px;
+        line-height: 14px;
+    }
+    .mainhead{
+        font-size:36px ;
+        line-height: 30px;
+    }
+    .sechead{
+        font-size:18px ;
+        line-height: 20px;
+    }
+    .joindis{
+        font-size:16px ;
+        line-height: 18px;
+    }
+    .our-sponsors-text{
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .fl1{
+        font-size:14px ;
+        line-height: 16px;
+    }
+    .fl2{
+        font-size:12px ;
+        line-height: 13px;
+    }   
+    .fl3{
+        font-size:8px ;
+        line-height: 10px;
+    } 
+
+    .sl1{
+        font-size:15px ;
+        line-height: 18px;
+    }
+    .sl2 , .sl3{
+        font-size:18px ;
+        line-height: 20px;
+    }
+ }
+
