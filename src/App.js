@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 import useAuth from "./hooks/useAuth";
 import MainLayout from "./containers/Layout/Layout";
+import Dashboard from "./containers/Dashboard/Dashboard"
 import Login from "./containers/Login/Login";
 import Signup from "./containers/Signup/Signup";
 import Hero from "./containers/Hero/Hero";
@@ -79,14 +80,8 @@ function App() {
             </Route>
 
             <Route element={<PrivateRoute />}>
-
-              <Route 
-                path="/change-password" 
-                element={
-                  <ChangePassword />
-                }
-              />
-
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/change-password" element={<ChangePassword />} />
             </Route>
 
 

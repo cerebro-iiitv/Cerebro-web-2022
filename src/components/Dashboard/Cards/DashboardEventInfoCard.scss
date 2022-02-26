@@ -1,0 +1,54 @@
+.dashboard-event-info-card {
+  width: 21%;
+  &__vert-bar {
+    width: 4%;
+    height: 100%;
+    background-color: #f8b813;
+    border-radius: 17.7716px 0px 0px 17.7716px;
+  }
+  &__details-cont {
+    margin: 2% 6%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    &__indicator {
+      width: 45%;
+      &__text {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.2rem;
+        color: white;
+        font-family: Biryani;
+        font-style: normal;
+        font-weight: 400;
+        text-shadow: 0px 2px 5px #f8b813;
+      }
+    }
+    &__text {
+      font-family: Barlow;
+      font-size: 1.25rem;
+      font-style: normal;
+      font-weight: 400;
+      letter-spacing: 0em;
+      color: white;
+      padding: 5% 0 2% 0;
+    }
+    &__link a {
+      text-decoration: none;
+      font-family: Barlow;
+      font-size: 1.2rem;
+      font-style: normal;
+      font-weight: 400;
+      letter-spacing: 0em;
+      color: #42b0ff;
+    }
+  }
+}
+
+.dashboard-event-info-card > div {
+  display: flex;
+  padding: 3% 5%;
+}
