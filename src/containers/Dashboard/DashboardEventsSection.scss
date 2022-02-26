@@ -1,0 +1,26 @@
+.dashboard-events {
+  &__title {
+    background: url("../../assets/images/dashboard-events-bg.png") no-repeat
+      center center/cover;
+    width: 15%;
+    height: 6.5vh;
+    margin: 0 auto;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Barlow;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 0em;
+    color: #1ca0ff;
+  }
+  &__no-events {
+    font-family: Barlow;
+    color: white;
+    font-size: 3rem;
+    width: fit-content;
+    margin: 5% auto;
+  }
+}

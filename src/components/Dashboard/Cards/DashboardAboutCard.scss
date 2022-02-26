@@ -1,0 +1,30 @@
+.dashboard-about-card {
+  width: 40%;
+  margin-left: 4%;
+  &__row {
+    display: flex;
+    margin: 3% 0;
+    &__title {
+      width: 40%;
+      font-family: Barlow;
+      font-size: 1.4rem;
+      font-style: normal;
+      font-weight: 500;
+      letter-spacing: 0em;
+      color: #48b2ff;
+    }
+    &__value {
+      width: 60%;
+      font-family: Barlow;
+      font-size: 1.4rem;
+      font-style: normal;
+      font-weight: 400;
+      letter-spacing: 0em;
+      color: white;
+    }
+  }
+}
+
+.dashboard-about-card > div {
+  padding: 0.5% 6%;
+}
