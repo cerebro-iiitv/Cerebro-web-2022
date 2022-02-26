@@ -1,0 +1,55 @@
+.dashboard__title-cont {
+  background: url("../../assets/images/dashboard-title-bg.png") no-repeat center
+    bottom;
+  background-size: contain;
+  height: 9vh;
+  background-color: #0a2245;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  &__home,
+  &__logout {
+    outline: none;
+    background: none;
+    border: none;
+    display: flex;
+    cursor: pointer;
+    &-title {
+      font-family: Barlow;
+      font-size: 1.3rem;
+      font-style: normal;
+      font-weight: 400;
+      letter-spacing: 0em;
+      color: white;
+    }
+  }
+  &__home {
+    margin-top: 0.4%;
+    &-icon {
+      img {
+        width: 82%;
+      }
+    }
+  }
+  &__logout {
+    margin-top: 0.6%;
+    &-title{
+      padding-right: 2%;
+      line-height: 1.3rem;
+    }
+    &-icon {
+      img {
+        width: 90%;
+      }
+    }
+  }
+  &__main-heading {
+    font-family: Barlow;
+    font-size: 2.1rem;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0em;
+    color: #ffffff;
+    margin: 0.4% 9%;
+  }
+}

@@ -1,7 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.App {
+  height: 100vh;
+  width: 100vw;
+  background: #071e40;
 }
 
 @font-face {
@@ -20,6 +28,36 @@
 }
 
 @font-face {
+  font-family: Rekt Brush;
+  src: url("./assets/fonts/RektBrush.otf");
+}
+
+@font-face {
+  font-family: cendre;
+  src: url("./assets/fonts/Cendre.ttf");
+}
+
+@font-face {
+  font-family: Barlow;
+  src: url("./assets/fonts/Barlow-Regular.otf");
+}
+
+@font-face {
+  font-family: avenir;
+  src: url("./assets/fonts/avenir.otf");
+}
+
+@font-face {
+  font-family: Changa;
+  src: url("./assets/fonts/Changa-Regular.ttf");
+}
+
+@font-face {
   font-family: Baumans;
-  src: url("./assets/fonts/Baumans.ttf");
+  src: url("./assets/fonts/Bauman-Regular.otf");
+}
+
+@font-face {
+  font-family: Lexie Readable;
+  src: url("./assets/fonts/LexieReadable.ttf");
 }

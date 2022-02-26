@@ -1,0 +1,30 @@
+.faq-scroll-bar{
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .buttons{
+        height: 100%;
+        width: 50%;
+        display: flex;
+        justify-content: space-evenly;
+        .selected-sphere{
+            transition: all 0.15s ease;
+            animation-name: rotateSphere;
+            animation-duration: 1.5s;
+        }
+        @keyframes rotateSphere {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(359deg);
+            }
+        }
+        img{
+            cursor: pointer;
+        }
+    }
+}

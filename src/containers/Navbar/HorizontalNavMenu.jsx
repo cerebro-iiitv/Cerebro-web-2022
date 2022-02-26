@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-
 import NavMenuCard from "../../components/NavMenuCard/NavMenuCard";
 
 import arrow_img from "../../assets/images/navbar_arrow.svg"
@@ -23,11 +22,11 @@ const getInitialCardIndex = (currPath) => {
     return 5; // for "/home" and any other path
 }
 
-const HorizontalNavMenu = () => {
+const HorizontalNavMenu = (props) => {
     const navigate = useNavigate();
     const location = useLocation();
     const initialCardIndex = getInitialCardIndex(location.pathname);
-
+    
     const [leftCardIndex, setLeftCardIndex] = useState(initialCardIndex);
     const [leftAndRightDisabled, setLeftAndRightDisabled] = useState(false);
     const [isTransitionEnabled, setIsTransitionEnabled] = useState(true)
@@ -37,6 +36,7 @@ const HorizontalNavMenu = () => {
 
     // Setting up the tilt css classes using wrappers around the visible cards
     const cardComponentsWithClones = React.useMemo(() => {
+
         let tempArr = navMenuDetails.map((option, i) => {
             let tiltClass = "";
             let shift = 0;
@@ -68,11 +68,13 @@ const HorizontalNavMenu = () => {
                 <NavMenuCard className={tiltClass}
                     title={option.title}
                     isTransitionEnabled={isTransitionEnabled}
-                    transitionAfterClick={cardClickHandler} />
+                    transitionAfterClick={cardClickHandler}  
+                    key={i}
+                    nohover={props.nohover}/>
             )
         });
         return tempArr;
-    }, [leftCardIndex, isTransitionEnabled]);
+    }, [leftCardIndex, isTransitionEnabled,props.nohover]);
 
 
     useEffect(() => {
@@ -124,7 +126,6 @@ const HorizontalNavMenu = () => {
     }, [leftAndRightDisabled])
 
     const scrollLeft = () => {
-        console.log(leftCardIndex);
         let linkAddr = "/" + navMenuDetails[leftCardIndex + 1].title.toLowerCase();
         if (linkAddr === "/faq's") {
             linkAddr = "/faq"
@@ -137,7 +138,6 @@ const HorizontalNavMenu = () => {
     }
 
     const scrollRight = () => {
-        console.log(leftCardIndex);
         let linkAddr = "/" + navMenuDetails[leftCardIndex + 3].title.toLowerCase();
         if (linkAddr === "/faq's") {
             linkAddr = "/faq"
@@ -176,14 +176,31 @@ const HorizontalNavMenu = () => {
         setTouchPosition(null);
     }
 
+const handleArrowClickRight = (e) => {
+    if(!leftAndRightDisabled){
+        scrollRight();
+    }
+
+    props.nohover();
+}
+
+
+const handleArrowClickLeft = (e) => {
+    if(!leftAndRightDisabled){
+        scrollLeft();
+    }
+
+    props.nohover();
+}
+
     return (
         <div className="hori-menu">
             <div className="hori-menu__carousel-container">
                 <div className="hori-menu__carousel-wrapper">
                     <button className="hori-menu__carousel__left-arrow"
-                        onClick={!leftAndRightDisabled ? scrollLeft : null}
+                        onClick={handleArrowClickLeft}
                     >
-                        <img src={arrow_img} alt="left" />
+                        <img src={arrow_img} alt="left" className="arrow" />
                     </button>
                     <div className="hori-menu__carousel-content-wrapper"
                         onTouchStart={handleTouchStart}
@@ -198,9 +215,9 @@ const HorizontalNavMenu = () => {
                         </div>
                     </div>
                     <button className="hori-menu__carousel__right-arrow"
-                        onClick={!leftAndRightDisabled ? scrollRight : null}
+                        onClick={handleArrowClickRight}
                     >
-                        <img src={arrow_img} alt="right" />
+                        <img src={arrow_img} alt="right" className="arrow" />
                     </button>
                 </div>
             </div>

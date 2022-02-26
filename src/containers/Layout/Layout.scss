@@ -1,0 +1,368 @@
+.hud-top {
+  position: absolute;
+  height: 90px;
+  width: 100vw;
+  z-index: 2;
+  top: 0;
+  background: url("../../assets/images/commonlayer_top.svg") no-repeat top
+    center/auto;
+}
+
+.top-btn {
+  z-index: 2;
+  cursor: pointer;
+  &-higher {
+    z-index: 3;
+    cursor: pointer;
+  }
+}
+.tophover {
+  position: absolute;
+  height: 85px;
+  width: 100vw;
+  z-index: 2;
+  top: 0;
+  background: url("../../assets/images/commonlayer_top.svg") no-repeat top
+    center/auto;
+  transform: translateY(-80px);
+  transition: transform 1s ease;
+  animation: initial-up 0.5s;
+}
+.navbarr {
+  display: flex;
+  z-index: 2;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  height: 30vh;
+}
+
+
+.navbarr-hover{
+  display: flex;
+  z-index: 2;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 30vh;
+  animation: initial-down 0.5s;
+  transition: transform 1s ease;
+  transform: translateY(60%);
+
+}
+
+#navhover {
+  transform: translateY(60%);
+  transition: transform 1s ease;
+
+  &:hover{
+    transform: translateY(0%);
+  }
+  &:hover ~ .tophover {
+    transform: translateY(0%);
+  }
+  &:hover ~ .blur-layer {
+    transition: height 0s, opacity 1.5s, backdrop-filter 1.5s;
+    height: 100%;
+    opacity: 1;
+    backdrop-filter: blur(10px); 
+  }
+  &:hover .navbar__content__hoverbar {
+    animation: barout 1.5s forwards ease;
+  }
+}
+
+@keyframes initial-down {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(60%);
+  }
+}
+
+.blur-layer {
+  background: url("../../assets/images/glass-top.svg") no-repeat center
+    center/cover;
+  position: absolute;
+  height: 0%;
+  width: 100%;
+  opacity: 0;
+  z-index: 1;
+}
+
+.visible-layer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  justify-content: space-between;
+  &-top {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    &-dashboard {
+      height: 100%;
+    }
+  }
+
+  &-bottom {
+    height: 30%;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+
+@keyframes initial-up {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-80px);
+  }
+}
+
+.visible-layer {
+  &:hover .visible-layer-top-center {
+    transform: translateY(0%);
+  }
+}
+
+#lgndash {
+  font-family: Rekt Brush;
+  color: white;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 15px;
+}
+
+.dashboard-content {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  img {
+    margin-bottom: 5px;
+  }
+}
+.login-btn {
+  cursor: pointer;
+  column-gap: 10px;
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: url("../../assets/images/commonlayer_login.svg") no-repeat center
+    center;
+  height: 50px;
+}
+
+.dashboard-btn {
+  cursor: pointer;
+
+  column-gap: 10px;
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: url("../../assets/images/commonlayer_login.svg") no-repeat center
+    center;
+  height: 50px;
+  &-img {
+    margin-bottom: 2.5%;
+  }
+}
+
+.login-button-container {
+  margin-top: 2vh;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 2vw;
+  align-items: center;
+}
+
+.tophud-text {
+  text-align: center;
+  font-family: Rekt Brush;
+  color: rgba(256, 256, 256, 0.85);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 30px;
+  margin-top: 2vh;
+}
+
+.notext {
+  display: none;
+}
+
+#main-content {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+}
+
+@media screen and (max-width:767px){
+  .visible-layer{
+    display: none;
+  }
+}
+
+@media screen and (min-width:767px) and (max-width: 850px) {
+  .tophover {
+    height: 60px;
+    width: 100vw;
+    background-size: contain;
+  }
+.login-btn{
+  background-size: contain;
+  width: 120px;
+&-container{
+  margin-top: 0%;
+}
+
+}
+.tophud-text{
+  font-size: 20px;
+}
+
+
+#lgndash{
+  font-size: 10px;
+}
+  
+  #navhover {
+    transform: translateY(36%);
+  }
+  
+@keyframes initial-down {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(36%);
+  }
+}
+}
+
+
+@media screen and (min-width:850px) and (max-width: 1025px) {
+ 
+.login-btn{
+  background-size: contain;
+  width: 140px;
+}
+
+#lgndash{
+  font-size: 12px;
+}
+  
+  #navhover {
+    transform: translateY(45%);
+  }
+  
+@keyframes initial-down {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(45%);
+  }
+}
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1100px) {
+  #navhover {
+    transform: translateY(48%);
+  }
+  
+@keyframes initial-down {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(48%);
+  }
+}
+}
+
+@media screen and (min-width: 1100px) and (max-width: 1280px) {
+  #navhover {
+    transform: translateY(53%);
+  }
+  
+@keyframes initial-down {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(53%);
+  }
+}
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1439px) {
+  #navhover {
+    transform: translateY(62%);
+  }
+  
+@keyframes initial-down {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(62%);
+  }
+}
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1800px) {
+  #navhover {
+    transform: translateY(63%);
+  }
+  
+@keyframes initial-down {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(63%);
+  }
+}
+}
+
+@media screen and (min-width: 1800px) and (max-width: 1880px) {
+  #navhover {
+    transform: translateY(68%);
+  }
+  
+@keyframes initial-down {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(68%);
+  }
+}
+}
+@media screen and (min-height:400px) and (max-height:670px) {
+.login-btn{
+  background-size: contain;
+  width: 120px;
+}
+#lgndash{
+  font-size: 10px;
+}
+}
+

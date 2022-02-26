@@ -1,0 +1,60 @@
+.dashboard-socials-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 18%;
+  margin-right: 4%;
+  &__title-cont {
+    height: 23%;
+    &__text {
+      color: #f8b813;
+      font-family: Barlow;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 29px;
+      letter-spacing: 0em;
+      width: fit-content;
+    }
+  }
+  &__title-cont > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__links-cont {
+    height: 70%;
+    &__row-1,
+    &__row-2 {
+      height: fit-content;
+      display: flex;
+      align-items: center;
+      padding: 0% 2%;
+      & > div {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    &__row-1 {
+      justify-content: center;
+      &__r-arrow {
+        padding-right: 5%;
+        transform: rotate(180deg);
+      }
+      &__l-arrow {
+        padding-right: 5%;
+      }
+    }
+    &__row-2 {
+      justify-content: space-around;
+    }
+  }
+  &__links-cont > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 3% 0;
+  }
+}
