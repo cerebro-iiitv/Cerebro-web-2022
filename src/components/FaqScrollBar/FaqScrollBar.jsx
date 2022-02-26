@@ -11,9 +11,9 @@ const FaqScrollBar = ({visible, dataList, changeIndex}) => {
                 {
                     dataList.map((data,idx) => (
                         idx === visible ? 
-                       <img onClick={() => changeIndex(idx)} src={SelectedScrollButton} alt="selected-scroll-1"/>
+                       <img onClick={() => changeIndex(idx)} src={SelectedScrollButton} alt="selected-scroll-1" className={visible === idx ? "selected-sphere":""}/>
                        :
-                       <img onClick={() => changeIndex(idx)} src={rightScrollButton} alt="right-scroll-1"/>
+                       <img onClick={() => changeIndex(idx)} src={rightScrollButton} alt="right-scroll-1" className={visible === idx ? "selected-sphere":""}/>
                     ))
                 }
             </div>

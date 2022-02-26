@@ -1,20 +1,27 @@
-@media only screen and (max-width: 1024px){
-    .text{
-        .text-up{
+@media only screen and (max-width: 1024px) {
+    .text {
+        .text-up {
             font-size: 10px !important;
         }
-        .text-down{
+
+        .text-down {
             font-size: 10px !important;
         }
     }
 }
+
 .item-container {
     width: 90%;
-    // border: 1px solid white;
-    .text-dot-container-even:active {
+    .animate-up {
         .text p {
             animation-name: tweak-up;
-            animation-duration: 0.6s;
+            animation-duration: 0.8s;
+        }
+    }
+    .animate-down{
+        .text p{
+            animation-name: tweak-down;
+            animation-duration: 0.8s;
         }
     }
 
@@ -28,18 +35,28 @@
         @media only screen and (max-width: 1024px) {
             .text {
                 .text-up {
-                    font-size: 12px;
-                }
-            }
-        }
-
-        @media only screen and (min-width: 1025px) and (max-width: 1280px){
-            .text{
-                .text-up{
                     font-size: 14px !important;
                 }
             }
         }
+
+        @media only screen and (min-width: 1025px) and (max-width: 1280px) {
+            .text {
+                .text-up {
+                    font-size: 14px !important;
+                }
+            }
+        }
+        
+@media only screen and (max-width: 1024px) and (height: 588px){
+    .text {
+        .text-up {
+            font-size: 8px !important;
+            // border-bottom: 1px solid yellow;
+        }
+    }
+}
+
         .text {
             height: 40px;
             display: flex;
@@ -67,6 +84,7 @@
 
             .line-cont {
                 display: flex;
+
                 .left-line {
                     width: 100%;
                     height: 100%;
@@ -80,13 +98,6 @@
 
         }
 
-    }
-
-    .text-dot-container-odd:active {
-        .text p {
-            animation-name: tweak-down;
-            animation-duration: 0.6s;
-        }
     }
 
     .text-dot-container-odd {
@@ -103,10 +114,19 @@
             }
         }
 
-        @media only screen and (min-width: 1025px) and (max-width: 1280px){
-            .text{
-                .text-down{
+        @media only screen and (min-width: 1025px) and (max-width: 1280px) {
+            .text {
+                .text-down {
                     font-size: 14px !important;
+                }
+            }
+        }
+
+        @media only screen and (max-width: 1024px) and (height: 588px){
+            .text {
+                .text-down {
+                    font-size: 8px !important;
+                    // border-bottom: 1px solid yellow;
                 }
             }
         }
@@ -166,11 +186,19 @@
     align-items: center;
     justify-content: center;
 }
-
+@media only screen and (max-width: 1024px) and (height: 588px){
+    .sphere{
+        margin-top: 1px 0 !important;
+        // border: 1px solid white;
+        width: 15px;
+        height: 15px;
+    }
+}
 .sphere {
     cursor: pointer;
     margin: 10px 0;
 }
+
 
 .gradient-text {
     pointer-events: none;

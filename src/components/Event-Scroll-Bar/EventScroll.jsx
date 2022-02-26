@@ -5,7 +5,7 @@ import { default as button } from '../../assets/images/Events/button.png';
 import { EventScrollItem } from "../EventScrollItem/EventScrollItem";
 import './EventScroll.scss';
 
-const EventScrollBar = ({ visible, loadless6, loadMore6, currIdx, events, loadPage, isSelected}) => {
+const EventScrollBar = ({ boxClass, visible, loadless6, loadMore6, currIdx, events, loadPage, isSelected}) => {
 
     return (
         <div className="scroll-bar-button">
@@ -17,7 +17,7 @@ const EventScrollBar = ({ visible, loadless6, loadMore6, currIdx, events, loadPa
             <div className="scroll-bar">
                 {
                     events.slice(visible, visible+7).map((event,idx) => (
-                        <EventScrollItem key={events[idx].id} isSelected = {isSelected} event = {event} idx = {idx} currIdx = {currIdx} visible={visible} loadPage={loadPage} />
+                        <EventScrollItem boxClass={boxClass} key={events[idx].id} isSelected = {isSelected} event = {event} idx = {idx} currIdx = {currIdx} visible={visible} loadPage={loadPage} />
                     ))
                 }
             </div>
