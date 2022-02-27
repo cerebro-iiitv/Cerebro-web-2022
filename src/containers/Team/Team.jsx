@@ -11,7 +11,6 @@ const Team = () => {
     const [teamData, setTeamData] = useState({});
     const [selectedTeam, setSelectedTeam] = useState("Core");
     const [selectedTeamData, setSelectedTeamData] = useState([]);
-    const [boxClass, setClass] = useState({ up: ["text-dot-container-even"], down: ["text-dot-container-odd"] })
     const [showLoadingSpinner, setShowLoadingSpinner] = useState(true);
 
     useEffect(() => {
