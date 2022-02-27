@@ -1,7 +1,8 @@
-import TeamMember from "../../components/TeamMember/TeamMember"
+import TeamMember from "../../components/Team/TeamMember/TeamMember"
 import "./TeamMembers.scss"
 
 const TeamMembers = ({ selectedTeamData }) => {
+    console.log(selectedTeamData);
     return (
         <div className="team-members">
             <div className="team-members-cont">

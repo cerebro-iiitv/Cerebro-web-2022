@@ -1,34 +1,47 @@
 import { useEffect, useState } from "react";
 import axiosInstance from "../../services/AxiosInstance";
 import TeamMembers from "./TeamMembers";
+import TeamSelector from "../../components/Team/TeamSelector/TeamSelector";
+import LoadingSpinner from "../../components/LoadingSpinner/LoadingSpinner";
+import "./Team.scss";
 
-import "./Team.scss"
+const teamOptionsArr = ["Core", "PR", "Core Support", "Web Dev", "Design", "Video Editing", "Gaming"];
 
-const teamOptionsArr = ["Core", "Public Relation", "Core Support", "Web Dev", "Design", "Video Editing", "Gaming"];
 const Team = () => {
     const [teamData, setTeamData] = useState({});
     const [selectedTeam, setSelectedTeam] = useState("Core");
-
-    let selectedTeamData = [];
-    for (let i in teamData) {
-        if (i === selectedTeam) {
-            selectedTeamData = teamData[i];
-        }
-    }
+    const [selectedTeamData, setSelectedTeamData] = useState([]);
+    const [boxClass, setClass] = useState({ up: ["text-dot-container-even"], down: ["text-dot-container-odd"] })
+    const [showLoadingSpinner, setShowLoadingSpinner] = useState(true);
 
     useEffect(() => {
-        axiosInstance.get("/teams", {
-            "Content-Type": "application/json",
-        }).then(res => setTeamData(res.data));
+        axiosInstance.get("/teams").then(res => setTeamData(res.data));
     }, []);
+
+    useEffect(() => {
+        setShowLoadingSpinner(true);
+        for (let i in teamData) {
+            if (i === selectedTeam) {
+                setSelectedTeamData(teamData[i]);
+            }
+        }
+        setShowLoadingSpinner(false);
+    }, [selectedTeam, showLoadingSpinner, teamData]);
 
     return (
         <div className="team">
-            <TeamMembers selectedTeamData={selectedTeamData} />
-            {/* <TeamSelector /> */}
-            {teamOptionsArr.map((element) => (
-                <button key={element} onClick={() => { setSelectedTeam(element) }}>{element}</button>
-            ))}
+            {
+                showLoadingSpinner
+                    ? <LoadingSpinner />
+                    :
+                    <>
+                        <TeamMembers selectedTeamData={selectedTeamData} />
+                        <TeamSelector
+                            teamOptions={teamOptionsArr}
+                            setSelectedTeam={setSelectedTeam}
+                            selectedTeam={selectedTeam} />
+                    </>
+            }
         </div>
     )
 }

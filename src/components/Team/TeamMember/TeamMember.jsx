@@ -1,6 +1,6 @@
-import githublogo from "../../assets/images/githublogo.png";
-import linkedinlogo from "../../assets/images/linkedinlogo.png";
-import twitterlogo from "../../assets/images/twitterlogo.png";
+import githublogo from "../../../assets/images/githublogo.png";
+import linkedinlogo from "../../../assets/images/linkedinlogo.png";
+import twitterlogo from "../../../assets/images/twitterlogo.png";
 import "./TeamMember.scss";
 
 const TeamMember = ({ profilepic, github, twitter, linked_in, name, role }) => {
