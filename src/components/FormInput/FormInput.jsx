@@ -10,7 +10,7 @@ export const FormInput = ({ label, name, type, setFieldValue, page }) => {
       <label className="forminput__label">{label}</label>
       {type === "file" ? (
         <input
-          accept="application/pdf, application/jpg, application/jpeg, application/png"
+          accept="application/pdf"
           className={`forminput__input ${custom}`}
           {...{ name, type }}
           onChange={(event) => {

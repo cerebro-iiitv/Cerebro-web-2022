@@ -9,6 +9,7 @@ import {
   initialValues,
   validate,
 } from "./util/ChangePasswordFormData";
+import "./ChangePassword.scss";
 
 const ChangePassword = () => {
   const [submitStatus, setSubmitStatus] = useState("");
@@ -40,7 +41,7 @@ const ChangePassword = () => {
     >
       <Formik {...{ validate, initialValues, onSubmit }}>
         {({ isSubmitting, errors }) => (
-          <Form>
+          <Form className="change-password">
             {changePasswordFormData.map(({ label, name, type }, index) => (
               <FormInput
                 {...{ label, name, type }}

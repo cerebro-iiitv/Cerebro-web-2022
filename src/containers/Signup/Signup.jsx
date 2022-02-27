@@ -23,33 +23,36 @@ const Signup = () => {
     Object.keys(values).forEach((key) => setFieldTouched(key, false));
     if (page === 1) setPage(2);
     else {
-      const form = new FormData();
-      form.append("first_name", values.firstname);
-      form.append("last_name", values.lastname);
-      form.append("email", values.email);
-      form.append("password", values.password);
-      form.append("mobile_number", values.phone);
-      // form.append("proof", values.proof); FILE UPLOAD
-      form.append("proof", "https://github.com/cerebro-iiitv/Cerebro-web-2022");
-      form.append("address", values.address);
-      form.append("institute_name", values.institute);
-      form.append("degree", values.degree);
       let res;
       try {
-        res = await axiosInstance.post("/account/signup/", form, {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
+        const fileUpload = new FormData();
+        fileUpload.append("pdf", values.proof);
+        fileUpload.append("email", values.email);
+        res = await axiosInstance.post("/docs/proof-upload/", fileUpload, {
+          headers: { "Content-Type": "multipart/form-data" },
         });
+        const id = res.data.id;
+        const data = {
+          first_name: values.firstname,
+          last_name: values.lastname,
+          email: values.email,
+          password: values.password,
+          mobile_number: values.phone,
+          proof_id: id,
+          address: values.address,
+          institute_name: values.institute,
+          degree: values.degree,
+        };
+        res = await axiosInstance.post("/account/signup/", data);
         if (res.status === 201) {
           setSubmitStatus(true);
         } else if (res.data.email[0]) {
           setFieldError("authentication", res.data.email[0]);
           setSubmitStatus(false);
         }
-      } catch {
+      } catch (error) {
         console.log(res);
-        setFieldError("authentication", res.data || "Error");
+        setFieldError("authentication", res.data || res.error || "Error");
       }
     }
     setSubmitting(false);

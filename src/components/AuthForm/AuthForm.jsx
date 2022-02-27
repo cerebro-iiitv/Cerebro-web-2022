@@ -2,11 +2,22 @@ import React from "react";
 import { Link } from "react-router-dom";
 import leftarm from "../../assets/images/left-arm.svg";
 import rightarm from "../../assets/images/right-arm.svg";
+import homeicon from "../../assets/images/home-icon.png";
 import "./AuthForm.scss";
 
 const AuthForm = ({ title, children, to, text, link }) => {
   return (
     <div className="authform">
+      <div className="authform__link">
+        <Link to="/" className="authform__link__container">
+          <img
+            src={homeicon}
+            alt="Home"
+            className="authform__link__container__icon"
+          />
+          <span className="authform__link__container__text">Home</span>
+        </Link>
+      </div>
       <div className="authform__pillar">
         <img
           src={leftarm}

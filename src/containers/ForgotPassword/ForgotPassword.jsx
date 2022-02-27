@@ -9,6 +9,7 @@ import {
   initialValues,
   validate,
 } from "./util/ForgotPasswordFormData";
+import "./ForgotPassword.scss";
 
 const ForgotPassword = () => {
   const [submitStatus, setSubmitStatus] = useState("");
@@ -36,7 +37,7 @@ const ForgotPassword = () => {
     >
       <Formik {...{ validate, initialValues, onSubmit }}>
         {({ isSubmitting, errors }) => (
-          <Form>
+          <Form className="forgot-password">
             {forgotPasswordFormData.map(({ label, name, type }, index) => (
               <FormInput
                 {...{ label, name, type }}
