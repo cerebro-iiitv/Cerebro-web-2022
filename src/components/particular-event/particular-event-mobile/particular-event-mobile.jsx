@@ -38,7 +38,7 @@ const ParticularMobileEvent = ({ currEvent, isLogged }) => {
     return (
         <div className="particular-event-section">
             <div className="event-desc">
-                <p className="desc">{currEvent.description}. For further communication join our <a href="#">Discord Server</a></p>
+                <p className="desc">{currEvent.description}. For further communication join our <a href="https://discord.gg/F5Z3Gqg9">Discord Server</a></p>
             </div>
             <div className="main-body">
                 {/* Time Line */}
@@ -72,8 +72,8 @@ const ParticularMobileEvent = ({ currEvent, isLogged }) => {
                         <p className="prize-details">{currEvent.team_size}</p>
                     </div>
                     <div className="rules-soc">
-                        <a href="#" className="rules">Rules and Regulations</a>
-                        <a href="#" className="social">Social Media</a>
+                        <a href="https://discord.gg/F5Z3Gqg9" className="rules">Rules and Regulations</a>
+                        <a href="https://discord.gg/F5Z3Gqg9" className="social">Social Media</a>
                     </div>
                 </div>
 
