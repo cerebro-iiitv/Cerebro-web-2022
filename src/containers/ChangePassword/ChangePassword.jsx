@@ -22,7 +22,7 @@ const ChangePassword = () => {
     let res;
     try {
       res = await axiosInstance.patch("/account/change-password/", data);
-      console.log(res);
+      // console.log(res);
       if (res.data.message) setSubmitStatus(res.data.message);
       else setFieldError("authentication", "An error occurred");
     } catch (error) {

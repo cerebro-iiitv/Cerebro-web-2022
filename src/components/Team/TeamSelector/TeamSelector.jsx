@@ -7,6 +7,7 @@ const TeamSelector = ({ teamOptions, selectedTeam, setSelectedTeam }) => {
             {
                 teamOptions.map((teamTitle, index) => (
                     <TeamSelectorItem
+                        key={index}
                         title={teamTitle}
                         selectedItem={selectedTeam}
                         setSelectedTeam={setSelectedTeam}

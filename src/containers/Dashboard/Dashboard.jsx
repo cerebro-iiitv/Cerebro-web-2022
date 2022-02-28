@@ -22,7 +22,7 @@ const Dashboard = () => {
     }
 
     const getEventsSectionData = (fetchedData) => {
-        const isEventsSectionDataPresent = fetchedData && fetchedData.registered_events && fetchedData.registered_events.length > 1;
+        const isEventsSectionDataPresent = fetchedData && fetchedData.registered_events && fetchedData.registered_events.length > 0;
         return isEventsSectionDataPresent ? fetchedData.registered_events.map(
             (event) => (
                 {
