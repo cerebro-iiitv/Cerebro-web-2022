@@ -19,6 +19,7 @@ import Events from "./containers/Events/Events";
 import PrivateRoute from "./components/RouteElements/PrivateRoute";
 import UserRoute from "./components/RouteElements/UserRoute";
 import "./App.css";
+import Team from "./containers/Team/Team";
 
 function App() {
   const auth = useAuth();
@@ -80,7 +81,7 @@ function App() {
             path="/team"
             element={
               <MainLayout status="hover" hover={hover} sethover={sethover}>
-                <div>{/* <h1>Team</h1> */}</div>
+                <Team />
               </MainLayout>
             }
           />

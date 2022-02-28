@@ -26,6 +26,11 @@ body {
 }
 
 @font-face {
+  font-family: Avenir Next;
+  src: url("./assets/fonts/AvenirNext.otf");
+}
+
+@font-face {
   font-family: Rekt Brush;
   src: url("./assets/fonts/RektBrush.otf");
 }
