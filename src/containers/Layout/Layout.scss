@@ -214,7 +214,19 @@
 }
 
 @media screen and (max-width:767px){
-  .visible-layer{
+  .navbarr-hover{
+    display: none;
+  }
+  .navbarr{
+    display: none;
+  }
+  .tophover{
+    display: none;
+  }
+  .hud-top{
+    display: none;
+  }
+  .login-button-container{
     display: none;
   }
 }

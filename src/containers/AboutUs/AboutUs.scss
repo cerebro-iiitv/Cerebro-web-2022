@@ -62,6 +62,10 @@ a {
     display: flex;
     flex-direction: row;
     align-items: center;
+
+    @media screen and (max-width:767px) {
+        flex-direction: column;
+    }
 }
 
 .aboutus-name {
@@ -71,7 +75,6 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    border-right: 3px solid #FFC700;
 }
 
 .aboutus-info {
@@ -81,6 +84,8 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-left: 3px solid #FFC700;
+
 }
 
 .sponsor-and-circles {
@@ -89,6 +94,10 @@ a {
     display: flex;
     flex-direction: row;
     align-items: center;
+
+    @media screen and (max-width:767px) {
+        flex-direction: column;
+    }
 
 }
 
@@ -372,7 +381,531 @@ a {
 }
 
 
+
+@media screen and (max-width:321px) {
+    .aboutus-main {
+        height: 100%;
+        width: 94vw;
+        margin-bottom: 0%;
+        background: url(../../assets/images/aboutus-background-mob-5.svg) no-repeat center center/contain;
+        &-content {
+            height: 90%;
+        }
+    }
+
+    .name-and-info{
+        height: 40%;
+    }
+
+    .aboutus-name{
+        width: 90%;
+       
+    }
+
+    .aboutus-info{
+        width: 90%;
+    
+    }
+
+    .aboutus-sponsor {
+        height: 40%;
+        width: 90%;
+    }
+
+    .aboutus-circles {
+        width: 90%;
+        border-top: 1px dashed rgba(255, 255, 255, 0.9);
+        background: none;
+        height: 40% ;
+    }
+
+   
+    .hov1, .hov2, .hov3 {
+        margin: 0%;
+        height: 70%;
+    }
+
+    .hov2{
+        transform: translateY(30%);
+    }
+
+    .infotext {
+        font-size: 14px;
+        line-height: 16px;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    .mainhead {
+        font-size: 36px;
+        line-height: 38px;
+        margin-left:0% ;
+
+    }
+
+    .sechead {
+        font-size: 18px;
+        line-height: 20px;
+        margin-left:0% ;
+
+    }
+    .sponsor-and-circles{
+        row-gap: 5%;
+        height: 50%;
+    }
+    .sponsordiv{
+        width: 40%;
+    }
+    .joindis {
+        font-size: 12px;
+        line-height: 16px;
+        margin-left:0% ;
+
+    }
+    .sponsordiv{
+        margin-left:0% ;
+        height: 30%;
+
+    }
+    .our-sponsors-text {
+        font-size: 14px;
+        line-height: 16px;
+    } 
+    
+    .fl1 {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .fl2 {
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    .fl3 {
+        font-size: 8px;
+        line-height: 10px;
+    }
+
+    .sl1 {
+        font-size: 14px;
+        line-height: 16px;
+    }
+}
+
+
+
+
+@media screen and (min-width:321px)  and (max-width:376px) {
+    .aboutus-main {
+        height: 100%;
+        width: 94vw;
+        margin-bottom: 0%;
+        background: url(../../assets/images/aboutus-background-mob-4.svg) no-repeat center center/contain;
+        &-content {
+            height: 90%;
+        }
+    }
+
+    .name-and-info{
+        height: 40%;
+    }
+
+    .aboutus-name{
+        width: 90%;
+       
+    }
+
+    .aboutus-info{
+        width: 90%;
+    
+    }
+
+    .aboutus-sponsor {
+        height: 40%;
+        width: 90%;
+    }
+
+    .aboutus-circles {
+        width: 90%;
+        border-top: 1px dashed rgba(255, 255, 255, 0.9);
+        background: none;
+        height: 40% ;
+    }
+
+   
+    .hov1, .hov2, .hov3 {
+        margin: 0%;
+        height: 70%;
+    }
+
+    .hov2{
+        transform: translateY(30%);
+    }
+
+    .infotext {
+        font-size: 14px;
+        line-height: 16px;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    .mainhead {
+        font-size: 36px;
+        line-height: 38px;
+        margin-left:0% ;
+
+    }
+
+    .sechead {
+        font-size: 18px;
+        line-height: 20px;
+        margin-left:0% ;
+
+    }
+    .sponsor-and-circles{
+        row-gap: 5%;
+        height: 50%;
+    }
+    .joindis {
+        font-size: 12px;
+        line-height: 16px;
+        margin-left:0% ;
+
+    }
+    .sponsordiv{
+        margin-left:0% ;
+        height: 30%;
+
+    }
+    .our-sponsors-text {
+        font-size: 14px;
+        line-height: 16px;
+    } 
+    
+    .fl1 {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .fl2 {
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    .fl3 {
+        font-size: 8px;
+        line-height: 10px;
+    }
+
+    .sl1 {
+        font-size: 14px;
+        line-height: 16px;
+    }
+}
+
+
+
+@media screen and (min-width: 376px) and (max-width:440px) {
+    .aboutus-main {
+        height: 90%;
+        width: 94vw;
+        margin-bottom: 0%;
+        background: url(../../assets/images/aboutus-background-mob-3.svg) no-repeat center center/contain;
+        &-content {
+            height: 95%;
+        }
+    }
+
+    .aboutus-name{
+        width: 90%;
+    }
+
+    .aboutus-info{
+        width: 90%;
+    }
+
+    .aboutus-sponsor {
+        height: 40%;
+        width: 90%;
+    }
+
+    .aboutus-circles {
+        width: 90%;
+        border-top: 1px dashed rgba(255, 255, 255, 0.9);
+        background: none;
+        height: 50% ;
+    }
+
+   
+    .hov1, .hov2, .hov3 {
+        margin: 0%;
+        height: 60%;
+    }
+
+    .hov2{
+        transform: translateY(30%);
+    }
+
+    .infotext {
+        font-size: 16px;
+        line-height: 18px;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    .mainhead {
+        font-size: 40px;
+        line-height: 38px;
+        margin-left:0% ;
+
+    }
+
+    .sechead {
+        font-size: 20px;
+        line-height: 22px;
+        margin-left:0% ;
+
+    }
+    .sponsor-and-circles{
+        row-gap: 5%;
+    }
+    .joindis {
+        font-size: 12px;
+        line-height: 16px;
+        margin-left:0% ;
+
+    }
+    .sponsordiv{
+        margin-left:0% ;
+        height: 30%;
+
+    }
+    .our-sponsors-text {
+        font-size: 16px;
+        line-height: 18px;
+    } 
+    
+    .fl1 {
+        font-size: 17px;
+        line-height: 19px;
+    }
+
+    .fl2 {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .fl3 {
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    .sl1 {
+        font-size: 18px;
+        line-height: 20px;
+    }
+}
+
+@media screen and (min-width: 440px) and (max-width:570px) {
+    .aboutus-main {
+        height: 90%;
+        width: 94vw;
+        margin-bottom: 0%;
+        background: url(../../assets/images/aboutus-background-mob-2.svg) no-repeat center center/contain;
+        &-content {
+            height: 82%;
+        }
+    }
+
+    .aboutus-name{
+        width: 90%;
+    }
+
+    .aboutus-info{
+        width: 90%;
+    }
+
+    .aboutus-sponsor {
+        height: 60%;
+        width: 90%;
+    }
+
+    .aboutus-circles {
+        width: 90%;
+        border-top: 1px dashed rgba(255, 255, 255, 0.9);
+        background: none;
+    }
+
+   
+    .hov1, .hov2, .hov3 {
+        margin: 0%;
+    }
+
+    .hov2{
+        transform: translateY(30%);
+
+    }
+
+    .infotext {
+        font-size: 16px;
+        line-height: 18px;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    .mainhead {
+        font-size: 40px;
+        line-height: 38px;
+        margin-left:0% ;
+
+    }
+
+    .sechead {
+        font-size: 20px;
+        line-height: 22px;
+        margin-left:0% ;
+
+    }
+    .sponsor-and-circles{
+        row-gap: 5%;
+    }
+    .joindis {
+        font-size: 12px;
+        line-height: 16px;
+        margin-left:0% ;
+
+    }
+    .sponsordiv{
+        margin-left:0% ;
+        height: 30%;
+
+    }
+    .our-sponsors-text {
+        font-size: 16px;
+        line-height: 18px;
+    } 
+    
+    .fl1 {
+        font-size: 17px;
+        line-height: 19px;
+    }
+
+    .fl2 {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .fl3 {
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    .sl1 {
+        font-size: 18px;
+        line-height: 20px;
+    }
+}
  
+
+
+@media screen and (min-width:570px) and (max-width:767px) {
+    .aboutus-main {
+        height: 90%;
+        width: 94vw;
+        margin-bottom: 0%;
+        background: url(../../assets/images/aboutus-background-mob-1.svg) no-repeat center center/contain;
+        &-content {
+            height: 82%;
+        }
+    }
+
+    .aboutus-name{
+        width: 90%;
+    }
+
+    .aboutus-info{
+        width: 90%;
+    }
+
+    .aboutus-sponsor {
+        height: 60%;
+        width: 90%;
+    }
+
+    .aboutus-circles {
+        width: 90%;
+        border-top: 1px dashed rgba(255, 255, 255, 0.9);
+        background: none;
+    }
+
+   
+    .hov1, .hov2, .hov3 {
+        margin: 0%;
+    }
+
+    .hov2{
+        transform: translateY(20%);
+    }
+    .infotext {
+        font-size: 16px;
+        line-height: 18px;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    .mainhead {
+        font-size: 40px;
+        line-height: 38px;
+        margin-left:0% ;
+
+    }
+
+    .sechead {
+        font-size: 20px;
+        line-height: 22px;
+        margin-left:0% ;
+
+    }
+    .sponsor-and-circles{
+        row-gap: 5%;
+    }
+    .joindis {
+        font-size: 12px;
+        line-height: 16px;
+        margin-left:0% ;
+
+    }
+    .sponsordiv{
+        margin-left:0% ;
+        height: 30%;
+
+    }
+    .our-sponsors-text {
+        font-size: 16px;
+        line-height: 18px;
+    } 
+    
+    .fl1 {
+        font-size: 17px;
+        line-height: 19px;
+    }
+
+    .fl2 {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .fl3 {
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    .sl1 {
+        font-size: 18px;
+        line-height: 20px;
+    }
+}
 
 
 @media screen and (min-width:767px) and (max-width:850px) {
