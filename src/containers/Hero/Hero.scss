@@ -1,20 +1,19 @@
-.desktop-hero{
-    height: 100vh;
-    width: 100vw;
-    
+.desktop-hero {
+  height: 100vh;
+  width: 100vw;
 }
 
-.mobile-hero{
-    height: 100vh;
-    width: 100vw;
+.mobile-hero {
+  height: 100vh;
+  width: 100vw;
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .mobile-hero {
+    display: block;
+  }
+  .desktop-hero {
     display: none;
-}
-
-@media screen and (max-width:767px){
-    .mobile-hero{
-        display: block;
-    }
-    .desktop-hero{
-        display: none;
-    }
+  }
 }
