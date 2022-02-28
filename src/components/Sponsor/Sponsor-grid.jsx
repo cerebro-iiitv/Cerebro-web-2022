@@ -8,7 +8,7 @@ import { default as rightArrow } from "../../assets/images/Sponsors/right-arrow.
 import ParticularSponsor from "../ParticularSponsorType/ParticularSponsor";
 
 const SponsorGrid = ({sponsorData, loadMore, loadLess, visible}) => {
-    console.log(sponsorData.length);
+    // console.log(sponsorData.length);
     return (
         <div className="grid">
             <div className="left-arrow">

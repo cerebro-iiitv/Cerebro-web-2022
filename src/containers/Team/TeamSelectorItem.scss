@@ -1,4 +1,5 @@
 .team-selector-item {
+  user-select: none;
   margin-top: 5px; // misc fix to align the dots
   width: 11%;
   display: flex;
@@ -39,6 +40,7 @@
     display: flex;
     align-items: center;
     button {
+      cursor: pointer;
       display: flex;
       justify-content: center;
       align-items: center;
