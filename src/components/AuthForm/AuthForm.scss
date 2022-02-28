@@ -133,6 +133,36 @@ $mobile: 600px;
             color: #ddb83a;
           }
         }
+
+        &__home {
+          cursor: pointer;
+          width: 150px;
+          height: 39px;
+          background: rgba(28, 160, 255, 0.6);
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          border-radius: 5px;
+          margin-bottom: 10px;
+
+          &:active {
+            box-shadow: 0 1px #666;
+            transform: translateY(0.5px);
+          }
+
+          &__link {
+            font-family: Barlow;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            color: #ffffff;
+          }
+
+          @media screen and (min-width: $tablet) {
+            display: none;
+          }
+        }
       }
     }
   }

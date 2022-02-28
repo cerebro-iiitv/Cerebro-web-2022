@@ -50,6 +50,10 @@ const JoinTeam = () => {
       Object.keys(event.registration_attributes).forEach((field) => {
         if (!values[field]) {
           errors[field] = "Required";
+        } else if (event.registration_attributes[field] === "int") {
+          if (!values[field].test(/^\d+$/)) {
+            errors[field] = "Must be an integer";
+          }
         }
       });
     }
@@ -60,6 +64,7 @@ const JoinTeam = () => {
     try {
       if (event.team_event) {
         const data = {
+          event_id: eventId,
           team_code: values.team_code,
           registration_data: { ...values },
         };

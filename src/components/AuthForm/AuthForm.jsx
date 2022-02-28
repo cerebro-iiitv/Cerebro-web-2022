@@ -32,6 +32,14 @@ const AuthForm = ({ title, children, to, text, link }) => {
         <div className="authform__center__form">
           <div className="authform__center__form__container">
             {children}
+            <span className="authform__center__form__container__home">
+              <Link
+                to="/"
+                className="authform__center__form__container__home__link"
+              >
+                Home
+              </Link>
+            </span>
             <span className="authform__center__form__container__text">
               {`${text} `}
               <Link

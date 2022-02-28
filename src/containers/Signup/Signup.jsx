@@ -38,7 +38,7 @@ const Signup = () => {
           email: values.email,
           password: values.password,
           mobile_number: values.phone,
-          proof_id: id,
+          proof: id,
           address: values.address,
           institute_name: values.institute,
           degree: values.degree,
@@ -48,6 +48,9 @@ const Signup = () => {
           setSubmitStatus(true);
         } else if (res.data.email[0]) {
           setFieldError("authentication", res.data.email[0]);
+          setSubmitStatus(false);
+        } else {
+          setFieldError("authentication", "Something went wrong");
           setSubmitStatus(false);
         }
       } catch (error) {
