@@ -1,0 +1,373 @@
+.particular-event-section {
+    height: 100%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    .event-desc {
+        // height: 20%;
+        display: flex;
+        justify-content: center;
+        width: 70%;
+        font-family: Barlow;
+        color: white;
+        font-size: 0.8rem;
+        margin-bottom: 2%;
+
+        .desc {
+            text-align: center;
+            a{
+                text-decoration: none;
+                color: #1CA0FF;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .main-body {
+        padding: 4% 0;
+        background: linear-gradient(105.87deg, rgba(51, 169, 255, 0.31) 3.04%, rgba(255, 255, 255, 0) 96.05%);
+        filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25));
+        backdrop-filter: blur(80px);
+        border-radius: 20px;
+        // border: 1px solid #5dbbff;
+        height: 90%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .time-line {
+            width: 80%;
+            display: flex;
+            justify-content: center;
+
+            .to-dot {
+                margin-left: 8%;
+                margin-right: 8%;
+            }
+
+            .date1 {
+                background-image: url("../../../assets/images/Events/time-background.svg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 165px;
+                padding: 8px 0px;
+
+                .date1-items {
+                    color: white;
+                    font-family: Barlow;
+                    text-align: center;
+                    font-size: 15px;
+                }
+
+                .time {
+                    color: white;
+                    font-family: Barlow;
+                    font-size: 15px;
+                }
+
+                .date-line {
+                    width: 65%;
+                    height: 0.5rem;
+                }
+            }
+        }
+
+        .mid-line {
+            width: 80%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .queries{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            color: white;
+            // border: 1px solid white;
+            width: 70%;
+            .prize,.team{
+                // border: 1px solid white;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                .prize-query{
+                    // border: 1px solid white;
+                    text-align: left;
+                    font-family: Poppins;
+                    color: #1CA0FF;
+                    font-weight: bold;
+                    font-size: 1.4rem;
+                    @media only screen and (max-width: 600px){
+                        font-size: 1.2rem;
+                    }
+                    @media only screen and (max-width: 425px){
+                        font-size: 1rem;
+                    }
+                    width: 100%;
+                }
+                .prize-details{
+                    width: 40%;
+                    text-align: left;
+                    font-family: Poppins;
+                    font-weight: bold;
+                    font-size: 1.4rem;
+                    @media only screen and (max-width: 600px){
+                        font-size: 1.2rem;
+                    }
+                    @media only screen and (max-width: 425px){
+                        font-size: 1rem;
+                    }
+                }
+            }
+            .rules-soc{
+                margin-top: 5%;
+                text-decoration: none;
+                font-family: Poppins;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                a{
+                    color: #FFC700;
+                    @media only screen and (max-width: 600px){
+                        font-size: 0.8rem;
+                    }
+                    @media only screen and (max-width: 425px){
+                        font-size: 0.7rem;
+                    }
+                }
+            }
+        }
+
+        .organizers{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            // border: 1px solid white;
+            width: 70%;
+            // border: 1px solid white;
+            .convenor-details{
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                .convenor-query{
+                    font-weight: 700;
+                    width: 30%;
+                    color: #1CA0FF;
+                    font-family: Poppins;
+                    font-size: 1rem;
+                    @media only screen and (max-width: 600px){
+                        font-size: 0.8rem;
+                    }
+                    @media only screen and (max-width: 425px){
+                        font-size: 0.7rem;
+                    }
+
+                }
+                .convenor-details{
+                    padding-left: 18%;
+                    width: 55%;
+                    color: white;
+                    font-family: Poppins;
+                    font-size: 1rem;
+                    @media only screen and (max-width: 600px){
+                        font-size: 0.8rem;
+                    }
+                    @media only screen and (max-width: 425px){
+                        font-size: 0.7rem;
+                    }
+                }
+            }
+            .co-convenor-details{
+                margin-top: 2%;
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                .co-convenor-query{
+                    font-weight: 700;
+                    width: 30%;
+                    color: #1CA0FF;
+                    font-family: Poppins;
+                    font-size: 1rem;
+                    @media only screen and (max-width: 600px){
+                        font-size: 0.8rem;
+                    }
+                    @media only screen and (max-width: 425px){
+                        font-size: 0.7rem;
+                    }
+                }
+                .co-dets{
+                    width: 55%;
+                    padding-left: 18%;
+
+                    // border: 1px solid red;
+                    .co-convenor-details{
+                        color: white;
+                        font-family: Poppins;
+                        font-size: 1rem;
+                        @media only screen and (max-width: 600px){
+                            font-size: 0.8rem;
+                        }
+                        @media only screen and (max-width: 425px){
+                            font-size: 0.7rem;
+                        }
+                    }
+                }
+            }
+            .members-details{
+                margin-top: 2%;
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                .members-query{
+                    font-weight: 700;
+                    width: 30%;
+                    color: #1CA0FF;
+                    font-family: Poppins;
+                    font-size: 1rem;
+                    @media only screen and (max-width: 600px){
+                        font-size: 0.8rem;
+                    }
+                    @media only screen and (max-width: 425px){
+                        font-size: 0.7rem;
+                    }
+                }
+                .mem-dets{
+                    padding-left: 18%;
+                    width: 55%;
+                    .mem-details{
+                        color: white;
+                        font-family: Poppins;
+                        font-size: 1rem;
+                        @media only screen and (max-width: 600px){
+                            font-size: 0.8rem;
+                        }
+                        @media only screen and (max-width: 425px){
+                            font-size: 0.7rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .buttonCont {
+            display: flex;
+            justify-content: center;
+            width: 80%;
+
+            .button-container {
+                
+                .submit-text {
+                    // border: 1px solid white;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                  
+                    .dashBoardDets{
+                        font-size: 1.2rem;
+                        color: #F8B813;
+                        font-family: Barlow;
+                        @media only screen and (max-width: 485px){
+                            font-size: 0.9rem;
+                        }
+                        @media only screen and (max-width: 361px){
+                            font-size: 0.6rem;
+                        }
+                    }
+                    .text_image{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        .submitted_text {
+                            color: #F8B813;
+                            font-family: Barlow;
+                            font-size: 1.2rem !important;
+                            @media only screen and (max-width: 485px){
+                                font-size: 0.9rem !important;
+                            }
+                            @media only screen and (max-width: 361px){
+                                font-size: 0.6rem !important;
+                            }
+                            margin-right: 4%;
+                        }
+                        .green-tick{
+                            width: 10%;
+                        }
+                    }
+
+                    
+                   
+                    .team_code_text {
+                        color: #F8B813;
+                        font-family: Barlow;
+                        .teamcodequery{
+                            font-size: 1.2rem;
+                            @media only screen and (max-width: 485px){
+                                font-size: 0.9rem;
+                            }
+                            @media only screen and (max-width: 361px){
+                                font-size: 0.6rem;
+                            }
+                        }
+                        .teamCode{
+                            color: white;
+                            font-weight: bold;
+                            font-family: Barlow;
+                            font-size: 1.2rem;
+                            @media only screen and (max-width: 485px){
+                                font-size: 0.9rem;
+                            }
+                            @media only screen and (max-width: 361px){
+                                font-size: 0.6rem;
+                            }
+                        }
+                    }
+                }
+
+                width: 100%;
+                display: flex;
+                justify-content: center;
+
+                .mid-button-line {
+                    margin-left: 7%;
+                    margin-right: 4%;
+                }
+
+                #single-button {
+                    margin-right: -3%;
+                }
+
+                button {
+                    font-family: Barlow;
+                    font-weight: 700;
+                    border: none;
+                    border-radius: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 10rem;
+                    padding: 0.30em 0;
+                    background-color: #EBC027;
+                    color: #29457C;
+                    font-size: 16px;
+                    box-shadow: 0px 3.17885px 3.17885px rgba(0, 0, 0, 0.25);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

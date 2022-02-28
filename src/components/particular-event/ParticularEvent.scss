@@ -362,7 +362,7 @@
 
         .right-door {
             height: 100%;
-            transform: rotateZ(180deg);
+            transform: rotateY(180deg);
         }
     }
 
@@ -411,11 +411,6 @@
             width: 80%;
             display: flex;
             justify-content: center;
-
-            .to-dot {
-                margin-left: 8%;
-                margin-right: 8%;
-            }
 
             .to-dot {
                 margin-left: 8%;
