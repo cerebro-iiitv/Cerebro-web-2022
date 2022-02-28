@@ -10,7 +10,7 @@ $mobile-view: 767px;
 }
 
 
-#black-background {
+#blur-background {
     position: fixed;
     top: 0;
     left: 0;
@@ -37,7 +37,7 @@ $mobile-view: 767px;
 }
     
 
-.black-background-visible {
+.blur-background-visible {
     display: block !important;
 }
 
@@ -47,7 +47,7 @@ $mobile-view: 767px;
     width: 20%;
     z-index: 1;
     img {
-        width: 40px;
+        
         transition: 0.1s linear;
         
         &:hover {
@@ -182,4 +182,41 @@ color: #FFFFFF;
     align-items: center;
     text-align: center;
     
+}
+
+@media screen and (min-width:380px) and (max-width:480px) {
+    .elements{
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .btn_element{
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .burger-heading{
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .burger-icon{
+        width: 30px;
+    }
+}
+
+
+@media screen and (min-width:280px) and (max-width:380px) {
+    .elements{
+        font-size: 12px;
+        line-height: 22px;
+    }
+    .btn_element{
+        font-size: 12px;
+        line-height: 22px;
+    }
+    .burger-heading{
+        font-size: 12px;
+        line-height: 22px;
+    }
+    .burger-icon{
+        width: 25px;
+    }
 }

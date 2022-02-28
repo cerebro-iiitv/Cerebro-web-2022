@@ -807,12 +807,17 @@ a {
 
  @media screen and (max-width:321px) {
     .aboutus-main {
-        height: 100%;
+        margin-top: 15%;
+        height: 90%;
         width: 94vw;
+        background: linear-gradient(105.87deg, rgba(51, 169, 255, 0.31) 3.04%, rgba(255, 255, 255, 0) 96.05%);
+       
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255, 255, 255, 0.4);
+        border-radius: 20px;
         margin-bottom: 0%;
-        background: url(../../assets/images/aboutus-background-mob-5.svg) no-repeat center center/contain;
         &-content {
-            height: 90%;
+            height: 100%;
         }
     }
 
@@ -921,12 +926,18 @@ a {
 
 @media screen and (min-width:321px)  and (max-width:376px) {
     .aboutus-main {
-        height: 100%;
+        margin-top: 10%;
+
+        height: 90%;
         width: 94vw;
         margin-bottom: 0%;
-        background: url(../../assets/images/aboutus-background-mob-4.svg) no-repeat center center/contain;
+        background: linear-gradient(105.87deg, rgba(51, 169, 255, 0.31) 3.04%, rgba(255, 255, 255, 0) 96.05%);
+        border-radius: 20px;
+       
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255, 255, 255, 0.4);
         &-content {
-            height: 90%;
+            height: 100%;
         }
     }
 
@@ -1031,12 +1042,18 @@ a {
 
 @media screen and (min-width: 376px) and (max-width:440px) {
     .aboutus-main {
+        margin-top: 7%;
+
         height: 90%;
         width: 94vw;
         margin-bottom: 0%;
-        background: url(../../assets/images/aboutus-background-mob-3.svg) no-repeat center center/contain;
+        background: linear-gradient(105.87deg, rgba(51, 169, 255, 0.31) 3.04%, rgba(255, 255, 255, 0) 96.05%);
+        border-radius: 20px;
+       
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255, 255, 255, 0.4);
         &-content {
-            height: 95%;
+            height: 100%;
         }
     }
 
@@ -1132,12 +1149,18 @@ a {
 
 @media screen and (min-width: 440px) and (max-width:570px) {
     .aboutus-main {
+        margin-top: 7%;
+
         height: 90%;
         width: 94vw;
         margin-bottom: 0%;
-        background: url(../../assets/images/aboutus-background-mob-2.svg) no-repeat center center/contain;
+        background: linear-gradient(105.87deg, rgba(51, 169, 255, 0.31) 3.04%, rgba(255, 255, 255, 0) 96.05%);
+        border-radius: 20px;
+       
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255, 255, 255, 0.4);
         &-content {
-            height: 82%;
+            height: 100%;
         }
     }
 
@@ -1234,12 +1257,16 @@ a {
 
 @media screen and (min-width:570px) and (max-width:767px) {
     .aboutus-main {
+        margin-top: 7%;
         height: 90%;
         width: 94vw;
         margin-bottom: 0%;
-        background: url(../../assets/images/aboutus-background-mob-1.svg) no-repeat center center/contain;
+        background: linear-gradient(105.87deg, rgba(51, 169, 255, 0.31) 3.04%, rgba(255, 255, 255, 0) 96.05%);
+       border-radius: 20px;
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255, 255, 255, 0.4);
         &-content {
-            height: 82%;
+            height: 100%;
         }
     }
 

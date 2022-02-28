@@ -22,6 +22,7 @@ return (
         
           <div className="burger-container">
             <img
+            className="burger-icon"
               src={burgericon}
               alt="Open menu"
               onClick={toggledrawer}
@@ -29,8 +30,8 @@ return (
           </div>
 
           <div
-            id="black-background"
-            className={ drawerOut ? "black-background-visible" : null}
+            id="blur-background"
+            className={ drawerOut ? "blur-background-visible" : null}
             onClick={closedrawer}
           />
 
@@ -41,6 +42,7 @@ return (
             <div className="burger-header">
             <div id="drawer-button" className="burger-container insidedrawer">
             <img
+            className="burger-icon"
               src={burgericon}
               alt="Open menu"
               onClick={toggledrawer}
