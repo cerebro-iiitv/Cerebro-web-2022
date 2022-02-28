@@ -10,6 +10,8 @@ const Dashboard = () => {
     const [userData, setUserData] = useState({ infoCardData: {}, eventsSectionData: [] });
     const [isLoading, setIsLoading] = useState(true);
 
+    console.log(userData);
+
     const getInfoCardData = (fetchedData) => {
         const isInfoCardDataPresent = fetchedData && fetchedData.personal_details;
         return isInfoCardDataPresent ? {
@@ -22,7 +24,7 @@ const Dashboard = () => {
     }
 
     const getEventsSectionData = (fetchedData) => {
-        const isEventsSectionDataPresent = fetchedData && fetchedData.registered_events && fetchedData.registered_events.length > 1;
+        const isEventsSectionDataPresent = fetchedData && fetchedData.registered_events && fetchedData.registered_events.length > 0;
         return isEventsSectionDataPresent ? fetchedData.registered_events.map(
             (event) => (
                 {
