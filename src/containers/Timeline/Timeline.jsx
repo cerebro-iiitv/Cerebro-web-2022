@@ -3,6 +3,7 @@ import TimelineItem from "../../components/TimelineItem/TimelineItem";
 import { timelineData } from "./util/TimelineData";
 import useHorizontalScroll from "../../hooks/useHorizontalScroll";
 import "./Timeline.scss";
+import MobileTitle from "../../components/MobileTitle/MobileTitle";
 
 const Timeline = () => {
   const scrollRef = useHorizontalScroll();
@@ -21,6 +22,7 @@ const Timeline = () => {
 
   return (
     <>
+      <MobileTitle title="Timeline"/>
       <div className="timeline" ref={scrollRef}>
         <div className="timeline__container">
           <div className="timeline__container__upper">

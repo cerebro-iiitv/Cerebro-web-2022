@@ -1,11 +1,24 @@
+$tablet: 1000px;
+$mobile: 600px;
+$small-mobile: 400px;
+
 .forminput {
   display: flex;
   flex-direction: column;
   align-items: center;
+  // width: 100%;
   input:-webkit-autofill,
   textarea:-webkit-autofill,
   select:-webkit-autofill {
     transition-delay: 3600s;
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
   }
 
   &__label {
@@ -62,6 +75,7 @@
       padding: 5px 5px;
       resize: none;
       overflow-y: clip;
+      height: 100px !important;
     }
 
     &__email {
@@ -80,11 +94,17 @@
       float: left;
       padding-right: 20px;
     }
+
+    &__proof {
+      label {
+        margin-top: 10px;
+      }
+    }
   }
 
   &__login {
     &__email {
-      width: 544.65px;
+      width: 500px;
       margin-bottom: 10px;
     }
   }
@@ -107,9 +127,121 @@
   }
 
   &__change-pass {
-    &__oldPassword, &__newPassword, &__confirmPassword {
+    &__oldPassword,
+    &__newPassword,
+    &__confirmPassword {
       margin-bottom: 10px;
       width: 450px;
+    }
+  }
+
+  &__join-team {
+    &__team_code {
+      padding: 4px;
+
+      label {
+        font-family: Barlow;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 28px;
+        color: #ffffff;
+        margin-bottom: 5px;
+      }
+
+      input {
+        font-size: 20px;
+        font-weight: 700;
+        background: #b2d5ff;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 7px;
+        color: #000000;
+      }
+    }
+  }
+
+  &__create-team {
+    &__team_name {
+      label {
+        font-family: Barlow;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 28px;
+        color: #ffffff;
+        margin-bottom: 5px;
+      }
+
+      input {
+        font-size: 20px;
+        font-weight: 700;
+        background: #b2d5ff;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 7px;
+        color: #000000;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .forminput {
+    &__login {
+      &__email {
+        width: 95%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .forminput {
+    width: 85%;
+
+    &__label {
+      text-align: center;
+    }
+
+    &__field {
+      width: 100%;
+    }
+
+    &__create-team__team_name,
+    &__join-team__team_code {
+      label {
+        font-size: 24px;
+      }
+    }
+
+    &__signup {
+      width: 100%;
+      margin-top: 20px;
+
+      &__firstname {
+        float: none;
+        padding: 10px 0px;
+      }
+
+      &__password {
+        float: none;
+      }
+
+      &__address {
+        padding: 2px;
+        label {
+          padding-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $small-mobile) {
+  .forminput {
+    &__signup {
+      &__proof {
+        input {
+          width: 100px;
+        }
+      }
     }
   }
 }

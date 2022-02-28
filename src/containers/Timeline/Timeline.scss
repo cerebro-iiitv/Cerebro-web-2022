@@ -1,3 +1,6 @@
+$mobile: 600px;
+$small-mobile: 400px;
+
 .timeline {
   padding-left: 80px;
   height: 100%;
@@ -17,15 +20,25 @@
     box-shadow: inset 100px 0px 50px -25px rgb(7, 30, 64, 1),
       inset -150px 0 50px -55px rgb(7, 30, 64, 1);
     pointer-events: none;
-  }
 
-  @media screen and (min-height: 600px) {
-    align-items: center;
+    @media screen and (max-width: $mobile) {
+      box-shadow: inset 70px 0px 50px -25px rgb(7, 30, 64, 1),
+        inset -125px 0 50px -55px rgb(7, 30, 64, 1);
+    }
   }
 
   &::-webkit-scrollbar {
     width: 0px;
     background: transparent;
+  }
+
+  @media screen and (min-height: $mobile) {
+    height: 95%;
+    align-items: center;
+  }
+
+  @media screen and (max-width: $mobile) {
+    padding-left: 30px;
   }
 
   &__container {
@@ -129,6 +142,10 @@
         border: 1px solid #e4c142;
         border-radius: 7px 7px 7px 7px;
       }
+
+      @media screen and (max-width: $mobile) {
+        display: none;
+      }
     }
 
     &__left {
@@ -153,6 +170,10 @@
         background-color: #e4c142;
         border: 1px solid #e4c142;
         border-radius: 7px 7px 7px 7px;
+      }
+
+      @media screen and (max-width: $mobile) {
+        display: none;
       }
     }
   }

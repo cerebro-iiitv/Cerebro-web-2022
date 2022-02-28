@@ -12,12 +12,14 @@ import ChangePassword from "./containers/ChangePassword/ChangePassword";
 import Timeline from "./containers/Timeline/Timeline";
 import FAQs from "./containers/FAQs/FAQs";
 import Sponsors from "./containers/Sponsors/Sponsors";
+import JoinTeam from "./containers/JoinTeam/JoinTeam";
+import CreateTeam from "./containers/CreateTeam/CreateTeam";
+import VerifyEmail from "./containers/VerifyEmail/VerifyEmail";
+import Events from "./containers/Events/Events";
 import PrivateRoute from "./components/RouteElements/PrivateRoute";
 import UserRoute from "./components/RouteElements/UserRoute";
 import "./App.css";
 import Team from "./containers/Team/Team";
-
-import Events from "./containers/Events/Events";
 
 function App() {
   const auth = useAuth();
@@ -29,6 +31,7 @@ function App() {
   if (token) {
     auth.login(token);
   }
+
   return (
     <div className="App">
       <BrowserRouter>
@@ -36,25 +39,22 @@ function App() {
           <Route
             path="/"
             element={
-              <>
-                <MainLayout status="no-hover" hover={hover} sethover={sethover}>
-                  <Hero
-                    redir={redirect}
-                    setredir={setredirect}
-                    flagprop={flag}
-                    setflagprop={setflag}
-                  />
-                </MainLayout>
-              </>
+              <MainLayout status="no-hover" hover={hover} sethover={sethover}>
+                <Hero
+                  redir={redirect}
+                  setredir={setredirect}
+                  flagprop={flag}
+                  setflagprop={setflag}
+                />
+              </MainLayout>
             }
           />
-        </Routes>
 
-        <Routes>
           <Route element={<UserRoute />}>
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/forgot-password" element={<ForgotPassword />} />
+            <Route path="/account/email-verify" element={<VerifyEmail />} />
             <Route
               path="/account/password-reset/:uidb64/:token"
               element={<ResetPassword />}
@@ -64,9 +64,9 @@ function App() {
           <Route element={<PrivateRoute />}>
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/change-password" element={<ChangePassword />} />
+            <Route path="/event/join/:eventName" element={<JoinTeam />} />
+            <Route path="/event/create/:eventName" element={<CreateTeam />} />
           </Route>
-
-          <Route path="/dashboard" element={<p>Hello Human</p>} />
 
           <Route
             path="/sponsors"
@@ -97,7 +97,6 @@ function App() {
             path="/event"
             element={
               <MainLayout status="hover" hover={hover} sethover={sethover}>
-                <div>{/* <h1>Event</h1> */}</div>
                 <Events />
               </MainLayout>
             }
