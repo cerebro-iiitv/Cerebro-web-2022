@@ -6,22 +6,27 @@ import FormInput from "../../components/FormInput/FormInput";
 import EventBtn from "../../components/EventBtn/EventBtn";
 import Loading from "../../components/Loading/Loading";
 import axiosInstance from "../../services/AxiosInstance";
+import eventData from "../Events/util/EventData.json";
 import "./CreateTeam.scss";
 
 const CreateTeam = () => {
   const navigate = useNavigate();
-  const { eventId } = useParams();
+  const { eventName } = useParams();
   const [event, setEvent] = useState(null);
   const [teamCode, setTeamCode] = useState("");
   const [submitStatus, setSubmitStatus] = useState("");
+  const [eventId, setEventId] = useState("");
   const mountedRef = useRef(true);
 
   useEffect(() => {
     const getData = async () => {
       try {
-        const res = await axiosInstance.get(`/events/${eventId}`);
+        const id = eventData[eventName];
+        if (!id) throw new Error("Event not found");
+        setEventId(id);
+        const res = await axiosInstance.get(`/events/${id}`);
         if (!res.data.team_event || res.data.is_registered) {
-          navigate(`/event/join/${eventId}`);
+          navigate(`/event/join/${id}`);
         }
         setEvent(res.data);
       } catch {
@@ -30,7 +35,7 @@ const CreateTeam = () => {
     };
     getData();
     return () => (mountedRef.current = false);
-  }, [eventId, navigate]);
+  }, [eventName, navigate]);
 
   const toLabel = (field) =>
     field

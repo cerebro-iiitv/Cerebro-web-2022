@@ -64,8 +64,8 @@ function App() {
           <Route element={<PrivateRoute />}>
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/change-password" element={<ChangePassword />} />
-            <Route path="/event/join/:eventId" element={<JoinTeam />} />
-            <Route path="/event/create/:eventId" element={<CreateTeam />} />
+            <Route path="/event/join/:eventName" element={<JoinTeam />} />
+            <Route path="/event/create/:eventName" element={<CreateTeam />} />
           </Route>
 
           <Route

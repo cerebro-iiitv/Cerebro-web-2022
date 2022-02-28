@@ -6,25 +6,30 @@ import FormInput from "../../components/FormInput/FormInput";
 import EventBtn from "../../components/EventBtn/EventBtn";
 import Loading from "../../components/Loading/Loading";
 import axiosInstance from "../../services/AxiosInstance";
+import eventData from "../Events/util/EventData.json";
 import "./JoinTeam.scss";
 
 const JoinTeam = () => {
-  const { eventId } = useParams();
+  const { eventName } = useParams();
   const navigate = useNavigate();
   const [event, setEvent] = useState(null);
   const [submitStatus, setSubmitStatus] = useState("");
+  const [eventId, setEventId] = useState("");
 
   useEffect(() => {
     const getData = async () => {
       try {
-        const res = await axiosInstance.get(`/events/${eventId}`);
+        const id = eventData[eventName];
+        if (!id) throw new Error("Event not found");
+        setEventId(id);
+        const res = await axiosInstance.get(`/events/${id}`);
         setEvent(res.data);
       } catch {
         navigate("/event");
       }
     };
     getData();
-  }, [eventId, navigate]);
+  }, [navigate, eventName]);
 
   const toLabel = (field) =>
     field
