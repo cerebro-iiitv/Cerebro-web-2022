@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import HeroInitial from "../../components/Hero-Initial/Hero-Initial";
 import AboutUs from "../AboutUs/AboutUs";
+import "./Hero.scss"
 const Hero = (props) => {
   class Redeeirect extends Component {
     componentDidMount() {
@@ -24,8 +25,13 @@ const Hero = (props) => {
 
   return (
     <>
+    <div className="desktop-hero">
       <Redeeirect />
-    </>
+    </div>
+     <div className="mobile-hero">
+     <AboutUs />
+   </div>
+   </>
   );
 };
 

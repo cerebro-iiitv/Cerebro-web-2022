@@ -4,7 +4,7 @@ import dashboard from "../../assets/images/dashboard icon.svg";
 import useAuth from "../../hooks/useAuth";
 import {Link} from "react-router-dom";
 import React from "react";
-
+import BurgerNav from "../../components/BurgerNav/BurgerNav";
 
 const Layout = (props) => {
 
@@ -56,7 +56,9 @@ const HandleMouseLeave = () => {
   return (
     <>
       <div className="visible-layer">
+        <BurgerNav />
         <div className="login-button-container">
+
           <LogStatus />
         </div>
         <div className="main-content" id="main-content"> {props.children} </div>
