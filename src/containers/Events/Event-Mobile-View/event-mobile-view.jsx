@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axiosInstance from "../../../services/AxiosInstance";
-import {default as logo} from '../../../assets/images/Events/Logo.png';
 
 import { default as useAuth } from '../../../hooks/useAuth';
 import LoadingSpinner from "../../../components/LoadingSpinner/LoadingSpinner";
