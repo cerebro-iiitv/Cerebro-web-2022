@@ -20,15 +20,6 @@ const EventMobile = () => {
             // Using axios instance to get the data
             var data = await axiosInstance.get('/events/');
             data = data.data;
-            // To change the name of csgo and codm
-            data[8].title = "CSGO";
-            data[11].title = "CODM";
-
-            // swap event at index 14 and 17
-            var temp = data[14];
-            data[14] = data[17];
-            data[17] = temp;
-
             setCurrEvent(data[0]);
             setEvents(data);
             setLoading(false);
@@ -53,7 +44,6 @@ const EventMobile = () => {
                             <EventMobileScroll events = {events} currIdx = {currIdx} onTouchOpen={onTouchLoadEvent}/>
                         </div>
 
-{/* Continue with the making of following components */}
 
                         <div className="particular-event-display">
                             <ParticularMobileEvent isLogged = {auth.isLoggedIn} currEvent = {currEvent}/>

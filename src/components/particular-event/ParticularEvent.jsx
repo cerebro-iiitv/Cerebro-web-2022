@@ -13,7 +13,7 @@ import { default as greenTick } from '../../assets/images/Events/green-tick.svg'
 
 // configuring toast
 toast.configure()
-export const ParticularEvent = ({ eventId, team_code, submitted, isLogged, isReg, subReq, title, start_time, prize, end_time, description, team_size, convenor, co_convenor1, co_convenor2, mem1, mem2 }) => {
+export const ParticularEvent = ({ shortName, rulesDoc, socialMedia, eventId, team_code, submitted, isLogged, isReg, subReq, title, start_time, prize, end_time, description, team_size, convenor, co_convenor1, co_convenor2, mem1, mem2 }) => {
 
   // subReq = true;
   // submitted = true;
@@ -21,6 +21,9 @@ export const ParticularEvent = ({ eventId, team_code, submitted, isLogged, isReg
   // isReg = undefined;
   // submitted = undefined;
   // subReq = undefined;
+  const startDate = start_time.split("-");
+  const endDate = end_time.split("-");
+  console.log(startDate);
 
   if (title === "CSGO") {
     title = "Counter-Strike: Global Offensive";
@@ -63,15 +66,15 @@ export const ParticularEvent = ({ eventId, team_code, submitted, isLogged, isReg
 
         <div className='time-line'>
           <div className='date1'>
-            <p className='date1-items'>{start_time} </p>
+            <p className='date1-items'>{startDate[0]} </p>
             <img src={dateLine} alt="date-line" className='date-line' />
-            <p> 8:00PM</p>
+            <p>{startDate[1]}</p>
           </div>
           <img src={toDot} alt="to-dot" className='to-dot' />
           <div className='date1'>
-            <p className='date1-items'>{end_time} </p>
+            <p className='date1-items'>{endDate[0]} </p>
             <img src={dateLine} alt="date-line" className='date-line' />
-            <p>8:00PM</p>
+            <p>{endDate[1]}</p>
           </div>
         </div>
 
@@ -93,8 +96,8 @@ export const ParticularEvent = ({ eventId, team_code, submitted, isLogged, isReg
             </div>
 
             <div className="rules">
-              <p className='rules-regulations'> <a href="https://discord.gg/QaYWmeBc">Rules and Regulations</a> <br />
-                <a href="https://discord.gg/QaYWmeBc">Social Media</a>
+              <p className='rules-regulations'> <a href={rulesDoc}>Rules and Regulations</a> <br />
+                <a href={socialMedia}>Social Media</a>
               </p>
             </div>
           </div>
@@ -129,10 +132,10 @@ export const ParticularEvent = ({ eventId, team_code, submitted, isLogged, isReg
                 {/* <button id="single-button" onClick={authNotifier}>Register</button> */}
                 {
                   team_size === 1 ?
-                    <a id='single-button' href={`event/join/${eventId}`} onClick={authNotifier}>Register</a>
+                    <a id='single-button' href={null} onClick={authNotifier}>Register</a>
                     :
 
-                    <a id="single-button" href={`event/create/${eventId}`} onClick={authNotifier}>Register</a>
+                    <a id="single-button" href={null} onClick={authNotifier}>Create Team</a>
                 }
 
                 {
@@ -144,7 +147,7 @@ export const ParticularEvent = ({ eventId, team_code, submitted, isLogged, isReg
                 {
                   team_size > 1 ?
 
-                  <a href={`event/join/${eventId}`} onClick={authNotifier}>Join Team</a>
+                  <a href={null} onClick={authNotifier}>Join Team</a>
                     :
                     ""
                 }

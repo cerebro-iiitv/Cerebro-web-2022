@@ -2,19 +2,18 @@
     "faqs": [
         {
             "id": 1,
-            "question": "Who can register for the fest?",
-            "answer": "Anyone who is pursuing an undergraduate degree in India across any stream is eligible to register for the fest. Undergraduate students pursuing a degree in any other country apart from India are not permitted to register for the fest. Graduated students from any institute are not eligible for the registration in this fest."
-        },
-        {
-            "id": 2,
             "question": "Is there any participation fee?",
             "answer": "You can participate free of cost! There is absolutely no participation fees."
         },
-
         {
-            "id": 3,
+            "id": 2,
             "question": "Why do I need to join the discord server?",
             "answer": "All communication like match fixtures, submission forms and more will be communicated through discord server only and there are dedicated channels for queries between participants and organizers."
+        },
+        {
+            "id": 3,
+            "question": "Who can register for the fest?",
+            "answer": "Anyone who is pursuing an undergraduate degree in India across any stream is eligible to register for the fest. Undergraduate students pursuing a degree in any other country apart from India are not permitted to register for the fest. Graduated students from any institute are not eligible for the registration in this fest."
         },
         {
             "id": 4,
@@ -28,4 +27,3 @@
         }
     ]
 }
-

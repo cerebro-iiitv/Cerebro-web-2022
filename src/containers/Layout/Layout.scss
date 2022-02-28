@@ -235,6 +235,23 @@
   width: 100vw;
 }
 
+@media screen and (max-width:767px){
+  .navbarr-hover{
+    display: none;
+  }
+  .navbarr{
+    display: none;
+  }
+  .tophover{
+    display: none;
+  }
+  .hud-top{
+    display: none;
+  }
+  .login-button-container{
+    display: none;
+  }
+}
 
 @media screen and (min-width:767px) and (max-width: 850px) {
   .tophover {
