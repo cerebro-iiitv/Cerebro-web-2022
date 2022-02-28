@@ -1,0 +1,87 @@
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 25%;
+  height: 41%;
+  margin: 2% 2%;
+
+  &__img-cont {
+    &__bg {
+      width: 70%;
+      position: relative;
+      margin: 0.5% auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: radial-gradient(
+        82.9% 82.9% at 10.32% 20.97%,
+        rgba(255, 255, 255, 0.66) 0%,
+        rgba(28, 160, 255, 0.66) 100%
+      );
+      padding: 2px;
+      border-radius: 50%;
+      &__img {
+        width: 100%;
+      }
+    }
+    &__overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      color: #fff;
+      opacity: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 20% 0;
+      a {
+        margin: 0 6%;
+        width: 25%;
+        height: fit-content;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    &__bg__img,
+    &__overlay {
+      transition: 0.3s all;
+      border-radius: 50%;
+    }
+    &__bg:hover {
+      .team-member__img-cont__overlay {
+        opacity: 1;
+      }
+      .team-member__img-cont__bg__img {
+        -webkit-filter: blur(4px);
+        filter: blur(4px);
+      }
+    }
+  }
+
+  &__name {
+    font-family: Avenir Next;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.2rem;
+    letter-spacing: 0em;
+    color: #ffffff99;
+    padding-top: 5%;
+  }
+
+  &__title {
+    font-family: Avenir Next;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.2rem;
+    letter-spacing: 0em;
+    color: #fff;
+  }
+}

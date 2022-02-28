@@ -1,0 +1,11 @@
+.loading-spinner-cont {
+  height: 72vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading-spinner {
+  height: 120px;
+  width: 120px;
+  animation: loading 2s infinite linear;
+}
