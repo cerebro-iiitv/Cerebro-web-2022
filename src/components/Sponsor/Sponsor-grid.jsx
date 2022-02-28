@@ -17,7 +17,7 @@ const SponsorGrid = ({sponsorData, loadMore, loadLess, visible}) => {
 
             <div className="details">
                 {
-                    innerWidth > 768 
+                    window.innerWidth > 768 
                     ? 
                         sponsorData.slice(visible, visible + 6).map((sponsor, idx) => (
                             <ParticularSponsor logo={sponsor.logo} websiteLink={sponsor.websiteLink} type={sponsor.type} key={sponsor.id} background={sponsor.background} />

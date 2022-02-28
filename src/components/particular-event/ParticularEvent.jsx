@@ -3,6 +3,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './ParticularEvent.scss';
 
+
 import { default as toDot } from '../../assets/images/Events/to-dot.svg';
 import { default as dateLine } from '../../assets/images/Events/date-line.svg';
 import { default as door } from '../../assets/images/Events/door.png';
@@ -12,7 +13,7 @@ import { default as greenTick } from '../../assets/images/Events/green-tick.svg'
 
 // configuring toast
 toast.configure()
-export const ParticularEvent = ({ team_code, submitted, isLogged, isReg, subReq, title, start_time, prize, end_time, description, team_size, convenor, co_convenor1, co_convenor2, mem1, mem2 }) => {
+export const ParticularEvent = ({ eventId, team_code, submitted, isLogged, isReg, subReq, title, start_time, prize, end_time, description, team_size, convenor, co_convenor1, co_convenor2, mem1, mem2 }) => {
 
   // subReq = true;
   // submitted = true;
@@ -125,7 +126,15 @@ export const ParticularEvent = ({ team_code, submitted, isLogged, isReg, subReq,
           {
             isLogged === false ?
               <div className='button-container'>
-                <button id="single-button" onClick={authNotifier}>Register</button>
+                {/* <button id="single-button" onClick={authNotifier}>Register</button> */}
+                {
+                  team_size === 1 ?
+                    <a id='single-button' href={`event/join/${eventId}`} onClick={authNotifier}>Register</a>
+                    :
+
+                    <a id="single-button" href={`event/create/${eventId}`} onClick={authNotifier}>Register</a>
+                }
+
                 {
                   team_size > 1 ?
                     <img src={midButtonLine} className="mid-button-line" alt="mid-button-line" />
@@ -134,7 +143,8 @@ export const ParticularEvent = ({ team_code, submitted, isLogged, isReg, subReq,
                 }
                 {
                   team_size > 1 ?
-                    <button onClick={authNotifier}>Join Team</button>
+
+                  <a href={`event/join/${eventId}`} onClick={authNotifier}>Join Team</a>
                     :
                     ""
                 }
@@ -161,10 +171,10 @@ export const ParticularEvent = ({ team_code, submitted, isLogged, isReg, subReq,
                             </div>
                             <p className='team_code_text'>Check Dashboard for more details</p>
                             {
-                              team_size > 1 ? 
-                            <p className="team_code_text">Team Code: <span className='teamCode'>{team_code}</span></p>
-                              :
-                              ""
+                              team_size > 1 ?
+                                <p className="team_code_text">Team Code: <span className='teamCode'>{team_code}</span></p>
+                                :
+                                ""
                             }
                           </div>
 
@@ -172,7 +182,16 @@ export const ParticularEvent = ({ team_code, submitted, isLogged, isReg, subReq,
                     }
                   </div> :
                     <div className='button-container'>
-                      <button id="single-button" onClick={registerUser}>Register</button>
+                      {
+                        team_size === 1 ?
+                          <a id='single-button' href={`event/join/${eventId}`} onClick={registerUser}>Register</a>
+                          :
+
+                          <a id="single-button" href={`event/create/${eventId}`} onClick={registerUser}>Register</a>
+
+
+                      }
+
                       {
                         team_size > 1 ?
                           <img src={midButtonLine} className="mid-button-line" alt="mid-button-line" />
@@ -181,7 +200,9 @@ export const ParticularEvent = ({ team_code, submitted, isLogged, isReg, subReq,
                       }
                       {
                         team_size > 1 ?
-                          <button onClick={joinTeam}>Join Team</button>
+
+                          <a href={`event/join/${eventId}`} onClick={joinTeam}>Join Team</a>
+
                           :
                           ""
                       }
