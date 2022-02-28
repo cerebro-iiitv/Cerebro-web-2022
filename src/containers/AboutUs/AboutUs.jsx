@@ -4,7 +4,7 @@ import React from "react";
 
 const AboutUs = (props) => {
 
-  console.log(props.status);
+  // console.log(props.status);
 
   return (
     <div className={props.status==='first'?"aboutus":"aboutUs"}>
