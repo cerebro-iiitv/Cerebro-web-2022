@@ -1,0 +1,21 @@
+$mobile: 600px;
+
+.mobile-title {
+  margin-top: 10px;
+  padding-bottom: 8px;
+  background: url("../../assets/images/mobile-title.svg") no-repeat center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  font-family: Barlow;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  color: #ffffff;
+  text-align: center;
+
+  @media screen and (min-width: $mobile) {
+    display: none;
+  }
+}

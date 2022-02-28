@@ -39,7 +39,7 @@ export const signupFormData = {
     },
     {
       name: "proof",
-      label: "Proof of bachelors (pdf under 10kb)",
+      label: "Proof of bachelors (under 100kb)",
       type: "file",
     },
     {

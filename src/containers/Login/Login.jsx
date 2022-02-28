@@ -15,7 +15,6 @@ const Login = () => {
   const auth = useAuth();
 
   const onSubmit = async (values, { setSubmitting, setFieldError }) => {
-    console.log(values);
     try {
       const res = await axiosInstance.post("/account/login/", values);
       auth.login(res.data.Token);

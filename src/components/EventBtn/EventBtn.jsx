@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import BtnLoader from "../BtnLoader/BtnLoader";
 import "./EventBtn.scss";
 
 const EventBtn = ({
@@ -12,6 +13,8 @@ const EventBtn = ({
 }) => {
   const navigate = useNavigate();
   const onClick = () => navigate("/event");
+
+  const custom = submitStatus ? "disable" : "enable";
 
   return (
     <div className="eventbtn">
@@ -26,10 +29,12 @@ const EventBtn = ({
       <div className="eventbtn__bottom">
         <button
           type="submit"
-          disabled={isSubmitting}
-          className="eventbtn__bottom__submit"
+          disabled={submitStatus}
+          className={`eventbtn__bottom__${custom}`}
         >
-          <span className="eventbtn__bottom__submit__text">{submitText}</span>
+          <div className={`eventbtn__bottom__${custom}__text`}>
+            {isSubmitting ? <BtnLoader /> : submitText}
+          </div>
         </button>
         <div className="eventbtn__bottom__vl" />
         <button className="eventbtn__bottom__back" onClick={onClick}>

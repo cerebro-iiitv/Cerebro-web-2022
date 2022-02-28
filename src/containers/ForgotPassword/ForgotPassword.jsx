@@ -43,6 +43,7 @@ const ForgotPassword = () => {
                 {...{ label, name, type }}
                 key={index}
                 page="forgot-pass"
+                disabled={submitStatus}
               />
             ))}
             <AuthBtn

@@ -14,11 +14,11 @@ import FAQs from "./containers/FAQs/FAQs";
 import Sponsors from "./containers/Sponsors/Sponsors";
 import JoinTeam from "./containers/JoinTeam/JoinTeam";
 import CreateTeam from "./containers/CreateTeam/CreateTeam";
+import VerifyEmail from "./containers/VerifyEmail/VerifyEmail";
+import Events from "./containers/Events/Events";
 import PrivateRoute from "./components/RouteElements/PrivateRoute";
 import UserRoute from "./components/RouteElements/UserRoute";
 import "./App.css";
-
-import Events from "./containers/Events/Events";
 
 function App() {
   const auth = useAuth();
@@ -30,7 +30,7 @@ function App() {
   if (token) {
     auth.login(token);
   }
-  
+
   return (
     <div className="App">
       <BrowserRouter>
@@ -53,6 +53,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/forgot-password" element={<ForgotPassword />} />
+            <Route path="/account/email-verify" element={<VerifyEmail />} />
             <Route
               path="/account/password-reset/:uidb64/:token"
               element={<ResetPassword />}

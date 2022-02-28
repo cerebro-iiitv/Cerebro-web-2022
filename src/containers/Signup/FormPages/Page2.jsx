@@ -1,5 +1,6 @@
 import React from "react";
 import FormInput from "../../../components/FormInput/FormInput";
+import BtnLoader from "../../../components/BtnLoader/BtnLoader";
 import { signupFormData } from "../util/SignupFormData";
 import leftarrow from "../../../assets/images/left-arrow.svg";
 import "../Signup.scss";
@@ -54,9 +55,9 @@ const Page2 = ({
             className="signup__bottom__buttons__submit"
             disabled={isSubmitting}
           >
-            <span className="signup__bottom__buttons__submit__text">
-              Submit
-            </span>
+            <div className="signup__bottom__buttons__submit__text">
+              {isSubmitting ? <BtnLoader /> : "Submit"}
+            </div>
           </button>
         </div>
       </div>

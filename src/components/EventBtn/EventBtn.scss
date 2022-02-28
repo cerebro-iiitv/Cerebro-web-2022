@@ -6,7 +6,7 @@ $small-mobile: 400px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 40px 0px 10px 0px;
+  margin: 20px 0px 10px 0px;
 
   &__bottom {
     display: flex;
@@ -18,7 +18,7 @@ $small-mobile: 400px;
       justify-content: center;
     }
 
-    &__submit {
+    &__enable {
       cursor: pointer;
       width: 166px;
       height: 41px;
@@ -37,13 +37,32 @@ $small-mobile: 400px;
         font-size: 24px;
         text-align: center;
         color: #ffffff;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    &__disable {
+      pointer-events: none;
+      width: 166px;
+      height: 41px;
+      background: #aaaaaa;
+      border-radius: 11px;
+
+      &__text {
+        font-family: Barlow;
+        font-size: 24px;
+        text-align: center;
+        color: #000000;
       }
     }
 
     &__vl {
       width: 1px;
       height: 50px;
-      background:#1ca0ff;
+      background: #1ca0ff;
       margin: 0px 15px;
 
       @media screen and (max-width: $mobile) {
@@ -82,7 +101,7 @@ $small-mobile: 400px;
   &__status {
     margin-bottom: 5px;
     text-align: center;
-    
+
     &__error {
       font-size: 15px;
       font-weight: 500;

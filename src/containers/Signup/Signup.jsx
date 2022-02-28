@@ -51,7 +51,6 @@ const Signup = () => {
           setSubmitStatus(false);
         }
       } catch (error) {
-        console.log(res);
         setFieldError("authentication", res.data || res.error || "Error");
       }
     }

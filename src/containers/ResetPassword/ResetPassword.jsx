@@ -47,6 +47,7 @@ const ResetPassword = () => {
                 {...{ label, name, type }}
                 page="reset-pass"
                 key={index}
+                disabled={submitStatus}
               />
             ))}
             <AuthBtn

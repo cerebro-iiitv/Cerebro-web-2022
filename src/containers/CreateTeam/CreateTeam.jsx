@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Formik, Form } from "formik";
 import EventForm from "../../components/EventForm/EventForm";
@@ -14,22 +14,22 @@ const CreateTeam = () => {
   const [event, setEvent] = useState(null);
   const [teamCode, setTeamCode] = useState("");
   const [submitStatus, setSubmitStatus] = useState("");
+  const mountedRef = useRef(true);
 
   useEffect(() => {
     const getData = async () => {
       try {
         const res = await axiosInstance.get(`/events/${eventId}`);
-        console.log(res.data);
-        if (!res.data.team_event) {
+        if (!res.data.team_event || res.data.is_registered) {
           navigate(`/event/join/${eventId}`);
         }
         setEvent(res.data);
-        console.log(res.data);
       } catch {
         navigate("/event");
       }
     };
     getData();
+    return () => (mountedRef.current = false);
   }, [eventId, navigate]);
 
   const toLabel = (field) =>
@@ -65,25 +65,28 @@ const CreateTeam = () => {
   };
 
   const onSubmit = async (values, { setFieldError, setSubmitting }) => {
-    console.log("hello");
+    setSubmitting(true);
     try {
       const data = {
         event: eventId,
         team_name: values.team_name,
         team_captain: { team_code: "111111" },
       };
-      if (event.registration_attributes)
+      if (event.registration_attributes) {
         data["team_captain"]["registration_data"] = { ...values };
+        delete data["team_captain"]["registration_data"]["team_name"];
+        delete data["team_captain"]["registration_data"]["event"];
+      }
       const res = await axiosInstance.post("/registration/team/", data);
       setSubmitStatus(res.data.success);
       setTeamCode(res.data.team_code);
     } catch (error) {
-      if (error.response.data.Error)
+      if (error.response?.data?.Error)
         setFieldError("event", error.response.data.Error);
-      else if (error.response.data.error)
+      else if (error.response?.data?.error)
         setFieldError("event", error.response.data.error);
+      else setFieldError("event", "Something went wrong");
     }
-    setSubmitting(false);
   };
 
   const mapType = (type) => {
@@ -109,6 +112,7 @@ const CreateTeam = () => {
               name="team_name"
               type="text"
               page="create-team"
+              disabled={submitStatus}
             />
             <hr className="create-team__line" />
             {event.registration_attributes &&
@@ -116,6 +120,7 @@ const CreateTeam = () => {
                 ([key, value], index) => (
                   <div className="create-team__input" key={index}>
                     <FormInput
+                      disabled={submitStatus}
                       label={toLabel(key)}
                       name={key}
                       type={mapType(value)}

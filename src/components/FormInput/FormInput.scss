@@ -94,6 +94,12 @@ $small-mobile: 400px;
       float: left;
       padding-right: 20px;
     }
+
+    &__proof {
+      label {
+        margin-top: 10px;
+      }
+    }
   }
 
   &__login {

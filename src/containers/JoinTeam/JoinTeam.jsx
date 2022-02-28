@@ -67,7 +67,6 @@ const JoinTeam = () => {
         delete data["registration_data"]["event"];
         if (!event.registration_attributes) delete data["registration_data"];
         const res = await axiosInstance.post("/registration/teammember/", data);
-        console.log(res);
         if (res.data.error) setFieldError("event", res.data.error);
         else setSubmitStatus(res.data.success);
       } else {
@@ -82,7 +81,6 @@ const JoinTeam = () => {
           "/registration/individual-registration/",
           data
         );
-        console.log(res);
         if (res.data.error) setFieldError("event", res.data.error);
         else setSubmitStatus(`Successfully registered for ${event.title}`);
       }
@@ -111,8 +109,8 @@ const JoinTeam = () => {
           You have already registered for this event
           <br />
           {event.team_event && "Check your team code on your Dashboard"}
-          <Link to="/event" className="join-team__backlink">
-            <span className="join-team__backlink__text">Back to Events</span>
+          <Link to="/dashboard" className="join-team__backlink">
+            <span className="join-team__backlink__text">Dashboard</span>
           </Link>
         </div>
       </EventForm>
@@ -130,6 +128,7 @@ const JoinTeam = () => {
                   name="team_code"
                   type="text"
                   page="join-team"
+                  disabled={submitStatus}
                 />
                 <hr className="join-team__line" />
               </>
@@ -144,6 +143,7 @@ const JoinTeam = () => {
                       type={mapType(value)}
                       page="join-team"
                       key={index}
+                      disabled={submitStatus}
                     />
                   </div>
                 )

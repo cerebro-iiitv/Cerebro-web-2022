@@ -1,0 +1,24 @@
+.verify-email {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  &__loading {
+    margin-bottom: 40px;
+  }
+
+  &__text {
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    color: #ffffff;
+    text-align: center;
+
+    &__error {
+      color: #ff0033;
+    }
+  }
+}
