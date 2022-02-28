@@ -132,10 +132,10 @@ export const ParticularEvent = ({ shortName, rulesDoc, socialMedia, eventId, tea
                 {/* <button id="single-button" onClick={authNotifier}>Register</button> */}
                 {
                   team_size === 1 ?
-                    <a id='single-button' href={null} onClick={authNotifier}>Register</a>
+                    <button id='single-button' href={null} onClick={authNotifier}>Register</button>
                     :
 
-                    <a id="single-button" href={null} onClick={authNotifier}>Create Team</a>
+                    <button id="single-button"  onClick={authNotifier}>Create Team</button>
                 }
 
                 {
@@ -147,7 +147,7 @@ export const ParticularEvent = ({ shortName, rulesDoc, socialMedia, eventId, tea
                 {
                   team_size > 1 ?
 
-                  <a href={null} onClick={authNotifier}>Join Team</a>
+                  <button onClick={authNotifier}>Join Team</button>
                     :
                     ""
                 }

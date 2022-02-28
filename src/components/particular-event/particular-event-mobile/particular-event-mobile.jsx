@@ -121,10 +121,10 @@ const ParticularMobileEvent = ({ currEvent, isLogged }) => {
                                 {/* <button id="single-button" onClick={authNotifier}>Register</button> */}
                                 {
                                     currEvent.team_size === 1 ?
-                                        <a href={null} id='single-button' onClick={authNotifier}>Register</a>
+                                        <button id='single-button' onClick={authNotifier}>Register</button>
                                         :
 
-                                        <a id="single-button" href={null} onClick={authNotifier}>Create Team</a>
+                                        <button id="single-button" href={null} onClick={authNotifier}>Create Team</button>
                                 }
 
                                 {
@@ -136,7 +136,7 @@ const ParticularMobileEvent = ({ currEvent, isLogged }) => {
                                 {
                                     currEvent.team_size > 1 ?
 
-                                        <a href={null} onClick={authNotifier}>Join Team</a>
+                                        <button onClick={authNotifier}>Join Team</button>
                                         :
                                         ""
                                 }
