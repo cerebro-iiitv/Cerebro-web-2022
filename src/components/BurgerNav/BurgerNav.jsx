@@ -101,6 +101,15 @@ return (
             </Link>
 
 
+            <Link
+              className="list_element"
+              onClick={closedrawer}
+              to="/brochure"
+            >
+              
+              <span className="elements">Brochure</span>
+            </Link>
+
             {auth.isLoggedIn ? (
               <>
                 <Link
