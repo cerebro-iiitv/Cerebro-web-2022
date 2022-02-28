@@ -19,7 +19,8 @@ const JoinTeam = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const id = eventData[eventName];
+        if (!eventName) throw new Error("No event name provided");
+        const id = eventData[eventName.toUpperCase()];
         if (!id) throw new Error("Event not found");
         setEventId(id);
         const res = await axiosInstance.get(`/events/${id}`);

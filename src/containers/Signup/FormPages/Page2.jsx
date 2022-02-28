@@ -12,6 +12,8 @@ const Page2 = ({
   errors,
   submitStatus,
 }) => {
+  const custom = submitStatus ? "disable" : "enable";
+
   return (
     <>
       {signupFormData.page2.map(({ label, name, type }, index) => (
@@ -52,10 +54,10 @@ const Page2 = ({
           <div className="signup__bottom__buttons__vl" />
           <button
             type="submit"
-            className="signup__bottom__buttons__submit"
+            className={`signup__bottom__buttons__${custom}`}
             disabled={isSubmitting}
           >
-            <div className="signup__bottom__buttons__submit__text">
+            <div className={`signup__bottom__buttons__${custom}__text`}>
               {isSubmitting ? <BtnLoader /> : "Submit"}
             </div>
           </button>

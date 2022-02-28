@@ -50,7 +50,7 @@
         height: 48px;
       }
 
-      &__submit {
+      &__enable {
         cursor: pointer;
         margin-left: 10px;
         width: 150px;
@@ -75,6 +75,22 @@
           flex-direction: row;
           align-items: center;
           justify-content: center;
+        }
+      }
+
+      &__disable {
+        pointer-events: none;
+        width: 166px;
+        height: 41px;
+        background: #aaaaaa;
+        border-radius: 11px;
+        margin-left: 10px;
+
+        &__text {
+          font-family: Barlow;
+          font-size: 24px;
+          text-align: center;
+          color: #000000;
         }
       }
     }
