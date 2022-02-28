@@ -67,7 +67,7 @@ const ParticularMobileEvent = ({ currEvent, isLogged }) => {
                         <p className="prize-query">Prize Worth</p>
                         <p className="prize-details">{currEvent.prize} INR</p>
                     </div>
-                    <div className="team">
+                    <div className="team_det">
                         <p className="prize-query">Team Size</p>
                         <p className="prize-details">{currEvent.team_size}</p>
                     </div>

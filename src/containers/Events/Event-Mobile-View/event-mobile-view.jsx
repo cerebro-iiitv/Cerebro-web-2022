@@ -3,6 +3,7 @@ import axiosInstance from "../../../services/AxiosInstance";
 import {default as logo} from '../../../assets/images/Events/Logo.png';
 
 import { default as useAuth } from '../../../hooks/useAuth';
+import LoadingSpinner from "../../../components/LoadingSpinner/LoadingSpinner";
 
 import EventMobileScroll from "../../../components/Event-Scroll-Bar/event-mobile-scroll/event-mobile-scroll";
 import ParticularMobileEvent from "../../../components/particular-event/particular-event-mobile/particular-event-mobile";
@@ -46,7 +47,7 @@ const EventMobile = () => {
             {
                 isLoading === true 
                 ? 
-                    <img src={logo} alt="cerebro-loading-logo" className="loading-logo"/>
+                    <LoadingSpinner />
                 :
                     <div className="main-cont">
                         <div className="event-mobile-scrollbar">

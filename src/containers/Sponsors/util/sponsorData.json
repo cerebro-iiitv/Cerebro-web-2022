@@ -2,150 +2,93 @@
     "sponsors": [
         {
             "id": 1,
-            "type": "Title",
-            "logo": "https://i.imgur.com/DlQi3Ie.png",
-            "websiteLink": "https://www.apple.com/in/",
+            "type": "Swags Sponsor",
+            "logo": "https://i.imgur.com/sOsX5oX.png",
+            "websiteLink": "https://www.stickermule.com/en-in",
             "background": "https://i.imgur.com/6A9TJZx.png"
         },
         {
             "id": 2,
-            "type": "Event",
-            "logo": "https://i.imgur.com/DlQi3Ie.png",
-            "websiteLink": "https://www.apple.com/in/",
+            "type": "Platform Sponsor",
+            "logo": "https://i.imgur.com/SHGWEzV.png",
+            "websiteLink": "https://github.com/",
             "background": "https://i.imgur.com/6A9TJZx.png"
         },
         {
             "id": 3,
-            "type": "Associate",
-            "logo": "https://i.imgur.com/DlQi3Ie.png",
-            "websiteLink": "https://www.apple.com/in/",
+            "type": "Savings Partner",
+            "logo": "https://i.imgur.com/0S8NWDm.png",
+            "websiteLink": "https://www.grabon.in/",
             "background": "https://i.imgur.com/6A9TJZx.png"
         },
         {
             "id": 4,
-            "type": "Gold",
-            "logo": "https://i.imgur.com/DlQi3Ie.png",
-            "websiteLink": "https://www.apple.com/in/",
-            "background": "https://i.imgur.com/NZDEuTZ.png"
+            "type": "Social Media Partner",
+            "logo": "https://i.imgur.com/WlZmcU3.png",
+            "websiteLink": "https://www.campuskarma.in/",
+            "background": "https://i.imgur.com/6A9TJZx.png"
         },
         {
             "id": 5,
-            "type": "Silver",
-            "logo": "https://i.imgur.com/DlQi3Ie.png",
-            "websiteLink": "https://www.apple.com/in/",
-            "background": "https://i.imgur.com/3yGMqjP.png"
+            "type": "Certificate Sponsor",
+            "logo": "https://i.imgur.com/2BILmT5.png",
+            "websiteLink": "https://givemycertificate.com/",
+            "background": "https://i.imgur.com/6A9TJZx.png"
 
         },
         {
             "id": 6,
-            "type": "Platinum",
-            "logo": "https://i.imgur.com/DlQi3Ie.png",
-            "websiteLink": "https://www.apple.com/in/",
-            "background": "https://i.imgur.com/0XNJMe3.png"
+            "type": "Education Partner",
+            "logo": "https://i.imgur.com/vxfRxTT.png",
+            "websiteLink": "https://www.henryharvin.com/",
+            "background": "https://i.imgur.com/6A9TJZx.png"
 
         },
         {
             "id": 7,
-            "type": "Bronze7",
-            "logo": "https://i.imgur.com/DlQi3Ie.png",
-            "websiteLink": "https://www.apple.com/in/",
+            "type": "Prudentia Title Sponsor",
+            "logo": "https://i.imgur.com/3z6w0Wh.png",
+            "websiteLink": "https://turtlewealth.in/",
             "background": "https://i.imgur.com/0XNJMe3.png"
 
         },
         {
             "id": 8,
-            "type": "Bronze8",
-            "logo": "https://i.imgur.com/DlQi3Ie.png",
-            "websiteLink": "https://www.apple.com/in/",
+            "type": "Prudentia Co-Title Sponsor",
+            "logo": "https://i.imgur.com/rPNejKf.png",
+            "websiteLink": "https://toggle.ai/?promo=PRUDENTIA22",
             "background": "https://i.imgur.com/0XNJMe3.png"
 
         },
         {
             "id": 9,
-            "type": "Bronze9",
-            "logo": "https://i.imgur.com/DlQi3Ie.png",
-            "websiteLink": "https://www.apple.com/in/",
+            "type": "Prudentia Platform Sponsor",
+            "logo": "https://i.imgur.com/K7xtvFn.png",
+            "websiteLink": "https://www.stockgro.club/",
             "background": "https://i.imgur.com/0XNJMe3.png"
 
         },
         {
             "id": 10,
-            "type": "Bronze10",
+            "type": "Prudentia Gold Sponsor",
             "logo": "https://i.imgur.com/DlQi3Ie.png",
-            "websiteLink": "https://www.apple.com/in/",
+            "websiteLink": "https://www.elearnmarkets.com/courses/display/learn-options-trading",
             "background": "https://i.imgur.com/0XNJMe3.png"
 
         },
         {
             "id": 11,
-            "type": "Bronze11",
-            "logo": "https://i.imgur.com/DlQi3Ie.png",
-            "websiteLink": "https://www.apple.com/in/",
+            "type": "Prudentia Gold Sponsor",
+            "logo": "https://i.imgur.com/YTaQ7ce.png",
+            "websiteLink": "http://sponsorbull.com/",
             "background": "https://i.imgur.com/0XNJMe3.png"
 
         },
         {
             "id": 12,
-            "type": "bronze12",
-            "logo": "https://i.imgur.com/DlQi3Ie.png",
-            "websiteLink": "https://www.apple.com/in/",
-            "background": "https://i.imgur.com/0XNJMe3.png"
-        },
-        {
-            "id": 13,
-            "type": "bronze13",
-            "logo": "https://i.imgur.com/DlQi3Ie.png",
-            "websiteLink": "https://www.apple.com/in/",
-            "background": "https://i.imgur.com/0XNJMe3.png"
-
-        },
-        {
-            "id": 14,
-            "type": "bronze14",
-            "logo": "https://i.imgur.com/DlQi3Ie.png",
-            "websiteLink": "https://www.apple.com/in/",
-            "background": "https://i.imgur.com/0XNJMe3.png"
-        },
-        {
-            "id": 15,
-            "type": "bronze15",
-            "logo": "https://i.imgur.com/DlQi3Ie.png",
-            "websiteLink": "https://www.apple.com/in/",
-            "background": "https://i.imgur.com/0XNJMe3.png"
-        },
-        {
-            "id": 16,
-            "type": "bronze16",
-            "logo": "https://i.imgur.com/DlQi3Ie.png",
-            "websiteLink": "https://www.apple.com/in/",
-            "background": "https://i.imgur.com/0XNJMe3.png"
-        },
-        {
-            "id": 17,
-            "type": "bronze17",
-            "logo": "https://i.imgur.com/DlQi3Ie.png",
-            "websiteLink": "https://www.apple.com/in/",
-            "background": "https://i.imgur.com/0XNJMe3.png"
-        },
-        {
-            "id": 18,
-            "type": "bronze18",
-            "logo": "https://i.imgur.com/DlQi3Ie.png",
-            "websiteLink": "https://www.apple.com/in/",
-            "background": "https://i.imgur.com/0XNJMe3.png"
-        },
-        {
-            "id": 19,
-            "type": "bronze19",
-            "logo": "https://i.imgur.com/DlQi3Ie.png",
-            "websiteLink": "https://www.apple.com/in/",
-            "background": "https://i.imgur.com/0XNJMe3.png"
-        },
-        {
-            "id": 20,
-            "type": "bronze20",
-            "logo": "https://i.imgur.com/DlQi3Ie.png",
-            "websiteLink": "https://www.apple.com/in/",
+            "type": "Prudentia Gold Sponsor",
+            "logo": "https://i.imgur.com/QVKFFEY.png",
+            "websiteLink": "https://www.investinghub.in/",
             "background": "https://i.imgur.com/0XNJMe3.png"
         }
     ]

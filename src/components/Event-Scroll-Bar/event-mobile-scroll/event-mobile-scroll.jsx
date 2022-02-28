@@ -1,10 +1,6 @@
 import React from "react";
 import './event-mobile-scroll.scss';
 const EventMobileScroll = ({ events, currIdx, onTouchOpen }) => {
-    const selectedStyle = {
-        color: '#FFC700',
-        fontSize: '30px'
-    }
     return (
         <div className="scroll_bar_view_port">
             <div className="scroll_bar" >

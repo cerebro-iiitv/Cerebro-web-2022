@@ -2,28 +2,30 @@
     "faqs": [
         {
             "id": 1,
-            "question": "Who can register in the festival1 ?",
-            "answer": "Anyone currently pursuing an undergraduate degree from any institution in India, across all streams is eligible to participate in Cerebro 2022. Alumnus of IIITV and graduated students of any institute are not permitted to participate."
+            "question": "Who can register for the fest?",
+            "answer": "Anyone who is pursuing an undergraduate degree in India across any stream is eligible to register for the fest. Undergraduate students pursuing a degree in any other country apart from India are not permitted to register for the fest. Graduated students from any institute are not eligible for the registration in this fest."
         },
         {
             "id": 2,
-            "question": "Who can register in the festival2 ?",
-            "answer": "Anyone currently pursuing an undergraduate degree from any institution in India, across all streams is eligible to participate in Cerebro 2022. Alumnus of IIITV and graduated students of any institute are not permitted to participate."
+            "question": "Is there any participation fee?",
+            "answer": "You can participate free of cost! There is absolutely no participation fees."
         },
+
         {
             "id": 3,
-            "question": "Who can register in the festival3 ?",
-            "answer": "Anyone currently pursuing an undergraduate degree from any institution in India, across all streams is eligible to participate in Cerebro 2022. Alumnus of IIITV and graduated students of any institute are not permitted to participate."
+            "question": "Why do I need to join the discord server?",
+            "answer": "All communication like match fixtures, submission forms and more will be communicated through discord server only and there are dedicated channels for queries between participants and organizers."
         },
         {
             "id": 4,
-            "question": "Who can register in the festival4 ?",
-            "answer": "Anyone currently pursuing an undergraduate degree from any institution in India, across all streams is eligible to participate in Cerebro 2022. Alumnus of IIITV and graduated students of any institute are not permitted to participate."
+            "question": "How many events can I participate in?",
+            "answer": "All the events! Yes, you read that correctly. We have not set any cap on the number of events you can participate in and win too!"
         },
         {
             "id": 5,
-            "question": "Who can register in the festival5 ?",
-            "answer": "Anyone currently pursuing an undergraduate degree from any institution in India, across all streams is eligible to participate in Cerebro 2022. Alumnus of IIITV and graduated students of any institute are not permitted to participate."
+            "question": "What is the deadline for registering in an event?",
+            "answer": "Registration deadline for any event is 6 hrs before the event starts."
         }
     ]
 }
+

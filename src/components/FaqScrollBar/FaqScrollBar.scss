@@ -10,9 +10,13 @@
     .buttons{
         height: 100%;
         width: 50%;
+        @media only screen and (max-width: 395px){
+            width: 20% !important;
+        }
         display: flex;
         justify-content: space-evenly;
         .selected-sphere{
+            width: 100%;
             transition: all 0.15s ease;
             animation-name: rotateSphere;
             animation-duration: 1.5s;
@@ -26,6 +30,7 @@
             }
         }
         img{
+            width: 100%;
             cursor: pointer;
         }
     }

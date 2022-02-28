@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import useAuth from "./hooks/useAuth";
 import MainLayout from "./containers/Layout/Layout";
-import Dashboard from "./containers/Dashboard/Dashboard"
+import Dashboard from "./containers/Dashboard/Dashboard";
 import Login from "./containers/Login/Login";
 import Signup from "./containers/Signup/Signup";
 import Hero from "./containers/Hero/Hero";
@@ -17,8 +17,9 @@ import UserRoute from "./components/RouteElements/UserRoute";
 
 import "./App.css";
 
-import Events from "./containers/Events/Events";
-import EventMobile from "./containers/Events/Event-Mobile-View/event-mobile-view";
+import TeamWrapper from "./containers/Team/TeamWrapper";
+
+import EventWrapper from "./containers/Events/EventWrapper";
 
 
 function App() {
@@ -40,7 +41,12 @@ function App() {
             element={
               <>
                 <MainLayout status="no-hover" hover={hover} sethover={sethover}>
-                  <Hero redir={redirect} setredir={setredirect} flagprop={flag} setflagprop={setflag} />
+                  <Hero
+                    redir={redirect}
+                    setredir={setredirect}
+                    flagprop={flag}
+                    setflagprop={setflag}
+                  />
                 </MainLayout>
               </>
             }
@@ -49,37 +55,13 @@ function App() {
 
         <Routes>
           <Route element={<UserRoute />}>
-            <Route
-              path="/login"
-              element={
-
-                <Login />
-
-              }
-            />
-            <Route
-              path="/signup"
-              element={
-
-                <Signup />
-
-              }
-            />
-            <Route
-              path="/forgot-password"
-              element={
-
-                <ForgotPassword />
-
-              }
-            />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
             <Route
               path="/account/password-reset/:uidb64/:token"
-              element={
-                <ResetPassword />
-              }
+              element={<ResetPassword />}
             />
-
           </Route>
 
           <Route element={<PrivateRoute />}>
@@ -87,14 +69,7 @@ function App() {
             <Route path="/change-password" element={<ChangePassword />} />
           </Route>
 
-
-
-          <Route
-            path="/dashboard"
-            element={
-              <p>Hello Human</p>
-            }
-          />
+          <Route path="/dashboard" element={<p>Hello Human</p>} />
 
           <Route
             path="/sponsors"
@@ -109,7 +84,7 @@ function App() {
             path="/team"
             element={
               <MainLayout status="hover" hover={hover} sethover={sethover}>
-                <div>{/* <h1>Team</h1> */}</div>
+               <TeamWrapper />
               </MainLayout>
             }
           />
@@ -125,7 +100,10 @@ function App() {
             path="/event"
             element={
               <MainLayout status="hover" hover={hover} sethover={sethover}>
-                <EventMobile />
+                <EventWrapper />
+                 {/* {
+                  mobileView ? <EventMobile /> : <Events />
+                } */}
               </MainLayout>
             }
           />
