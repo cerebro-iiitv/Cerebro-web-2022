@@ -34,9 +34,11 @@
     &__row {
       margin: 3% 0;
       &__title {
+        width: 40%;
         font-size: 1.3rem;
       }
       &__value {
+        width: 60%;
         font-size: 1.3rem;
       }
     }
@@ -79,38 +81,38 @@
     &__row {
       margin: 3.5% 0;
       &__title {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
       }
       &__value {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
       }
     }
   }
 }
 
-@media (max-width: 426px){
+@media (max-width: 470px){
   .dashboard-about-card {
     &__row {
       margin: 3.5% 0;
       &__title {
-        font-size: 1.1rem;
+        font-size: 1rem;
       }
       &__value {
-        font-size: 1.1rem;
+        font-size: 1rem;
       }
     }
   }
 }
 
-@media (max-width: 351px){
+@media (max-width: 400px){
   .dashboard-about-card {
     &__row {
       margin: 3% 0;
       &__title {
-        font-size: 1rem;
+        font-size: 0.9rem;
       }
       &__value {
-        font-size: 1rem;
+        font-size: 0.9rem;
       }
     }
   }

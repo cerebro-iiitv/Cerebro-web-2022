@@ -2,13 +2,13 @@
   background-color: #0a2245;
   &__title {
     width: 15%;
-    margin: 0 auto;
+    margin: 2% auto;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: Barlow;
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-style: normal;
     font-weight: 600;
     letter-spacing: 0em;
@@ -19,7 +19,8 @@
     color: white;
     font-size: 3rem;
     width: fit-content;
-    margin: 5% auto;
+    margin: 2% auto;
+    text-align: center;
   }
 }
 
@@ -31,7 +32,32 @@
       font-size: 2.3rem;
     }
     &__no-events {
-      font-size: 3rem;
+      font-size: 2rem;
+      width: fit-content;
+      margin: 5% auto;
+    }
+  }
+}
+
+@media (max-width: 1051px) {
+  .dashboard-events {
+    &__title {
+      width: fit-content;
+      margin: 2% auto 2% auto;
+      font-size: 2.3rem;
+    }
+    &__no-events {
+      font-size: 1.6rem;
+      width: fit-content;
+      margin: 5% auto;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .dashboard-events {
+    &__no-events {
+      font-size: 1.5rem;
       width: fit-content;
       margin: 5% auto;
     }
