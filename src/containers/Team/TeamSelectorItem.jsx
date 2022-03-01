@@ -36,6 +36,8 @@ const TeamSelectorItem = ({ title, selectedItem, setSelectedTeam, isEvenNumbered
 
     const btnImg = isItemSelected ? selectedBtnImg : unselectedBtnImg;
 
+    const prBtnClass = title === "PR" ? "pr-round-btn" : "";
+
     const btnclickHandler = () => {
         setSelectedTeam(title);
         setWillAnimate(true);
@@ -46,13 +48,15 @@ const TeamSelectorItem = ({ title, selectedItem, setSelectedTeam, isEvenNumbered
             <button onClick={btnclickHandler} className={upperTitleClasses}>
                 <div className={upperTitleClasses}>{title}</div>
             </button>
-            <div className="team-selector-item__btn-cont">
+            <div className={`team-selector-item__btn-cont ${prBtnClass}`}>
                 <button onClick={btnclickHandler}>
                     <img src={btnImg} alt={title} />
                 </button>
             </div>
             <button onClick={btnclickHandler} className={lowerTitleClasses}>
-                <div className={lowerTitleClasses}>{title === "PR" ? "Public Relations" : title}</div>
+                <div className={lowerTitleClasses}>
+                    {title === "PR" ? "Public Relations" : title}
+                </div>
             </button>
         </div>
     )

@@ -28,3 +28,10 @@
     padding: 5% 0;
   }
 }
+
+@media (max-width: 950px){
+  .team-members-cont {
+    height: 55vh;
+    width: 70%;
+  }
+}

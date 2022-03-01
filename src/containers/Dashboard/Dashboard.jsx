@@ -133,6 +133,39 @@ import "./Dashboard.scss";
 //                 }
 //             ]
 //         },
+//         {
+//             event_title: "Rocket League",
+//             start_time: "18/03/2022-3:00 pm",
+//             end_time: "20/03/2022-3:00 pm",
+//             is_team_event: true,
+//             max_size: 2,
+//             team_captain: "201951083@gmail.com",
+//             team_name: "Forever Silver Niggas Forever Silver Niggas",
+//             current_size: 1,
+//             is_full: false,
+//             team_code: "RCL#00001",
+//             submission_data: null,
+//             team_member: [
+//                 {
+//                     first_name: "Raghu Raj",
+//                     last_name: "Sodani",
+//                     email: "201951118@iiitvadodara.ac.in",
+//                     registration_data: {
+//                         ign: "Smoke@123",
+//                         epic_games_id: 22104
+//                     }
+//                 },
+//                 {
+//                     first_name: "Krishna",
+//                     last_name: "Gaur",
+//                     email: "201951083@gmail.com",
+//                     registration_data: {
+//                         ign: "Paradox@123",
+//                         epic_games_id: 11204
+//                     }
+//                 }
+//             ]
+//         },
 //     ]
 // };
 
@@ -160,12 +193,12 @@ const Dashboard = () => {
             (event) => {
                 const startDate = event.start_time.substring(0, 10);
                 const startTime = event.start_time.substring(11, event.start_time.length);
-                console.log(startDate);
-                console.log(startTime);
+                // console.log(startDate);
+                // console.log(startTime);
                 const endDate = event.end_time.substring(0, 10);
                 const endTime = event.end_time.substring(11, event.end_time.length);
-                console.log(endDate);
-                console.log(endTime);
+                // console.log(endDate);
+                // console.log(endTime);
                 return {
                     key: event.event_title,
                     eventName: event.event_title,

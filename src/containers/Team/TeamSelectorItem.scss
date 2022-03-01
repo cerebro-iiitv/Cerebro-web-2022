@@ -60,6 +60,10 @@
   }
 }
 
+.pr-round-btn{
+  margin-top: 7px;
+}
+
 @keyframes tweak-down {
   0% {
     transform: translateY(0px);
@@ -117,4 +121,7 @@
       }
     }
   }
+  .pr-round-btn{
+    margin-top: 10px;
+  }  
 }

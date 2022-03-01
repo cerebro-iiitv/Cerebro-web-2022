@@ -5,7 +5,7 @@ import TeamSelector from "../../components/Team/TeamSelector/TeamSelector";
 import LoadingSpinner from "../../components/LoadingSpinner/LoadingSpinner";
 import "./Team.scss";
 
-const teamOptionsArr = ["Core", "PR", "Core Support", "Web Dev", "Design", "Video Editing", "Gaming", "Sponsor"];
+const teamOptionsArr = ["Core", "PR", "Core Support", "Web Dev", "Design", "Video Editing", "Gaming", "Sponsorship"];
 
 const Team = () => {
     const [teamData, setTeamData] = useState({});

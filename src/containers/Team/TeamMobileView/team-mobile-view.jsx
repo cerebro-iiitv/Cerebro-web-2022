@@ -6,7 +6,7 @@ import axiosInstance from "../../../services/AxiosInstance";
 import LoadingSpinner from "../../../components/LoadingSpinner/LoadingSpinner";
 import TeamScrollMobile from "../../../components/Team/TeamSroll/TeamScroll";
 
-const teamOptionsArr = ["Core", "PR", "Core Support", "Web Dev", "Design", "Video Editing", "Gaming"];
+const teamOptionsArr = ["Core", "PR", "Core Support", "Web Dev", "Design", "Video Editing", "Gaming", "Sponsorship"];
 
 const TeamMobile = () => {
     const [teamData, setTeamData] = useState([]);

@@ -3,9 +3,11 @@ import linkedinlogo from "../../../assets/images/linkedinlogo.png";
 import twitterlogo from "../../../assets/images/twitterlogo.png";
 import "./TeamMember.scss";
 
-const TeamMember = ({ category, profilepic, github, twitter, linked_in, name, role }) => {
+const TeamMember = ({
+    isCountLessThanFour, category, profilepic, github, twitter, linked_in, name, role }) => {
+    const teamMemberClasses = `team-member ${isCountLessThanFour ? "lower-count-cont" : ""}`;
     return (
-        <div className={category === "Web Dev" ? "team-member web" : "team-member"}>
+        <div className={teamMemberClasses}>
             <div className="team-member__img-cont">
                 <div className="team-member__img-cont__bg">
                     <img src={profilepic} alt="profile" className="team-member__img-cont__bg__img" />
