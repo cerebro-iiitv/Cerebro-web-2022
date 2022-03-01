@@ -29,6 +29,11 @@ $small-mobile: 400px;
       position: fixed;
       margin: auto;
       overflow: scroll;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
 
     &__title {
@@ -42,8 +47,9 @@ $small-mobile: 400px;
     }
 
     &__children {
+      padding-top: 20px;
       max-height: fit-content;
-      min-height: 80vh;
+      min-height: 65vh;
       display: flex;
       flex-direction: column;
       align-items: center;
