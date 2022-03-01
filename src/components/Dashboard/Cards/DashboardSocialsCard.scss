@@ -3,16 +3,15 @@
   flex-direction: column;
   justify-content: space-between;
   width: 18%;
-  margin-right: 4%;
   &__title-cont {
     height: 23%;
     &__text {
       color: #f8b813;
       font-family: Barlow;
-      font-size: 24px;
+      font-size: 1.5rem;
       font-style: normal;
       font-weight: 700;
-      line-height: 29px;
+      line-height: 1.8rem;
       letter-spacing: 0em;
       width: fit-content;
     }
@@ -56,5 +55,143 @@
     flex-direction: column;
     justify-content: space-around;
     padding: 3% 0;
+  }
+}
+
+@media (max-width: 1250px) {
+  .dashboard-socials-card {
+    width: 21%;
+    &__title-cont {
+      height: 23%;
+      &__text {
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+      }
+    }
+    &__links-cont {
+      height: 70%;
+      &__row-1,
+      &__row-2 {
+        padding: 0% 2%;
+        & > div {
+          a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+              width: 80%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  .dashboard-socials-card {
+    width: 46%;
+    &__title-cont {
+      height: 24%;
+      &__text {
+        font-size: 1.9rem;
+        line-height: 1.9rem;
+      }
+    }
+    &__links-cont {
+      height: 68%;
+      &__row-1,
+      &__row-2 {
+        padding: 0% 2%;
+        & > div {
+          a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .dashboard-socials-card {
+    &__title-cont {
+      height: 24%;
+      &__text {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+      }
+    }
+    &__links-cont {
+      height: 68%;
+      &__row-1,
+      &__row-2 {
+        & > div {
+          a {
+            img {
+              width: 90%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .dashboard-socials-card {
+    &__title-cont {
+      height: 24%;
+      &__text {
+        font-size: 1.4rem;
+        line-height: 1.4rem;
+      }
+    }
+    &__links-cont {
+      height: 68%;
+      &__row-1,
+      &__row-2 {
+        & > div {
+          a {
+            img {
+              width: 80%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 426px) {
+  .dashboard-socials-card {
+    &__title-cont {
+      height: 24%;
+      &__text {
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+      }
+    }
+    &__links-cont {
+      height: 68%;
+      &__row-1,
+      &__row-2 {
+        & > div {
+          a {
+            img {
+              width: 70%;
+            }
+          }
+          img {
+            width: 70%;
+          }
+        }
+      }
+    }
   }
 }

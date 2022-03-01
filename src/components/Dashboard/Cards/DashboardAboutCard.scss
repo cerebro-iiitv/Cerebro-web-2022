@@ -1,6 +1,5 @@
 .dashboard-about-card {
   width: 40%;
-  margin-left: 4%;
   &__row {
     display: flex;
     margin: 3% 0;
@@ -27,4 +26,94 @@
 
 .dashboard-about-card > div {
   padding: 0.5% 6%;
+}
+
+@media (max-width: 1250px) {
+  .dashboard-about-card {
+    width: 42%;
+    &__row {
+      margin: 3% 0;
+      &__title {
+        width: 40%;
+        font-size: 1.3rem;
+      }
+      &__value {
+        width: 60%;
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+// mob view triggered
+@media (max-width: 1050px){
+  .dashboard-about-card {
+    width: 100%;
+    margin-bottom: 6%;
+    &__row {
+      margin: 2% 0;
+      &__title {
+        font-size: 1.8rem;
+      }
+      &__value {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 650px){
+  .dashboard-about-card {
+    &__row {
+      margin: 2% 0;
+      &__title {
+        font-size: 1.5rem;
+      }
+      &__value {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 550px){
+  .dashboard-about-card {
+    &__row {
+      margin: 3.5% 0;
+      &__title {
+        font-size: 1.1rem;
+      }
+      &__value {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 470px){
+  .dashboard-about-card {
+    &__row {
+      margin: 3.5% 0;
+      &__title {
+        font-size: 1rem;
+      }
+      &__value {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px){
+  .dashboard-about-card {
+    &__row {
+      margin: 3% 0;
+      &__title {
+        font-size: 0.9rem;
+      }
+      &__value {
+        font-size: 0.9rem;
+      }
+    }
+  }
 }

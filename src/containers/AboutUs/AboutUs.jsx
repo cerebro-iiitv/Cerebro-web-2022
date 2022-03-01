@@ -3,9 +3,6 @@ import "./AboutUs.scss";
 import React from "react";
 
 const AboutUs = (props) => {
-
-  // console.log(props.status);
-
   return (
     <div className={props.status==='first'?"aboutus":"aboutUs"}>
       <div className="aboutus-main">
@@ -28,7 +25,7 @@ const AboutUs = (props) => {
             <div className="aboutus-sponsor">
               <p className="joindis">
                 Join the{" "}
-                <a href="https://discord.com/channels/796739253186592849/935117726295420988">
+                <a href="https://discord.gg/VRTeuWZp2a" target="_blank" rel="noreferrer">
                   <span id="disserver">discord server</span>
                 </a>{" "}
                 for further communication!

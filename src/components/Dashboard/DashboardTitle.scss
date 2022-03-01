@@ -9,6 +9,7 @@
   align-items: flex-start;
   &__home,
   &__logout {
+    position: relative;
     outline: none;
     background: none;
     border: none;
@@ -22,9 +23,13 @@
       letter-spacing: 0em;
       color: white;
     }
+    &-icon--tab {
+      display: none;
+    }
   }
   &__home {
-    margin-top: 0.4%;
+    top: 10%;
+    right: 10%;
     &-icon {
       img {
         width: 82%;
@@ -32,8 +37,9 @@
     }
   }
   &__logout {
-    margin-top: 0.6%;
-    &-title{
+    top: 15%;
+    left: 10%;
+    &-title {
       padding-right: 2%;
       line-height: 1.3rem;
     }
@@ -43,6 +49,9 @@
       }
     }
   }
+  &__mob-btns-cont {
+    display: none;
+  }
   &__main-heading {
     font-family: Barlow;
     font-size: 2.1rem;
@@ -50,6 +59,108 @@
     font-weight: 400;
     letter-spacing: 0em;
     color: #ffffff;
-    margin: 0.4% 9%;
+    margin: 0.4% 0%;
+  }
+}
+
+@media (max-width: 1400px) {
+  .dashboard__title-cont {
+    &__home {
+      top: 10%;
+      right: 11%;
+    }
+    &__logout {
+      left: 11%;
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .dashboard__title-cont {
+    &__home {
+      right: 12%;
+    }
+    &__logout {
+      left: 12%;
+    }
+  }
+}
+
+@media (max-width: 1185px) {
+  .dashboard__title-cont {
+    &__home {
+      right: 13%;
+    }
+    &__logout {
+      left: 13%;
+    }
+  }
+}
+
+@media (max-width: 1085px) {
+  .dashboard__title-cont {
+    &__home {
+      right: 14%;
+    }
+    &__logout {
+      left: 14%;
+    }
+  }
+}
+
+// tab view triggered
+@media (max-width: 1050px) {
+  .dashboard__title-cont {
+    height: fit-content;
+    align-items: center;
+    padding: 3% 0;
+    background: none;
+    &__home,
+    &__logout {
+      &-title {
+        display: none;
+      }
+      &-icon {
+        display: none;
+      }
+      &-icon--tab {
+        display: flex;
+        align-items: center;
+      }
+    }
+    &__main-heading {
+      margin: 0;
+      font-size: 3rem;
+    }
+  }
+}
+
+// mob view triggered
+@media (max-width: 500px) {
+  .dashboard__title-cont {
+    flex-direction: column;
+    align-items: center;
+    padding: 4% 0;
+    &__home,
+    &__logout {
+      display: none;
+    }
+    &__mob-btns-cont {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      &__home,
+      &__logout {
+        padding-top: 8%;
+        outline: none;
+        background: none;
+        border: none;
+        display: flex;
+        cursor: pointer;
+      }
+    }
+    &__main-heading {
+      margin: 0;
+    }
   }
 }

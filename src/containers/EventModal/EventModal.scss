@@ -1,7 +1,8 @@
 .event-modal__backdrop {
+  position: fixed;
+  top: 0;
   width: 100%;
-  height: 100%;
-  position: absolute;
+  height: 100vh;
   background-color: #0a2245;
   z-index: 3;
 }
@@ -185,5 +186,416 @@
     text-align: center;
     border-radius: 11px;
     color: white;
+  }
+}
+
+@media (max-width: 1250px) {
+  .event-modal__backdrop {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #0a2245;
+    z-index: 3;
+  }
+  .event-modal {
+    width: 65%;
+    height: 100%;
+    margin: 0% auto;
+    padding: 3% 0;
+    border-radius: 8px;
+    &__title {
+      font-size: 2.8rem;
+      line-height: 3.125rem;
+    }
+    &__content {
+      & > * {
+        width: 80%;
+      }
+      margin: 4% 0;
+      padding: 5% 0 3% 0;
+      width: 100%;
+      border-radius: 8px;
+      &__schedule {
+        &__key {
+          width: 50%;
+          font-size: 1.4rem;
+          line-height: 1.625rem;
+        }
+        &__value {
+          width: 50%;
+          font-size: 1.4rem;
+          line-height: 1.625rem;
+        }
+      }
+
+      &__registration {
+        padding-top: 2%;
+        &__key {
+          width: 50%;
+          font-size: 1.4rem;
+          line-height: 1.625rem;
+        }
+        &__value {
+          width: 50%;
+          &-complete,
+          &-incomplete {
+            font-size: 1.4rem;
+          }
+          &-incomplete {
+            &__remaining {
+              padding-left: 2%;
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+
+      &__divider {
+        padding: 4% 0;
+        width: 100%;
+        img {
+          width: 90%;
+        }
+      }
+
+      &__part-details {
+        &__detail {
+          margin-bottom: 3%;
+          &-key,
+          &-value {
+            width: 50%;
+            font-size: 1.4rem;
+            line-height: 1.625rem;
+          }
+          &-value > * {
+            padding-bottom: 2%;
+          }
+          &-value > *:nth-child(even) {
+            padding-bottom: 5%;
+          }
+        }
+      }
+    }
+    &__button {
+      padding: 1% 2%;
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+      border-radius: 11px;
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  .event-modal__backdrop {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #0a2245;
+    z-index: 3;
+  }
+  .event-modal {
+    width: 80%;
+    height: 100%;
+    margin: 0% auto;
+    padding: 3% 0;
+    border-radius: 8px;
+    &__title {
+      font-size: 2.8rem;
+      line-height: 3.125rem;
+    }
+    &__content {
+      & > * {
+        width: 80%;
+      }
+      margin: 4% 0;
+      padding: 5% 0 3% 0;
+      width: 100%;
+      border-radius: 8px;
+      &__schedule {
+        &__key {
+          width: 50%;
+          font-size: 1.4rem;
+          line-height: 1.625rem;
+        }
+        &__value {
+          width: 50%;
+          font-size: 1.4rem;
+          line-height: 1.625rem;
+        }
+      }
+
+      &__registration {
+        padding-top: 2%;
+        &__key {
+          width: 50%;
+          font-size: 1.4rem;
+          line-height: 1.625rem;
+        }
+        &__value {
+          width: 50%;
+          &-complete,
+          &-incomplete {
+            font-size: 1.4rem;
+          }
+          &-incomplete {
+            &__remaining {
+              padding-left: 2%;
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+
+      &__divider {
+        padding: 4% 0;
+        width: 100%;
+        img {
+          width: 90%;
+        }
+      }
+
+      &__part-details {
+        &__detail {
+          margin-bottom: 3%;
+          &-key,
+          &-value {
+            width: 50%;
+            font-size: 1.4rem;
+            line-height: 1.625rem;
+          }
+          &-value > * {
+            padding-bottom: 2%;
+          }
+          &-value > *:nth-child(even) {
+            padding-bottom: 5%;
+          }
+        }
+      }
+    }
+    &__button {
+      padding: 1% 2%;
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+      border-radius: 11px;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .event-modal__backdrop {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #0a2245;
+    z-index: 3;
+  }
+  .event-modal {
+    width: 90%;
+    height: 100%;
+    margin: 0% auto;
+    padding: 3% 0;
+    border-radius: 8px;
+    &__title {
+      font-size: 2.6rem;
+      line-height: 3rem;
+    }
+    &__content {
+      & > * {
+        width: 85%;
+      }
+      margin: 4% 0;
+      padding: 5% 0 3% 0;
+      width: 100%;
+      border-radius: 8px;
+      &__schedule {
+        &__key {
+          width: 50%;
+          font-size: 1.2rem;
+          line-height: 1.4rem;
+        }
+        &__value {
+          width: 50%;
+          font-size: 1.2rem;
+          line-height: 1.4rem;
+        }
+      }
+
+      &__registration {
+        padding-top: 2%;
+        &__key {
+          width: 50%;
+          font-size: 1.2rem;
+          line-height: 1.4rem;
+        }
+        &__value {
+          width: 50%;
+          &-complete,
+          &-incomplete {
+            font-size: 1.2rem;
+          }
+          &-incomplete {
+            &__remaining {
+              padding-left: 2%;
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+
+      &__divider {
+        padding: 4% 0;
+        width: 100%;
+        img {
+          width: 90%;
+        }
+      }
+
+      &__part-details {
+        &__detail {
+          margin-bottom: 3%;
+          &-key,
+          &-value {
+            width: 50%;
+            font-size: 1.2rem;
+            line-height: 1.4rem;
+          }
+          &-value > * {
+            padding-bottom: 2%;
+          }
+          &-value > *:nth-child(even) {
+            padding-bottom: 5%;
+          }
+        }
+      }
+    }
+    &__button {
+      padding: 2% 3%;
+      font-size: 1.1rem;
+      line-height: 1.3rem;
+      border-radius: 11px;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .event-modal__backdrop {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #0a2245;
+    z-index: 3;
+  }
+  .event-modal {
+    width: 90%;
+    height: 100%;
+    margin: 0% auto;
+    padding: 3% 0;
+    border-radius: 8px;
+    &__title {
+      font-size: 2.4rem;
+      line-height: 2.5rem;
+      padding-top: 4%;
+    }
+    &__content {
+      & > * {
+        width: 85%;
+      }
+      margin: 4% 0;
+      padding: 5% 0 3% 0;
+      width: 100%;
+      border-radius: 8px;
+      &__schedule {
+        flex-wrap: wrap;
+        text-align: center;
+        &__key {
+          width: 100%;
+          font-size: 1.2rem;
+          line-height: 1.4rem;
+        }
+        &__value {
+          padding-top: 1%;
+          width: 100%;
+          font-size: 1.2rem;
+          line-height: 1.4rem;
+        }
+      }
+
+      &__registration {
+        text-align: center;
+        flex-wrap: wrap;
+        padding-top: 2%;
+        &__key {
+          width: 100%;
+          font-size: 1.2rem;
+          line-height: 1.4rem;
+        }
+        &__value {
+          width: 100%;
+          padding-top: 1%;
+          &-complete,
+          &-incomplete {
+            font-size: 1.2rem;
+          }
+          &-incomplete {
+            &__remaining {
+              padding-left: 2%;
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+
+      &__divider {
+        padding: 4% 0;
+        width: 100%;
+        img {
+          width: 90%;
+        }
+      }
+
+      &__part-details {
+        &__detail {
+          text-align: center;
+          flex-wrap: wrap;
+          margin-bottom: 3%;
+          &-key,
+          &-value {
+            padding-top: 1%;
+            width: 100%;
+            font-size: 1.2rem;
+            line-height: 1.4rem;
+          }
+          &-value > * {
+            padding-bottom: 2%;
+          }
+          &-value > *:nth-child(even) {
+            padding-bottom: 5%;
+          }
+        }
+      }
+    }
+    &__button {
+      margin: 2% 0;
+      padding: 2% 3%;
+      font-size: 1.1rem;
+      line-height: 1.3rem;
+      border-radius: 11px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .event-modal {
+    &__title {
+      font-size: 2.1rem;
+      line-height: 2.2rem;
+      padding-top: 4%;
+    }
+  }
+}
+
+@media (max-width: 330px) {
+  .event-modal {
+    &__title {
+      font-size: 2rem;
+      line-height: 2.1rem;
+      padding-top: 4%;
+    }
   }
 }

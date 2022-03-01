@@ -8,3 +8,17 @@
   height: 9vh;
   margin: 2% auto;
 }
+
+@media (max-width: 1170px){
+  .team-selector {
+    height: 8vh;
+  }
+}
+
+@media (max-width: 1010px){
+  .team-selector {
+    width: 70%;
+    height: 6vh;
+    margin: 2% auto;
+  }
+}

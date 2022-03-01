@@ -97,8 +97,6 @@ const ModalOverlay = ({ setShowModal, modalData }) => {
         participantDetailsObj["Other Team Members"] = otherTeamMembers;
     }
 
-    // console.log("generated participant details ", participantDetailsObj)
-
     const getPartiValueJSX = (detailKey, detailVal) => {
         if (detailKey === "Other Team Members") {
             return <div className="event-modal__content__part-details__detail-value">{detailVal.map((i) => (
@@ -164,7 +162,7 @@ const ModalOverlay = ({ setShowModal, modalData }) => {
                                 <span className="event-modal__content__schedule__value__date">{modalData.endDate}
                                 </span>
                                 <span className="event-modal__content__schedule__value__time">
-                                    {` (${modalData.startTime})`}
+                                    {` (${modalData.endTime})`}
                                 </span>
                             </div>
                         </div>
@@ -198,7 +196,6 @@ const ModalOverlay = ({ setShowModal, modalData }) => {
 }
 
 const EventModal = ({ setShowModal, modalData }) => {
-    // console.log(modalData)
     return (
         <>
             {ReactDOM.createPortal(
