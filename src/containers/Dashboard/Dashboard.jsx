@@ -27,10 +27,60 @@ const temp = {
             submission_data: null
         },
         {
+            event_title: "Penumbera",
+            start_time: "18/03/2022-3:00 pm",
+            end_time: "20/03/2022-3:00 pm",
+            is_team_event: false,
+            registration_data: {
+                hacker_earth_id: "1"
+            },
+            submission_data: null
+        },
+        {
+            event_title: "Penumbera",
+            start_time: "18/03/2022-3:00 pm",
+            end_time: "20/03/2022-3:00 pm",
+            is_team_event: false,
+            registration_data: {
+                hacker_earth_id: "1"
+            },
+            submission_data: null
+        },
+        {
+            event_title: "Penumbera",
+            start_time: "18/03/2022-3:00 pm",
+            end_time: "20/03/2022-3:00 pm",
+            is_team_event: false,
+            registration_data: {
+                hacker_earth_id: "1"
+            },
+            submission_data: null
+        },
+        {
+            event_title: "Penumbera",
+            start_time: "18/03/2022-3:00 pm",
+            end_time: "20/03/2022-3:00 pm",
+            is_team_event: false,
+            registration_data: {
+                hacker_earth_id: "1"
+            },
+            submission_data: null
+        },
+        {
+            event_title: "Penumbera",
+            start_time: "18/03/2022-3:00 pm",
+            end_time: "20/03/2022-3:00 pm",
+            is_team_event: false,
+            registration_data: {
+                hacker_earth_id: "1"
+            },
+            submission_data: null
+        },
+        {
             event_title: "Lights, Camera, Action",
             start_time: "18/03/2022-3:00 pm",
             end_time: "20/03/2022-3:00 pm",
-            is_team_event: true,
+            is_team_event: false,
             max_size: 2,
             team_captain: "201951083@gmail.com",
             team_name: "Forever Silver Niggas Forever Silver Niggas",
@@ -57,7 +107,7 @@ const temp = {
             is_team_event: true,
             max_size: 2,
             team_captain: "201951083@gmail.com",
-            team_name: "Forever Silver Niggas",
+            team_name: "Forever Silver Niggas Forever Silver Niggas",
             current_size: 2,
             is_full: true,
             team_code: "RCL#00001",
