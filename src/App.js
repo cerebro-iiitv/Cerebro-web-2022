@@ -15,7 +15,6 @@ import Sponsors from "./containers/Sponsors/Sponsors";
 import JoinTeam from "./containers/JoinTeam/JoinTeam";
 import CreateTeam from "./containers/CreateTeam/CreateTeam";
 import VerifyEmail from "./containers/VerifyEmail/VerifyEmail";
-import Events from "./containers/Events/Events";
 import PrivateRoute from "./components/RouteElements/PrivateRoute";
 import UserRoute from "./components/RouteElements/UserRoute";
 

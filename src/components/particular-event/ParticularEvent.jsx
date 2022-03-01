@@ -187,10 +187,10 @@ export const ParticularEvent = ({ shortName, rulesDoc, socialMedia, eventId, tea
                     <div className='button-container'>
                       {
                         team_size === 1 ?
-                          <a id='single-button' href={`event/join/${eventId}`} onClick={registerUser}>Register</a>
+                          <a id='single-button' href={`event/join/${shortName}`} onClick={registerUser}>Register</a>
                           :
 
-                          <a id="single-button" href={`event/create/${eventId}`} onClick={registerUser}>Register</a>
+                          <a id="single-button" href={`event/create/${shortName}`} onClick={registerUser}>Create Team</a>
 
 
                       }
@@ -204,7 +204,7 @@ export const ParticularEvent = ({ shortName, rulesDoc, socialMedia, eventId, tea
                       {
                         team_size > 1 ?
 
-                          <a href={`event/join/${eventId}`} onClick={joinTeam}>Join Team</a>
+                          <a href={`event/join/${shortName}`} onClick={joinTeam}>Join Team</a>
 
                           :
                           ""

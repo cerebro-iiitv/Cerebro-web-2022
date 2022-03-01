@@ -13,7 +13,7 @@ const EventMobile = () => {
     const [isLoading, setLoading] = useState(true);
     const [currIdx, setCurrIdx] = useState(0);
 
-  const auth = useAuth();
+    const auth = useAuth();
 
     useEffect(() => {
         async function fetchData() {
@@ -27,30 +27,29 @@ const EventMobile = () => {
         fetchData();
     }, []);
 
-    function onTouchLoadEvent (idx, event) {
+    function onTouchLoadEvent(idx, event) {
         setCurrIdx(idx);
         setCurrEvent(event);
     }
 
+    if (isLoading === true) {
+        return <LoadingSpinner />;
+    }
     return (
         <div className="event-base">
-            {
-                isLoading === true 
-                ? 
-                    <LoadingSpinner />
-                :
-                    <div className="main-cont">
-                        <div className="event-mobile-scrollbar">
-                            <EventMobileScroll events = {events} currIdx = {currIdx} onTouchOpen={onTouchLoadEvent}/>
-                        </div>
+
+            <div className="main-cont">
+                <div className="event-mobile-scrollbar">
+                    <EventMobileScroll events={events} currIdx={currIdx} onTouchOpen={onTouchLoadEvent} />
+                </div>
 
 
-                        <div className="particular-event-display">
-                            <ParticularMobileEvent isLogged = {auth.isLoggedIn} currEvent = {currEvent}/>
-                        </div>
+                <div className="particular-event-display">
+                    <ParticularMobileEvent isLogged={auth.isLoggedIn} currEvent={currEvent} />
+                </div>
 
-                    </div>
-            }
+            </div>
+
         </div>
     )
 }
