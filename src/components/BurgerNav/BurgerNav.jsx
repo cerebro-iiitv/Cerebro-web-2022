@@ -50,7 +50,7 @@ const BurgerNav = () => {
           <span className="elements">Home</span>
         </Link>
 
-        <Link className="list_element" onClick={closedrawer} to="/event">
+        <Link className="list_element" onClick={closedrawer} to="/events">
           <span className="elements">Events</span>
         </Link>
 

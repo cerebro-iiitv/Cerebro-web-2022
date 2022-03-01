@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Cerebro 2022",
+  "name": "Annual Technical Festival of IIIT Vadodara",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,17 +8,17 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
+      "src": "favicon.ico",
+      "sizes": "192x192",
+      "type": "image/x-icon"
     },
     {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "src": "favicon.ico",
+      "sizes": "512x512",
+      "type": "image/x-icon"
     }
   ],
-  "start_url": ".",
+  "start_url": "cerebro.iiitvadodara.ac.in",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"

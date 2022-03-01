@@ -31,7 +31,7 @@ const CreateTeam = () => {
         }
         setEvent(res.data);
       } catch {
-        navigate("/event");
+        navigate("/events");
       }
     };
     getData();
