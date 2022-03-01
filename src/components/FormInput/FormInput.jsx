@@ -23,7 +23,7 @@ export const FormInput = ({
           onChange={(event) => {
             const file = event.target.files[0];
             if (file.size > 300000) {
-              alert("File/Image size should be less than 300kb");
+              alert("File/Image size should be less than 300KB");
               event.target.value = "";
             } else {
               setFieldValue(name, file);

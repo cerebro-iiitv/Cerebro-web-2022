@@ -39,7 +39,7 @@ export const signupFormData = {
     },
     {
       name: "proof",
-      label: "Proof of pursuing UG (under 300kb)",
+      label: "Proof of pursuing UG (under 300KB)",
       type: "file",
     },
     {
