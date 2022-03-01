@@ -68,13 +68,13 @@ export const ParticularEvent = ({ shortName, rulesDoc, socialMedia, eventId, tea
           <div className='date1'>
             <p className='date1-items'>{startDate[0]} </p>
             <img src={dateLine} alt="date-line" className='date-line' />
-            <p>{startDate[1]}</p>
+            <p className='time'>{startDate[1]}</p>
           </div>
           <img src={toDot} alt="to-dot" className='to-dot' />
           <div className='date1'>
             <p className='date1-items'>{endDate[0]} </p>
             <img src={dateLine} alt="date-line" className='date-line' />
-            <p>{endDate[1]}</p>
+            <p className='time'>{endDate[1]}</p>
           </div>
         </div>
 

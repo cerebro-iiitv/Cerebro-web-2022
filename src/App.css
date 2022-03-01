@@ -49,7 +49,7 @@ body {
 
 @font-face {
   font-family: avenir;
-  src: url("./assets/fonts/avenir.otf");
+  src: url("./assets/fonts/AvenirNext.otf");
 }
 
 @font-face {
@@ -65,4 +65,9 @@ body {
 @font-face {
   font-family: Lexie Readable;
   src: url("./assets/fonts/LexieReadable.ttf");
+}
+
+@font-face {
+  font-family: Retro Gaming;
+  src: url("./assets/fonts/Retro Gaming.ttf");
 }
