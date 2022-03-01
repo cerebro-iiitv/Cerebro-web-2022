@@ -27,16 +27,16 @@ const ParticularMobileEvent = ({ currEvent, isLogged }) => {
 
     // function for submitting work
     const submitWork = () => {
-        console.log("Called the submit work function");
+        // console.log("Called the submit work function");
     }
 
     // function for registering the user
     const registerUser = () => {
-        console.log("Calling the registered function");
+        // console.log("Calling the registered function");
     }
 
     const joinTeam = () => {
-        console.log("Calling the join team function");
+        // console.log("Calling the join team function");
     }
     return (
         <div className="particular-event-section">

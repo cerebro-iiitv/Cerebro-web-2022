@@ -22,7 +22,7 @@ const Timeline = () => {
 
   return (
     <>
-      <MobileTitle title="Timeline"/>
+      <MobileTitle title="Timeline" />
       <div className="timeline" ref={scrollRef}>
         <div className="timeline__container">
           <div className="timeline__container__upper">
