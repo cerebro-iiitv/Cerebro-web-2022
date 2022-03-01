@@ -27,7 +27,7 @@ const CreateTeam = () => {
         setEventId(id);
         const res = await axiosInstance.get(`/events/${id}`);
         if (!res.data.team_event || res.data.is_registered) {
-          navigate(`/event/join/${id}`);
+          navigate(`/event/join/${eventName}`);
         }
         setEvent(res.data);
       } catch {
@@ -37,13 +37,6 @@ const CreateTeam = () => {
     getData();
     return () => (mountedRef.current = false);
   }, [eventName, navigate]);
-
-  const toLabel = (field) =>
-    field
-      .toLowerCase()
-      .split("_")
-      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(" ");
 
   const getInitialValues = () => {
     const values = { team_name: "", event: "" };
@@ -65,7 +58,8 @@ const CreateTeam = () => {
         if (!values[field]) {
           errors[field] = "Required";
         } else if (event.registration_attributes[field] === "int") {
-          if (!values[field].test(/^\d+$/)) {
+          const regex = /^\d+$/;
+          if (!regex.test(values[field])) {
             errors[field] = "Must be an integer";
           }
         }
@@ -75,7 +69,6 @@ const CreateTeam = () => {
   };
 
   const onSubmit = async (values, { setFieldError, setSubmitting }) => {
-    setSubmitting(true);
     try {
       const data = {
         event: eventId,
@@ -131,7 +124,7 @@ const CreateTeam = () => {
                   <div className="create-team__input" key={index}>
                     <FormInput
                       disabled={submitStatus}
-                      label={toLabel(key)}
+                      label={key}
                       name={key}
                       type={mapType(value)}
                       page="create-team"

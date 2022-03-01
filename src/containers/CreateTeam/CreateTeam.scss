@@ -29,7 +29,7 @@ $mobile: 600px;
 
   &__success {
     width: max-content;
-    height: 37px;
+    height: 40px;
     background: #000000;
     border: 0.5px solid rgba(255, 255, 255, 0.75);
     padding: 5px;
@@ -48,6 +48,10 @@ $mobile: 600px;
       text-align: center;
       letter-spacing: 0.3em;
       color: #ffffff;
+      
+      @media screen and (max-width: $mobile) {
+        padding-bottom: 2px;
+      }
     }
   }
 
