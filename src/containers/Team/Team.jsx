@@ -12,7 +12,7 @@ const Team = () => {
     const [selectedTeam, setSelectedTeam] = useState("Core");
     const [selectedTeamData, setSelectedTeamData] = useState([]);
     const [showLoadingSpinner, setShowLoadingSpinner] = useState(true);
-
+    const [selectedTitle, setSelectedTitle] = useState();
     useEffect(() => {
         axiosInstance.get("/teams").then(res => setTeamData(res.data));
     }, []);
@@ -22,6 +22,7 @@ const Team = () => {
         for (let i in teamData) {
             if (i === selectedTeam) {
                 setSelectedTeamData(teamData[i]);
+                setSelectedTitle(i);
             }
         }
         setShowLoadingSpinner(false);
@@ -34,7 +35,7 @@ const Team = () => {
                     ? <LoadingSpinner />
                     :
                     <>
-                        <TeamMembers selectedTeamData={selectedTeamData} />
+                        <TeamMembers category = {selectedTitle} selectedTeamData={selectedTeamData} />
                         <TeamSelector
                             teamOptions={teamOptionsArr}
                             setSelectedTeam={setSelectedTeam}

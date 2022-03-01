@@ -19,6 +19,14 @@ const Sponsors = () => {
     const loadLess = () => {
         setVisible(visible-6);
     }    
+
+    const loadMoreScroll = () => {
+        setVisible(visible + 3);
+    }
+
+    const loadLessScroll = () => {
+        setVisible(visible - 3);
+    }
     return (
         <div className="sponsors">
             <div className="left-pillar">
@@ -30,7 +38,7 @@ const Sponsors = () => {
                 </div>
 
                 <div className="sponsor-grid">
-                    <SponsorGrid sponsorData = {sponsorDataJson.sponsors} visible = {visible} loadMore = {loadMore} loadLess = {loadLess}/>
+                    <SponsorGrid loadLessScroll={loadLessScroll} loadMoreScroll={loadMoreScroll} sponsorData = {sponsorDataJson.sponsors} visible = {visible} loadMore = {loadMore} loadLess = {loadLess}/>
                 </div>
             </div>
             <div className="right-pillar">

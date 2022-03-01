@@ -11,7 +11,13 @@
     width: 100vw;
     display: flex;
     justify-content: space-between;
+    @media only screen and (max-width: 768px){
+        background: linear-gradient(90deg, #112852 19.91%, #010101 94.44%);
+    }
     .left-pillar{
+        @media only screen and (max-width: 768px){
+            display: none;
+        }
         height: 100vh;
         width: 35%;
         img{
@@ -20,6 +26,9 @@
         }
     }
     .right-pillar{
+        @media only screen and (max-width: 768px){
+            display: none;
+        }
         height: 100vh;
         width: 35%;
         img{
@@ -35,7 +44,11 @@
         justify-content: space-around;
         align-items: center;
         height: 80%;
-
+        @media only screen and (max-width: 768px){
+            padding-top: 8%;
+            height: 100%;
+            width: 100%;
+        }
         .title-cont{
             height: 10%;
             .title{

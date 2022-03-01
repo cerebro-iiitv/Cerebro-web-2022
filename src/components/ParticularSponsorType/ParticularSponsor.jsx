@@ -3,19 +3,12 @@ import React from "react";
 import "./ParticularSponsor.scss";
 
 
-const ParticularSponsor = ({ logo, websiteLink, type, background }) => {
-
-    const sponsorStyles = {
-        backgroundImage: `url(${background})`,
-        backgroundSize: 'contain',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: "50% 50%"
-    }
+const ParticularSponsor = ({ logo, websiteLink, type }) => {
 
     return (
 
         <div className="particular-component">
-            <a href={websiteLink} className="sponsor-background" style={sponsorStyles}>
+            <a href={websiteLink} className="sponsor-background">
                 <img src={logo} alt="sponsor-logo" className="logo" />
             </a>
 
