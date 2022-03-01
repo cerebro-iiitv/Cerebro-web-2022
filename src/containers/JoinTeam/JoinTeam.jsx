@@ -26,7 +26,7 @@ const JoinTeam = () => {
         const res = await axiosInstance.get(`/events/${id}`);
         setEvent(res.data);
       } catch {
-        navigate("/event");
+        navigate("/events");
       }
     };
     getData();

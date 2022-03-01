@@ -12,7 +12,7 @@ const EventBtn = ({
   successMessage,
 }) => {
   const navigate = useNavigate();
-  const onClick = () => navigate("/event");
+  const onClick = () => navigate("/events");
 
   const custom = submitStatus ? "disable" : "enable";
 

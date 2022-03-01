@@ -9,7 +9,7 @@ let navMenuDetails = [
     { title: "Team" },
     { title: "FAQ's" },
     { title: "Home" },
-    { title: "Event" },
+    { title: "Events" },
     { title: "Timeline" },
 ]
 navMenuDetails = [...navMenuDetails, ...navMenuDetails, ...navMenuDetails];
@@ -17,7 +17,7 @@ navMenuDetails = [...navMenuDetails, ...navMenuDetails, ...navMenuDetails];
 const getInitialCardIndex = (currPath) => {
     if (currPath === "/team") return 3;
     if (currPath === "/faq") return 4;
-    if (currPath === "/event") return 6;
+    if (currPath === "/events") return 6;
     if (currPath === "/timeline") return 7;
     return 5; // for "/home" and any other path
 }
