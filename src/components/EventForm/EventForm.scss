@@ -9,7 +9,11 @@ $small-mobile: 400px;
   background-size: cover;
 
   @media screen and (max-width: $tablet) {
+    align-items: center;
     background: none;
+    display: flex;
+    justify-content: center;
+    position: fixed;
   }
 
   &__container {
@@ -18,9 +22,18 @@ $small-mobile: 400px;
     align-items: center;
 
     @media screen and (max-width: $tablet) {
-      padding: 4%;
       height: 90%;
+      width: 85%;
       justify-content: space-evenly;
+      display: block;
+      position: fixed;
+      margin: auto;
+      overflow: scroll;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
 
     &__title {
@@ -29,13 +42,14 @@ $small-mobile: 400px;
       // font-weight: normal;
       font-size: 42px;
       color: #e4c142;
-      padding-top: 1%;
       padding-bottom: 1.5%;
       text-align: center;
     }
 
     &__children {
-      height: 72.5vh;
+      padding-top: 20px;
+      max-height: fit-content;
+      min-height: 65vh;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -52,6 +66,7 @@ $small-mobile: 400px;
         box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
         backdrop-filter: blur(80px);
         border-radius: 20px;
+        padding-top: 30px;
       }
     }
   }

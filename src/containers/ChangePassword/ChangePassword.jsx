@@ -32,7 +32,12 @@ const ChangePassword = () => {
   };
 
   return (
-    <AuthForm title="Change Password" to="/" text="Return to home?" link="Home">
+    <AuthForm
+      title="Change Password"
+      to="/"
+      text="Return to dashboard?"
+      link="Dashboard"
+    >
       <Formik {...{ validate, initialValues, onSubmit }}>
         {({ isSubmitting, errors }) => (
           <Form className="change-password">
