@@ -23,7 +23,7 @@ export const ParticularEvent = ({ shortName, rulesDoc, socialMedia, eventId, tea
   // subReq = undefined;
   const startDate = start_time.split("-");
   const endDate = end_time.split("-");
-  console.log(startDate);
+  // console.log(startDate);
 
   if (title === "CSGO") {
     title = "Counter-Strike: Global Offensive";
@@ -38,16 +38,16 @@ export const ParticularEvent = ({ shortName, rulesDoc, socialMedia, eventId, tea
 
   // function for submitting work
   const submitWork = () => {
-    console.log("Called the submit work function");
+    // console.log("Called the submit work function");
   }
 
   // function for registering the user
   const registerUser = () => {
-    console.log("Calling the registered function");
+    // console.log("Calling the registered function");
   }
 
   const joinTeam = () => {
-    console.log("Calling the join team function");
+    // console.log("Calling the join team function");
   }
   return (
     <div className='event'>
