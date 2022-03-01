@@ -1,8 +1,14 @@
+$tablet: 1000px;
+
 .login {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+
+  @media screen and (max-width: $tablet) {
+    padding-top: 80px; 
+  }
 
   &__button {
     margin-top: 10px;
