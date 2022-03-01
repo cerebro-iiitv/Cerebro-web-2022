@@ -94,7 +94,7 @@ function App() {
             }
           />
           <Route
-            path="/event"
+            path="/events"
             element={
               <MainLayout status="hover" hover={hover} sethover={sethover}>
                 <Events />
