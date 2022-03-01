@@ -6,11 +6,32 @@
 
 .team-members-cont {
   height: 60vh;
-  width: 75%;
+  width: 60%;
   margin: 0 auto;
   padding: 20px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 1250px){
+  .team-members-cont {
+    height: 55vh;
+    width: 60%;
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 1150px){
+  .team-members-cont {
+    padding: 5% 0;
+  }
+}
+
+@media (max-width: 950px){
+  .team-members-cont {
+    height: 55vh;
+    width: 70%;
+  }
 }

@@ -1,4 +1,27 @@
+.dashboard::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.dashboard::-webkit-scrollbar-track {
+  background: #c6e7ff1a;
+}
+
+/* Handle */
+.dashboard::-webkit-scrollbar-thumb {
+  background: #e4c142;
+}
+
+/* Handle on hover */
+.dashboard::-webkit-scrollbar-thumb:hover {
+  background: #e4c142;
+}
+
 .dashboard {
+  overflow-x: hidden;
+  width: 90vw;
+  min-height: 100%;
+  margin: 0 auto;
   background-color: #0a2245;
 
   @keyframes loading {

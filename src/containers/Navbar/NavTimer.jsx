@@ -10,7 +10,7 @@ const NavTimer = () => {
     const [seconds, setSeconds] = useState("00");
 
     useEffect(() => {
-        const countdownDate = new Date("Mar 18, 2022 00:00:00").getTime();
+        const countdownDate = new Date("Mar 14, 2022 00:00:00").getTime();
 
         const interval = setInterval(() => {
             const currentTime = new Date().getTime();

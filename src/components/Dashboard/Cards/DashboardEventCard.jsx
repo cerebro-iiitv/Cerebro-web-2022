@@ -15,6 +15,8 @@ const DashboardEventCard = ({ eventData, isEventsMoreThan5, participantDetails }
         teamName,
         isTeamFull } = eventData;
     const [showEventModal, setShowEventModal] = useState(false);
+    const checkMarkCondition = !isTeamEvent || isTeamFull;
+    console.log(checkMarkCondition);
     const showModal = () => {
         setShowEventModal(true);
     }
@@ -48,13 +50,13 @@ const DashboardEventCard = ({ eventData, isEventsMoreThan5, participantDetails }
                                 {teamName}
                             </div>
                         </div>
-                        {
-                            isTeamFull &&
-                            <div className="dashboard-event-carousel-card__checkmark">
-                                <img src={checkmarkimg} alt="check" />
-                            </div>
-                        }
                     </>
+                }
+                {
+                    checkMarkCondition &&
+                    <div className="dashboard-event-carousel-card__checkmark">
+                        <img src={checkmarkimg} alt="check" />
+                    </div>
                 }
             </DashboardCardWrapper>
             {showEventModal &&

@@ -1,6 +1,20 @@
 .dashboard-info-cards-cont {
   background-color: #0a2245;
-  padding: 3% 0 2% 0;
+  padding: 3% 0 1% 0;
   display: flex;
   justify-content: space-evenly;
+}
+
+@media (max-width: 1050px) {
+  .dashboard-info-cards-cont {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 3% 4% 6% 4%;
+  }
+}
+
+@media (max-width: 426px) {
+  .dashboard-info-cards-cont {
+    padding: 3% 0% 6% 0%;
+  }
 }
