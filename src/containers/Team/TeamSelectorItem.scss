@@ -1,0 +1,79 @@
+.team-selector-item {
+  user-select: none;
+  margin-top: 5px; // misc fix to align the dots
+  width: 11%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  &-even {
+    flex-direction: column-reverse;
+  }
+  &__title {
+    margin: 4% 0;
+    font-family: Baumans;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0em;
+    color: #ffffff99;
+    &-hidden {
+      visibility: hidden;
+    }
+    &-visible {
+      visibility: visible;
+    }
+    &__animate-up {
+      animation-name: tweak-up;
+      animation-duration: 0.8s;
+    }
+    &__animate-down {
+      animation-name: tweak-down;
+      animation-duration: 0.8s;
+    }
+    &-selected {
+      color: #fffcc9;
+      box-shadow: 0px 0px 4.8x 0px #fec600;
+    }
+  }
+  &__btn-cont {
+    display: flex;
+    align-items: center;
+    button {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      background-color: #071e40;
+    }
+  }
+}
+
+@keyframes tweak-down {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(8px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes tweak-up {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}

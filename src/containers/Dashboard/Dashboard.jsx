@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import axiosInstance from "../../services/AxiosInstance";
+import LoadingSpinner from "../../components/LoadingSpinner/LoadingSpinner";
 import DashboardTitle from "../../components/Dashboard/DashboardTitle";
 import DashboardInfoCards from "../../components/Dashboard/DashboardInfoCards";
 import DashboardEventsSection from "./DashboardEventsSection";
 import "./Dashboard.scss";
-import loadingLogo from '../../assets/images/Events/Logo.png';
 
 
 const temp = {
@@ -156,9 +156,7 @@ const Dashboard = () => {
             {
                 isLoading
                     ?
-                    <div className="dashboard__loading-spinner-cont">
-                        <img src={loadingLogo} alt="cerebro-loading-logo" className="dashboard__loading-spinner" />
-                    </div>
+                    <LoadingSpinner />
                     :
                     <>
                         <DashboardInfoCards  {...userData.infoCardData} />
