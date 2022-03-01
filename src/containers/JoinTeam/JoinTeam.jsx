@@ -32,13 +32,6 @@ const JoinTeam = () => {
     getData();
   }, [navigate, eventName]);
 
-  const toLabel = (field) =>
-    field
-      .toLowerCase()
-      .split("_")
-      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(" ");
-
   const getInitialValues = () => {
     const values = { team_code: "", event: "" };
     if (event.registration_attributes) {
@@ -57,7 +50,8 @@ const JoinTeam = () => {
         if (!values[field]) {
           errors[field] = "Required";
         } else if (event.registration_attributes[field] === "int") {
-          if (!values[field].test(/^\d+$/)) {
+          const regex = /^\d+$/;
+          if (!regex.test(values[field])) {
             errors[field] = "Must be an integer";
           }
         }
@@ -149,7 +143,7 @@ const JoinTeam = () => {
                 ([key, value], index) => (
                   <div className="join-team__input" key={index}>
                     <FormInput
-                      label={toLabel(key)}
+                      label={key}
                       name={key}
                       type={mapType(value)}
                       page="join-team"
