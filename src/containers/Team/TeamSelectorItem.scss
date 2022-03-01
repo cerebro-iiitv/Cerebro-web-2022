@@ -1,11 +1,19 @@
 .team-selector-item {
   user-select: none;
   margin-top: 5px; // misc fix to align the dots
-  width: 11%;
+  width: 9%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  button {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: #071e40;
+  }
   &-even {
     flex-direction: column-reverse;
   }
@@ -18,7 +26,7 @@
     font-weight: 400;
     letter-spacing: 0em;
     color: #ffffff99;
-    
+
     &-hidden {
       visibility: hidden;
     }
@@ -77,5 +85,36 @@
 
   100% {
     transform: translateY(0px);
+  }
+}
+
+@media (max-width: 1170px) {
+  .team-selector-item {
+    user-select: none;
+    margin-top: 5px; // misc fix to align the dots
+    width: 9%;
+    &__title {
+      width: max-content;
+      margin: 4% 0;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media (max-width: 1010px) {
+  .team-selector-item {
+    user-select: none;
+    margin-top: 5px; // misc fix to align the dots
+    width: 9%;
+    &__title {
+      width: max-content;
+      margin: 8% 0 8% 0;
+      font-size: 0.7rem;
+    }
+    &__btn-cont {
+      button {
+        width: 90%;
+      }
+    }
   }
 }

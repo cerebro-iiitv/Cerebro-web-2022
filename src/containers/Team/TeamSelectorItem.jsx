@@ -43,13 +43,17 @@ const TeamSelectorItem = ({ title, selectedItem, setSelectedTeam, isEvenNumbered
 
     return (
         <div className="team-selector-item">
-            <div className={upperTitleClasses}>{title}</div>
+            <button onClick={btnclickHandler} className={upperTitleClasses}>
+                <div className={upperTitleClasses}>{title}</div>
+            </button>
             <div className="team-selector-item__btn-cont">
                 <button onClick={btnclickHandler}>
                     <img src={btnImg} alt={title} />
                 </button>
             </div>
-            <div className={lowerTitleClasses}>{title === "PR" ? "Public Relations" : title}</div>
+            <button onClick={btnclickHandler} className={lowerTitleClasses}>
+                <div className={lowerTitleClasses}>{title === "PR" ? "Public Relations" : title}</div>
+            </button>
         </div>
     )
 }
