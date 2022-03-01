@@ -164,7 +164,7 @@ const ModalOverlay = ({ setShowModal, modalData }) => {
                                 <span className="event-modal__content__schedule__value__date">{modalData.endDate}
                                 </span>
                                 <span className="event-modal__content__schedule__value__time">
-                                    {` (${modalData.startTime})`}
+                                    {` (${modalData.endTime})`}
                                 </span>
                             </div>
                         </div>

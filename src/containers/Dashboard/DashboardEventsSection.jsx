@@ -1,4 +1,5 @@
 import DashboardEventCarousel from "./DashboardEventsCarousel";
+import DashboardMobileEventCarousel from "./Mobile/DashboardMobileEventsCarousel";
 import "./DashboardEventsSection.scss";
 
 // temp data
@@ -38,11 +39,16 @@ const DashboardEventsSection = ({ participantDetails, eventsData }) => {
             {!eventsData.length &&
                 <h3 className="dashboard-events__no-events">You haven't registered for any events yet.</h3>}
             {eventsData.length &&
-                <DashboardEventCarousel
-                    eventsData={eventsData}
-                    participantDetails={participantDetails}
-                />
-                // <DashboardEventCarousel eventsData={tempeventsData} />
+                <>
+                    <DashboardEventCarousel
+                        eventsData={eventsData}
+                        participantDetails={participantDetails}
+                    />
+                    <DashboardMobileEventCarousel
+                        eventsData={eventsData}
+                        participantDetails={participantDetails} />
+                    {/* <DashboardEventCarousel eventsData={tempeventsData} /> */}
+                </>
             }
         </div>
     )

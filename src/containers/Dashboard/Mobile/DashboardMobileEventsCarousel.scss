@@ -1,6 +1,8 @@
-.event-menu {
-  width: 98%;
+.event-menu-mob {
+  display: none;
+  width: 50%;
   margin: 0 auto;
+  padding: 2% 0;
   &__carousel {
     &-container {
       max-width: 90%;
@@ -36,7 +38,7 @@
     }
 
     &-content > * {
-      width: calc(100% / 5);
+      width: 100%;
       // below only when > 5
       // flex-shrink: 0;
       // flex-grow: 1;
@@ -71,7 +73,13 @@
 }
 
 @media (max-width: 1050px) {
-  .event-menu {
-    display: none;
+  .event-menu-mob {
+    display: block;
+  }
+}
+
+@media (max-width: 550px) {
+  .event-menu-mob {
+    width: 70%;
   }
 }

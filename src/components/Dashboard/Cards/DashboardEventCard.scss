@@ -2,8 +2,9 @@
   margin: 2.5% 0;
   text-align: center;
   &__title {
+    width: 93%;
     font-family: Barlow;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-style: normal;
     font-weight: 700;
     line-height: 1.8rem;
@@ -12,6 +13,7 @@
     padding-bottom: 8%;
   }
   &__dt-cont {
+    width: 90%;
     padding-bottom: 7%;
     &__date {
       font-family: Chakra Petch;
@@ -35,9 +37,7 @@
   }
   &__team-size {
     margin-bottom: 6%;
-    background: url("../../../assets/images/dashboard-event-team-bg.png")
-      no-repeat center center/cover;
-    width: 100%;
+    width: 90%;
     height: 17%;
     font-family: Chakra Petch;
     font-size: 1.05rem;
@@ -57,6 +57,7 @@
     }
   }
   &__team-name {
+    width: 95%;
     &__title {
       font-family: Barlow;
       font-size: 1.1rem;
@@ -71,7 +72,7 @@
       padding: 4% 0;
       color: #1ca0ff;
       font-family: Barlow;
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       font-style: normal;
       font-weight: 600;
       letter-spacing: 0em;
@@ -87,10 +88,367 @@
 .dashboard-event-carousel-card > div {
   margin: 0% auto;
   padding: 3vh 0 5vh 0;
-  width: 15vw;
-  height: 35vh;
+  width: 14vw;
+  min-height: 35vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+}
+
+@media (max-width: 1350px) {
+  .dashboard-event-carousel-card {
+    margin: 2.5% 0;
+    &__title {
+      width: 93%;
+      font-size: 1.3rem;
+      line-height: 1.4rem;
+      padding-bottom: 8%;
+    }
+    &__dt-cont {
+      width: 90%;
+      padding-bottom: 7%;
+      &__date {
+        font-size: 1rem;
+        line-height: 1.15rem;
+      }
+      &__time {
+        margin-top: 4%;
+        font-size: 1rem;
+        line-height: 1.1rem;
+      }
+    }
+    &__team-size {
+      margin-bottom: 8%;
+      width: 90%;
+      height: 17%;
+      font-size: 1rem;
+      line-height: 1.2rem;
+      span:nth-child(2) {
+        margin-left: 3%;
+      }
+    }
+    &__team-name {
+      width: 95%;
+      &__title {
+        font-size: 1rem;
+        line-height: 1.2rem;
+      }
+      &__value {
+        padding: 4% 0;
+        font-size: 1.1rem;
+      }
+    }
+    &__checkmark {
+      bottom: 0.5%;
+      img{
+        width: 90%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1050px){
+  .dashboard-event-carousel-card {
+    margin: 2.5% 0 6% 0;
+    position: relative;
+    &__title {
+      width: 93%;
+      font-size: 1.7rem;
+      line-height: 1.8rem;
+      padding-bottom: 8%;
+    }
+    &__dt-cont {
+      width: 90%;
+      padding-bottom: 7%;
+      &__date {
+        font-size: 1.35rem;
+        line-height: 1.25rem;
+      }
+      &__time {
+        margin-top: 4%;
+        font-size: 1.3rem;
+        line-height: 1.2rem;
+      }
+    }
+    &__team-size {
+      margin-bottom: 6%;
+      width: 90%;
+      height: 17%;
+      font-size: 1.3rem;
+      line-height: 1.2rem;
+      span:nth-child(2) {
+        margin-left: 3%;
+      }
+    }
+    &__team-name {
+      width: 95%;
+      &__title {
+        font-size: 1.3rem;
+        line-height: 1.2rem;
+      }
+      &__value {
+        padding: 4% 0;
+        font-size: 1.6rem;
+      }
+    }
+    &__checkmark {
+      bottom: -4%;
+      img{
+        width: 100%;
+      }
+    }
+  }
+  
+  .dashboard-event-carousel-card > div {
+    margin: 0% auto;
+    padding: 3vh 0 5vh 0;
+    width: 28vw;
+    min-height: 45vh;
+  }
+}
+
+@media (max-width: 800px){
+  .dashboard-event-carousel-card {
+    position: relative;
+    &__title {
+      width: 93%;
+      font-size: 1.5rem;
+      line-height: 1.6rem;
+      padding-bottom: 8%;
+    }
+    &__dt-cont {
+      width: 90%;
+      padding-bottom: 7%;
+      &__date {
+        font-size: 1.25rem;
+        line-height: 1.15rem;
+      }
+      &__time {
+        margin-top: 4%;
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+      }
+    }
+    &__team-size {
+      margin-bottom: 6%;
+      width: 90%;
+      height: 17%;
+      font-size: 1.2rem;
+      line-height: 1.1rem;
+      span:nth-child(2) {
+        margin-left: 3%;
+      }
+    }
+    &__team-name {
+      width: 95%;
+      &__title {
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+      }
+      &__value {
+        padding: 4% 0;
+        font-size: 1.5rem;
+      }
+    }
+    &__checkmark {
+      bottom: -5%;
+      img{
+        width: 100%;
+      }
+    }
+  }
+  
+  .dashboard-event-carousel-card > div {
+    margin: 0% auto;
+    padding: 3vh 0 5vh 0;
+    width: 28vw;
+    min-height: 42vh;
+  }
+}
+
+@media (max-width: 600px){
+  .dashboard-event-carousel-card {
+    position: relative;
+    &__title {
+      width: 93%;
+      font-size: 1.5rem;
+      line-height: 1.6rem;
+      padding-bottom: 8%;
+    }
+    &__dt-cont {
+      width: 90%;
+      padding-bottom: 7%;
+      &__date {
+        font-size: 1.25rem;
+        line-height: 1.15rem;
+      }
+      &__time {
+        margin-top: 4%;
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+      }
+    }
+    &__team-size {
+      margin-bottom: 6%;
+      width: 90%;
+      height: 17%;
+      font-size: 1.2rem;
+      line-height: 1.1rem;
+      span:nth-child(2) {
+        margin-left: 3%;
+      }
+    }
+    &__team-name {
+      width: 95%;
+      &__title {
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+      }
+      &__value {
+        padding: 4% 0;
+        font-size: 1.5rem;
+      }
+    }
+    &__checkmark {
+      bottom: -5%;
+      img{
+        width: 100%;
+      }
+    }
+  }
+  
+  .dashboard-event-carousel-card > div {
+    margin: 0% auto;
+    padding: 3vh 0 5vh 0;
+    width: 38vw;
+    min-height: 42vh;
+  }
+}
+
+@media (max-width: 550px){
+  .dashboard-event-carousel-card {
+    position: relative;
+    &__title {
+      width: 93%;
+      font-size: 1.4rem;
+      line-height: 1.4rem;
+      padding-bottom: 8%;
+    }
+    &__dt-cont {
+      width: 90%;
+      padding-bottom: 7%;
+      &__date {
+        font-size: 1.1rem;
+        line-height: 1rem;
+      }
+      &__time {
+        margin-top: 4%;
+        font-size: 1.05rem;
+        line-height: 1.1rem;
+      }
+    }
+    &__team-size {
+      margin-bottom: 6%;
+      width: 90%;
+      height: 17%;
+      font-size: 1.1rem;
+      line-height: 1.1rem;
+      span:nth-child(2) {
+        margin-left: 3%;
+      }
+    }
+    &__team-name {
+      width: 95%;
+      &__title {
+        font-size: 1.1rem;
+        line-height: 1.1rem;
+      }
+      &__value {
+        padding: 4% 0;
+        font-size: 1.3rem;
+      }
+    }
+    &__checkmark {
+      bottom: -5%;
+      img{
+        width: 100%;
+      }
+    }
+  }
+  
+  .dashboard-event-carousel-card > div {
+    margin: 0% auto;
+    padding: 3vh 0 5vh 0;
+    width: 45vw;
+    min-height: 39vh;
+  }
+}
+
+@media (max-width: 426px){
+  .dashboard-event-carousel-card {
+    position: relative;
+    &__title {
+      width: 90%;
+      font-size: 1.25rem;
+      line-height: 1.3rem;
+      padding-bottom: 8%;
+    }
+    &__dt-cont {
+      width: 90%;
+      padding-bottom: 7%;
+      &__date {
+        font-size: 1.1rem;
+        line-height: 1rem;
+      }
+      &__time {
+        margin-top: 4%;
+        font-size: 1.05rem;
+        line-height: 1.1rem;
+      }
+    }
+    &__team-size {
+      margin-bottom: 6%;
+      width: 90%;
+      height: 17%;
+      font-size: 1.1rem;
+      line-height: 1.1rem;
+      span:nth-child(2) {
+        margin-left: 3%;
+      }
+    }
+    &__team-name {
+      width: 90%;
+      &__title {
+        font-size: 1.1rem;
+        line-height: 1.1rem;
+      }
+      &__value {
+        padding: 4% 0;
+        font-size: 1.15rem;
+      }
+    }
+    &__checkmark {
+      bottom: -5%;
+      img{
+        width: 100%;
+      }
+    }
+  }
+  
+  .dashboard-event-carousel-card > div {
+    margin: 0% auto;
+    padding: 3vh 0 5vh 0;
+    width: 48vw;
+    min-height: 39vh;
+  }
+}
+
+@media (max-width: 350px){
+  .dashboard-event-carousel-card > div {
+    margin: 0% auto;
+    padding: 3vh 0 5vh 0;
+    width: 50vw;
+    min-height: 39vh;
+  }
 }
