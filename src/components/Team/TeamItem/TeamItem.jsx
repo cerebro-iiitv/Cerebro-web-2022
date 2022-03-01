@@ -14,7 +14,7 @@ const TeamItem = ({ currTeam }) => {
                     currTeam.map((member, idx) => (
                         <div className="particular-team">
                             <div className="profile-pic">
-                                <img src={member.profilepic} alt="" className="profile" />
+                                <img src={member.profilepic} alt="profile-pic" className="profile" />
                             </div>
                             <div className="other-details">
 

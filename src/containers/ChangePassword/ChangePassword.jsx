@@ -9,6 +9,7 @@ import {
   initialValues,
   validate,
 } from "./util/ChangePasswordFormData";
+import "./ChangePassword.scss";
 
 const ChangePassword = () => {
   const [submitStatus, setSubmitStatus] = useState("");
@@ -22,7 +23,6 @@ const ChangePassword = () => {
     let res;
     try {
       res = await axiosInstance.patch("/account/change-password/", data);
-      // console.log(res);
       if (res.data.message) setSubmitStatus(res.data.message);
       else setFieldError("authentication", "An error occurred");
     } catch (error) {
@@ -32,20 +32,16 @@ const ChangePassword = () => {
   };
 
   return (
-    <AuthForm
-      title="Change Password"
-      to="/"
-      text="Return to home?"
-      link="Home"
-    >
+    <AuthForm title="Change Password" to="/" text="Return to home?" link="Home">
       <Formik {...{ validate, initialValues, onSubmit }}>
         {({ isSubmitting, errors }) => (
-          <Form>
+          <Form className="change-password">
             {changePasswordFormData.map(({ label, name, type }, index) => (
               <FormInput
                 {...{ label, name, type }}
                 page="change-pass"
                 key={index}
+                disabled={submitStatus}
               />
             ))}
             <AuthBtn

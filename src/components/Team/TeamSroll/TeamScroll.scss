@@ -4,6 +4,7 @@
     overflow: auto;
     box-sizing: border-box;
     padding-left: 25px;
+    // height: 100vh;
     width: 100vw;
     min-width: 100vw;
     position: fixed;
@@ -18,7 +19,8 @@
     overflow-x: scroll !important;
     box-sizing: border-box;
     // height: 100%;
-    padding-bottom: 4%;
+    margin-bottom: 4%;
+    // border: 1px solid white;
 
     .team-scroll-bar {
         height: 45px;
@@ -27,34 +29,37 @@
         flex-direction: row;
         justify-content: space-around;
         margin-top: 20px;
+        padding-bottom: 4%;
         
         .particular-team {
-            @media only screen and (max-width: 380px){
-                &:first-child{
-                    margin-left: 7rem;
-                }
-            }
-            @media only screen and (min-width:381px) and (max-width: 450px){
-                &:first-child{
-                    margin-left: 5rem;
-                }
-            }
+            // @media only screen and (max-width: 380px){
+            //     &:first-child{
+            //         margin-left: 7rem;
+            //     }
+            // }
+            // @media only screen and (min-width:381px) and (max-width: 450px){
+            //     &:first-child{
+            //         margin-left: 5rem;
+            //     }
+            // }
             
             text-align: center;
             display: block;
-            width: 100%;
+            // width: 100%;
             color: rgba(255, 255, 255, 0.6);
             font-family: Baumans;
             font-size: 16px;
-            margin-right: 2%;
-            margin-left: 2%;
+            margin-right: 10px;
+            // margin-left: 2%;
 
+            p{
+                width: max-content;
+            }
             .active {
                 animation-name: tweak-up;
                 animation-duration: 1s;
                 color: #FFD79D;
                 text-shadow: 0px 0px 4.85399px #EB8800;
-                
             }
 
             @keyframes tweak-up {

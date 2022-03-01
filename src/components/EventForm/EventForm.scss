@@ -1,0 +1,58 @@
+$tablet: 1000px;
+$mobile: 600px;
+$small-mobile: 400px;
+
+.evnt-form {
+  width: 100vw;
+  height: 100vh;
+  background: url("../../assets/images/event-form-bg.svg") no-repeat bottom;
+  background-size: cover;
+
+  @media screen and (max-width: $tablet) {
+    background: none;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (max-width: $tablet) {
+      padding: 4%;
+      height: 90%;
+      justify-content: space-evenly;
+    }
+
+    &__title {
+      // font-family: Lexie Readable;
+      // font-style: normal;
+      // font-weight: normal;
+      font-size: 42px;
+      color: #e4c142;
+      padding-top: 1%;
+      padding-bottom: 1.5%;
+      text-align: center;
+    }
+
+    &__children {
+      height: 72.5vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      @media screen and (max-width: $tablet) {
+        width: -webkit-fill-available;
+        margin-top: 20px;
+        background: linear-gradient(
+          105.87deg,
+          rgba(51, 169, 255, 0.31) 3.04%,
+          rgba(147, 209, 255, 0.05) 100.02%
+        );
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(80px);
+        border-radius: 20px;
+      }
+    }
+  }
+}
