@@ -60,5 +60,24 @@
         margin-bottom: 10%;
     }
 }
-    
+
+
+@media screen and (min-width: 767px) and (max-width: 1000px){
+    .heroinitial{
+        height: 90vh;
+        background:url("../../assets/images/hero-img-1-1280px.svg") no-repeat bottom center;
+    }
+    .cerebro-logo{
+        width:200px;
+        height:200px;
+        margin-bottom: 10%;
+    }
+}
+
+
+    @media screen and (max-width:767px) {
+        .hi-mainwrap{
+            animation: fade-out 0s ease-out 0s forwards;
+        }
+    }
 

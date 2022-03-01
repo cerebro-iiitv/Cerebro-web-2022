@@ -1,4 +1,5 @@
 import React from "react";
+import BtnLoader from "../BtnLoader/BtnLoader";
 import "./AuthBtn.scss";
 
 const AuthBtn = ({
@@ -8,6 +9,8 @@ const AuthBtn = ({
   btnText,
   successMessage,
 }) => {
+  const custom = submitStatus ? "disable" : "enable";
+
   return (
     <div className="authbtn">
       {errors.authentication && (
@@ -16,8 +19,14 @@ const AuthBtn = ({
       {submitStatus && (
         <span className="authbtn__status__success">{successMessage}</span>
       )}
-      <button type="submit" disabled={isSubmitting} className="authbtn__button">
-        <span className="authbtn__button__text">{btnText}</span>
+      <button
+        type="submit"
+        disabled={submitStatus}
+        className={`authbtn__button__${custom}`}
+      >
+        <div className={`authbtn__button__${custom}__text`}>
+          {isSubmitting ? <BtnLoader /> : btnText}
+        </div>
       </button>
     </div>
   );

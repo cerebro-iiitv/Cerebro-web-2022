@@ -10,6 +10,7 @@ import {
   initialValues,
   validate,
 } from "./util/ResetPasswordFormData";
+import "./ResetPassword.scss";
 
 const ResetPassword = () => {
   const [submitStatus, setSubmitStatus] = useState("");
@@ -40,12 +41,13 @@ const ResetPassword = () => {
     <AuthForm title="Reset Password" to="/" text="Return to home?" link="Home">
       <Formik {...{ validate, initialValues, onSubmit }}>
         {({ isSubmitting, errors }) => (
-          <Form>
+          <Form className="reset-password">
             {resetPasswordFormData.map(({ label, name, type }, index) => (
               <FormInput
                 {...{ label, name, type }}
                 page="reset-pass"
                 key={index}
+                disabled={submitStatus}
               />
             ))}
             <AuthBtn

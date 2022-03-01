@@ -1,0 +1,118 @@
+$mobile: 600px;
+$small-mobile: 400px;
+
+.eventbtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0px 10px 0px;
+
+  &__bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    @media screen and (max-width: $mobile) {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &__enable {
+      cursor: pointer;
+      width: 166px;
+      height: 41px;
+      background: #f8b813;
+      border-radius: 11px;
+
+      &:active {
+        box-shadow: 0 1px #666;
+        transform: translateY(0.5px);
+      }
+
+      &__text {
+        font-family: Barlow;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        text-align: center;
+        color: #ffffff;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    &__disable {
+      pointer-events: none;
+      width: 166px;
+      height: 41px;
+      background: #aaaaaa;
+      border-radius: 11px;
+
+      &__text {
+        font-family: Barlow;
+        font-size: 24px;
+        text-align: center;
+        color: #000000;
+      }
+    }
+
+    &__vl {
+      width: 1px;
+      height: 50px;
+      background: #1ca0ff;
+      margin: 0px 15px;
+
+      @media screen and (max-width: $mobile) {
+        display: none;
+      }
+    }
+
+    &__back {
+      cursor: pointer;
+      width: 166px;
+      height: 41px;
+      background: rgba(28, 160, 255, 0.6);
+      border-radius: 11px;
+
+      &:active {
+        box-shadow: 0 1px #666;
+        transform: translateY(0.5px);
+      }
+
+      @media screen and (max-width: $mobile) {
+        margin-top: 10px;
+      }
+
+      &__text {
+        font-family: Barlow;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        color: #ffffff;
+      }
+    }
+  }
+
+  &__status {
+    margin-bottom: 5px;
+    text-align: center;
+
+    &__error {
+      font-size: 15px;
+      font-weight: 500;
+      color: #ff0033;
+    }
+
+    &__success {
+      font-size: 15px;
+      font-weight: 500;
+      color: #12ca50;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

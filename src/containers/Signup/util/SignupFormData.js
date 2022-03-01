@@ -22,7 +22,7 @@ export const signupFormData = {
     },
     {
       name: "email",
-      label: "Email ID",
+      label: "Email ID (Institute ID preferred)",
       type: "email",
     },
   ],
@@ -39,7 +39,7 @@ export const signupFormData = {
     },
     {
       name: "proof",
-      label: "Proof of bachelors",
+      label: "Proof of pursuing UG (under 100kb)",
       type: "file",
     },
     {

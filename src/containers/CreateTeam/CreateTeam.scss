@@ -1,0 +1,58 @@
+$mobile: 600px;
+
+.create-team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  &__line {
+    border: none;
+    border-top: 1.5px dashed #1ca0ff;
+    height: 0px;
+    width: 540px;
+    margin: 10px 0px;
+
+    @media screen and (max-width: $mobile) {
+      margin: 20px 0px;
+      width: 100%;
+    }
+  }
+
+  &__input {
+    margin: 5px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__success {
+    width: max-content;
+    height: 37px;
+    background: #000000;
+    border: 0.5px solid rgba(255, 255, 255, 0.75);
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+
+    &__code {
+      font-family: Calculator;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 32px;
+      text-align: center;
+      letter-spacing: 0.3em;
+      color: #ffffff;
+    }
+  }
+
+  &__message {
+    padding: 10px;
+    margin-bottom: 4px;
+  }
+}
