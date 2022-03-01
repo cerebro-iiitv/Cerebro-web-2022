@@ -12,19 +12,25 @@ const SponsorGrid = ({sponsorData, loadMore, loadLess, visible}) => {
     return (
         <div className="grid">
             <div className="left-arrow">
-                <img id = {visible === 0 ? "disable-on" : ""} onClick={loadLess} src={leftArrow} alt="left-arrow" className="left-arrow-img"/>
+                <img id={visible === 0 ? "disable-on" : ""} onClick={loadLess} src={leftArrow} alt="left-arrow" className="left-arrow-img" />
             </div>
 
             <div className="details">
                 {
-                    sponsorData.slice(visible, visible+6).map((sponsor,idx) => (
-                        <ParticularSponsor logo = {sponsor.logo} websiteLink = {sponsor.websiteLink} type = {sponsor.type} key = {sponsor.id} background = {sponsor.background}/>
-                    ))
+                    window.innerWidth > 768 
+                    ? 
+                        sponsorData.slice(visible, visible + 6).map((sponsor, idx) => (
+                            <ParticularSponsor logo={sponsor.logo} websiteLink={sponsor.websiteLink} type={sponsor.type} key={sponsor.id} background={sponsor.background} />
+                        )) 
+                    :
+                        sponsorData.map((sponsorr, idx) => (
+                            <ParticularSponsor logo={sponsorr.logo} websiteLink={sponsorr.websiteLink} type={sponsorr.type} key={sponsorr.id} background={sponsorr.background} />
+                        ))
                 }
             </div>
 
             <div className="right-arrow">
-                <img id = {(visible === (sponsorData.length) - 6) || (visible === (sponsorData.length)-(sponsorData.length % 6)) ? "disable-on" : ""} onClick={loadMore} src={rightArrow} alt="right-arrow" className="right-arrow-img"/>
+                <img id={(visible === (sponsorData.length) - 6) || (visible === (sponsorData.length) - (sponsorData.length % 6)) ? "disable-on" : ""} onClick={loadMore} src={rightArrow} alt="right-arrow" className="right-arrow-img" />
             </div>
         </div>
     )

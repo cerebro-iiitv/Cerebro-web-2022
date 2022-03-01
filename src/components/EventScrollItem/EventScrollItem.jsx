@@ -8,7 +8,12 @@ import { default as selectedDot } from '../../assets/images/Events/selected-dot.
 import { default as sphere } from '../../assets/images/Events/sphere.svg';
 
 export const EventScrollItem = ({ boxClass, event, idx, currIdx, visible, loadPage, isSelected }) => {
-
+    if(event.title === "Counter-Strike: Global Offensive"){
+        event.title = "CSGO"
+    }
+    if(event.title === "Call of Duty: Mobile"){
+        event.title = "CODM"
+    }
     return (
         <div className="item-container">
             {

@@ -15,11 +15,15 @@ import Sponsors from "./containers/Sponsors/Sponsors";
 import JoinTeam from "./containers/JoinTeam/JoinTeam";
 import CreateTeam from "./containers/CreateTeam/CreateTeam";
 import VerifyEmail from "./containers/VerifyEmail/VerifyEmail";
-import Events from "./containers/Events/Events";
 import PrivateRoute from "./components/RouteElements/PrivateRoute";
 import UserRoute from "./components/RouteElements/UserRoute";
+
 import "./App.css";
-import Team from "./containers/Team/Team";
+
+import TeamWrapper from "./containers/Team/TeamWrapper";
+
+import EventWrapper from "./containers/Events/EventWrapper";
+
 
 function App() {
   const auth = useAuth();
@@ -81,7 +85,7 @@ function App() {
             path="/team"
             element={
               <MainLayout status="hover" hover={hover} sethover={sethover}>
-                <Team />
+               <TeamWrapper />
               </MainLayout>
             }
           />
@@ -97,7 +101,10 @@ function App() {
             path="/events"
             element={
               <MainLayout status="hover" hover={hover} sethover={sethover}>
-                <Events />
+                <EventWrapper />
+                 {/* {
+                  mobileView ? <EventMobile /> : <Events />
+                } */}
               </MainLayout>
             }
           />

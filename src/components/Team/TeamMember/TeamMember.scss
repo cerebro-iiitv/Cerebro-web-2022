@@ -1,10 +1,11 @@
+
 .team-member {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   width: 25%;
-  height: 41%;
+  height: 38%;
   margin: 2% 2%;
 
   &__img-cont {
@@ -66,22 +67,30 @@
 
   &__name {
     font-family: Avenir Next;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 500;
     line-height: 1.2rem;
     letter-spacing: 0em;
     color: #ffffff99;
     padding-top: 5%;
-  }
+    text-align: center;
+    width: max-content;
+}
 
   &__title {
     font-family: Avenir Next;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 500;
     line-height: 1.2rem;
     letter-spacing: 0em;
     color: #fff;
+    text-align: center;
+    width: max-content;
   }
+}
+.web{
+  width: 20%;
+  margin: 2% 0.4%;
 }

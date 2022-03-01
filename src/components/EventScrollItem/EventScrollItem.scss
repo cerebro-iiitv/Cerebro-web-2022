@@ -26,9 +26,10 @@
     }
 
     .text-dot-container-even {
+        // border: 1px solid red;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center;
         flex-wrap: row-wrap;
 
@@ -101,9 +102,10 @@
     }
 
     .text-dot-container-odd {
+        // border: 1px solid white;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         flex-wrap: row-wrap;
 
         @media only screen and (max-width: 1024px) {
@@ -139,6 +141,7 @@
             height: 40px;
 
             .text-down {
+                padding-top: 28%;
                 text-align: center;
                 font-size: 16px;
                 font-family: Baumans;
@@ -196,7 +199,6 @@
 }
 .sphere {
     cursor: pointer;
-    margin: 10px 0;
 }
 
 

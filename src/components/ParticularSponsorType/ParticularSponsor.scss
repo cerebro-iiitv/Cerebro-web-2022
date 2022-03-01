@@ -3,22 +3,36 @@
     src: url("../../assets/fonts/Barlow-Regular.ttf");
 }
 .particular-component{
-    
     text-decoration: none;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @media only screen and (max-width: 768px){
+        height: 100%;
+        width: 100%;
+        margin-bottom: 20%;
+    }
     .sponsor-background{
+        background-image: url("../../assets/images/Sponsors/gold-sponsor.png");
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
         height: 80%;
+        @media only screen and (max-width: 768px){
+            width: 20rem;
+            height: 20rem;
+        }
         .logo{
-            width: 50%;
-            border-radius: 50%;
+            @media only screen and (max-width: 768px) and (min-width: 450px){
+                width: 29%;
+            }
+            width: 40%;
         }
     }
     .sponsor-type{
@@ -28,7 +42,7 @@
             text-align: center;
             text-transform: uppercase;
             color: white;
-            font-size: 150%;
+            font-size: 1.2em;
             font-family: Barlow;
         }
     }
