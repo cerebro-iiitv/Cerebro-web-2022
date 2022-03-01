@@ -4,7 +4,8 @@
   width: 100vw;
   z-index: 2;
   top: 0;
-  background: url("../../assets/images/commonlayer_top.svg") no-repeat top center/auto;
+  background: url("../../assets/images/commonlayer_top.svg") no-repeat top
+    center/auto;
 }
 
 .top-btn {
@@ -23,13 +24,15 @@
   width: 100vw;
   z-index: 2;
   top: 0;
-  background: url("../../assets/images/commonlayer_top.svg") no-repeat top center/auto;
+  background: url("../../assets/images/commonlayer_top.svg") no-repeat top
+    center/auto;
   transform: translateY(-80px);
   transition: transform 1s ease;
   animation: initial-up 0.5s;
 }
 
 .navbarr {
+  user-select: none;
   display: flex;
   z-index: 2;
   align-items: center;
@@ -39,6 +42,7 @@
 }
 
 .navbarr-hover {
+  user-select: none;
   display: flex;
   z-index: 2;
   align-items: center;
@@ -58,11 +62,11 @@
     transform: translateY(0%);
   }
 
-  &:hover~.tophover {
+  &:hover ~ .tophover {
     transform: translateY(0%);
   }
 
-  &:hover~.blur-layer {
+  &:hover ~ .blur-layer {
     transition: height 0s, opacity 1.5s, backdrop-filter 1.5s;
     height: 100%;
     opacity: 1;
@@ -85,7 +89,8 @@
 }
 
 .blur-layer {
-  background: url("../../assets/images/glass-top.svg") no-repeat center center/cover;
+  background: url("../../assets/images/glass-top.svg") no-repeat center
+    center/cover;
   position: absolute;
   height: 0%;
   width: 100%;
@@ -168,7 +173,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background: url("../../assets/images/commonlayer_login.svg") no-repeat center center;
+  background: url("../../assets/images/commonlayer_login.svg") no-repeat center
+    center;
   height: 50px;
 }
 
@@ -181,7 +187,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background: url("../../assets/images/commonlayer_login.svg") no-repeat center center;
+  background: url("../../assets/images/commonlayer_login.svg") no-repeat center
+    center;
   height: 50px;
   &-img {
     margin-bottom: 2.5%;
@@ -189,6 +196,7 @@
 }
 
 .login-button-container {
+  user-select: none;
   margin-top: 2vh;
   display: flex;
   justify-content: flex-end;

@@ -10,10 +10,13 @@ a {
     align-items: center;
     opacity: 1;
     animation: fade-in 1s ease-in;
+    user-select: none;
 }
 
 
 .aboutUs {
+    user-select: none;
+
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -684,7 +687,7 @@ a {
     .aboutus-main{
         margin-bottom: 8%;
         height: 50%;
-        width: 70vw;
+        width: 60vw;
     }
     .infotext{
         font-size: 12px;

@@ -33,8 +33,7 @@
         cursor: pointer;
         background-color: transparent;
         border: none;
-        // font-family: Lato;
-        // font-style: normal;
+        font-family: avenir;
         font-size: 20px;
         letter-spacing: 0.08em;
         color: #ddb83a;
@@ -67,9 +66,7 @@
         }
 
         &__text {
-          // font-family: Be Vietnam Pro;
-          // font-style: normal;
-          // font-weight: normal;
+          font-family: Be Vietnam Pro;
           font-size: 22px;
           color: rgba(0, 0, 0, 0.75);
           display: flex;

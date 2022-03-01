@@ -4,7 +4,7 @@ import { Formik, Form } from "formik";
 import EventForm from "../../components/EventForm/EventForm";
 import FormInput from "../../components/FormInput/FormInput";
 import EventBtn from "../../components/EventBtn/EventBtn";
-import Loading from "../../components/Loading/Loading";
+import Loading from "../../components/LoadingSpinner/LoadingSpinner"; 
 import axiosInstance from "../../services/AxiosInstance";
 import eventData from "../Events/util/EventData.json";
 import "./JoinTeam.scss";
