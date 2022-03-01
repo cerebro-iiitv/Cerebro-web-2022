@@ -40,7 +40,7 @@ const FaqCardArrow = ({ dataList, visible, loadMore, loadLess }) => {
             </div>
 
             <div className="arrow-right">
-                <img id = {visible === 4 ? "disable-on":""} onClick={loadMore} src={ArrowRight} alt="right-arrow" className="right-arrow-img" />
+                <img id = {visible === dataList.length-1 ? "disable-on":""} onClick={loadMore} src={ArrowRight} alt="right-arrow" className="right-arrow-img" />
             </div>
         </div>
     )

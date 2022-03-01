@@ -1,0 +1,16 @@
+.event-wrapper {
+    .event-desk{
+        display: block;
+    }
+    .event-mobile{
+        display: none;
+    }
+    @media only screen and (max-width: 850px){
+        .event-mobile{
+            display: block;
+        }
+        .event-desk{
+            display: none;
+        }
+    }
+}

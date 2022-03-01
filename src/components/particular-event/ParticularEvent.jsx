@@ -3,6 +3,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './ParticularEvent.scss';
 
+
 import { default as toDot } from '../../assets/images/Events/to-dot.svg';
 import { default as dateLine } from '../../assets/images/Events/date-line.svg';
 import { default as door } from '../../assets/images/Events/door.png';
@@ -12,7 +13,7 @@ import { default as greenTick } from '../../assets/images/Events/green-tick.svg'
 
 // configuring toast
 toast.configure()
-export const ParticularEvent = ({ team_code, submitted, isLogged, isReg, subReq, title, start_time, prize, end_time, description, team_size, convenor, co_convenor1, co_convenor2, mem1, mem2 }) => {
+export const ParticularEvent = ({ shortName, rulesDoc, socialMedia, eventId, team_code, submitted, isLogged, isReg, subReq, title, start_time, prize, end_time, description, team_size, convenor, co_convenor1, co_convenor2, mem1, mem2 }) => {
 
   // subReq = true;
   // submitted = true;
@@ -20,6 +21,9 @@ export const ParticularEvent = ({ team_code, submitted, isLogged, isReg, subReq,
   // isReg = undefined;
   // submitted = undefined;
   // subReq = undefined;
+  const startDate = start_time.split("-");
+  const endDate = end_time.split("-");
+  console.log(startDate);
 
   if (title === "CSGO") {
     title = "Counter-Strike: Global Offensive";
@@ -62,15 +66,15 @@ export const ParticularEvent = ({ team_code, submitted, isLogged, isReg, subReq,
 
         <div className='time-line'>
           <div className='date1'>
-            <p className='date1-items'>{start_time} </p>
+            <p className='date1-items'>{startDate[0]} </p>
             <img src={dateLine} alt="date-line" className='date-line' />
-            <p> 8:00PM</p>
+            <p>{startDate[1]}</p>
           </div>
           <img src={toDot} alt="to-dot" className='to-dot' />
           <div className='date1'>
-            <p className='date1-items'>{end_time} </p>
+            <p className='date1-items'>{endDate[0]} </p>
             <img src={dateLine} alt="date-line" className='date-line' />
-            <p>8:00PM</p>
+            <p>{endDate[1]}</p>
           </div>
         </div>
 
@@ -92,8 +96,8 @@ export const ParticularEvent = ({ team_code, submitted, isLogged, isReg, subReq,
             </div>
 
             <div className="rules">
-              <p className='rules-regulations'> <a href="https://discord.gg/QaYWmeBc">Rules and Regulations</a> <br />
-                <a href="https://discord.gg/QaYWmeBc">Social Media</a>
+              <p className='rules-regulations'> <a href={rulesDoc}>Rules and Regulations</a> <br />
+                <a href={socialMedia}>Social Media</a>
               </p>
             </div>
           </div>
@@ -125,7 +129,15 @@ export const ParticularEvent = ({ team_code, submitted, isLogged, isReg, subReq,
           {
             isLogged === false ?
               <div className='button-container'>
-                <button id="single-button" onClick={authNotifier}>Register</button>
+                {/* <button id="single-button" onClick={authNotifier}>Register</button> */}
+                {
+                  team_size === 1 ?
+                    <button id='single-button' href={null} onClick={authNotifier}>Register</button>
+                    :
+
+                    <button id="single-button"  onClick={authNotifier}>Create Team</button>
+                }
+
                 {
                   team_size > 1 ?
                     <img src={midButtonLine} className="mid-button-line" alt="mid-button-line" />
@@ -134,7 +146,8 @@ export const ParticularEvent = ({ team_code, submitted, isLogged, isReg, subReq,
                 }
                 {
                   team_size > 1 ?
-                    <button onClick={authNotifier}>Join Team</button>
+
+                  <button onClick={authNotifier}>Join Team</button>
                     :
                     ""
                 }
@@ -161,10 +174,10 @@ export const ParticularEvent = ({ team_code, submitted, isLogged, isReg, subReq,
                             </div>
                             <p className='team_code_text'>Check Dashboard for more details</p>
                             {
-                              team_size > 1 ? 
-                            <p className="team_code_text">Team Code: <span className='teamCode'>{team_code}</span></p>
-                              :
-                              ""
+                              team_size > 1 ?
+                                <p className="team_code_text">Team Code: <span className='teamCode'>{team_code}</span></p>
+                                :
+                                ""
                             }
                           </div>
 
@@ -172,7 +185,16 @@ export const ParticularEvent = ({ team_code, submitted, isLogged, isReg, subReq,
                     }
                   </div> :
                     <div className='button-container'>
-                      <button id="single-button" onClick={registerUser}>Register</button>
+                      {
+                        team_size === 1 ?
+                          <a id='single-button' href={`event/join/${shortName}`} onClick={registerUser}>Register</a>
+                          :
+
+                          <a id="single-button" href={`event/create/${shortName}`} onClick={registerUser}>Create Team</a>
+
+
+                      }
+
                       {
                         team_size > 1 ?
                           <img src={midButtonLine} className="mid-button-line" alt="mid-button-line" />
@@ -181,7 +203,9 @@ export const ParticularEvent = ({ team_code, submitted, isLogged, isReg, subReq,
                       }
                       {
                         team_size > 1 ?
-                          <button onClick={joinTeam}>Join Team</button>
+
+                          <a href={`event/join/${shortName}`} onClick={joinTeam}>Join Team</a>
+
                           :
                           ""
                       }
