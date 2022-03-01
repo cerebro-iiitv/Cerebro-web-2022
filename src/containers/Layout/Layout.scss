@@ -27,9 +27,6 @@
   transform: translateY(-80px);
   transition: transform 1s ease;
   animation: initial-up 0.5s;
-  @media only screen and (max-width: 768px) {
-    display: none;
-  }
 }
 
 .navbarr {
@@ -39,9 +36,6 @@
   flex-direction: column;
   justify-content: flex-end;
   height: 30vh;
-  @media only screen and (max-width: 768px) {
-    display: none;
-  }
 }
 
 .navbarr-hover {
@@ -176,10 +170,6 @@
   justify-content: center;
   background: url("../../assets/images/commonlayer_login.svg") no-repeat center center;
   height: 50px;
-
-  @media only screen and (max-width: 768px) {
-    display: none;
-  }
 }
 
 .dashboard-btn {
@@ -193,9 +183,6 @@
   justify-content: center;
   background: url("../../assets/images/commonlayer_login.svg") no-repeat center center;
   height: 50px;
-  @media only screen and (max-width: 768px) {
-    display: none;
-  }
   &-img {
     margin-bottom: 2.5%;
   }
