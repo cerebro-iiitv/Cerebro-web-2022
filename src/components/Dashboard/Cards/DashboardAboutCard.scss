@@ -20,6 +20,8 @@
       font-weight: 400;
       letter-spacing: 0em;
       color: white;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 }
@@ -28,7 +30,7 @@
   padding: 0.5% 6%;
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1350px) {
   .dashboard-about-card {
     width: 42%;
     &__row {
@@ -46,7 +48,7 @@
 }
 
 // mob view triggered
-@media (max-width: 1050px){
+@media (max-width: 1050px) {
   .dashboard-about-card {
     width: 100%;
     margin-bottom: 6%;
@@ -62,7 +64,7 @@
   }
 }
 
-@media (max-width: 650px){
+@media (max-width: 650px) {
   .dashboard-about-card {
     &__row {
       margin: 2% 0;
@@ -76,7 +78,7 @@
   }
 }
 
-@media (max-width: 550px){
+@media (max-width: 550px) {
   .dashboard-about-card {
     &__row {
       margin: 3.5% 0;
@@ -90,7 +92,7 @@
   }
 }
 
-@media (max-width: 470px){
+@media (max-width: 470px) {
   .dashboard-about-card {
     &__row {
       margin: 3.5% 0;
@@ -104,7 +106,7 @@
   }
 }
 
-@media (max-width: 400px){
+@media (max-width: 400px) {
   .dashboard-about-card {
     &__row {
       margin: 3% 0;
