@@ -20,6 +20,9 @@ const DashboardAboutCard = ({ name, instituteName, email, mobileNo }) => {
                 <div className="dashboard-about-card__row__title">Contact No.</div>
                 <div className="dashboard-about-card__row__value">{mobileNo}</div>
             </div>
+            
+            <div className="pass-reset-main"> <p className="pass-reset-text">Reset Password</p></div>
+
         </DashboardCardWrapper>
     )
 }
