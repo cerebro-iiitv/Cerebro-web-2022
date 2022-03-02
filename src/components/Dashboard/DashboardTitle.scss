@@ -28,7 +28,7 @@
   }
   &__home {
     top: 10%;
-    right: 10%;
+    right: 12%;
     &-icon {
       img {
         width: 82%;
@@ -37,7 +37,7 @@
   }
   &__logout {
     top: 15%;
-    left: 10%;
+    left: 12%;
     &-title {
       padding-right: 2%;
       line-height: 1.3rem;
@@ -66,10 +66,10 @@
   .dashboard__title-cont {
     &__home {
       top: 10%;
-      right: 11%;
+      right: 13%;
     }
     &__logout {
-      left: 11%;
+      left: 13%;
     }
   }
 }
