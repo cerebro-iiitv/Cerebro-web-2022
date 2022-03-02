@@ -10,13 +10,6 @@ import { default as midButtonLine } from '../../../assets/images/Events/mid-butt
 import { default as greenTick } from '../../../assets/images/Events/green-tick.svg';
 
 const ParticularMobileEvent = ({ currEvent, isLogged }) => {
-    // var title = currEvent.title;
-    // if (title === "CSGO") {
-    //     title = "Counter-Strike: Global Offensive";
-    // }
-    // else if (title === "CODM") {
-    //     title = "Call of Duty: Mobile";
-    // }
     const startDate = currEvent.start_time.split("-");
     const endDate = currEvent.end_time.split("-");
 
@@ -25,19 +18,6 @@ const ParticularMobileEvent = ({ currEvent, isLogged }) => {
         toast.info("Log In to Register", { position: toast.POSITION.TOP_LEFT });
     }
 
-    // function for submitting work
-    const submitWork = () => {
-        // console.log("Called the submit work function");
-    }
-
-    // function for registering the user
-    const registerUser = () => {
-        // console.log("Calling the registered function");
-    }
-
-    const joinTeam = () => {
-        // console.log("Calling the join team function");
-    }
     return (
         <div className="particular-event-section">
 
@@ -150,7 +130,7 @@ const ParticularMobileEvent = ({ currEvent, isLogged }) => {
                                             currEvent.submission_required === true ? <div>
                                                 {
                                                     currEvent.submitted === true ? <div className="submit-text"><p className="submitted_text">You have already submitted</p><img src={greenTick} alt="greenTick" className='green-tick' /></div>
-                                                        : <button id="single-button" onClick={submitWork}>Submit</button>
+                                                        : <button id="single-button">Submit</button>
                                                 }
                                             </div>
                                                 : <div>
@@ -176,10 +156,10 @@ const ParticularMobileEvent = ({ currEvent, isLogged }) => {
                                         <div className='button-container'>
                                             {
                                                 currEvent.team_size === 1 ?
-                                                    <a id='single-button' href={`event/join/${currEvent.short_name}`} onClick={registerUser}>Register</a>
+                                                    <a id='single-button' href={`event/join/${currEvent.short_name}`}>Register</a>
                                                     :
 
-                                                    <a id="single-button" href={`event/create/${currEvent.short_name}`} onClick={registerUser}>Create Team</a>
+                                                    <a id="single-button" href={`event/create/${currEvent.short_name}`} >Create Team</a>
 
 
                                             }
@@ -193,7 +173,7 @@ const ParticularMobileEvent = ({ currEvent, isLogged }) => {
                                             {
                                                 currEvent.team_size > 1 ?
 
-                                                    <a href={`event/join/${currEvent.short_name}`} onClick={joinTeam}>Join Team</a>
+                                                    <a href={`event/join/${currEvent.short_name}`}>Join Team</a>
 
                                                     :
                                                     ""
