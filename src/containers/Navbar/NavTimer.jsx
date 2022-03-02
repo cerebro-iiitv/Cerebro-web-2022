@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 import navtimer_titles from "../../assets/images/navtimer_titles.svg"
 import "./NavTimer.scss"
@@ -34,6 +34,9 @@ const NavTimer = () => {
                 setSeconds("00");
             }
         }, 1000);
+        return () => {
+            clearInterval(interval);
+        };
     }, []);
 
     const colonBetweenTime = <div className="timer-item">
@@ -43,25 +46,25 @@ const NavTimer = () => {
     return (
         <div className="timer__main-container">
             <div className="timer__titles-container">
-                <img src={navtimer_titles} alt="timer-titles" className="timer-titles"/>
+                <img src={navtimer_titles} alt="timer-titles" className="timer-titles" />
             </div>
             <div className="timer__inner-container">
                 <div className="timer-items">
-                <div className="timer-item first">
-                    <div className="timer-value">{days}</div>
-                </div>
-                {colonBetweenTime}
-                <div className="timer-item">
-                    <div className="timer-value">{hours}</div>
-                </div>
-                {colonBetweenTime}
-                <div className="timer-item">
-                    <div className="timer-value">{minutes}</div>
-                </div>
-                {colonBetweenTime}
-                <div className="timer-item last">
-                    <div className="timer-value">{seconds}</div>
-                </div>
+                    <div className="timer-item first">
+                        <div className="timer-value">{days}</div>
+                    </div>
+                    {colonBetweenTime}
+                    <div className="timer-item">
+                        <div className="timer-value">{hours}</div>
+                    </div>
+                    {colonBetweenTime}
+                    <div className="timer-item">
+                        <div className="timer-value">{minutes}</div>
+                    </div>
+                    {colonBetweenTime}
+                    <div className="timer-item last">
+                        <div className="timer-value">{seconds}</div>
+                    </div>
                 </div>
             </div>
         </div>
