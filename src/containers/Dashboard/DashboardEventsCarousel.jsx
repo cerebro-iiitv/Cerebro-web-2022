@@ -61,11 +61,11 @@ const DashboardEventCarousel = ({ participantDetails, eventsData }) => {
         const currentTouch = e.touches[0].clientX
         const diff = touchDown - currentTouch
 
-        if (diff > 5) {
+        if (diff > 5 && !isRightDisabled) {
             scrollRight();
         }
 
-        if (diff < -5) {
+        if (diff < -5 && !isLeftDisabled) {
             scrollLeft();
         }
 
@@ -88,7 +88,8 @@ const DashboardEventCarousel = ({ participantDetails, eventsData }) => {
                     }
                     <div className="event-menu__carousel-content-wrapper"
                         onTouchStart={handleTouchStart}
-                        onTouchMove={handleTouchMove}>
+                        onTouchMove={handleTouchMove}
+                    >
                         <div className="event-menu__carousel-content"
                             style={{
                                 transform: transformPptValue,
