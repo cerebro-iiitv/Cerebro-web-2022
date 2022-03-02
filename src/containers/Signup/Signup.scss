@@ -1,3 +1,6 @@
+$tablet: 1100px;
+$mobile: 600px;
+
 .signup {
   &__bottom {
     margin-top: 30px;
@@ -38,6 +41,7 @@
         letter-spacing: 0.08em;
         color: #ddb83a;
         margin-right: 10px;
+        margin-bottom: 10px;
 
         &__arrow {
           padding: 0px 5px;
@@ -96,7 +100,7 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: $mobile) {
   .signup {
     display: flex;
     flex-direction: column;
@@ -106,14 +110,23 @@
     &__bottom {
       &__buttons {
         flex-direction: column;
-        margin-right: 10px;
-
-        &__page {
-          margin-bottom: 10px;
-        }
 
         &__vl {
           display: none;
+        }
+
+        &__page {
+          margin-right: 0px;
+        }
+
+        &__enable {
+          margin-left: 0px;
+          margin-bottom: 10px;
+        }
+
+        &__disable {
+          margin-left: 0px;
+          margin-bottom: 10px;
         }
       }
     }
