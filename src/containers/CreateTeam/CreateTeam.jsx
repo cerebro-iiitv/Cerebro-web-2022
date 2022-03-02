@@ -4,7 +4,7 @@ import { Formik, Form } from "formik";
 import EventForm from "../../components/EventForm/EventForm";
 import FormInput from "../../components/FormInput/FormInput";
 import EventBtn from "../../components/EventBtn/EventBtn";
-import Loading from "../../components/LoadingSpinner/LoadingSpinner"; 
+import Loading from "../../components/LoadingSpinner/LoadingSpinner";
 import axiosInstance from "../../services/AxiosInstance";
 import eventData from "../Events/util/EventData.json";
 import "./CreateTeam.scss";
@@ -55,20 +55,18 @@ const CreateTeam = () => {
       errors["team_name"] = "Must be at least 3 characters";
     if (event.registration_attributes) {
       Object.keys(event.registration_attributes).forEach((field) => {
+        const regex = new RegExp(event.registration_attributes[field]);
         if (!values[field]) {
           errors[field] = "Required";
-        } else if (event.registration_attributes[field] === "int") {
-          const regex = /^\d+$/;
-          if (!regex.test(values[field])) {
-            errors[field] = "Must be an integer";
-          }
+        } else if (!regex.test(values[field])) {
+          errors[field] = `Invalid ${field}`;
         }
       });
     }
     return errors;
   };
 
-  const onSubmit = async (values, { setFieldError, setSubmitting }) => {
+  const onSubmit = async (values, { setFieldError }) => {
     try {
       const data = {
         event: eventId,
@@ -92,17 +90,6 @@ const CreateTeam = () => {
     }
   };
 
-  const mapType = (type) => {
-    switch (type) {
-      case "int":
-        return "number";
-      case "string":
-        return "text";
-      default:
-        return "text";
-    }
-  };
-
   if (!event) return <Loading />;
 
   return (
@@ -120,13 +107,13 @@ const CreateTeam = () => {
             <hr className="create-team__line" />
             {event.registration_attributes &&
               Object.entries(event.registration_attributes).map(
-                ([key, value], index) => (
+                ([key], index) => (
                   <div className="create-team__input" key={index}>
                     <FormInput
                       disabled={submitStatus}
                       label={key}
                       name={key}
-                      type={mapType(value)}
+                      type="text"
                       page="create-team"
                       key={index}
                     />

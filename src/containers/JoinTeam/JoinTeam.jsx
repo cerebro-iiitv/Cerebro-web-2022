@@ -47,13 +47,11 @@ const JoinTeam = () => {
     if (event.team_event && !values.team_code) errors["team_code"] = "Required";
     if (event.registration_attributes) {
       Object.keys(event.registration_attributes).forEach((field) => {
+        const regex = new RegExp(event.registration_attributes[field]);
         if (!values[field]) {
           errors[field] = "Required";
-        } else if (event.registration_attributes[field] === "int") {
-          const regex = /^\d+$/;
-          if (!regex.test(values[field])) {
-            errors[field] = "Must be an integer";
-          }
+        }else if (!regex.test(values[field])) {
+          errors[field] = `Invalid ${field}`;
         }
       });
     }
@@ -95,17 +93,6 @@ const JoinTeam = () => {
     setSubmitting(false);
   };
 
-  const mapType = (type) => {
-    switch (type) {
-      case "int":
-        return "number";
-      case "string":
-        return "text";
-      default:
-        return "text";
-    }
-  };
-
   if (!event) return <Loading />;
   if (event.is_registered)
     return (
@@ -145,7 +132,7 @@ const JoinTeam = () => {
                     <FormInput
                       label={key}
                       name={key}
-                      type={mapType(value)}
+                      type="text"
                       page="join-team"
                       key={index}
                       disabled={submitStatus}
