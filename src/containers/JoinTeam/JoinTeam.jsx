@@ -51,7 +51,7 @@ const JoinTeam = () => {
         if (!values[field]) {
           errors[field] = "Required";
         }else if (!regex.test(values[field])) {
-          errors[field] = "Invalid";
+          errors[field] = `Invalid ${field}`;
         }
       });
     }

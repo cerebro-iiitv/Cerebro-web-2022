@@ -60,7 +60,7 @@ const CreateTeam = () => {
           console.log(field)
           errors[field] = "Required";
         } else if (!regex.test(values[field])) {
-          errors[field] = "Invalid";
+          errors[field] = `Invalid ${field}`;
         }
       });
     }
