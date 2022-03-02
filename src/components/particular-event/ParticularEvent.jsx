@@ -61,7 +61,7 @@ export const ParticularEvent = ({ shortName, rulesDoc, socialMedia, eventId, tea
         <div className='event-title'> <p className="title">{title}</p></div>
 
         <div className="event-container">
-          <p className='event-para'>{description}, join our <a href='https://discord.gg/QaYWmeBc' className='discord-server'>Discord Server</a> </p>
+          <p className='event-para'>{description}, join our <a href='https://discord.com/invite/VRTeuWZp2a' target="_blank" rel="noreferrer" className='discord-server'>Discord Server</a> </p>
         </div>
 
         <div className='time-line'>
@@ -135,7 +135,7 @@ export const ParticularEvent = ({ shortName, rulesDoc, socialMedia, eventId, tea
                     <button id='single-button' href={null} onClick={authNotifier}>Register</button>
                     :
 
-                    <button id="single-button"  onClick={authNotifier}>Create Team</button>
+                    <button id="single-button" onClick={authNotifier}>Create Team</button>
                 }
 
                 {
@@ -147,7 +147,7 @@ export const ParticularEvent = ({ shortName, rulesDoc, socialMedia, eventId, tea
                 {
                   team_size > 1 ?
 
-                  <button onClick={authNotifier}>Join Team</button>
+                    <button onClick={authNotifier}>Join Team</button>
                     :
                     ""
                 }

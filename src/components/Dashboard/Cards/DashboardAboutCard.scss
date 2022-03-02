@@ -20,6 +20,8 @@
       font-weight: 400;
       letter-spacing: 0em;
       color: white;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 }
@@ -28,23 +30,7 @@
   padding: 0.5% 6%;
 }
 
-
-.pass-reset-main{
-  padding-bottom: 5px;
-}
-
-.pass-reset-text{
-  font-family: Barlow;
-font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 22px;
-
-
-color: #F8B813;
-}
-
-@media (max-width: 1250px) {
+@media (max-width: 1350px) {
   .dashboard-about-card {
     width: 42%;
     &__row {
@@ -62,7 +48,7 @@ color: #F8B813;
 }
 
 // mob view triggered
-@media (max-width: 1050px){
+@media (max-width: 1050px) {
   .dashboard-about-card {
     width: 100%;
     margin-bottom: 6%;
@@ -79,7 +65,7 @@ color: #F8B813;
 
 }
 
-@media (max-width: 650px){
+@media (max-width: 650px) {
   .dashboard-about-card {
     &__row {
       margin: 2% 0;
@@ -97,7 +83,7 @@ color: #F8B813;
   }
 }
 
-@media (max-width: 550px){
+@media (max-width: 550px) {
   .dashboard-about-card {
     &__row {
       margin: 3% 0;
@@ -116,7 +102,7 @@ color: #F8B813;
   }
 }
 
-@media (max-width: 470px){
+@media (max-width: 470px) {
   .dashboard-about-card {
     &__row {
       margin: 3% 0;
@@ -135,7 +121,7 @@ color: #F8B813;
   }
 }
 
-@media (max-width: 400px){
+@media (max-width: 400px) {
   .dashboard-about-card {
     &__row {
       margin: 3% 0;
