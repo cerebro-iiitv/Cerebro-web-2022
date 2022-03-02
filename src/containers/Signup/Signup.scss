@@ -1,3 +1,6 @@
+$tablet: 1100px;
+$mobile: 600px;
+
 .signup {
   &__bottom {
     margin-top: 30px;
@@ -33,12 +36,12 @@
         cursor: pointer;
         background-color: transparent;
         border: none;
-        // font-family: Lato;
-        // font-style: normal;
+        font-family: avenir;
         font-size: 20px;
         letter-spacing: 0.08em;
         color: #ddb83a;
         margin-right: 10px;
+        margin-bottom: 10px;
 
         &__arrow {
           padding: 0px 5px;
@@ -67,9 +70,7 @@
         }
 
         &__text {
-          // font-family: Be Vietnam Pro;
-          // font-style: normal;
-          // font-weight: normal;
+          font-family: Be Vietnam Pro;
           font-size: 22px;
           color: rgba(0, 0, 0, 0.75);
           display: flex;
@@ -99,7 +100,7 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: $mobile) {
   .signup {
     display: flex;
     flex-direction: column;
@@ -109,14 +110,23 @@
     &__bottom {
       &__buttons {
         flex-direction: column;
-        margin-right: 10px;
-
-        &__page {
-          margin-bottom: 10px;
-        }
 
         &__vl {
           display: none;
+        }
+
+        &__page {
+          margin-right: 0px;
+        }
+
+        &__enable {
+          margin-left: 0px;
+          margin-bottom: 10px;
+        }
+
+        &__disable {
+          margin-left: 0px;
+          margin-bottom: 10px;
         }
       }
     }

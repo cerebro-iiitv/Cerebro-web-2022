@@ -61,11 +61,11 @@ const DashboardMobileEventCarousel = ({ participantDetails, eventsData }) => {
         const currentTouch = e.touches[0].clientX
         const diff = touchDown - currentTouch
 
-        if (diff > 1) {
+        if (diff > 1 && !isRightDisabled) {
             scrollRight();
         }
 
-        if (diff < -1) {
+        if (diff < -1 && !isLeftDisabled) {
             scrollLeft();
         }
 

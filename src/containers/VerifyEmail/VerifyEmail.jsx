@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import Loading from "../../components/Loading/Loading";
+import Loading from "../../components/LoadingSpinner/LoadingSpinner"; 
 import axiosInstance from "../../services/AxiosInstance";
 import "./VerifyEmail.scss";
 

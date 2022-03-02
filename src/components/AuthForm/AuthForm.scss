@@ -6,6 +6,8 @@ $mobile: 600px;
   flex-direction: row;
   justify-content: space-between;
   background-color: #071e40;
+  overflow: hidden;
+  height: 100vh;
 
   @media screen and (max-width: $tablet) {
     justify-content: center;
@@ -70,18 +72,14 @@ $mobile: 600px;
     }
 
     &__title {
-      background: url("../../assets/images/auth-title-bg.svg") no-repeat center
-        center;
+      background: url("../../assets/images/auth-title-bg.svg") no-repeat;
+      background-position-y: top;
       pointer-events: none;
       user-select: none;
       width: 400px;
       height: 65px;
       background-size: contain;
       position: relative;
-
-      @media screen and (max-width: $mobile) {
-        width: 100%;
-      }
 
       &__text {
         font-family: Barlow;
@@ -131,8 +129,7 @@ $mobile: 600px;
         align-items: center;
 
         &__text {
-          // font-family: Lato;
-          // font-style: normal;
+          font-family: avenir;
           font-weight: normal;
           font-size: 16px;
           letter-spacing: 0.08em;
@@ -155,6 +152,7 @@ $mobile: 600px;
           justify-content: center;
           border-radius: 5px;
           margin-bottom: 10px;
+          margin-top: 5px;
 
           &:active {
             box-shadow: 0 1px #666;

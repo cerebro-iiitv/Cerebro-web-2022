@@ -1,4 +1,4 @@
-$tablet: 1000px;
+$tablet: 1100px;
 
 .login {
   display: flex;
@@ -12,7 +12,9 @@ $tablet: 1000px;
 
   &__button {
     margin-top: 10px;
+
     &__link {
+      font-family: Barlow;
       font-size: 18px;
       text-decoration: none;
       color: #ddb83a;

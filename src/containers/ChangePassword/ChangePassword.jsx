@@ -34,7 +34,7 @@ const ChangePassword = () => {
   return (
     <AuthForm
       title="Change Password"
-      to="/"
+      to="/dashboard"
       text="Return to dashboard?"
       link="Dashboard"
     >

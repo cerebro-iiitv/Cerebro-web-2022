@@ -23,7 +23,7 @@ const DashboardSocialsCard = () => {
                         <img src={arrowimg} alt="left arrow" />
                     </div>
                     <div className="dashboard-socials-card__links-cont__row-1__discord">
-                        <a href="https://discord.gg/ttcvsmCDk7" target="_blank" rel="noreferrer">
+                        <a href="https://discord.com/invite/VRTeuWZp2a" target="_blank" rel="noreferrer">
                             <img src={discordlogo} alt="discord" />
                         </a>
                     </div>
