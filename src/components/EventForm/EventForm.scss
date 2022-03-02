@@ -20,6 +20,7 @@ $small-mobile: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 80vh;
 
     @media screen and (max-width: $tablet) {
       height: 90%;
@@ -46,13 +47,36 @@ $small-mobile: 400px;
     }
 
     &__children {
-      padding-top: 20px;
-      max-height: fit-content;
-      min-height: 65vh;
+      padding: 0px 20px;
+      min-height: 60vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
+      overflow: scroll;
+      overflow-x: hidden;
+
+      &::-webkit-scrollbar {
+        width: 5px;
+        margin-left: 10px;
+      }
+      
+      &::-webkit-scrollbar-thumb {
+        background: rgba(28, 160, 255, 0.6);
+      }
+      
+      &::-webkit-scrollbar-thumb:hover {
+        background: rgba(28, 160, 255, 0.6);
+      }
+      
+      scrollbar-color: rgba(28, 160, 255, 0.6) transparent;
+      scrollbar-width: thin;
+      
+      margin-top: 100px;
+
+      @media screen and (max-height: 700px){
+        margin-top: 50px;
+      }
 
       @media screen and (max-width: $tablet) {
         width: -webkit-fill-available;
