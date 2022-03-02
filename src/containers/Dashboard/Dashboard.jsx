@@ -174,8 +174,6 @@ const Dashboard = () => {
     const [userData, setUserData] = useState({ infoCardData: {}, eventsSectionData: [] });
     const [isLoading, setIsLoading] = useState(true);
 
-    console.log(userData);
-
     const getInfoCardData = (fetchedData) => {
         const isInfoCardDataPresent = fetchedData && fetchedData.personal_details;
         return isInfoCardDataPresent ? {

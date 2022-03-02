@@ -57,7 +57,6 @@ const CreateTeam = () => {
       Object.keys(event.registration_attributes).forEach((field) => {
         const regex = new RegExp(event.registration_attributes[field]);
         if (!values[field]) {
-          console.log(field)
           errors[field] = "Required";
         } else if (!regex.test(values[field])) {
           errors[field] = `Invalid ${field}`;
