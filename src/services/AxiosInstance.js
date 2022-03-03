@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "https://cerebro2022.herokuapp.com/",
+  baseURL: "https://cerebro2022.tk/",
 });
 
 axiosInstance.interceptors.request.use((config) => {
