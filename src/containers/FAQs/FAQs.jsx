@@ -7,7 +7,7 @@ import FaqCardArrow from '../../components/FaqCardArrow/FaqCardArrow';
 import FaqScrollBar from '../../components/FaqScrollBar/FaqScrollBar';
 
 const FAQs = () => {
-    const [visible, setVisible] = useState(2);
+    const [visible, setVisible] = useState(0);
 
     const loadMore = () => {
         setVisible(visible + 1);

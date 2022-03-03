@@ -47,41 +47,47 @@
         },
         {
             "id": 8,
+            "type": "Gaming Partner",
+            "logo": "https://crerbro2022team.s3.ap-south-1.amazonaws.com/Sponsors/14.png",
+            "websiteLink": "https://brosena.xyz/"
+        },
+        {
+            "id": 9,
             "type": "Prudentia Title Sponsor",
             "logo": "https://crerbro2022team.s3.ap-south-1.amazonaws.com/Sponsors/8.jpg",
             "websiteLink": "https://turtlewealth.in/"
 
         },
         {
-            "id": 9,
+            "id": 10,
             "type": "Prudentia Co-Title Sponsor",
             "logo": "https://crerbro2022team.s3.ap-south-1.amazonaws.com/Sponsors/9.jpg",
             "websiteLink": "https://toggle.ai/?promo=PRUDENTIA22"
 
         },
         {
-            "id": 10,
+            "id": 11,
             "type": "Prudentia Platform Sponsor",
             "logo": "https://crerbro2022team.s3.ap-south-1.amazonaws.com/Sponsors/10.jpg",
             "websiteLink": "https://www.stockgro.club/"
 
         },
         {
-            "id": 11,
+            "id": 12,
             "type": "Prudentia Gold Sponsor",
             "logo": "https://crerbro2022team.s3.ap-south-1.amazonaws.com/Sponsors/11.jpg",
             "websiteLink": "https://www.elearnmarkets.com/courses/display/learn-options-trading"
 
         },
         {
-            "id": 12,
+            "id": 13,
             "type": "Prudentia Gold Sponsor",
             "logo": "https://crerbro2022team.s3.ap-south-1.amazonaws.com/Sponsors/12.jpg",
             "websiteLink": "http://sponsorbull.com/"
 
         },
         {
-            "id": 13,
+            "id": 14,
             "type": "Prudentia Gold Sponsor",
             "logo": "https://crerbro2022team.s3.ap-south-1.amazonaws.com/Sponsors/13.jpg",
             "websiteLink": "https://www.investinghub.in/"
