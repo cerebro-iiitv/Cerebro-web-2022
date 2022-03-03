@@ -169,7 +169,7 @@ $mobile-view: 767px;
   text-align: center;
 }
 
-@media screen and (min-width: 380px) and (max-width: 480px) {
+@media screen and (min-width: 415px) and (max-width: 480px) {
   .elements {
     font-size: 16px;
     line-height: 24px;
@@ -187,7 +187,26 @@ $mobile-view: 767px;
   }
 }
 
-@media screen and (min-width: 280px) and (max-width: 380px) {
+@media screen and (min-width: 365px) and (max-width: 415px) {
+  .elements {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .btn_element {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .burger-heading {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .burger-icon {
+    width: 30px;
+  }
+}
+
+
+@media screen and (max-width: 365px) {
   .elements {
     font-size: 12px;
     line-height: 22px;
@@ -201,6 +220,6 @@ $mobile-view: 767px;
     line-height: 22px;
   }
   .burger-icon {
-    width: 25px;
+    width: 30px;
   }
 }

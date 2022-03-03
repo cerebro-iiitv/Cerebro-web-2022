@@ -182,9 +182,13 @@
     &__bg-img {
       background-size: cover;
     }
+    &__hori {
+      margin-bottom: 2%;
+      width: 80vw;
+    }
   }
   .navbar__content__hoverbar {
-    margin-bottom: 10px;
+    margin-bottom: 0.6%;
     height: 3.8vh;
   }
 }
