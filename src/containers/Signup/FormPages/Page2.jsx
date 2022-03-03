@@ -35,7 +35,7 @@ const Page2 = ({
           )}
           {submitStatus && (
             <span className="signup__bottom__status__success">
-              Please confirm your email address
+              In order to complete the sign-up process, please click the confirmation link sent to your email address.
             </span>
           )}
         </div>
