@@ -3,136 +3,181 @@
     src: url("../../assets/fonts/Poppins-Regular.ttf");
 }
 
-.faq-card-arrow-cont{
+.faq-card-arrow-cont {
     color: white;
     display: flex;
     justify-content: space-between;
     height: 100%;
     width: 100%;
 
-    .arrow-left{
+    .arrow-left {
         -webkit-tap-highlight-color: transparent;
-        @media only screen and (max-width: 768px){
+
+        @media only screen and (max-width: 768px) {
             width: 6%;
             height: 100%;
             margin-top: 4%;
         }
+
         height: 100%;
         width: 4.5%;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        .left-arrow-img{
+
+        .left-arrow-img {
             cursor: pointer;
         }
     }
 
-    .arrow-right{
+    .arrow-right {
+
         // -webkit-tap-highlight-color: transparent;
-        @media only screen and (max-width: 768px){
+        @media only screen and (max-width: 768px) {
             width: 6%;
             margin-top: 4%;
         }
+
         height: 100%;
         width: 4.5%;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        .right-arrow-img{
+
+        .right-arrow-img {
             cursor: pointer;
         }
     }
-    .details-container{
+
+    .details-container {
+        // border: 1px solid white;
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        
         width: 65%;
-        
-        .particular-faq{
-            height: 70%;
+        // padding-top: 15%;
+
+        .particular-faq {
+            // border: 1px solid white;
+            height: 80%;
+            width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
 
-            .faq-question{  
-                margin-bottom: 7%;  
-                .question{
-                    @media only screen and (max-width: 768px){
+            .faq-question {
+
+                // height: 20%;
+                margin-bottom: 5%;  
+                .question {
+                    @media only screen and (max-width: 768px) {
                         font-size: 20px;
                     }
-                    @media only screen and (max-width: 570px){
+
+                    @media only screen and (max-width: 570px) {
                         font-size: 18px;
                     }
-                    @media only screen and (max-width: 455px){
+
+                    @media only screen and (max-width: 455px) {
                         font-size: 16px;
                     }
-                    @media only screen and (max-width: 375px){
+
+                    @media only screen and (max-width: 375px) {
                         font-size: 14px;
                     }
+
                     font-family: Poppins;
                     text-align: center;
                     color: #FFAA00;
                     font-size: 1.89em;
-                    // line-height: 2.8rem;
                 }
-                @media only screen and (min-width: 769px) and (max-width: 1280px){
-                    .question{
+
+                @media only screen and (min-width: 769px) and (max-width: 1280px) {
+                    .question {
                         font-size: 20px;
                         line-height: 24px;
                     }
-                    
+
                 }
-                @media only screen and (min-width: 1281px) and (max-width: 1770px){
-                    .question{
+
+                @media only screen and (min-width: 1281px) and (max-width: 1770px) {
+                    .question {
                         font-size: 22px;
                     }
-                    
+
                 }
-                
+
             }
-            .faq-answer{
-                .answer{
-                    @media only screen and (max-width: 768px){
+
+            .faq-answer {
+                .start_video {
+                    width: 100%;
+                    height: 100%;
+
+                    iframe {
+                        border: 10px solid rgba(0, 0, 0, 0.3);
+                        border-radius: 20px;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .answer {
+                    @media only screen and (max-width: 768px) {
                         font-size: 18px;
                     }
-                    @media only screen and (max-width: 570px){
+
+                    @media only screen and (max-width: 570px) {
                         font-size: 16px;
                     }
-                    @media only screen and (max-width: 455px){
+
+                    @media only screen and (max-width: 455px) {
                         font-size: 14px;
                     }
-                    @media only screen and (max-width: 375px){
+
+                    @media only screen and (max-width: 375px) {
                         font-size: 12px;
                     }
+
                     font-family: Poppins;
                     text-align: center;
                     font-size: 1.312em;
                     line-height: 1.9em;
-                    @media only screen and (max-width: 768px){
+
+                    @media only screen and (max-width: 768px) {
                         line-height: 1.6em;
                     }
                 }
-                @media only screen and (min-width: 769px) and (max-width: 1280px){
-                    .answer{
+
+                @media only screen and (min-width: 769px) and (max-width: 1280px) {
+                    .answer {
                         font-size: 14px;
                     }
                 }
-                @media only screen and (min-width: 1281px) and (max-width: 1770px){
-                    .answer{
+
+                @media only screen and (min-width: 1281px) and (max-width: 1770px) {
+                    .answer {
                         font-size: 16px;
                     }
-                    
+
                 }
             }
-            
+
+        }
+
+        .first-idx {
+            .faq-answer {
+                height: 80%;
+                width: 100%;
+            }
+
         }
     }
 }
 
-#disable-on{
+#disable-on {
     opacity: 0;
     cursor: none;
     pointer-events: none;

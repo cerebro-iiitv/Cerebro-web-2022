@@ -2,26 +2,31 @@
     "faqs": [
         {
             "id": 1,
+            "question": "How to signup on the website and register for an event?",
+            "answer": "https://www.youtube.com/embed/ftB5_KN8zck"
+        },
+        {
+            "id": 2,
             "question": "Is there any participation fee?",
             "answer": "You can participate free of cost! There is absolutely no participation fees."
         },
         {
-            "id": 2,
+            "id": 3,
             "question": "Why do I need to join the discord server?",
             "answer": "All communication like match fixtures, submission forms and more will be communicated through discord server only and there are dedicated channels for queries between participants and organizers."
         },
         {
-            "id": 3,
+            "id": 4,
             "question": "Who can register for the fest?",
             "answer": "Anyone who is pursuing an undergraduate degree in India across any stream is eligible to register for the fest. Undergraduate students pursuing a degree in any other country apart from India are not permitted to register for the fest. Graduated students from any institute are not eligible for the registration in this fest."
         },
         {
-            "id": 4,
+            "id": 5,
             "question": "How many events can I participate in?",
             "answer": "All the events! Yes, you read that correctly. We have not set any cap on the number of events you can participate in and win too!"
         },
         {
-            "id": 5,
+            "id": 6,
             "question": "What is the deadline for registering in an event?",
             "answer": "Registration deadline for any event is 6 hrs before the event starts."
         }
