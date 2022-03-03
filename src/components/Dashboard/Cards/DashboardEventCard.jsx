@@ -16,7 +16,6 @@ const DashboardEventCard = ({ eventData, isEventsMoreThan5, participantDetails }
         isTeamFull } = eventData;
     const [showEventModal, setShowEventModal] = useState(false);
     const checkMarkCondition = !isTeamEvent || isTeamFull;
-    console.log(checkMarkCondition);
     const showModal = () => {
         setShowEventModal(true);
     }

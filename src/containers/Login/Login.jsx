@@ -21,7 +21,15 @@ const Login = () => {
       if (location.state?.from) navigate(location.state.from);
       else navigate("/");
     } catch (error) {
-      setFieldError("authentication", "Invalid email or password");
+      // console.log(error.response.data);
+      let message = "Invalid email or password";
+      if (!!error.response && !!error.response.data && !!error.response.data.status) {
+        message = error.response.data.status;
+        if (message === "User not verified") {
+          message = "Please verify your email first by clicking on the confirmation link sent to your email address during signup.";
+        }
+      }
+      setFieldError("authentication", message);
     }
     setSubmitting(false);
   };

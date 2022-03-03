@@ -19,8 +19,10 @@ export const initialValues = {
 export const validate = (values) => {
   const errors = {};
   if (!values.password) errors.password = "Required";
-  else if (values.password.trim().length < 7)
+  else if (values.password.length < 7)
     errors.password = "Password must be at least 7 characters";
+  else if(values.password.length > 64)
+    errors.password = "Password must be less than 64 characters";
   if (!values.confirmPassword) errors.confirmPassword = "Required";
   else if (values.password !== values.confirmPassword)
     errors.confirmPassword = "Passwords must match";

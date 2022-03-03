@@ -6,7 +6,7 @@ const BrochureNavBtn = () => {
     return (
         <div className="brochure-btn-cont">
             <a
-                href="https://online.fliphtml5.com/nmsmv/flhr/"
+                href="https://online.fliphtml5.com/dobmw/qsik/"
                 target="_blank"
                 rel="noreferrer"
             >
