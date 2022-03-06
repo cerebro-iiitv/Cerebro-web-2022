@@ -83,7 +83,7 @@ const ModalOverlay = ({ setShowModal, modalData }) => {
             ...participantDetailsObj
         }
         for (let i of modalData.teamMember) {
-            if ((i.first_name + " " + i.last_name) === currentPartiName) {
+            if (i.email === currentPartiEmail) {
                 for (let j in i["registration_data"]) {
                     participantDetailsObj[j.toUpperCase()] = i["registration_data"][j];
                 }
