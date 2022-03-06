@@ -29,6 +29,11 @@
             "id": 6,
             "question": "What is the deadline for registering in an event?",
             "answer": "Registration deadline for any event is 6 hrs before the event starts."
+        },
+        {
+            "id": 7,
+            "question": "What is proof of UG?",
+            "answer": "Documents like college ID , college enrolment letter, JOSAA seat allocation letter or any valid  document that can clearly determine you as an UG student."
         }
     ]
 }

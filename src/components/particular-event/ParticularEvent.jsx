@@ -15,15 +15,8 @@ import { default as greenTick } from '../../assets/images/Events/green-tick.svg'
 toast.configure()
 export const ParticularEvent = ({ shortName, rulesDoc, socialMedia, eventId, team_code, submitted, isLogged, isReg, subReq, title, start_time, prize, end_time, description, team_size, convenor, co_convenor1, co_convenor2, mem1, mem2 }) => {
 
-  // subReq = true;
-  // submitted = true;
-  // isLogged = false;
-  // isReg = undefined;
-  // submitted = undefined;
-  // subReq = undefined;
   const startDate = start_time.split("-");
   const endDate = end_time.split("-");
-  // console.log(startDate);
 
   if (title === "CSGO") {
     title = "Counter-Strike: Global Offensive";
@@ -35,20 +28,7 @@ export const ParticularEvent = ({ shortName, rulesDoc, socialMedia, eventId, tea
   const authNotifier = () => {
     toast.info("Log In to Register", { position: toast.POSITION.TOP_LEFT });
   }
-
-  // function for submitting work
-  const submitWork = () => {
-    // console.log("Called the submit work function");
-  }
-
-  // function for registering the user
-  const registerUser = () => {
-    // console.log("Calling the registered function");
-  }
-
-  const joinTeam = () => {
-    // console.log("Calling the join team function");
-  }
+  
   return (
     <div className='event'>
 
@@ -160,7 +140,7 @@ export const ParticularEvent = ({ shortName, rulesDoc, socialMedia, eventId, tea
                       subReq === true ? <div>
                         {
                           submitted === true ? <div className="submit-text"><p className="submitted_text">You have already submitted</p><img src={greenTick} alt="greenTick" className='green-tick' /></div>
-                            : <button id="single-button" onClick={submitWork}>Submit</button>
+                            : <button id="single-button">Submit</button>
                         }
                       </div>
                         : <div>
@@ -187,10 +167,10 @@ export const ParticularEvent = ({ shortName, rulesDoc, socialMedia, eventId, tea
                     <div className='button-container'>
                       {
                         team_size === 1 ?
-                          <a id='single-button' href={`event/join/${shortName}`} onClick={registerUser}>Register</a>
+                          <a id='single-button' href={`event/join/${shortName}`} >Register</a>
                           :
 
-                          <a id="single-button" href={`event/create/${shortName}`} onClick={registerUser}>Create Team</a>
+                          <a id="single-button" href={`event/create/${shortName}`} >Create Team</a>
 
 
                       }
@@ -204,7 +184,7 @@ export const ParticularEvent = ({ shortName, rulesDoc, socialMedia, eventId, tea
                       {
                         team_size > 1 ?
 
-                          <a href={`event/join/${shortName}`} onClick={joinTeam}>Join Team</a>
+                          <a href={`event/join/${shortName}`} >Join Team</a>
 
                           :
                           ""
