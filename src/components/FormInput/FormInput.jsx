@@ -1,5 +1,6 @@
 import React from "react";
 import { ErrorMessage, Field } from "formik";
+import { toast } from "react-toastify";
 import "./FormInput.scss";
 
 export const FormInput = ({
@@ -22,8 +23,10 @@ export const FormInput = ({
           {...{ name, type }}
           onChange={(event) => {
             const file = event.target.files[0];
-            if (file.size > 300000) {
-              alert("File/Image size should be less than 300KB");
+            if (file.size > 2097152) {
+              toast.error("File/Image size should be less than 2MB", {
+                position: toast.POSITION.TOP_LEFT,
+              });
               event.target.value = "";
             } else {
               setFieldValue(name, file);
