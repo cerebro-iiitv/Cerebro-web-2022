@@ -229,18 +229,41 @@ $small-mobile: 400px;
       &__password {
         float: none;
         padding: 0px;
+        label {
+          margin-top: 10px;
+        }
         input {
           padding-left: 5px;
         }
       }
 
+      &__confirmPassword {
+        label {
+          margin-top: 10px;
+        }
+      }
+
       &__address {
-        padding: 2px;
+        padding: 0px;
         label {
           padding-top: 10px;
         }
         textarea {
           padding: 5px;
+        }
+      }
+
+      &__degree {
+        margin-top: 10px;
+      }
+
+      &__phone {
+        margin-top: 10px;
+      }
+
+      &__email {
+        label {
+          margin-top: 10px;
         }
       }
     }
