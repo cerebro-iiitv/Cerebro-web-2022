@@ -66,7 +66,7 @@ const BurgerNav = () => {
           <span className="elements">Faqs</span>
         </Link>
 
-        <a className="list_element" onClick={closedrawer} href="https://online.fliphtml5.com/dobmw/qsik/" target="_blank" rel="noreferrer">
+        <a className="list_element" onClick={closedrawer} href="https://online.fliphtml5.com/dobmw/ufom/" target="_blank" rel="noreferrer">
           <span className="elements">Brochure</span>
         </a>
 

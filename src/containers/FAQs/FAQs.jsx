@@ -29,7 +29,7 @@ const FAQs = () => {
                     </div>
 
                     <div className="faq-social">
-                        <p className="social">Can't find the answer you are looking for? <a href="https://discord.gg/F5Z3Gqg9">Reach out to our team</a> or <a href="https://discord.gg/F5Z3Gqg9">Join our discord server</a></p>
+                        <p className="social">Can't find the answer you are looking for? <a href="https://discord.gg/QHkkW6RFUZ">Reach out to our team</a> or <a href="https://discord.gg/QHkkW6RFUZ">Join our discord server</a></p>
                     </div>
 
                 </div>
