@@ -23,7 +23,7 @@ const ParticularMobileEvent = ({ currEvent, isLogged }) => {
 
             <div className="main-body">
                 <div className="event-desc">
-                    <p className="desc">{currEvent.description}. For further communication join our <a href="https://discord.gg/F5Z3Gqg9">Discord Server</a></p>
+                    <p className="desc">{currEvent.description}. For further communication join our <a href="https://discord.com/invite/VRTeuWZp2a">Discord Server</a></p>
                 </div>
                 {/* Time Line */}
                 <div className='time-line'>
