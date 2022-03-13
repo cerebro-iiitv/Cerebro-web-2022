@@ -10,6 +10,7 @@ import { default as midButtonLine } from '../../../assets/images/Events/mid-butt
 import { default as greenTick } from '../../../assets/images/Events/green-tick.svg';
 
 const ParticularMobileEvent = ({ currEvent, isLogged }) => {
+    // currEvent.submission_required = true;
     const startDate = currEvent.start_time.split("-");
     const endDate = currEvent.end_time.split("-");
 
@@ -95,73 +96,22 @@ const ParticularMobileEvent = ({ currEvent, isLogged }) => {
                 </div>
 
                 {/* Button System */}
-                <div className="buttonCont">
+
+                <div className="reg-cont">
                     {
-                        isLogged === false ?
-                            <div className='button-container'>
-                                {/* <button id="single-button" onClick={authNotifier}>Register</button> */}
+                        currEvent.registration_closed ? <p className="close-text">Registrations Closed</p>
+                            :
+                            <div className="buttonCont">
                                 {
-                                    currEvent.team_size === 1 ?
-                                        <button id='single-button' onClick={authNotifier}>Register</button>
-                                        :
-
-                                        <button id="single-button" href={null} onClick={authNotifier}>Create Team</button>
-                                }
-
-                                {
-                                    currEvent.team_size > 1 ?
-                                        <img src={midButtonLine} className="mid-button-line" alt="mid-button-line" />
-                                        :
-                                        ""
-                                }
-                                {
-                                    currEvent.team_size > 1 ?
-
-                                        <button onClick={authNotifier}>Join Team</button>
-                                        :
-                                        ""
-                                }
-                            </div>
-                            : <div className='buttonCont'>
-                                {
-                                    // here the user is logged in now we check if isReg
-                                    currEvent.is_registered === true ? <div className='button-container'>
-                                        {
-                                            currEvent.submission_required === true ? <div>
-                                                {
-                                                    currEvent.submitted === true ? <div className="submit-text"><p className="submitted_text">You have already submitted</p><img src={greenTick} alt="greenTick" className='green-tick' /></div>
-                                                        : <button id="single-button">Submit</button>
-                                                }
-                                            </div>
-                                                : <div>
-                                                    {/* Here no submission is required */}
-                                                    {/* Route to details page */}
-                                                    <div className="submit-text">
-                                                        <div className="text_image">
-                                                            <p className="submitted_text">You have registered</p>
-                                                            <img src={greenTick} alt="greenTick" className='green-tick' />
-                                                        </div>
-                                                        <p className='team_code_text'>Check Dashboard for more details</p>
-                                                        {
-                                                            currEvent.team_size > 1 ?
-                                                                <p className="team_code_text">Team Code: <span className='teamCode'>{currEvent.team_code}</span></p>
-                                                                :
-                                                                ""
-                                                        }
-                                                    </div>
-
-                                                </div>
-                                        }
-                                    </div> :
+                                    isLogged === false ?
                                         <div className='button-container'>
+                                            {/* <button id="single-button" onClick={authNotifier}>Register</button> */}
                                             {
                                                 currEvent.team_size === 1 ?
-                                                    <a id='single-button' href={`event/join/${currEvent.short_name}`}>Register</a>
+                                                    <button id='single-button' onClick={authNotifier}>Register</button>
                                                     :
 
-                                                    <a id="single-button" href={`event/create/${currEvent.short_name}`} >Create Team</a>
-
-
+                                                    <button id="single-button" href={null} onClick={authNotifier}>Create Team</button>
                                             }
 
                                             {
@@ -173,19 +123,78 @@ const ParticularMobileEvent = ({ currEvent, isLogged }) => {
                                             {
                                                 currEvent.team_size > 1 ?
 
-                                                    <a href={`event/join/${currEvent.short_name}`}>Join Team</a>
-
+                                                    <button onClick={authNotifier}>Join Team</button>
                                                     :
                                                     ""
                                             }
                                         </div>
+                                        : <div className='buttonCont'>
+                                            {
+                                                // here the user is logged in now we check if isReg
+                                                currEvent.is_registered === true ? <div className='button-container'>
+                                                    {
+                                                        currEvent.submission_required === true ? <div>
+                                                            {
+                                                                currEvent.submitted === true ? <div className="submit-text"><p className="submitted_text">You have already submitted</p><img src={greenTick} alt="greenTick" className='green-tick' /></div>
+                                                                    : <a id="single-button" href={`event/submit/${currEvent.short_name}`}>Submit</a>
+                                                            }
+                                                        </div>
+                                                            : <div>
+                                                                {/* Here no submission is required */}
+                                                                {/* Route to details page */}
+                                                                <div className="submit-text">
+                                                                    <div className="text_image">
+                                                                        <p className="submitted_text">You have registered</p>
+                                                                        <img src={greenTick} alt="greenTick" className='green-tick' />
+                                                                    </div>
+                                                                    <p className='team_code_text'>Check Dashboard for more details</p>
+                                                                    {
+                                                                        currEvent.team_size > 1 ?
+                                                                            <p className="team_code_text">Team Code: <span className='teamCode'>{currEvent.team_code}</span></p>
+                                                                            :
+                                                                            ""
+                                                                    }
+                                                                </div>
 
+                                                            </div>
+                                                    }
+                                                </div> :
+                                                    <div className='button-container'>
+                                                        {
+                                                            currEvent.team_size === 1 ?
+                                                                <a id='single-button' href={`event/join/${currEvent.short_name}`}>Register</a>
+                                                                :
+
+                                                                <a id="single-button" href={`event/create/${currEvent.short_name}`} >Create Team</a>
+
+
+                                                        }
+
+                                                        {
+                                                            currEvent.team_size > 1 ?
+                                                                <img src={midButtonLine} className="mid-button-line" alt="mid-button-line" />
+                                                                :
+                                                                ""
+                                                        }
+                                                        {
+                                                            currEvent.team_size > 1 ?
+
+                                                                <a href={`event/join/${currEvent.short_name}`}>Join Team</a>
+
+                                                                :
+                                                                ""
+                                                        }
+                                                    </div>
+
+                                            }
+
+                                        </div>
                                 }
 
                             </div>
                     }
-
                 </div>
+
             </div>
         </div>
     )
