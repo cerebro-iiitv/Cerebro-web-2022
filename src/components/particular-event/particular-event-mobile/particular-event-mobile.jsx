@@ -11,6 +11,8 @@ import { default as greenTick } from '../../../assets/images/Events/green-tick.s
 
 const ParticularMobileEvent = ({ currEvent, isLogged }) => {
     // currEvent.submission_required = true;
+    // currEvent.submitted = true;
+
     const startDate = currEvent.start_time.split("-");
     const endDate = currEvent.end_time.split("-");
 
@@ -135,7 +137,7 @@ const ParticularMobileEvent = ({ currEvent, isLogged }) => {
                                                     {
                                                         currEvent.submission_required === true ? <div>
                                                             {
-                                                                currEvent.submitted === true ? <div className="submit-text"><p className="submitted_text">You have already submitted</p><img src={greenTick} alt="greenTick" className='green-tick' /></div>
+                                                                currEvent.submitted === true ? <div className="submit-text"><p className="submit_text">You have already submitted</p><img src={greenTick} alt="greenTick" className='green-tick' /></div>
                                                                     : <a id="single-button" href={`event/submit/${currEvent.short_name}`}>Submit</a>
                                                             }
                                                         </div>

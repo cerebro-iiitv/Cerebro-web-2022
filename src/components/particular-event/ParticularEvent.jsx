@@ -15,6 +15,8 @@ import { default as greenTick } from '../../assets/images/Events/green-tick.svg'
 toast.configure()
 export const ParticularEvent = ({ registrationStatus, shortName, rulesDoc, socialMedia, eventId, team_code, submitted, isLogged, isReg, subReq, title, start_time, prize, end_time, description, team_size, convenor, co_convenor1, co_convenor2, mem1, mem2 }) => {
   // subReq = true;
+  // submitted = true;
+
   const startDate = start_time.split("-");
   const endDate = end_time.split("-");
 
@@ -142,7 +144,7 @@ export const ParticularEvent = ({ registrationStatus, shortName, rulesDoc, socia
                           {
                             subReq === true ? <div>
                               {
-                                submitted === true ? <div className="submit-text"><p className="submitted_text">You have already submitted</p><img src={greenTick} alt="greenTick" className='green-tick' /></div>
+                                submitted === true ? <div className="submit-text"><p className="submitt_text">You have already submitted</p><img src={greenTick} alt="greenTick" className='green-tick' /></div>
                                   : <a id="single-button" href={`event/submit/${shortName}`}>Submit</a>
                               }
                             </div>
