@@ -331,7 +331,17 @@
                 }
             }
         }
-
+        
+        .reg-cont{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            .close-text{
+                font-size: 14px;
+                font-family: Barlow;
+                color: #F8B813;
+            }
+        }
         .buttonCont {
             display: flex;
             justify-content: center;
