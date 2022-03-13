@@ -28,16 +28,18 @@
     }
 
     .buttonCont {
-        .submit-text{
-            p{
+        .submit-text {
+            p {
                 font-size: 10px !important;
             }
-            .text_image{
-                p{
+
+            .text_image {
+                p {
                     font-size: 10px !important;
                 }
             }
         }
+
         .button-container {
             button {
                 font-size: 14px !important;
@@ -598,13 +600,26 @@
             }
         }
 
+        .reg-cont {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            .close-text {
+                color: #F8B813;
+                font-family: Barlow;
+                font-size: 22px;
+
+            }
+        }
+
         .buttonCont {
             display: flex;
             justify-content: center;
             width: 80%;
 
             .button-container {
-                
+
                 .submit-text {
                     // border: 1px solid white;
                     width: 100%;
@@ -613,7 +628,8 @@
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
-                    .text_image{
+
+                    .text_image {
                         display: flex;
                         justify-content: center;
                         align-items: center;
@@ -624,18 +640,19 @@
                             font-size: 16px;
                             margin-right: 4%;
                         }
-                        .green-tick{
+
+                        .green-tick {
                             width: 10%;
                         }
                     }
 
-                    .teamCode{
+                    .teamCode {
                         color: white;
                         font-weight: bold;
                         font-family: Barlow;
                         font-size: 16px;
                     }
-                   
+
                     .team_code_text {
                         color: #F8B813;
                         font-family: Barlow;
@@ -656,7 +673,8 @@
                     margin-right: -3%;
                 }
 
-                a,button {
+                a,
+                button {
                     font-family: Barlow;
                     font-weight: 700;
                     border: none;
@@ -678,10 +696,10 @@
     }
 }
 
-.time{
+.time {
     padding-bottom: 5px;
 }
 
-.date1-items{
+.date1-items {
     padding-bottom: 2px;
 }

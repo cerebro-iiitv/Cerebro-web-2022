@@ -13,8 +13,8 @@ import { default as greenTick } from '../../assets/images/Events/green-tick.svg'
 
 // configuring toast
 toast.configure()
-export const ParticularEvent = ({ shortName, rulesDoc, socialMedia, eventId, team_code, submitted, isLogged, isReg, subReq, title, start_time, prize, end_time, description, team_size, convenor, co_convenor1, co_convenor2, mem1, mem2 }) => {
-
+export const ParticularEvent = ({ registrationStatus, shortName, rulesDoc, socialMedia, eventId, team_code, submitted, isLogged, isReg, subReq, title, start_time, prize, end_time, description, team_size, convenor, co_convenor1, co_convenor2, mem1, mem2 }) => {
+  // subReq = true;
   const startDate = start_time.split("-");
   const endDate = end_time.split("-");
 
@@ -28,7 +28,7 @@ export const ParticularEvent = ({ shortName, rulesDoc, socialMedia, eventId, tea
   const authNotifier = () => {
     toast.info("Log In to Register", { position: toast.POSITION.TOP_LEFT });
   }
-  
+
   return (
     <div className='event'>
 
@@ -104,75 +104,21 @@ export const ParticularEvent = ({ shortName, rulesDoc, socialMedia, eventId, tea
 
         </div>
 
-
-        <div className="buttonCont">
+        <div className="reg-cont">
           {
-            isLogged === false ?
-              <div className='button-container'>
-                {/* <button id="single-button" onClick={authNotifier}>Register</button> */}
+            registrationStatus ? <p className="close-text">Registrations Closed</p>
+              :
+              <div className="buttonCont">
                 {
-                  team_size === 1 ?
-                    <button id='single-button' href={null} onClick={authNotifier}>Register</button>
-                    :
-
-                    <button id="single-button" onClick={authNotifier}>Create Team</button>
-                }
-
-                {
-                  team_size > 1 ?
-                    <img src={midButtonLine} className="mid-button-line" alt="mid-button-line" />
-                    :
-                    ""
-                }
-                {
-                  team_size > 1 ?
-
-                    <button onClick={authNotifier}>Join Team</button>
-                    :
-                    ""
-                }
-              </div>
-              : <div className='buttonCont'>
-                {
-                  // here the user is logged in now we check if isReg
-                  isReg === true ? <div className='button-container'>
-                    {
-                      subReq === true ? <div>
-                        {
-                          submitted === true ? <div className="submit-text"><p className="submitted_text">You have already submitted</p><img src={greenTick} alt="greenTick" className='green-tick' /></div>
-                            : <button id="single-button">Submit</button>
-                        }
-                      </div>
-                        : <div>
-                          {/* Here no submission is required */}
-                          {/* Route to details page */}
-
-                          <div className="submit-text">
-                            <div className="text_image">
-                              <p className="submitted_text">You have registered</p>
-                              <img src={greenTick} alt="greenTick" className='green-tick' />
-                            </div>
-                            <p className='team_code_text'>Check Dashboard for more details</p>
-                            {
-                              team_size > 1 ?
-                                <p className="team_code_text">Team Code: <span className='teamCode'>{team_code}</span></p>
-                                :
-                                ""
-                            }
-                          </div>
-
-                        </div>
-                    }
-                  </div> :
+                  isLogged === false ?
                     <div className='button-container'>
+                      {/* <button id="single-button" onClick={authNotifier}>Register</button> */}
                       {
                         team_size === 1 ?
-                          <a id='single-button' href={`event/join/${shortName}`} >Register</a>
+                          <button id='single-button' href={null} onClick={authNotifier}>Register</button>
                           :
 
-                          <a id="single-button" href={`event/create/${shortName}`} >Create Team</a>
-
-
+                          <button id="single-button" onClick={authNotifier}>Create Team</button>
                       }
 
                       {
@@ -184,19 +130,79 @@ export const ParticularEvent = ({ shortName, rulesDoc, socialMedia, eventId, tea
                       {
                         team_size > 1 ?
 
-                          <a href={`event/join/${shortName}`} >Join Team</a>
-
+                          <button onClick={authNotifier}>Join Team</button>
                           :
                           ""
                       }
                     </div>
+                    : <div className='buttonCont'>
+                      {
+                        // here the user is logged in now we check if isReg
+                        isReg === true ? <div className='button-container'>
+                          {
+                            subReq === true ? <div>
+                              {
+                                submitted === true ? <div className="submit-text"><p className="submitted_text">You have already submitted</p><img src={greenTick} alt="greenTick" className='green-tick' /></div>
+                                  : <a id="single-button" href={`event/submit/${shortName}`}>Submit</a>
+                              }
+                            </div>
+                              : <div>
+                                {/* Here no submission is required */}
+                                {/* Route to details page */}
 
+                                <div className="submit-text">
+                                  <div className="text_image">
+                                    <p className="submitted_text">You have registered</p>
+                                    <img src={greenTick} alt="greenTick" className='green-tick' />
+                                  </div>
+                                  <p className='team_code_text'>Check Dashboard for more details</p>
+                                  {
+                                    team_size > 1 ?
+                                      <p className="team_code_text">Team Code: <span className='teamCode'>{team_code}</span></p>
+                                      :
+                                      ""
+                                  }
+                                </div>
+
+                              </div>
+                          }
+                        </div> :
+                          <div className='button-container'>
+                            {
+                              team_size === 1 ?
+                                <a id='single-button' href={`event/join/${shortName}`} >Register</a>
+                                :
+
+                                <a id="single-button" href={`event/create/${shortName}`} >Create Team</a>
+
+
+                            }
+
+                            {
+                              team_size > 1 ?
+                                <img src={midButtonLine} className="mid-button-line" alt="mid-button-line" />
+                                :
+                                ""
+                            }
+                            {
+                              team_size > 1 ?
+
+                                <a href={`event/join/${shortName}`} >Join Team</a>
+
+                                :
+                                ""
+                            }
+                          </div>
+
+                      }
+
+                    </div>
                 }
 
               </div>
           }
-
         </div>
+
       </div>
 
       <div className="right-door-container">
