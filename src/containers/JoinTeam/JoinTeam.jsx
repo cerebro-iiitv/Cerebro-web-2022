@@ -4,7 +4,7 @@ import { Formik, Form } from "formik";
 import EventForm from "../../components/EventForm/EventForm";
 import FormInput from "../../components/FormInput/FormInput";
 import EventBtn from "../../components/EventBtn/EventBtn";
-import Loading from "../../components/LoadingSpinner/LoadingSpinner"; 
+import Loading from "../../components/LoadingSpinner/LoadingSpinner";
 import axiosInstance from "../../services/AxiosInstance";
 import eventData from "../Events/util/EventData.json";
 import "./JoinTeam.scss";
@@ -50,7 +50,7 @@ const JoinTeam = () => {
         const regex = new RegExp(event.registration_attributes[field]);
         if (!values[field]) {
           errors[field] = "Required";
-        }else if (!regex.test(values[field])) {
+        } else if (!regex.test(values[field])) {
           errors[field] = `Invalid ${field}`;
         }
       });
@@ -101,6 +101,18 @@ const JoinTeam = () => {
           You have already registered for this event
           <br />
           {event.team_event && "Check your team code on your Dashboard"}
+          <Link to="/dashboard" className="join-team__backlink">
+            <span className="join-team__backlink__text">Dashboard</span>
+          </Link>
+        </div>
+      </EventForm>
+    );
+
+  if (event.registration_closed)
+    return (
+      <EventForm title={event.title}>
+        <div className="join-team__message">
+          Registration for this event has closed!
           <Link to="/dashboard" className="join-team__backlink">
             <span className="join-team__backlink__text">Dashboard</span>
           </Link>

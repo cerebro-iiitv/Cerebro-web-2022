@@ -26,7 +26,7 @@ const CreateTeam = () => {
         if (!id) throw new Error("Event not found");
         setEventId(id);
         const res = await axiosInstance.get(`/events/${id}`);
-        if (!res.data.team_event || res.data.is_registered) {
+        if (!res.data.team_event || res.data.is_registered || res.data.registration_closed) {
           navigate(`/event/join/${eventName}`);
         }
         setEvent(res.data);
