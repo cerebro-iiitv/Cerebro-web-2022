@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Formik, Form } from "formik";
 import EventForm from "../../components/EventForm/EventForm";
 import FormInput from "../../components/FormInput/FormInput";
 import EventBtn from "../../components/EventBtn/EventBtn";
 import Loading from "../../components/LoadingSpinner/LoadingSpinner";
+import FormMessage from "../../components/FormMessage/FormMessage";
 import axiosInstance from "../../services/AxiosInstance";
 import eventData from "../Events/util/EventData.json";
 import "./JoinTeam.scss";
@@ -94,30 +95,21 @@ const JoinTeam = () => {
   };
 
   if (!event) return <Loading />;
+
   if (event.is_registered)
     return (
-      <EventForm title={event.title}>
-        <div className="join-team__message">
-          You have already registered for this event
-          <br />
-          {event.team_event && "Check your team code on your Dashboard"}
-          <Link to="/dashboard" className="join-team__backlink">
-            <span className="join-team__backlink__text">Dashboard</span>
-          </Link>
-        </div>
-      </EventForm>
+      <FormMessage title={event.title}>
+        You have already registered for this event
+        <br />
+        {event.team_event && "Check your team code on your Dashboard"}
+      </FormMessage>
     );
 
   if (event.registration_closed)
     return (
-      <EventForm title={event.title}>
-        <div className="join-team__message">
-          Registration for this event has closed!
-          <Link to="/dashboard" className="join-team__backlink">
-            <span className="join-team__backlink__text">Dashboard</span>
-          </Link>
-        </div>
-      </EventForm>
+      <FormMessage title={event.title}>
+        Registration for this event has closed!
+      </FormMessage>
     );
 
   return (
