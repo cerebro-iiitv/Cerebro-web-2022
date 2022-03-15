@@ -148,7 +148,7 @@ export const ParticularEvent = ({ teamFull, registrationStatus, shortName, rules
                             subReq === true ? 
                             <div>
                               {
-                                !teamFull ? <p className="incompleteTeam">In order to submit, you must complete your team</p>
+                                teamFull && !teamFull ? <p className="incompleteTeam">In order to submit, you must complete your team</p>
                                 :
                                 submitted === true ? <div className="submit-text"><p className="submitt_text">You have already submitted</p><img src={greenTick} alt="greenTick" className='green-tick' /></div>
                                   : <a id="single-button" href={`event/submit/${shortName}`}>Submit</a>
