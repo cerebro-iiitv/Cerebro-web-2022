@@ -24,18 +24,9 @@ const Events = () => {
   const auth = useAuth();
   useEffect(() => {
     async function fetchData() {
-      // Using axios instance to get the data
       var data = await axiosInstance.get('/events/');
       data = data.data;
-      // // To change the name of csgo and codm
-      // data[8].title = "CSGO";
-      // data[11].title = "CODM";
-
-      // // swap event at index 14 and 17
-      // var temp = data[14];
-      // data[14] = data[17];
-      // data[17] = temp;
-
+  
       setCurrEvent(data[0]);
       setEvents(data);
       setLoading(false);
@@ -55,7 +46,6 @@ const Events = () => {
     setIsSelected(true);
     setCurrEvent(event);
     setCurrIdx(idx);
-    // setClass([...boxClass, 'animate-up'])
     setClass({up: [...boxClass.up, 'animate-up'], down: [...boxClass.down, 'animate-down']});
   }
 
@@ -70,7 +60,7 @@ const Events = () => {
             <div className="event-rendering">
               {
 
-                <ParticularEvent registrationStatus = {currEvent.registration_closed} shortName = {currEvent.short_name} rulesDoc = {currEvent.rules_doc} socialMedia = {currEvent.social_media} eventId = {currEvent.id} team_code = {currEvent.team_code ? currEvent.team_code : "XXXX"} key={currEvent.id} subReq = {currEvent.submission_required} isLogged = {auth.isLoggedIn} isReg = {currEvent.is_registered} submitted = {currEvent.submitted} title={currEvent.title} prize={currEvent.prize} team_size={currEvent.team_size} start_time={currEvent.start_time} end_time={currEvent.end_time} description={currEvent.description} convenor={currEvent.contacts[0] ? currEvent.contacts[0].name : "Dhruv Dave"}
+                <ParticularEvent teamFull = {currEvent.team_full} registrationStatus = {currEvent.registration_closed} shortName = {currEvent.short_name} rulesDoc = {currEvent.rules_doc} socialMedia = {currEvent.social_media} eventId = {currEvent.id} team_code = {currEvent.team_code ? currEvent.team_code : "XXXX"} key={currEvent.id} subReq = {currEvent.submission_required} isLogged = {auth.isLoggedIn} isReg = {currEvent.is_registered} submitted = {currEvent.submitted} title={currEvent.title} prize={currEvent.prize} team_size={currEvent.team_size} start_time={currEvent.start_time} end_time={currEvent.end_time} description={currEvent.description} convenor={currEvent.contacts[0] ? currEvent.contacts[0].name : "Dhruv Dave"}
                   co_convenor1={currEvent.contacts[1] ? currEvent.contacts[1].name : "Dhruv Dave"} co_convenor2={currEvent.contacts[2] ? currEvent.contacts[2].name : "Dhruv Dave"} mem1={currEvent.contacts[3] ? currEvent.contacts[3].name : "Dhruv Dave"} mem2={currEvent.contacts[4] ? currEvent.contacts[4].name : "Dhruv Dave"} />
               }
             </div>
