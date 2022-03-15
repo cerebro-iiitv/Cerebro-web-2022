@@ -10,7 +10,12 @@ import { default as midButtonLine } from '../../../assets/images/Events/mid-butt
 import { default as greenTick } from '../../../assets/images/Events/green-tick.svg';
 
 const ParticularMobileEvent = ({ currEvent, isLogged }) => {
+    // currEvent.is_registered = true;
+    // currEvent.registration_closed = true;
     // currEvent.submission_required = true;
+    // currEvent.team_full = true;
+    // currEvent.submitted = true;
+
     const startDate = currEvent.start_time.split("-");
     const endDate = currEvent.end_time.split("-");
 
@@ -99,7 +104,7 @@ const ParticularMobileEvent = ({ currEvent, isLogged }) => {
 
                 <div className="reg-cont">
                     {
-                        currEvent.registration_closed ? <p className="close-text">Registrations Closed</p>
+                        currEvent.registration_closed && !currEvent.submission_required ? <p className="close-text">Registrations Closed</p>
                             :
                             <div className="buttonCont">
                                 {
@@ -135,7 +140,10 @@ const ParticularMobileEvent = ({ currEvent, isLogged }) => {
                                                     {
                                                         currEvent.submission_required === true ? <div>
                                                             {
-                                                                currEvent.submitted === true ? <div className="submit-text"><p className="submitted_text">You have already submitted</p><img src={greenTick} alt="greenTick" className='green-tick' /></div>
+                                                                !currEvent.team_full ? <p className="incompleteTeam">In order to submit, you must complete your team</p> 
+                                                                :
+                                                                currEvent.submitted === true 
+                                                                    ? <div className="submit-text"><p className="submit_text">You have already submitted</p><img src={greenTick} alt="greenTick" className='green-tick' /></div>
                                                                     : <a id="single-button" href={`event/submit/${currEvent.short_name}`}>Submit</a>
                                                             }
                                                         </div>
@@ -155,7 +163,6 @@ const ParticularMobileEvent = ({ currEvent, isLogged }) => {
                                                                             ""
                                                                     }
                                                                 </div>
-
                                                             </div>
                                                     }
                                                 </div> :

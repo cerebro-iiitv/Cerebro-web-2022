@@ -13,8 +13,13 @@ import { default as greenTick } from '../../assets/images/Events/green-tick.svg'
 
 // configuring toast
 toast.configure()
-export const ParticularEvent = ({ registrationStatus, shortName, rulesDoc, socialMedia, eventId, team_code, submitted, isLogged, isReg, subReq, title, start_time, prize, end_time, description, team_size, convenor, co_convenor1, co_convenor2, mem1, mem2 }) => {
-  // subReq = true;
+export const ParticularEvent = ({ teamFull, registrationStatus, shortName, rulesDoc, socialMedia, eventId, team_code, submitted, isLogged, isReg, subReq, title, start_time, prize, end_time, description, team_size, convenor, co_convenor1, co_convenor2, mem1, mem2 }) => {
+  // isReg = true;
+  // registrationStatus = true;
+  // subReq = false;
+  // teamFull = false;
+  // submitted = false;
+
   const startDate = start_time.split("-");
   const endDate = end_time.split("-");
 
@@ -106,7 +111,7 @@ export const ParticularEvent = ({ registrationStatus, shortName, rulesDoc, socia
 
         <div className="reg-cont">
           {
-            registrationStatus ? <p className="close-text">Registrations Closed</p>
+            registrationStatus && !subReq ? <p className="close-text">Registrations Closed</p>
               :
               <div className="buttonCont">
                 {
@@ -140,9 +145,12 @@ export const ParticularEvent = ({ registrationStatus, shortName, rulesDoc, socia
                         // here the user is logged in now we check if isReg
                         isReg === true ? <div className='button-container'>
                           {
-                            subReq === true ? <div>
+                            subReq === true ? 
+                            <div>
                               {
-                                submitted === true ? <div className="submit-text"><p className="submitted_text">You have already submitted</p><img src={greenTick} alt="greenTick" className='green-tick' /></div>
+                                !teamFull ? <p className="incompleteTeam">In order to submit, you must complete your team</p>
+                                :
+                                submitted === true ? <div className="submit-text"><p className="submitt_text">You have already submitted</p><img src={greenTick} alt="greenTick" className='green-tick' /></div>
                                   : <a id="single-button" href={`event/submit/${shortName}`}>Submit</a>
                               }
                             </div>

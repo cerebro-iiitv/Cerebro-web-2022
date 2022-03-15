@@ -619,8 +619,20 @@
             width: 80%;
 
             .button-container {
+                .incompleteTeam {
+                    text-align: center;
+                    font-family: Barlow;
+                    color: #F8B813;
+                    font-size: 20px;
+                }
 
                 .submit-text {
+                    .submitt_text {
+                        font-family: Barlow;
+                        color: #F8B813;
+                        font-size: 14px;
+                    }
+
                     // border: 1px solid white;
                     width: 100%;
                     height: 100%;
