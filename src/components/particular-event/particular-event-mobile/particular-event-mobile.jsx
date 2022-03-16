@@ -140,7 +140,7 @@ const ParticularMobileEvent = ({ currEvent, isLogged }) => {
                                                     {
                                                         currEvent.submission_required === true ? <div>
                                                             {
-                                                                !currEvent.team_full ? <p className="incompleteTeam">In order to submit, you must complete your team</p> 
+                                                                !currEvent.team_full && currEvent.team_full !== undefined ? <p className="incompleteTeam">In order to submit, you must complete your team</p> 
                                                                 :
                                                                 currEvent.submitted === true 
                                                                     ? <div className="submit-text"><p className="submit_text">You have already submitted</p><img src={greenTick} alt="greenTick" className='green-tick' /></div>
