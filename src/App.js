@@ -14,6 +14,7 @@ import FAQs from "./containers/FAQs/FAQs";
 import Sponsors from "./containers/Sponsors/Sponsors";
 import JoinTeam from "./containers/JoinTeam/JoinTeam";
 import CreateTeam from "./containers/CreateTeam/CreateTeam";
+import Submission from "./containers/Submission/Submission";
 import VerifyEmail from "./containers/VerifyEmail/VerifyEmail";
 import PrivateRoute from "./components/RouteElements/PrivateRoute";
 import UserRoute from "./components/RouteElements/UserRoute";
@@ -70,6 +71,7 @@ function App() {
             <Route path="/change-password" element={<ChangePassword />} />
             <Route path="/event/join/:eventName" element={<JoinTeam />} />
             <Route path="/event/create/:eventName" element={<CreateTeam />} />
+            <Route path="/event/submit/:eventName" element={<Submission />} />
           </Route>
 
           <Route
